@@ -1,0 +1,43 @@
+
+name: Atualizar dados do portal
+
+on:
+  schedule:
+    - cron: "17 10 * * 1-5"   # dias úteis, 7h17 de Brasília
+    - cron: "17 21 * * 1-5"   # dias úteis, 18h17 de Brasília
+    - cron: "47 14 * * 1-5"   # dias úteis, 11h47 de Brasília (lançamentos do painel)
+  workflow_dispatch: {}
+  push:
+    paths: ["data/boletins.json", "data/manual.json", "data/contato.json", "src/**"]
+
+permissions:
+  contents: write
+
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Buscar dados públicos
+        run: python scripts/atualizar_dados.py
+      - name: Ler o painel NEAGRO-DF (relações de troca e GTA)
+        run: node scripts/painel.js
+      - name: Montar a página
+        run: python scripts/montar_site.py
+      - name: Gravar alterações
+        run: |
+          git config user.name "robo-neagro"
+          git config user.email "robo-neagro@users.noreply.github.com"
+          git add data/dados.json data/painel.json index.html
+          git diff --cached --quiet || git commit -m "Atualização automática dos dados $(date -u +%F)"
+          git push
+      - name: Conferir a integração com o painel
+        # Falha (e o GitHub avisa por e-mail) se o painel mudou nomes de campos ou praças usados pelo portal.
+        # Valores atípicos, como preço com unidade trocada, aparecem como aviso no resumo da execução.
+        run: node scripts/painel.js --verificar
