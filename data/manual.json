@@ -1,0 +1,35 @@
+{
+ "_instrucoes": "Atualize semanalmente os indicadores Cepea/Esalq (o Cepea não tem API pública). Copie o valor do site do Cepea, a data de referência e a variação. O robô aplica este arquivo por cima dos dados automáticos.",
+ "indicadores": [
+  {
+   "id": "boi",
+   "valor": 386.3,
+   "referencia": "27/10/2026",
+   "variacao_pct": 6.04,
+   "variacao_desc": "no mês",
+   "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo)",
+   "link": "https://www.cepea.org.br/br/indicador/boi-gordo.aspx",
+   "extraido_em": "2026-10-28"
+  },
+  {
+   "id": "soja",
+   "valor": 157.41,
+   "referencia": "27/10/2026",
+   "variacao_pct": -2.57,
+   "variacao_desc": "no mês",
+   "fonte": "Indicador da Soja Cepea/Esalq Paranaguá",
+   "link": "https://www.cepea.org.br/br/indicador/soja.aspx",
+   "extraido_em": "2026-10-28"
+  },
+  {
+   "id": "milho",
+   "valor": 64.87,
+   "referencia": "27/10/2026",
+   "variacao_pct": -5.53,
+   "variacao_desc": "no mês",
+   "fonte": "Indicador do Milho Esalq/B3",
+   "link": "https://www.cepea.org.br/br/indicador/milho.aspx",
+   "extraido_em": "2026-10-28"
+  }
+ ]
+}

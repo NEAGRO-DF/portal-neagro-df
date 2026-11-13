@@ -1,0 +1,13 @@
+{
+  "_instrucoes": "Canais de contato e recebimento de demandas. Para receber as demandas direto na base do painel, publique a regra da coleção 'demandas' no Firebase (ver guia de implantação) e troque 'firestore_demandas' para true. Alternativa: informe em 'formulario_endpoint' o endereço de um serviço de formulários. Com os dois desligados, o formulário prepara a mensagem para o visitante enviar pelo próprio e-mail.",
+  "email": "secgeagro@unb.br",
+  "telefone": "(61) 3107-6628",
+  "endereco": "Campus Universitário Darcy Ribeiro, ICC Sul, Brasília-DF, CEP 70910-900",
+  "instagram": "https://www.instagram.com/neagroans/",
+  "instagram_rotulo": "@neagroans",
+  "formulario_endpoint": "",
+  "fonte": "https://neagrodf.unb.br/contato/",
+  "extraido_em": "2026-10-21",
+  "firestore_demandas": false,
+  "firestore_projeto": "neagro---df"
+}

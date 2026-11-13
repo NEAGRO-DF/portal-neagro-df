@@ -1,0 +1,1327 @@
+<title>Portal NEAGRO-DF</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF), FAV/UnB. Boletins de mercado, cotações, calculadora de relação de troca e dados do agro do DF, da RIDE, do Brasil e do mundo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&display=swap">
+<style>
+/* Layout: faixa de cotações, cabeçalho institucional de três colunas, abertura fotográfica do Cerrado, boletim do mês em destaque e cadeias produtivas em cartões com fotos reais. */
+:root{
+  --bg:#F4F6F1; --surface:#FFFFFF; --sunk:#EBF0E5; --ink:#1B2620; --muted:#59675F; --line:#DCE3D6;
+  --brand:#1C6E43; --brand-2:#14563A; --on-brand:#FFFFFF;
+  --ipe:#E9AE0C; --ipe-soft:#FBEFC8; --terra:#B4532B;
+  --band:#123627; --on-band:#EAF3EC; --band-muted:#A3BFAE;
+  --up:#1D7A47; --down:#B8402C; --bar:#2E8B57; --bar-2:#E9AE0C; --grid:#E3EADB;
+  --f-display:"Outfit","Segoe UI",system-ui,sans-serif;
+  --f-body:"Nunito Sans","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  --r:14px; --maxw:1200px; --logo-bg:transparent; --logo-pad:0;
+  --shadow:0 1px 0 rgba(27,38,32,.05),0 12px 28px -18px rgba(27,38,32,.45);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0F1813; --surface:#17231C; --sunk:#1C2B22; --ink:#E6EEE8; --muted:#A1B2A7; --line:#2A3A30;
+  --brand:#6BCB8E; --brand-2:#4FB476; --on-brand:#0B1A11; --ipe:#F2C13B; --ipe-soft:#3A3012; --terra:#F08A62;
+  --band:#08120D; --on-band:#E6EEE8; --band-muted:#8BA596;
+  --up:#6BCB8E; --down:#F5937E; --bar:#6BCB8E; --bar-2:#F2C13B; --grid:#24342A;
+  --logo-bg:#FFFFFF; --logo-pad:4px; --shadow:0 12px 28px -16px rgba(0,0,0,.75); color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0F1813; --surface:#17231C; --sunk:#1C2B22; --ink:#E6EEE8; --muted:#A1B2A7; --line:#2A3A30;
+  --brand:#6BCB8E; --brand-2:#4FB476; --on-brand:#0B1A11; --ipe:#F2C13B; --ipe-soft:#3A3012; --terra:#F08A62;
+  --band:#08120D; --on-band:#E6EEE8; --band-muted:#8BA596;
+  --up:#6BCB8E; --down:#F5937E; --bar:#6BCB8E; --bar-2:#F2C13B; --grid:#24342A;
+  --logo-bg:#FFFFFF; --logo-pad:4px; --shadow:0 12px 28px -16px rgba(0,0,0,.75); color-scheme:dark }
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--brand);text-underline-offset:3px;font-weight:700}
+a:hover{color:var(--brand-2)}
+:focus-visible{outline:3px solid var(--ipe);outline-offset:2px;border-radius:6px}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.12;text-wrap:balance;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(1.7rem,3vw,2.2rem)}
+h3{font-size:1.2rem}
+p{margin:0}
+.num{font-variant-numeric:tabular-nums}
+.eyebrow{display:inline-block;font-size:.76rem;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:var(--brand)}
+.skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:8px;background:var(--surface);padding:8px;z-index:30}
+
+/* Faixa de cotações */
+.ticker{background:var(--band);color:var(--on-band)}
+.ticker .wrap{display:flex;align-items:stretch;overflow-x:auto;scrollbar-width:thin}
+.tk{flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;padding-block:8px;padding-inline:14px;border-right:1px solid rgba(255,255,255,.09);white-space:nowrap}
+.tk:first-child{padding-left:0}
+.tk .n{font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--band-muted);font-weight:700}
+.tk .v{font-size:1rem;font-weight:800;font-variant-numeric:tabular-nums}
+.tk .v small{font-size:.7rem;color:var(--band-muted);margin-left:4px;font-weight:600}
+.tk .d{font-size:.72rem;font-weight:700;font-variant-numeric:tabular-nums}
+.up{color:var(--up)}.down{color:var(--down)}
+.ticker .up{color:#7EE0A4}.ticker .down{color:#FFA593}
+.tk-stamp{flex:0 0 auto;margin-left:auto;padding-left:16px;font-size:.7rem;color:var(--band-muted);display:flex;align-items:center;white-space:nowrap}
+
+/* Cabeçalho institucional */
+.masthead{background:var(--surface);border-bottom:1px solid var(--line)}
+.masthead .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:16px;padding-block:12px}
+.logo-slot{display:flex;align-items:center;min-width:0}
+.logo-slot.right{justify-content:flex-end}
+.logo-slot img{height:66px;width:auto;display:block;background:var(--logo-bg);border-radius:10px;padding:var(--logo-pad)}
+.inst{text-align:center}
+.inst strong{display:block;font-family:var(--f-display);font-weight:600;font-size:1.12rem;line-height:1.2}
+.inst span{display:block;font-size:.85rem;color:var(--muted)}
+
+/* Navegação */
+nav.main{background:var(--brand);position:sticky;top:env(safe-area-inset-top,0px);z-index:20;box-shadow:0 6px 16px -12px rgba(0,0,0,.5)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--brand)}
+nav.main .wrap{display:flex;align-items:center;gap:2px;overflow-x:auto;scrollbar-width:none;padding-block:7px}
+nav.main a{color:var(--on-brand);text-decoration:none;font-weight:700;font-size:.92rem;padding:7px 12px;white-space:nowrap;border-radius:8px}
+nav.main a:hover{background:rgba(255,255,255,.15)}
+nav.main a.cta{margin-left:auto;background:var(--ipe);color:#1B2620}
+
+section{padding-block:56px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:26px}
+.sec-head p{color:var(--muted);max-width:64ch;margin-top:8px;font-size:1.02rem}
+.src{font-size:.76rem;color:var(--muted);margin-top:10px}
+.src a{color:var(--muted);font-weight:600}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;box-shadow:var(--shadow);min-width:0}
+.alt{background:var(--sunk)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:800;font-size:.95rem;text-decoration:none;border-radius:10px;padding:11px 18px;border:2px solid var(--brand);cursor:pointer;font-family:inherit}
+.btn.primary{background:var(--brand);color:var(--on-brand)}
+.btn.primary:hover{background:var(--brand-2);border-color:var(--brand-2);color:var(--on-brand)}
+.btn.ghost{color:var(--brand);background:var(--surface)}
+.btn.sun{background:var(--ipe);border-color:var(--ipe);color:#1B2620}
+.btn.light{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.75);color:#FFFFFF}
+.btn.light:hover{background:rgba(255,255,255,.22);color:#FFFFFF}
+
+/* Abertura fotográfica */
+.hero{position:relative;padding:0;color:#FFFFFF;background:#2A4A6A}
+.hero .photo{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center 72%;display:block}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,28,18,.78) 0%,rgba(10,28,18,.45) 42%,rgba(10,28,18,0) 72%),linear-gradient(0deg,rgba(10,28,18,.5) 0%,transparent 35%)}
+.hero .wrap{position:relative;padding-block:96px 92px;display:grid;gap:34px}
+.hero .copy{max-width:600px}
+.hero .eyebrow{color:#F6D46B}
+.hero h1{font-size:clamp(2.1rem,4.6vw,3.4rem);margin-top:10px;color:#FFFFFF}
+.hero .lead{font-size:1.12rem;margin-top:14px;color:#EAF1EC;max-width:52ch}
+.credit{position:absolute;right:max(10px,env(safe-area-inset-right,0px));bottom:6px;font-size:.66rem;color:rgba(255,255,255,.75);font-weight:600}
+.credit a{color:inherit;font-weight:600}
+
+/* O que fazemos */
+.servicos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.servicos .sv{grid-template-columns:1fr;gap:10px;align-content:start}
+.sv{display:grid;grid-template-columns:48px minmax(0,1fr);gap:14px;align-items:start}
+.sv .ico{width:48px;height:48px;border-radius:12px;background:var(--sunk);display:grid;place-items:center;color:var(--brand)}
+.sv .ico svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sv h3{font-size:1.08rem;margin-bottom:4px}
+.sv p{font-size:.9rem;color:var(--muted)}
+.sv .for{font-size:.74rem;font-weight:800;color:var(--terra);margin-top:6px;letter-spacing:.02em}
+.fluxo{margin-top:30px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;counter-reset:passo;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.passo{padding:16px 16px 18px;border-right:1px solid var(--line);position:relative;min-width:0}
+.passo:last-child{border-right:0}
+.passo::before{counter-increment:passo;content:counter(passo);display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--brand);color:var(--on-brand);font:700 .9rem var(--f-display);margin-bottom:8px}
+.passo b{display:block;font-family:var(--f-display);font-size:1rem;line-height:1.2}
+.passo span{display:block;font-size:.76rem;font-weight:800;color:var(--terra);margin:2px 0 4px}
+.passo p{font-size:.84rem;color:var(--muted)}
+.fluxo-t{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline;margin-top:34px}
+.comp{margin-top:30px;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:24px;align-items:start}
+.comp-list{display:flex;flex-wrap:wrap;gap:8px}
+.comp-list span{font-size:.86rem;font-weight:700;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+
+/* Fale conosco */
+.contato{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:start}
+.canais{display:grid;gap:12px}
+.canal{display:grid;grid-template-columns:40px minmax(0,1fr);gap:12px;align-items:center;padding:14px 16px}
+.canal .ico{width:40px;height:40px;border-radius:10px;background:var(--sunk);display:grid;place-items:center;color:var(--brand)}
+.canal .ico svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.canal small{display:block;font-size:.74rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+.canal .val{font-weight:700;word-break:break-word;user-select:all}
+.copybtn{font:700 .76rem var(--f-body);border:1px solid var(--line);background:var(--bg);color:var(--brand);border-radius:6px;padding:2px 8px;cursor:pointer;margin-left:6px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.form-grid .full{grid-column:1/-1}
+.field select,.field textarea{font:600 1rem var(--f-body);color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:9px 12px;width:100%;min-width:0}
+.field textarea{min-height:130px;resize:vertical}
+.field select:focus,.field textarea:focus{border-color:var(--brand);outline:none}
+.field .err{font-size:.78rem;color:var(--down);font-weight:700}
+.sent{border:2px dashed var(--ipe);background:var(--ipe-soft);border-radius:12px;padding:14px 16px;margin-top:12px}
+.sent pre{white-space:pre-wrap;font:600 .86rem var(--f-body);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:10px;margin:10px 0;max-height:220px;overflow:auto}
+
+/* Relações de troca do mês (painel) */
+.pn-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.pn-chips span{font-size:.82rem;font-weight:700;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 12px}
+.pn-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:22px;align-items:start}
+.pn-resumo{list-style:none;margin:6px 0 0;padding:0;display:grid;gap:6px}
+.pn-resumo li{display:flex;justify-content:space-between;gap:10px;border-bottom:1px dashed var(--line);padding-bottom:6px;font-size:.92rem}
+.pn-cont{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.pn-df{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.pn-df div{background:var(--sunk);border-radius:8px;padding:8px 10px}
+.pn-df b{display:block;font-family:var(--f-display);font-size:1.1rem;font-variant-numeric:tabular-nums}
+.pn-df span{font-size:.72rem;color:var(--muted);font-weight:700;display:block}
+.sig{display:inline-block;white-space:nowrap;font-size:.74rem;font-weight:800;border-radius:6px;padding:2px 8px}
+.sig.favoravel{background:rgba(46,139,87,.16);color:var(--up)}
+.sig.normal{background:var(--sunk);color:var(--muted)}
+.sig.desfavoravel{background:rgba(196,83,43,.16);color:var(--down)}
+.pn-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:22px}
+.pn-kpi{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow);display:grid;gap:4px;align-content:start}
+.pn-kpi .k-n{font-size:.78rem;font-weight:800;color:var(--muted)}
+.pn-kpi .k-v{font-family:var(--f-display);font-size:1.9rem;line-height:1.05;font-variant-numeric:tabular-nums}
+.pn-kpi .k-u{font-size:.76rem;color:var(--muted)}
+.pn-kpi .k-d{font-size:.78rem;font-weight:700}
+.pn-sel{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 6px}
+.pn-sel button{font:700 .8rem var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px;cursor:pointer}
+.pn-sel button[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--on-brand)}
+.pn-h{margin:24px 0 10px}
+.pn-grid.pn-grid2{grid-template-columns:minmax(0,8fr) minmax(0,4fr)}
+.pn-spark svg{display:block;margin-top:8px}
+.pn-spark .s-r{font-size:.74rem;color:var(--muted);margin-top:4px}
+.pn-spark{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.pn-spark .card{padding:14px 16px}
+.pn-spark .s-n{font-size:.8rem;font-weight:800;color:var(--muted)}
+.pn-spark .s-v{font-family:var(--f-display);font-size:1.35rem;font-variant-numeric:tabular-nums}
+.legend i.lg-line{width:18px;background:var(--bar);height:3px;border-radius:2px;vertical-align:middle}
+.legend i.lg-mean{width:18px;border-top:2px dashed var(--muted);height:0;border-radius:0;vertical-align:middle}
+.legend i.lg-band{width:18px;background:var(--grid);border:1px solid var(--line)}
+.legend i.lg-ent{background:var(--bar)}.legend i.lg-sai{background:var(--bar-2)}
+#pn-tab td{font-size:.86rem}
+#pn-tab tr.grp td{background:var(--sunk);font-weight:800;font-size:.76rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:6px 10px}
+#pn-gta table td,#pn-gta table th{font-variant-numeric:tabular-nums}
+.cad .sigline{font-size:.78rem;color:var(--muted)}
+/* Fale conosco: demandas */
+.dm-side{display:grid;gap:14px;align-content:start}
+.dm-passos{margin:8px 0 0;padding-left:20px;display:grid;gap:8px}
+.dm-passos li b{display:block}
+.dm-passos li span{font-size:.86rem;color:var(--muted)}
+.dm-ex span{font-size:.8rem;padding:4px 10px}
+.field label small{font-weight:600;color:var(--muted)}
+.dm-ok label{display:flex;gap:8px;align-items:flex-start;font-weight:600;font-size:.86rem}
+.field.dm-ok input[type=checkbox]{width:18px;height:18px;flex:0 0 18px;margin-top:2px;padding:0;accent-color:var(--brand)}
+/* Boletim */
+.bol-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px}
+.feature{display:grid;grid-template-columns:210px minmax(0,1fr);gap:26px}
+.cover{aspect-ratio:210/297;max-width:100%;background:#FFFFFF;color:#1B2620;border:1px solid #CFD8C9;border-radius:4px;box-shadow:0 14px 26px -14px rgba(10,40,30,.55);padding:12px;display:flex;flex-direction:column;gap:7px;font-size:9px;line-height:1.35;transform:rotate(-2deg);transition:transform .25s}
+.feature:hover .cover{transform:rotate(0) scale(1.03)}
+.cover .ch{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #1B2620;padding-bottom:6px;gap:6px}
+.cover .ch img{height:26px;width:auto}
+.cover .ch span{font-size:6px;text-align:center;flex:1;line-height:1.25;font-weight:700}
+.cover .ct{font-family:var(--f-display);font-weight:700;font-size:12.5px;line-height:1.15}
+.cover .cn{font-size:7.5px;color:#59675F;font-weight:700}
+.cover .cimg{height:70px;background-size:cover;background-position:center;border-radius:2px}
+.cover .rows{display:grid;gap:3px}
+.cover .rows i{display:block;height:4px;background:#E3EADB;border-radius:2px}
+.cover .rows i:nth-child(3n){width:70%}
+.cover .tb{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;margin-top:auto}
+.cover .tb i{height:6px;background:#E8ECE6}
+.cover .tb i:nth-child(-n+4){background:#1C6E43}
+.tag{display:inline-block;font-size:.72rem;font-weight:800;letter-spacing:.05em;text-transform:uppercase;background:var(--terra);color:#FFFFFF;padding:4px 10px;border-radius:6px}
+.feature h3{font-size:clamp(1.5rem,2.6vw,1.95rem)}
+.feature-body{display:flex;flex-direction:column;gap:12px;min-width:0}
+.meta{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;color:var(--muted);font-weight:700}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:.8rem;font-weight:700;border-radius:999px;padding:3px 11px;background:var(--sunk)}
+.note{font-size:.8rem;color:var(--muted)}
+.series{display:flex;flex-direction:column;gap:14px}
+.serie{display:grid;grid-template-columns:76px minmax(0,1fr);gap:14px;padding:14px}
+.serie .th{width:76px;height:76px;border-radius:10px;background-size:cover;background-position:center}
+.serie-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.serie h3{font-size:1.02rem}
+.per{font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;color:var(--terra)}
+.serie p{font-size:.84rem;color:var(--muted);margin-top:4px}
+.years{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.years a{font-size:.8rem;text-decoration:none;border-radius:6px;padding:3px 10px;color:var(--brand);background:var(--sunk);border:1px solid var(--line)}
+.years a:hover{background:var(--brand);color:var(--on-brand)}
+
+/* Cadeias */
+.cadeias{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.cad{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.cad figure{margin:0}
+.cad .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--sunk)}
+.cad .ph img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s}
+.cad:hover .ph img{transform:scale(1.06)}
+.cad .ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 5px;font-size:.62rem;color:#FFFFFF;background:linear-gradient(transparent,rgba(0,0,0,.6));text-align:right}
+.cad .ph figcaption a{color:#FFFFFF;font-weight:600}
+.cad .bd{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.cad p{font-size:.86rem;color:var(--muted)}
+.stats{display:flex;flex-wrap:wrap;gap:6px}
+.stat{background:var(--sunk);border-radius:8px;padding:5px 10px}
+.stat b{display:block;font-family:var(--f-display);font-size:1.08rem;font-variant-numeric:tabular-nums;line-height:1.2}
+.stat span{font-size:.7rem;color:var(--muted);font-weight:700}
+.team{font-size:.76rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:8px;margin-top:auto}
+.cad .links{display:flex;gap:14px;font-size:.84rem;flex-wrap:wrap}
+
+/* Calculadora */
+.calc{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:stretch}
+.presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.presets button{font:700 .86rem var(--f-body);border:2px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer}
+.presets button[aria-pressed="true"]{border-color:var(--brand);background:var(--brand);color:var(--on-brand)}
+.field{display:grid;gap:4px;margin-bottom:12px}
+.field label{font-weight:800;font-size:.88rem}
+.field .row{display:grid;grid-template-columns:minmax(0,1fr) 120px;gap:8px}
+.field input{font:700 1rem var(--f-body);color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:10px;padding:9px 12px;width:100%;min-width:0}
+.field input:focus{border-color:var(--brand);outline:none}
+.field small{font-size:.75rem;color:var(--muted)}
+.result{display:grid;grid-template-columns:minmax(0,1fr) 180px;gap:18px;align-items:center}
+.result .pair{display:grid;gap:8px}
+.result .pair div{border-radius:10px;background-size:cover;background-position:center;aspect-ratio:4/3;position:relative}
+.result .pair span{position:absolute;left:6px;bottom:6px;right:6px;background:rgba(0,0,0,.62);color:#FFFFFF;font-size:.72rem;font-weight:800;padding:2px 7px;border-radius:6px}
+.big{font-family:var(--f-display);font-weight:700;font-size:clamp(2.4rem,5vw,3.4rem);line-height:1;color:var(--ink)}
+.meter{display:flex;flex-wrap:wrap;gap:4px;margin-block:12px}
+.meter i{width:22px;height:22px;border-radius:5px;background:var(--ipe);display:block}
+.meter i.part{background:linear-gradient(90deg,var(--ipe) var(--p),var(--ipe-soft) var(--p))}
+.result p{font-size:.98rem}
+
+/* Cotações */
+.grid12{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:22px}
+.span7{grid-column:span 7}.span5{grid-column:span 5}.span6{grid-column:span 6}.span4{grid-column:span 4}.span12{grid-column:span 12}
+.card h3{margin-bottom:2px}
+.card .sub{font-size:.84rem;color:var(--muted);margin-bottom:12px}
+.tscroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+th{text-align:left;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:800;padding:8px 10px;border-bottom:2px solid var(--line)}
+td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
+td.r,th.r{text-align:right}
+tr:last-child td{border-bottom:0}
+.mini{display:inline-flex;align-items:center;gap:10px}
+.av{width:34px;height:34px;border-radius:50%;flex:0 0 auto;background-size:cover;background-position:center;display:grid;place-items:center;font:800 .62rem var(--f-body);background-color:var(--sunk);color:var(--brand)}
+.delta{display:inline-block;white-space:nowrap;font-weight:800;border-radius:6px;padding:2px 8px;font-size:.82rem}
+.delta.up{background:rgba(46,139,87,.14)}.delta.down{background:rgba(196,83,43,.14)}
+.pill{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:var(--sunk);color:var(--muted)}
+.pill.auto{background:var(--brand);color:var(--on-brand)}
+svg text{fill:var(--muted);font-family:var(--f-body);font-size:11px;font-weight:700}
+svg .lbl{fill:var(--ink);font-size:12px}
+svg .val{fill:var(--ink);font-size:11.5px;font-weight:800}
+
+/* Você sabia */
+.facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:26px}
+.fact{display:block;width:100%;perspective:900px;border:0;padding:0;background:none;cursor:pointer;text-align:left;font:inherit;color:inherit}
+.fact .in{display:block;position:relative;width:100%;min-height:210px;transition:transform .5s;transform-style:preserve-3d}
+.fact[aria-pressed="true"] .in{transform:rotateY(180deg)}
+.fact .f,.fact .b{position:absolute;inset:0;border-radius:var(--r);padding:16px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;gap:6px;box-shadow:var(--shadow);overflow:hidden}
+.fact .f{background-size:cover;background-position:center;color:#FFFFFF;justify-content:flex-end}
+.fact .f::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 20%,rgba(0,0,0,.78))}
+.fact .f>*{position:relative}
+.fact .f b{font-family:var(--f-display);font-size:1.15rem;line-height:1.15}
+.fact .f span{font-size:.76rem;font-weight:800;color:#F6D46B}
+.fact .b{background:var(--brand);color:var(--on-brand);transform:rotateY(180deg);justify-content:center}
+.fact .b strong{font-family:var(--f-display);font-size:1.9rem;line-height:1.05}
+.fact .b p{font-size:.92rem}
+.fact .b small{font-size:.7rem;opacity:.85}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:22px}
+.kpi{background:var(--surface);border-radius:var(--r);padding:14px 16px;border:1px solid var(--line)}
+.kpi .k{font-size:.78rem;color:var(--muted);font-weight:700}
+.kpi .v{font-family:var(--f-display);font-size:1.65rem;font-weight:700;line-height:1.15}
+.kpi .s{font-size:.76rem;color:var(--muted)}
+.legend{display:flex;gap:14px;font-size:.8rem;color:var(--muted);margin-bottom:6px;flex-wrap:wrap;font-weight:700}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+
+/* Notícias */
+.news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.nw{display:grid;gap:4px;padding:16px}
+.nw a{color:var(--ink);text-decoration:none;font-family:var(--f-display);font-weight:600;font-size:1.1rem;line-height:1.25}
+.nw a:hover{color:var(--brand)}
+.nw .m{font-size:.78rem;color:var(--muted);display:flex;gap:10px;font-weight:700}
+.nw .t{justify-self:start;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em;background:var(--ipe-soft);border-radius:6px;padding:2px 8px}
+
+/* Sobre */
+.about{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px}
+.about p+p{margin-top:10px}
+.about .lead{font-family:var(--f-display);font-size:1.28rem;line-height:1.35;font-weight:500}
+.people{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.person{padding:14px 16px;display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:center}
+.person .ini{width:44px;height:44px;border-radius:50%;background:var(--ipe-soft);display:grid;place-items:center;font-family:var(--f-display);font-weight:700}
+.person b{display:block;line-height:1.25}
+.person span{font-size:.8rem;color:var(--muted);display:block}
+.roster{margin-top:20px;columns:2;column-gap:28px;font-size:.88rem}
+.roster div{break-inside:avoid;margin-bottom:12px}
+.roster b{display:block;font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--brand)}
+.datasites{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.datasites a{display:block;padding:16px;text-decoration:none;color:var(--ink)}
+.datasites a b{display:block;color:var(--brand)}
+.datasites a span{font-size:.84rem;color:var(--muted);font-weight:400}
+.fontes-det summary{cursor:pointer;font-family:var(--f-display);font-weight:600;font-size:1.05rem;color:var(--brand)}
+.fontes-det[open] summary{margin-bottom:4px}
+.credits{margin-top:12px;font-size:.8rem;color:var(--muted);columns:2;column-gap:28px}
+.credits div{break-inside:avoid;margin-bottom:6px}
+
+footer{background:var(--band);color:var(--on-band);padding-block:34px;font-size:.88rem}
+footer .wrap{display:grid;grid-template-columns:2fr 1fr 1fr;gap:24px}
+footer a{color:var(--on-band)}
+footer .muted{color:var(--band-muted)}
+footer b{display:block;margin-bottom:6px;font-family:var(--f-display);font-size:1.05rem}
+footer .wrap.inst-links{display:flex;flex-wrap:wrap;gap:8px 20px;border-top:1px solid rgba(255,255,255,.15);margin-top:24px;padding-top:18px;font-size:.8rem}
+footer .wrap.inst-links .muted{flex-basis:100%}
+/* Modo incorporado no WordPress da UnB: o tema já traz cabeçalho, barra do governo, VLibras e rodapé */
+html.embed #barra-brasil,html.embed .masthead,html.embed footer,html.embed .skip{display:none!important}
+html.embed nav.main{position:static}
+html.embed body::before{display:none}
+
+@media (max-width:960px){
+  .bol-grid,.calc,.about,.contato,.comp,.pn-grid,.pn-grid.pn-grid2{grid-template-columns:1fr}
+  .servicos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .fluxo{grid-template-columns:1fr}
+  .passo{border-right:0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:36px minmax(0,1fr);column-gap:10px}
+  .passo::before{grid-row:span 3;margin:0}
+  .passo:last-child{border-bottom:0}
+  .span7,.span5,.span6,.span4{grid-column:span 12}
+  .cadeias,.facts,.kpis,}
+@media (max-width:640px){
+  .masthead .wrap{grid-template-columns:auto minmax(0,1fr) auto;gap:10px}
+  .inst strong{font-size:.86rem}.inst span{font-size:.72rem}
+  .logo-slot img{height:46px}
+  nav.main .wrap{flex-wrap:wrap;justify-content:center;gap:2px 0;padding-block:5px}
+  nav.main a{font-size:.84rem;padding:6px 9px}
+  nav.main a.cta{margin-left:0}
+  .hero{background:var(--band)}
+  .hero .photo{position:relative;inset:auto;height:230px;object-position:center 78%}
+  .hero .shade{display:none}
+  .hero .wrap{padding-block:26px 34px}
+  .credit{top:206px;bottom:auto;text-shadow:0 1px 2px rgba(0,0,0,.8)}
+  .feature{grid-template-columns:1fr}
+  .cover{max-width:170px}
+  .cadeias,.news,.people,.datasites,.facts,.servicos,.form-grid{grid-template-columns:1fr}
+  .result{grid-template-columns:1fr}
+  .result .pair{grid-template-columns:1fr 1fr}
+  .roster,.credits{columns:1}
+  footer .wrap{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+section[id]{scroll-margin-top:60px}
+</style>
+
+<div id="barra-brasil" style="background:#7F7F7F;height:20px;padding:0 0 0 10px;display:block;"><ul id="menu-barra-temp" style="list-style:none;margin:0;padding:0"><li style="display:inline;float:left;padding-right:10px;margin-right:10px;border-right:1px solid #EDEDED"><a href="http://brasil.gov.br" style="font-family:sans,sans-serif;text-decoration:none;color:white;font-size:12px;line-height:20px">Portal do Governo Brasileiro</a></li></ul></div>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<div class="ticker" aria-label="Cotações e indicadores">
+  <div class="wrap" id="ticker"></div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="logo-slot"><a href="#inicio" aria-label="NEAGRO-DF, início"><img src="img/logo-neagro.png" alt="NEAGRO-DF"></a></div>
+    <div class="inst">
+      <strong>Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF)</strong>
+      <span>Faculdade de Agronomia e Medicina Veterinária (FAV/UnB)</span>
+    </div>
+    <div class="logo-slot right"><a href="https://www.unb.br/" aria-label="Universidade de Brasília"><img src="img/logo-unb.png" alt="Universidade de Brasília"></a></div>
+  </div>
+</header>
+
+<nav class="main" aria-label="Seções">
+  <div class="wrap">
+    <a href="#boletins">Boletins</a>
+    <a href="#painel">Indicadores</a>
+    <a href="#cotacoes">Cotações</a>
+    <a href="#df-ride">DF e RIDE</a>
+    <a href="#sobre">Quem somos</a>
+    <a class="cta" href="#contato">Fale conosco</a>
+  </div>
+</nav>
+
+<main id="conteudo">
+  <section class="hero" id="inicio">
+    <img class="photo" src="img/fotos/cerrado.jpg" alt="Lavoura de solo vermelho no Cerrado, com serras ao fundo e céu azul" fetchpriority="high">
+    <div class="shade"></div>
+    <div class="wrap">
+      <div class="copy">
+        <span class="eyebrow">Programa de Extensão FAV/UnB</span>
+        <h1>Informação de mercado para quem produz no DF e Entorno</h1>
+        <p class="lead">Boletins mensais de preços, relações de troca e dados das cadeias produtivas, preparados por estudantes de Gestão de Agronegócios da UnB.</p>
+        <div class="actions">
+          <a class="btn sun" href="#boletins">Ler o boletim do mês</a>
+          <a class="btn light" href="#painel">Ver as relações de troca do mês</a>
+        </div>
+      </div>
+    </div>
+    <div class="credit" id="hero-credit"></div>
+  </section>
+
+  <section id="boletins" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Nosso principal produto</span>
+          <h2>Boletins de mercado</h2>
+          <p>Todo mês, as equipes coletam preços nas praças do DF e Entorno, calculam as relações de troca e explicam o que mudou no mercado.</p>
+        </div>
+      </div>
+      <div class="bol-grid">
+        <article class="card feature" id="feature"></article>
+        <div class="series" id="series"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="painel">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Indicadores NEAGRO-DF</span>
+          <h2 id="pn-titulo">Relações de troca do mês</h2>
+          <p>Quanto o produtor precisa vender para comprar milho, o principal componente da ração. Quanto menor o índice, maior o poder de compra. O sinal compara o mês com a média dos meses acompanhados pelo núcleo.</p>
+        </div>
+        <a class="btn primary" href="#boletins">Ler a análise no boletim</a>
+      </div>
+      <div class="pn-chips" id="pn-chips"></div>
+      <div class="pn-kpis" id="pn-kpis"></div>
+      <div class="pn-grid pn-grid2">
+        <div class="card">
+          <h3>Evolução da relação de troca</h3>
+          <div class="sub" id="pn-graf-sub"></div>
+          <div class="pn-sel" id="pn-sel" role="group" aria-label="Escolha a relação de troca"></div>
+          <div id="pn-graf"></div>
+          <div class="legend"><span><i class="lg-line"></i>Relação de troca do mês</span><span><i class="lg-mean"></i>Média dos meses acompanhados</span><span><i class="lg-band"></i>Faixa normal (até 5% da média)</span></div>
+        </div>
+        <div class="card pn-side">
+          <h3>Resumo do mês</h3>
+          <div class="sub" id="pn-resumo-sub"></div>
+          <ul class="pn-resumo" id="pn-resumo"></ul>
+          <h3 style="margin-top:18px">Sinal das relações acompanhadas</h3>
+          <div class="sub" id="pn-cont-sub"></div>
+          <div class="pn-cont" id="pn-cont"></div>
+        </div>
+      </div>
+      <h3 class="pn-h">Preços no DF, últimos 13 meses</h3>
+      <div class="pn-spark" id="pn-spark"></div>
+      <div class="card" id="pn-gta" style="margin-top:22px"></div>
+      <div class="src" id="pn-src"></div>
+    </div>
+  </section>
+
+  <section id="servicos" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">O que fazemos</span>
+          <h2>Inteligência de mercado para o agro do DF e Entorno</h2>
+          <p>O NEAGRO-DF acompanha os preços das cadeias produtivas da região, transforma esses números em análise e coloca a informação ao alcance de quem produz, ensina e decide.</p>
+        </div>
+      </div>
+      <div class="servicos">
+        <div class="card sv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5M9 9h3"/></svg></div><div><h3>Boletim mensal de mercado</h3><p>Preços, variações e análise das ocorrências do mês em oito cadeias produtivas, com insumos e produtos lado a lado.</p><div class="for">Para produtores, técnicos e gestores</div></div></div>
+        <div class="card sv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 21s-6-5.6-6-10a6 6 0 0 1 12 0c0 4.4-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg></div><div><h3>Coleta semanal de preços</h3><p>Levantamento nas principais praças de interesse do DF e Entorno, registrado em planilha padronizada com média automática.</p><div class="for">Base de todos os nossos produtos</div></div></div>
+        <div class="card sv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 8h13l-3-3M20 16H7l3 3"/></svg></div><div><h3>Relações de troca</h3><p>Quanto produto é preciso vender para comprar milho, farelo de soja ou outros insumos, o termômetro do poder de compra do produtor.</p><div class="for">Para decisões de compra e venda</div></div></div>
+        <div class="card sv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M7 14v-3M11 14V8M15 14v-5M19 21H5"/></svg></div><div><h3>Indicadores e gráficos do mês</h3><p>Relações de troca, preços do DF e movimentação de animais, publicados aqui no portal em gráficos e atualizados a cada lançamento da equipe.</p><div class="for"><a href="#painel">Ver os indicadores</a></div></div></div>
+        <div class="card sv"><div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4M10 9l4 2-4 2z"/></svg></div><div><h3>Seminário on-line mensal</h3><p>Apresentação aberta dos temas do boletim nas duas primeiras semanas do mês seguinte, com espaço para perguntas.</p><div class="for">Para a comunidade e os estudantes</div></div></div>
+        <div class="card sv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 12c3-5 7-6 11-3l5-3v12l-5-3c-4 3-8 2-11-3z"/><path d="M8 12h.01"/></svg></div><div><h3>Indicadores específicos</h3><p>Indicador de preço da tilápia no DF e Índice de Relação de Troca (IRT) semestral do morango.</p><div class="for">Para cadeias emergentes do DF</div></div></div>
+        <div class="card sv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M3 7l6-3 6 3 6-3v13l-6 3-6-3-6 3z"/><path d="M9 4v13M15 7v13"/></svg></div><div><h3>Estudos regionais</h3><p>Dados do agro do DF e da RIDE e o PIB do agronegócio regional pela metodologia Cepea/Esalq, em construção.</p><div class="for">Para políticas públicas e pesquisa</div></div></div>
+        <div class="card sv"><div class="ico"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></div><div><h3>Formação de estudantes</h3><p>Estudantes de Gestão de Agronegócios aprendem na prática a coletar, tratar, interpretar e comunicar dados de mercado.</p><div class="for">Extensão universitária da FAV/UnB</div></div></div>
+      </div>
+
+      <div class="fluxo-t" id="cadeias">
+        <h3>Cadeias produtivas acompanhadas</h3>
+        <span class="note">Números do DF segundo o IBGE e cotações mais recentes</span>
+      </div>
+      <div class="cadeias" id="cad" style="margin-top:14px"></div>
+
+      <div class="fluxo-t">
+        <h3>Como o boletim é feito, todo mês</h3>
+        <span class="note">Etapas do fluxo de produção do NEAGRO-DF</span>
+      </div>
+      <div class="fluxo">
+        <div class="passo"><b>Coleta</b><span>Toda semana</span><p>As equipes registram os preços nas praças do DF e Entorno.</p></div>
+        <div class="passo"><b>Planilhas e análise</b><span>Semana do dia 15</span><p>Cada grupo lança os preços na base do núcleo e escreve o texto sobre as ocorrências do mês.</p></div>
+        <div class="passo"><b>Revisão</b><span>Semana seguinte</span><p>A coordenação avalia e corrige dados e textos.</p></div>
+        <div class="passo"><b>Montagem</b><span>Antes da publicação</span><p>A equipe de comunicação diagrama o boletim, que passa por nova revisão.</p></div>
+        <div class="passo"><b>Publicação e seminário</b><span>Início do mês seguinte</span><p>O boletim vai para o site e é apresentado no seminário on-line.</p></div>
+      </div>
+
+      <div class="comp">
+        <div><h3>Competências da equipe</h3><p class="note" style="font-size:.9rem;margin-top:4px">Áreas de atuação dos professores que coordenam o núcleo.</p></div>
+        <div class="comp-list">
+          <span>Mercados e cadeias de produção animal</span><span>Comercialização agrícola</span><span>Relações de troca e preços</span><span>Matriz insumo-produto</span><span>Competitividade de sistemas agroindustriais</span><span>Desenvolvimento regional</span><span>Econometria espacial</span><span>Complexidade econômica regional</span><span>Bioeconomia e análise emergética</span><span>Aquicultura e mercado do pescado</span><span>Relações institucionais no agronegócio</span><span>Estudos prospectivos</span>
+        </div>
+      </div>
+      <div class="actions"><a class="btn primary" href="#contato">Fale com a equipe</a><a class="btn ghost" href="#calculadora">Calcular a relação de troca</a></div>
+    </div>
+  </section>
+
+  <section id="calculadora">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Para o produtor</span>
+          <h2>Calculadora de relação de troca</h2>
+          <p>Quanto do seu produto você precisa vender para comprar o insumo? Digite os preços da sua região ou use o exemplo com as cotações mais recentes.</p>
+        </div>
+      </div>
+      <div class="calc">
+        <form class="card" id="calc-form" autocomplete="off">
+          <div class="presets" id="presets" role="group" aria-label="Exemplos prontos"></div>
+          <div class="field"><label for="prod-n">O que você vende (produto)</label><div class="row"><input id="prod-n" type="text"><input id="prod-u" type="text" aria-label="Unidade do produto"></div></div>
+          <div class="field"><label for="prod-p">Preço do produto (R$ por unidade)</label><input id="prod-p" type="number" min="0" step="0.01" inputmode="decimal"></div>
+          <div class="field"><label for="ins-n">O que você compra (insumo)</label><div class="row"><input id="ins-n" type="text"><input id="ins-u" type="text" aria-label="Unidade do insumo"></div></div>
+          <div class="field"><label for="ins-p">Preço do insumo (R$ por unidade)</label><input id="ins-p" type="number" min="0" step="0.01" inputmode="decimal"><small id="calc-src"></small></div>
+        </form>
+        <div class="card result" id="calc-out" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cotacoes" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Mercado</span>
+          <h2>Cotações e indicadores</h2>
+          <p>Câmbio, juros e inflação se atualizam sozinhos. Os indicadores Cepea são lançados pela coordenação toda semana.</p>
+        </div>
+      </div>
+      <div class="grid12">
+        <div class="card span7"><div class="tscroll"><table id="tbl-ind"><thead><tr><th>Indicador</th><th class="r">Valor</th><th>Referência</th><th class="r">Variação</th><th>Fonte</th></tr></thead><tbody></tbody></table></div></div>
+        <div class="span5" style="display:grid;gap:22px">
+          <div class="card"><h3>Dólar comercial</h3><div class="sub">R$ por US$, últimas 20 cotações</div><div id="ch-dolar"></div><div class="src" id="src-dolar"></div></div>
+          <div class="card"><h3>Inflação (IPCA 12 meses)</h3><div class="sub">%, últimos 12 meses</div><div id="ch-ipca"></div><div class="src" id="src-ipca"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="df-ride">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Nosso território</span>
+          <h2>Agro do DF e da RIDE</h2>
+          <p id="ride-nota"></p>
+        </div>
+      </div>
+      <h3 style="margin-bottom:12px">Você sabia? <span class="note" style="font-family:var(--f-body);font-weight:700">Toque no cartão para ver a resposta</span></h3>
+      <div class="facts" id="facts"></div>
+      <div class="kpis" id="kpis"></div>
+      <div class="grid12">
+        <div class="card span6"><h3 id="pam-t"></h3><div class="sub">Principais produtos, R$ milhões</div><div id="ch-pam"></div><div class="src" id="src-pam"></div></div>
+        <div class="card span6"><h3 id="ppm-t"></h3><div class="sub">Mil cabeças (galináceos em milhões)</div><div id="ch-ppm"></div><div class="src" id="src-ppm"></div></div>
+        <div class="card span12"><h3 id="ride-t"></h3><div class="sub">Quinze maiores municípios pelo valor da produção agrícola, R$ milhões</div><div class="legend"><span><i style="background:var(--bar)"></i>Goiás e Minas Gerais</span><span><i style="background:var(--bar-2)"></i>Distrito Federal</span></div><div id="ch-ride"></div><div class="src" id="src-ride"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="conjuntura" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Conjuntura</span>
+          <h2>Brasil e Mundo</h2>
+          <p>Como vai a agropecuária no PIB, o PIB do agronegócio, os preços internacionais dos alimentos e as notícias do setor.</p>
+        </div>
+      </div>
+      <div class="grid12">
+        <div class="card span4" id="pib"></div>
+        <div class="card span4" id="pibagro"></div>
+        <div class="card span4" id="faosub"></div>
+      </div>
+      <div class="fluxo-t" id="noticias">
+        <h3>Notícias do agro</h3>
+        <a href="https://www.instagram.com/neagroans/">Siga @neagroans no Instagram</a>
+      </div>
+      <div class="news" id="news" style="margin-top:14px"></div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <div class="wrap about">
+      <div>
+        <span class="eyebrow">Quem somos</span>
+        <h2 style="margin:6px 0 14px">Programa de Extensão da FAV/UnB</h2>
+        <p class="lead">O NEAGRO-DF organiza os dados das cadeias produtivas do Distrito Federal e Entorno e transforma números em informação útil para quem produz, ensina e decide.</p>
+        <p>Começou em 2023 como Projeto de Extensão da Faculdade de Agronomia e Medicina Veterinária e tornou-se Programa de Extensão em 2024. Os estudantes de Gestão de Agronegócios aprendem na prática a coletar, tratar e interpretar dados de mercado.</p>
+        <div class="actions">
+          <a class="btn ghost" href="https://sigaa.unb.br/sigaa/link/public/extensao/visualizacaoAcaoExtensao/12658">Programa no SIGAA</a>
+          <a class="btn ghost" href="http://fav.unb.br/">Site da FAV</a>
+        </div>
+      </div>
+      <div>
+        <div class="people" id="people"></div>
+        <div class="roster" id="roster"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Fale conosco</span>
+          <h2>Do que você precisa?</h2>
+          <p>Produtor rural, cooperativa, órgão público, empresa ou estudante: conte qual é a sua demanda. A equipe do NEAGRO-DF analisa o pedido e responde por e-mail, indicando como podemos ajudar.</p>
+        </div>
+      </div>
+      <div class="contato">
+        <div class="dm-side">
+          <div class="card">
+            <h3>Como funciona</h3>
+            <ol class="dm-passos">
+              <li><b>Você descreve a demanda</b><span>Preencha o formulário com o que precisa e para quando.</span></li>
+              <li><b>A equipe analisa</b><span>A coordenação avalia o pedido e indica a equipe da cadeia mais adequada.</span></li>
+              <li><b>Respondemos por e-mail</b><span>Com a informação, a proposta de trabalho ou a orientação sobre onde encontrar o dado.</span></li>
+            </ol>
+            <h3 style="margin-top:16px">Exemplos de demandas</h3>
+            <div class="comp-list dm-ex">
+              <span>Preços e séries de uma cadeia</span><span>Relação de troca da minha atividade</span><span>Estudo ou diagnóstico regional</span><span>Palestra, curso ou dia de campo</span><span>Parceria institucional</span><span>Entrevista e imprensa</span>
+            </div>
+          </div>
+          <div class="canais" id="canais"></div>
+        </div>
+        <form class="card" id="fc-form" novalidate>
+          <div class="form-grid">
+            <div class="field"><label for="fc-nome">Nome</label><input id="fc-nome" type="text" autocomplete="name" required><span class="err" id="e-nome"></span></div>
+            <div class="field"><label for="fc-email">E-mail</label><input id="fc-email" type="email" autocomplete="email" required><span class="err" id="e-email"></span></div>
+            <div class="field"><label for="fc-tel">Telefone ou WhatsApp <small>(opcional)</small></label><input id="fc-tel" type="tel" autocomplete="tel"></div>
+            <div class="field"><label for="fc-perfil">Você é</label>
+              <select id="fc-perfil"><option>Produtor rural</option><option>Cooperativa ou associação</option><option>Órgão público ou instituição</option><option>Empresa do agronegócio</option><option>Estudante ou pesquisador</option><option>Imprensa</option><option>Outro</option></select></div>
+            <div class="field"><label for="fc-inst">Propriedade ou instituição <small>(opcional)</small></label><input id="fc-inst" type="text" autocomplete="organization"></div>
+            <div class="field"><label for="fc-mun">Município e UF <small>(opcional)</small></label><input id="fc-mun" type="text" placeholder="Ex.: Planaltina, DF"></div>
+            <div class="field"><label for="fc-tipo">Tipo de demanda</label>
+              <select id="fc-tipo"><option>Dados e preços de uma cadeia</option><option>Análise ou estudo sob medida</option><option>Relação de troca da minha atividade</option><option>Palestra, curso ou capacitação</option><option>Parceria institucional</option><option>Imprensa</option><option>Dúvida sobre o boletim ou os indicadores</option><option>Quero participar da equipe</option><option>Outro</option></select></div>
+            <div class="field"><label for="fc-cadeia">Cadeia de interesse</label>
+              <select id="fc-cadeia"><option>Várias ou não se aplica</option><option>Suinocultura</option><option>Bovinocultura de corte</option><option>Bovinocultura de leite</option><option>Avicultura de corte</option><option>Avicultura de postura</option><option>Caprinocultura e ovinocultura</option><option>Piscicultura</option><option>Grãos e insumos</option><option>Morango</option></select></div>
+            <div class="field full"><label for="fc-msg">Descreva sua necessidade</label><textarea id="fc-msg" required placeholder="Ex.: Preciso da série de preços do suíno vivo no DF dos últimos 12 meses para negociar com o frigorífico."></textarea><span class="err" id="e-msg"></span></div>
+            <div class="field full"><label for="fc-prazo">Para quando você precisa? <small>(opcional)</small></label><input id="fc-prazo" type="text" placeholder="Ex.: até o fim de novembro"></div>
+            <div class="field full dm-ok"><label><input id="fc-ok" type="checkbox"> Autorizo o NEAGRO-DF a usar estes dados apenas para analisar e responder à minha demanda.</label><span class="err" id="e-ok"></span></div>
+          </div>
+          <div class="actions" style="margin-top:4px"><button class="btn primary" type="submit">Enviar demanda</button></div>
+          <div id="fc-out" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section id="fontes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Transparência</span>
+          <h2>De onde vêm os números</h2>
+          <p>Cada dado do portal tem fonte, endereço de consulta e data de extração. Os automáticos são renovados pelo robô de atualização; os manuais, pela coordenação.</p>
+        </div>
+      </div>
+      <details class="card fontes-det">
+        <summary>Ver fontes, metodologia e créditos das fotografias</summary>
+        <div class="tscroll" style="margin-top:14px"><table id="tbl-src"><thead><tr><th>Dado</th><th>Fonte</th><th>Endpoint</th><th>Extração</th><th>Modo</th></tr></thead><tbody></tbody></table></div>
+        <h3 style="margin-top:24px">Créditos das fotografias</h3>
+        <div class="credits" id="credits"></div>
+      </details>
+      <div class="datasites">
+        <a class="card" href="https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2017/resultados-definitivos"><b>Censo Agropecuário (IBGE)</b><span>Retrato censitário do campo brasileiro, com tabelas por município.</span></a>
+        <a class="card" href="https://www.conab.gov.br/info-agro"><b>Conab, Informações Agropecuárias</b><span>Safras, custos de produção, preços e mercado hortigranjeiro.</span></a>
+        <a class="card" href="https://sistemasweb.agricultura.gov.br/pages/AGROSTAT.html"><b>Agrostat (MAPA)</b><span>Comércio exterior do agronegócio por produto, mercado e UF.</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <b>NEAGRO-DF, Universidade de Brasília</b>
+      <p class="muted">Faculdade de Agronomia e Medicina Veterinária (FAV), <em>Campus</em> Universitário Darcy Ribeiro, Brasília-DF, CEP 70910-900.</p>
+      <p class="muted" style="margin-top:8px" id="stamp"></p>
+    </div>
+    <div>
+      <b>Publicações</b>
+      <p><a href="#boletins">Boletins de mercado</a></p>
+      <p><a href="#painel">Indicadores do mês</a></p>
+      <p><a href="#fontes">Fontes e metodologia</a></p>
+    </div>
+    <div>
+      <b>Contato</b>
+      <p id="ft-email"></p>
+      <p id="ft-tel"></p>
+      <p><a href="#contato">Fale conosco</a></p>
+      <p><a href="https://www.instagram.com/neagroans/">Instagram @neagroans</a></p>
+    </div>
+  </div>
+  <div class="wrap inst-links">
+    <a href="https://www.unb.br/">Universidade de Brasília</a>
+    <a href="http://fav.unb.br/">FAV/UnB</a>
+    <a href="http://ouvidoria.unb.br/">Ouvidoria UnB</a>
+    <a href="https://unb.br/administrativo/acesso-a-informacao/">Acesso à informação</a>
+    <a href="https://unb.br/institucional/transparencia-e-prestacao-de-contas">Transparência e prestação de contas</a>
+    <span class="muted">Copyright © <span id="ano"></span> Universidade de Brasília. Todos os direitos reservados.</span>
+  </div>
+</footer>
+
+
+<script id="snapshot-dados" type="application/json">{"atualizado_em": "2026-10-28T17:45:00-03:00", "indicadores": [{"id": "dolar", "nome": "Dólar comercial", "valor": 5.3414, "unidade": "R$/US$", "casas": 4, "referencia": "28/10/2026", "variacao_pct": 3.11, "variacao_desc": "no mês (desde 30/09)", "grupo": "macro", "serie": [["30/09", 5.1803], ["01/10", 5.2073], ["02/10", 5.2232], ["05/10", 4.9853], ["06/10", 4.9692], ["07/10", 4.9929], ["08/10", 5.0113], ["09/10", 4.9886], ["13/10", 5.009], ["14/10", 5.0435], ["15/10", 5.0515], ["16/10", 5.082], ["19/10", 5.0558], ["20/10", 5.0134], ["21/10", 5.027], ["22/10", 5.0377], ["23/10", 5.0371], ["26/10", 5.4998], ["27/10", 5.334], ["28/10", 5.3414]], "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)", "link": "https://www3.bcb.gov.br/sgspub/", "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.10813/dados/ultimos/20?formato=json", "extraido_em": "2026-10-28", "automatico": true}, {"id": "selic", "nome": "Selic meta", "valor": 13.75, "unidade": "% a.a.", "casas": 2, "referencia": "vigente em out/2026", "grupo": "macro", "fonte": "Banco Central do Brasil, SGS série 432 (meta Selic definida pelo Copom)", "link": "https://www.bcb.gov.br/controleinflacao/taxaselic", "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/1?formato=json", "extraido_em": "2026-10-28", "automatico": true}, {"id": "ipca12", "nome": "IPCA 12 meses", "valor": 4.58, "unidade": "%", "casas": 2, "referencia": "set/2026", "variacao_desc": "ago/2026: 4,22%", "grupo": "macro", "serie": [["out/25", 4.68], ["nov/25", 4.46], ["dez/25", 4.26], ["jan/26", 4.44], ["fev/26", 3.81], ["mar/26", 4.14], ["abr/26", 4.39], ["mai/26", 4.72], ["jun/26", 4.64], ["jul/26", 4.44], ["ago/26", 4.22], ["set/26", 4.58]], "fonte": "IBGE via Banco Central do Brasil, SGS série 13522 (IPCA acumulado em 12 meses)", "link": "https://www.ibge.gov.br/estatisticas/economicas/precos-e-custos/9256-indice-nacional-de-precos-ao-consumidor-amplo.html", "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados/ultimos/12?formato=json", "extraido_em": "2026-10-28", "automatico": true}, {"id": "boi", "nome": "Boi gordo Cepea/Esalq", "valor": 386.3, "unidade": "R$/@", "casas": 2, "referencia": "27/10/2026", "variacao_pct": 6.04, "variacao_desc": "no mês", "grupo": "precos", "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo)", "link": "https://www.cepea.org.br/br/indicador/boi-gordo.aspx", "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública", "extraido_em": "2026-10-28", "automatico": false}, {"id": "soja", "nome": "Soja Paranaguá Cepea/Esalq", "valor": 157.41, "unidade": "R$/sc 60 kg", "casas": 2, "referencia": "27/10/2026", "variacao_pct": -2.57, "variacao_desc": "no mês", "grupo": "precos", "fonte": "Indicador da Soja Cepea/Esalq Paranaguá", "link": "https://www.cepea.org.br/br/indicador/soja.aspx", "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública", "extraido_em": "2026-10-28", "automatico": false}, {"id": "milho", "nome": "Milho Esalq/B3", "valor": 64.87, "unidade": "R$/sc 60 kg", "casas": 2, "referencia": "27/10/2026", "variacao_pct": -5.53, "variacao_desc": "no mês", "grupo": "precos", "fonte": "Indicador do Milho Esalq/B3", "link": "https://www.cepea.org.br/br/indicador/milho.aspx", "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública", "extraido_em": "2026-10-28", "automatico": false}, {"id": "fao", "nome": "Índice FAO de preços de alimentos", "valor": 136.0, "unidade": "pontos", "casas": 1, "referencia": "set/2026", "variacao_pct": 1.5, "variacao_desc": "sobre ago/2026", "grupo": "mundo", "fonte": "FAO, Food Price Index, conforme Canal Rural (02/10/2026)", "link": "https://www.fao.org/worldfoodsituation/FoodPricesIndex/en", "endpoint": "https://www.fao.org/worldfoodsituation/FoodPricesIndex/en (CSV mensal)", "extraido_em": "2026-10-28", "automatico": true}], "brasil": {"pib_trimestral": {"titulo": "PIB do Brasil, 2º trimestre de 2026", "linhas": [{"rotulo": "PIB total", "tri": 0.5, "anual": 2.0}, {"rotulo": "Agropecuária", "tri": 2.8, "anual": 6.8}], "nota": "Variação sobre o trimestre anterior (com ajuste sazonal) e sobre o mesmo trimestre de 2025.", "fonte": "IBGE, Contas Nacionais Trimestrais, conforme Canal Rural (01/09/2026)", "link": "https://www.canalrural.com.br/agricultura/agronegocio/agropecuaria-cresce-28-e-impulsiona-pib-que-avanca-05-no-2o-trimestre-de-2026/", "endpoint": "https://apisidra.ibge.gov.br/values/t/5932/n1/all/v/6564/p/last%201/c11255/90687,90707", "extraido_em": "2026-10-20"}, "pib_agro_cepea": {"titulo": "PIB do agronegócio (Cepea/Esalq e CNA)", "texto": "Após forte avanço em 2025, o PIB do agronegócio recuou 2,01% no 1º trimestre de 2026, segundo o Cepea.", "fonte": "Cepea/Esalq e CNA, release do PIB-Agro", "link": "https://cepea.org.br/br/releases/pib-agro-cepea-apos-forte-avanco-em-2025-pib-do-agro-recua-2-no-1-tri.aspx", "extraido_em": "2026-10-20"}, "fao_subindices": {"titulo": "Índice FAO, variação em setembro de 2026", "linhas": [{"rotulo": "Açúcar", "valor": 6.1}, {"rotulo": "Cereais", "valor": 5.1}, {"rotulo": "Óleos vegetais", "valor": 0.9}, {"rotulo": "Lácteos", "valor": -0.1}, {"rotulo": "Carnes", "valor": -1.1}], "fonte": "FAO, conforme Canal Rural (02/10/2026)", "link": "https://www.canalrural.com.br/economia/indice-de-alimentos-da-fao-sobe-15-em-setembro/", "extraido_em": "2026-10-20"}}, "df": {"pam": {"titulo": "Valor da produção agrícola do Distrito Federal, 2025", "unidade": "R$ mil", "total": 1880752, "produtos": [["Soja", 639922], ["Milho", 430535], ["Feijão", 140016], ["Tomate", 105000], ["Sorgo", 88549], ["Morango", 69803], ["Alho", 68782], ["Pimentão", 39780], ["Goiaba", 37097], ["Café", 33343], ["Mandioca", 29482], ["Abacate", 27804]], "fonte": "IBGE, Produção Agrícola Municipal (PAM), tabela 5457", "link": "https://sidra.ibge.gov.br/tabela/5457", "endpoint": "https://apisidra.ibge.gov.br/values/t/5457/n3/53/v/215/p/last%201/c782/allxt", "extraido_em": "2026-10-20"}, "ppm": {"titulo": "Efetivo dos rebanhos do Distrito Federal, 2025", "unidade": "cabeças", "rebanhos": [["Galináceos", 8164577], ["Suínos", 146753], ["Bovinos", 76003], ["Equinos", 17150], ["Ovinos", 15156], ["Caprinos", 3327], ["Bubalinos", 509]], "fonte": "IBGE, Pesquisa da Pecuária Municipal (PPM), tabela 3939", "link": "https://sidra.ibge.gov.br/tabela/3939", "endpoint": "https://apisidra.ibge.gov.br/values/t/3939/n3/53/v/all/p/last%201/c79/allxt", "extraido_em": "2026-10-20"}}, "ride": {"titulo": "Valor da produção agrícola na RIDE-DF, 2025", "unidade": "R$ mil", "nota": "RIDE-DF segundo a Lei Complementar nº 163/2018: Distrito Federal, 29 municípios de Goiás e 4 de Minas Gerais.", "municipios": [["Brasília", "DF", 5300108, 1880752], ["Abadiânia", "GO", 5200100, 153650], ["Água Fria de Goiás", "GO", 5200175, 713126], ["Águas Lindas de Goiás", "GO", 5200258, 13278], ["Alexânia", "GO", 5200308, 113346], ["Alto Paraíso de Goiás", "GO", 5200605, 187465], ["Alvorada do Norte", "GO", 5200803, 33163], ["Barro Alto", "GO", 5203203, 218872], ["Cabeceiras", "GO", 5204003, 465515], ["Cavalcante", "GO", 5205307, 14168], ["Cidade Ocidental", "GO", 5205497, 86744], ["Cocalzinho de Goiás", "GO", 5205513, 181462], ["Corumbá de Goiás", "GO", 5205802, 161673], ["Cristalina", "GO", 5206206, 5447580], ["Flores de Goiás", "GO", 5207907, 196353], ["Formosa", "GO", 5208004, 389700], ["Goianésia", "GO", 5208608, 292626], ["Luziânia", "GO", 5212501, 1214123], ["Mimoso de Goiás", "GO", 5213053, 182157], ["Niquelândia", "GO", 5214606, 613827], ["Novo Gama", "GO", 5215231, 10242], ["Padre Bernardo", "GO", 5215603, 687477], ["Pirenópolis", "GO", 5217302, 101107], ["Planaltina", "GO", 5217609, 358752], ["Santo Antônio do Descoberto", "GO", 5219753, 36000], ["São João d'Aliança", "GO", 5220009, 633868], ["Simolândia", "GO", 5220686, 11389], ["Valparaíso de Goiás", "GO", 5221858, 1073], ["Vila Boa", "GO", 5222203, 99632], ["Vila Propício", "GO", 5222302, 531213], ["Arinos", "MG", 3104502, 100815], ["Buritis", "MG", 3109303, 1219241], ["Cabeceira Grande", "MG", 3109451, 289688], ["Unaí", "MG", 3170404, 2580368]], "fonte": "IBGE, Produção Agrícola Municipal (PAM), tabela 5457, valor total da produção", "link": "https://sidra.ibge.gov.br/tabela/5457", "endpoint": "https://apisidra.ibge.gov.br/values/t/5457/n6/{códigos}/v/215/p/last%201/c782/0", "extraido_em": "2026-10-20"}, "noticias": [{"titulo": "Soja cai até 4,2% em outubro, enquanto boi gordo sobe 3,7%", "veiculo": "Canal Rural", "data": "2026-10-10", "tema": "Preços", "link": "https://www.canalrural.com.br/agricultura/agronegocio/soja-cai-ate-42-em-outubro-enquanto-boi-gordo-sobe-37/"}, {"titulo": "Índice de alimentos da FAO sobe 1,5% em setembro", "veiculo": "Canal Rural", "data": "2026-10-02", "tema": "Mundo", "link": "https://www.canalrural.com.br/economia/indice-de-alimentos-da-fao-sobe-15-em-setembro/"}, {"titulo": "Agropecuária cresce 2,8% e impulsiona PIB, que avança 0,5% no 2º trimestre de 2026", "veiculo": "Canal Rural", "data": "2026-09-01", "tema": "Macroeconomia", "link": "https://www.canalrural.com.br/agricultura/agronegocio/agropecuaria-cresce-28-e-impulsiona-pib-que-avanca-05-no-2o-trimestre-de-2026/"}, {"titulo": "PIB-Agro/Cepea: após forte avanço em 2025, PIB do agro recua 2% no 1º trimestre", "veiculo": "Cepea/Esalq", "data": null, "tema": "PIB do agro", "link": "https://cepea.org.br/br/releases/pib-agro-cepea-apos-forte-avanco-em-2025-pib-do-agro-recua-2-no-1-tri.aspx"}]}</script>
+<script id="snapshot-boletins" type="application/json">{"_instrucoes": "Para publicar um boletim novo, acrescente um objeto no início da lista 'edicoes' (a mais recente primeiro). O site destaca automaticamente a primeira edição. Campos: serie (animal | tilapia | morango), numero, data (AAAA-MM-DD), titulo, cadeias (lista), resumo (2 a 3 frases), destaques (até 3 frases curtas), pdf (link direto do arquivo).", "series": [{"id": "animal", "nome": "Informações de Mercado da Produção Animal", "periodicidade": "Mensal", "descricao": "Levantamento semanal de preços de insumos (milho e farelo de soja) e de produtos das cadeias de produção animal nas praças de interesse do Distrito Federal e Entorno, com relações de troca e preços deflacionados.", "cadeias": ["Suinocultura", "Bovinocultura de corte", "Bovinocultura de leite", "Avicultura de corte", "Avicultura de postura", "Caprinocultura e ovinocultura", "Piscicultura", "Insumos"], "coordenacao": "Prof. Marlon Vinícius Brisola e Profa. Mayra Batista Bitencourt Fagundes", "acervo": [{"rotulo": "2026", "link": "https://drive.google.com/drive/folders/1y9kC1L_vhePxyCGWAqWFPnF98zo3_0it?usp=sharing"}, {"rotulo": "2025", "link": "https://drive.google.com/drive/folders/1nlvGQVJlPczhxGwvYdKxPdkg_Ye0WpKJ?usp=sharing"}, {"rotulo": "2024.2", "link": "https://drive.google.com/drive/folders/12YdyQ-VTkTWLqvT5Pkam_fTCruQOSh58?usp=sharing"}, {"rotulo": "2024.1", "link": "https://drive.google.com/drive/folders/12L8dEHtHBPzqOuSO9kfYMo6qanXV5wxN?usp=sharing"}, {"rotulo": "2023", "link": "https://drive.google.com/drive/folders/1273KhGq45kKCXD97-SXoc_qdtBce0SVY?usp=sharing"}]}, {"id": "morango", "nome": "Informativo Semestral do Morango", "periodicidade": "Semestral", "descricao": "Índice de Relação de Troca (IRT) do morango no Distrito Federal: quantidade de produto necessária para adquirir uma unidade comercial de cada insumo selecionado. Projeto de extensão Bioeconomia no agronegócio.", "cadeias": ["Morango", "Insumos"], "coordenacao": "Profa. Elen Presotto", "acervo": [{"rotulo": "2024/2", "link": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/EeBcbL4dKvVKr5F9ElTwDx8BP97MJqRHrInH6gBtjLV2AA?e=nLOhf5"}, {"rotulo": "2024/1", "link": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/EU4DYebcX4xHhLkOEl7YhtsBKuu18rELwabRkm-5sjixzw?e=fPfB3o"}, {"rotulo": "2023/2", "link": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/Ec1llS3EzUNOu9I_sxRccB4Bzs8Ec0OTLpwRNxHCmaV-Tg?e=icVccY"}, {"rotulo": "2023/1", "link": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/Ec-VSKEvDKxOhwupoF3mSlcBlGdIuQTzvigPmuvE2Bo4EA?e=DoQCzX"}, {"rotulo": "2022/2", "link": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/ESRjfzGyapNNso0b2Bcr4KMBQFtwkQiORCjAvoQbbJTj2g?e=cXNxEE"}]}, {"id": "tilapia", "nome": "Indicador de Preço da Tilápia no DF", "periodicidade": "Em implantação", "descricao": "Indicador de preços da tilápia inteira in natura nas propriedades rurais do Distrito Federal, mercado com cerca de 782 aquicultores e consumo per capita de pescado acima da média nacional.", "cadeias": ["Piscicultura"], "coordenacao": "Prof. Thiago Dias Trombeta", "acervo": []}], "edicoes": [{"serie": "animal", "numero": "190626", "data": "2026-06-19", "titulo": "Boletim de Mercado da Produção Animal do DF e Entorno", "cadeias": ["Suinocultura", "Bovinocultura de corte", "Insumos"], "resumo": "Edição com os preços de insumos e produtos das cadeias de produção animal acompanhadas pelo NEAGRO-DF, relações de troca entre insumo e produto e preços deflacionados pelo IPCA e IGP-DI.", "destaques": [], "pdf": "https://drive.google.com/drive/folders/1y9kC1L_vhePxyCGWAqWFPnF98zo3_0it?usp=sharing", "pdf_e_pasta": true}]}</script>
+<script id="snapshot-fotos" type="application/json">{"_instrucoes": "Fotografias do portal, todas com licença livre do Wikimedia Commons. Ao trocar uma foto, atualize autor, licença e link. Fotos próprias do NEAGRO-DF podem substituir estas, com crédito à equipe.", "fotos": {"cerrado": {"arquivo": "img/fotos/cerrado.jpg", "titulo": "Lavoura no Cerrado", "autor": "Carlos Ebert", "licenca": "CC BY 2.0", "licenca_link": "https://creativecommons.org/licenses/by/2.0", "fonte": "https://commons.wikimedia.org/wiki/File:Agriculture_in_Cerrado_(12311148555).jpg"}, "boi": {"arquivo": "img/fotos/boi.jpg", "titulo": "Gado Nelore em pastagem", "autor": "Carlos Ebert", "licenca": "CC BY 2.0", "licenca_link": "https://creativecommons.org/licenses/by/2.0", "fonte": "https://commons.wikimedia.org/wiki/File:Nelore_cattle_Brasil.jpg"}, "leite": {"arquivo": "img/fotos/leite.jpg", "titulo": "Ordenha em granja leiteira, Jaborá (SC)", "autor": "Alcimar Luiz Callegari", "licenca": "CC BY-SA 4.0", "licenca_link": "https://creativecommons.org/licenses/by-sa/4.0", "fonte": "https://commons.wikimedia.org/wiki/File:Jabor%C3%A1_SC_-_Granja_Adelir_Ant%C3%B4nio_Calegari.jpg"}, "suino": {"arquivo": "img/fotos/suino.jpg", "titulo": "Suínos ao ar livre", "autor": "kallerna", "licenca": "CC BY-SA 4.0", "licenca_link": "https://creativecommons.org/licenses/by-sa/4.0", "fonte": "https://commons.wikimedia.org/wiki/File:Pig_farm_Vampula_9.jpg"}, "galinha": {"arquivo": "img/fotos/galinha.jpg", "titulo": "Galinhas caipiras", "autor": "Jonathan Wilkins", "licenca": "CC BY-SA 3.0", "licenca_link": "https://creativecommons.org/licenses/by-sa/3.0", "fonte": "https://commons.wikimedia.org/wiki/File:Galinha_Caipira_feeding.jpg"}, "ovino": {"arquivo": "img/fotos/ovino.jpg", "titulo": "Ovinos Santa Inês", "autor": "Agriculturasp", "licenca": "CC BY 2.0", "licenca_link": "https://creativecommons.org/licenses/by/2.0", "fonte": "https://commons.wikimedia.org/wiki/File:Ovinos_Santa_Ines.jpg"}, "tilapia": {"arquivo": "img/fotos/tilapia.jpg", "titulo": "Tilápia-do-nilo", "autor": "Bjørn Christian Tørrissen", "licenca": "CC BY-SA 3.0", "licenca_link": "https://creativecommons.org/licenses/by-sa/3.0", "fonte": "https://commons.wikimedia.org/wiki/File:Oreochromis-niloticus-Nairobi.JPG"}, "morango": {"arquivo": "img/fotos/morango.jpg", "titulo": "Colheita de morango", "autor": "Marc-Lautenbacher", "licenca": "CC BY-SA 4.0", "licenca_link": "https://creativecommons.org/licenses/by-sa/4.0", "fonte": "https://commons.wikimedia.org/wiki/File:Strawberry_harvest_in_Quebec,_Canada.jpg"}, "milho": {"arquivo": "img/fotos/milho.jpg", "titulo": "Colheita de milho, Dourados (MS)", "autor": "Valter Campanato/Agência Brasil", "licenca": "CC BY 3.0 BR", "licenca_link": "https://creativecommons.org/licenses/by/3.0/br/", "fonte": "https://commons.wikimedia.org/wiki/File:Dourados_MS_milho_(Valter_Campanato)4set2009.jpg"}, "soja": {"arquivo": "img/fotos/soja.jpg", "titulo": "Colheita de soja", "autor": "Tiago Firmino Boaven… (usuário do Panoramio)", "licenca": "CC BY 3.0", "licenca_link": "https://creativecommons.org/licenses/by/3.0", "fonte": "https://commons.wikimedia.org/wiki/File:Colheitadeira_de_soja._-_panoramio.jpg"}}}</script>
+<script id="snapshot-contato" type="application/json">{"_instrucoes": "Canais de contato e recebimento de demandas. Para receber as demandas direto na base do painel, publique a regra da coleção 'demandas' no Firebase (ver guia de implantação) e troque 'firestore_demandas' para true. Alternativa: informe em 'formulario_endpoint' o endereço de um serviço de formulários. Com os dois desligados, o formulário prepara a mensagem para o visitante enviar pelo próprio e-mail.", "email": "secgeagro@unb.br", "telefone": "(61) 3107-6628", "endereco": "Campus Universitário Darcy Ribeiro, ICC Sul, Brasília-DF, CEP 70910-900", "instagram": "https://www.instagram.com/neagroans/", "instagram_rotulo": "@neagroans", "formulario_endpoint": "", "fonte": "https://neagrodf.unb.br/contato/", "extraido_em": "2026-10-21", "firestore_demandas": false, "firestore_projeto": "neagro---df"}</script>
+<script id="snapshot-painel" type="application/json">{"mes": "set/26", "mes_anterior": "ago/26", "base": "mai/26", "indices": {"ipca": 0.82, "igpdi": 1.5}, "resumo": [{"item": "Milho (GO)", "variacao": 9.53}, {"item": "Farelo de soja (GO)", "variacao": 29.53}, {"item": "Suíno vivo (DF)", "variacao": 6.07}, {"item": "Boi gordo (SP, Barretos, Scot)", "variacao": 5.33}, {"item": "Frango vivo (GO)", "variacao": 8.35}, {"item": "Ovo (GO)", "variacao": -11.11}, {"item": "Leite (GO)", "variacao": 0.7}], "semaforo": [{"cadeia": "Suinocultura", "relacao": "Milho × suíno vivo (DF)", "irt": 10.2308, "casas": 1, "ler": "kg de suíno por saca de milho", "media": 8.0145, "meses": 21, "sinal": "desfavoravel", "conferir": false}, {"cadeia": "Suinocultura", "relacao": "Farelo de soja × suíno vivo (DF)", "irt": 361.1912, "casas": 1, "ler": "kg de suíno por tonelada de farelo", "media": 225.5148, "meses": 21, "sinal": "desfavoravel", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Milho × boi gordo (GO)", "irt": 0.1719, "casas": 2, "ler": "@ de boi por saca de milho", "media": 0.1833, "meses": 21, "sinal": "favoravel", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Milho × boi gordo (MG)", "irt": 0.1862, "casas": 2, "ler": "@ de boi por saca de milho", "media": 0.2077, "meses": 21, "sinal": "favoravel", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Milho × boi gordo (MS)", "irt": 0.1549, "casas": 2, "ler": "@ de boi por saca de milho", "media": 0.1755, "meses": 21, "sinal": "favoravel", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Milho × boi gordo (MT)", "irt": 0.1495, "casas": 2, "ler": "@ de boi por saca de milho", "media": 0.1595, "meses": 21, "sinal": "favoravel", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Milho × boi gordo (PR)", "irt": 0.1627, "casas": 2, "ler": "@ de boi por saca de milho", "media": 0.1735, "meses": 21, "sinal": "favoravel", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Milho × boi gordo (SC)", "irt": 0.1748, "casas": 2, "ler": "@ de boi por saca de milho", "media": 0.1896, "meses": 21, "sinal": "favoravel", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Milho × boi gordo (SP)", "irt": 0.1798, "casas": 2, "ler": "@ de boi por saca de milho", "media": 0.1954, "meses": 21, "sinal": "favoravel", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Farelo de soja × boi gordo (GO)", "irt": 6.0331, "casas": 2, "ler": "@ de boi por tonelada de farelo", "media": 5.5008, "meses": 21, "sinal": "desfavoravel", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Farelo de soja × boi gordo (MT)", "irt": 5.8523, "casas": 2, "ler": "@ de boi por tonelada de farelo", "media": 5.2409, "meses": 21, "sinal": "desfavoravel", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Farelo de soja × boi gordo (SC)", "irt": 6.0724, "casas": 2, "ler": "@ de boi por tonelada de farelo", "media": 5.9764, "meses": 21, "sinal": "normal", "conferir": false}, {"cadeia": "Bovinocultura de corte", "relacao": "Farelo de soja × boi gordo (SP)", "irt": 5.9769, "casas": 2, "ler": "@ de boi por tonelada de farelo", "media": 5.4485, "meses": 21, "sinal": "desfavoravel", "conferir": false}, {"cadeia": "Avicultura de corte", "relacao": "Milho × frango vivo (GO)", "irt": 10.4677, "casas": 1, "ler": "kg de frango por saca de milho", "media": 10.1837, "meses": 21, "sinal": "normal", "conferir": false}, {"cadeia": "Avicultura de corte", "relacao": "Farelo de soja × frango vivo (GO)", "irt": 367.3405, "casas": 1, "ler": "kg de frango por tonelada de farelo", "media": 307.7307, "meses": 21, "sinal": "desfavoravel", "conferir": false}, {"cadeia": "Avicultura de postura", "relacao": "Milho × ovo (GO)", "irt": 13.275, "casas": 2, "ler": "dúzias de ovos por saca de milho", "media": 10.118, "meses": 21, "sinal": "desfavoravel", "conferir": false}, {"cadeia": "Avicultura de postura", "relacao": "Farelo de soja × ovo (GO)", "irt": 465.8545, "casas": 1, "ler": "dúzias de ovos por tonelada de farelo", "media": 307.6967, "meses": 21, "sinal": "desfavoravel", "conferir": false}, {"cadeia": "Bovinocultura de leite", "relacao": "Milho × leite (GO)", "irt": 20.2813, "casas": 2, "ler": "litros de leite por saca de milho", "media": 22.2576, "meses": 21, "sinal": "favoravel", "conferir": false}, {"cadeia": "Bovinocultura de leite", "relacao": "Farelo de soja × leite (GO)", "irt": 711.7222, "casas": 1, "ler": "litros de leite por tonelada de farelo", "media": 672.5602, "meses": 21, "sinal": "desfavoravel", "conferir": false}], "precos": {"suino": {"nome": "Suíno vivo DF", "valor": 5.675, "unidade": "R$/kg", "casas": 2, "variacao": 6.07}, "milho": {"nome": "Milho DF", "valor": 58.06, "unidade": "R$/sc 60 kg", "casas": 2, "variacao": 8.58}, "soja": {"nome": "Soja DF", "valor": 142.27, "unidade": "R$/sc 60 kg", "casas": 2, "variacao": 8.6}, "ovo": {"nome": "Ovo DF", "valor": 4.3623, "unidade": "R$/dúzia", "casas": 2, "variacao": -2.04}, "leite": {"nome": "Leite DF", "valor": 2.76, "unidade": "R$/litro", "casas": 2, "variacao": 1.1}, "frango": {"nome": "Frango vivo GO", "valor": 5.58, "unidade": "R$/kg", "casas": 2, "variacao": 8.35}, "tilapia": {"nome": "Tilápia (Grandes Lagos)", "valor": 9.48, "unidade": "R$/kg", "casas": 2, "variacao": -0.42}, "farelo": {"nome": "Farelo de soja GO", "valor": 2049.76, "unidade": "R$/t", "casas": 2, "variacao": 29.53}}, "series": {"meses": ["set/25", "out/25", "nov/25", "dez/25", "jan/26", "fev/26", "mar/26", "abr/26", "mai/26", "jun/26", "jul/26", "ago/26", "set/26"], "irt": {"Milho × suíno vivo (DF)": [6.0188, 6.3345, 6.0523, 6.5205, 7.647, 8.3566, 8.5688, 9.5854, 9.6149, 8.9112, 9.0799, 9.9944, 10.2308], "Milho × boi gordo (SP)": [0.1978, 0.1905, 0.1864, 0.1982, 0.1944, 0.1758, 0.1759, 0.1669, 0.1731, 0.1745, 0.1731, 0.1786, 0.1798], "Milho × frango vivo (GO)": [8.6451, 8.2672, 8.9951, 10.3869, 10.0308, 10.167, 11.74, 11.5284, 10.2354, 9.7423, 9.7907, 10.3553, 10.4677], "Milho × ovo (GO)": [9.5945, 9.983, 10.4863, 12.9275, 11.8545, 10.228, 8.6607, 9.2555, 9.9352, 9.2954, 9.7154, 10.7737, 13.275], "Milho × leite (GO)": [19.3792, 20.668, 23.9739, 27.4976, 28.5027, 27.3476, 25.399, 21.4634, 19.1309, 18.3551, 18.2383, 18.6469, 20.2813]}, "precos": {"sdf": [9.05, 8.64, 8.8, 8.8, 7.96, 7.15, 7.05, 6.175, 5.92, 6.025, 5.88, 5.35, 5.675], "milho_df": [54.47, 54.73, 53.26, 57.38, 60.87, 59.75, 60.41, 59.19, 56.92, 53.69, 53.39, 53.47, 58.06], "ovdf": [4.998, 4.4877, 4.3733, 4.4753, 4.1667, 5.0667, 5.4667, 5.4323, 5.2037, 5.3333, 4.829, 4.4533, 4.3623], "ledf": [2.65, 2.5, 2.43, 2.3, 2.3, 2.2, 2.23, 2.59, 2.6, 2.65, 2.67, 2.73, 2.76]}}, "destaques": ["Milho × suíno vivo (DF)", "Milho × boi gordo (SP)", "Milho × frango vivo (GO)", "Milho × leite (GO)", "Milho × ovo (GO)"], "gta_suinos": {"entrada": 6224, "saida": 15351}, "meses_registrados": 21, "relacoes_esperadas": 19, "alertas": [{"tipo": "valor", "campo": "frsp", "mes": "set/26", "texto": "Frango vivo SP em set/26: 1.42, contra mediana de 5.5 nas demais praças. Conferir unidade e série da fonte."}], "gta": {"mes": "set/26", "parcial": "out/26", "ate": "19/10/2026", "linhas": [{"especie": "Suínos", "entrada": 6224, "saida": 15351, "interno": null}, {"especie": "Bovinos", "entrada": 1495, "saida": 1080, "interno": 3756}, {"especie": "Aves vivas", "entrada": 783038, "saida": 13027719, "interno": 9367332}, {"especie": "Caprinos", "entrada": 270, "saida": 19, "interno": 11}, {"especie": "Ovinos", "entrada": 134, "saida": 50, "interno": 104}]}, "fonte": {"nome": "NEAGRO-DF (FAV/UnB), levantamento mensal de preços e relações de troca", "link": "", "endpoint": "base de dados interna do NEAGRO-DF", "gta_fonte": "SEAGRI-DF, GTAs emitidas e recebidas no DF, compiladas pelo NEAGRO-DF", "extraido_em": "2026-10-28"}}</script>
+<script>/* Cálculo do semáforo de relações de troca a partir da base do Painel NEAGRO-DF.
+   Usado em dois lugares, com o mesmo código:
+   1) pela página do portal, que lê a base do painel ao vivo;
+   2) pelo robô (scripts/painel.js), que grava o retrato data/painel.json.
+   Regras da aba Metodologia do painel:
+   IRT = preço do insumo ÷ preço do produto, no mês;
+   sinal comparado à média simples de todos os meses registrados (inclusive o atual):
+   favorável se o IRT estiver mais de 5% abaixo da média, desfavorável se mais de 5% acima, normal no intervalo. */
+(function (raiz) {
+  "use strict";
+  var MESES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+  function ordem(m) { var p = String(m).split("/"); return (+p[1]) * 100 + MESES.indexOf(p[0]); }
+  function valor(x) {
+    if (!x) return null;
+    if ("doubleValue" in x) return x.doubleValue;
+    if ("integerValue" in x) return +x.integerValue;
+    if ("stringValue" in x) return x.stringValue;
+    return null;
+  }
+  function plano(f) { var o = {}; for (var k in (f || {})) { var v = valor(f[k]); if (v !== null) o[k] = v; } return o; }
+
+  /* Junta o registro mensal (coleção "meses") com os lançamentos por aba (coleção "lancamentos"),
+     que o painel aplica por cima do registro do mês. */
+  function mesclar(docsMeses, docsLanc) {
+    var por = {};
+    (docsMeses || []).forEach(function (d) { var f = plano(d.fields); if (f.mes) por[f.mes] = f; });
+    (docsLanc || []).slice().sort(function (a, b) {
+      return String(valor((a.fields || {}).atualizado) || "").localeCompare(String(valor((b.fields || {}).atualizado) || ""));
+    }).forEach(function (d) {
+      var f = d.fields || {}, mes = valor(f.mes);
+      var c = f.campos && f.campos.mapValue ? plano(f.campos.mapValue.fields) : {};
+      if (!mes) return;
+      por[mes] = Object.assign(por[mes] || { mes: mes }, c);
+    });
+    return Object.keys(por).map(function (k) { return por[k]; }).sort(function (a, b) { return ordem(a.mes) - ordem(b.mes); });
+  }
+
+  var UFS_BOI_MILHO = ["GO", "MG", "MS", "MT", "PR", "SC", "SP"], UFS_BOI_FARELO = ["GO", "MT", "SC", "SP"];
+  function milho(uf) { return uf === "GO" ? "milho" : "milho_" + uf.toLowerCase(); }
+  function farelo(uf) { return uf === "GO" ? "farelo" : "farelo_" + uf.toLowerCase(); }
+  var RELACOES = [
+    { cadeia: "Suinocultura", relacao: "Milho × suíno vivo (DF)", a: "milho_df", b: "sdf", ler: "kg de suíno por saca de milho", casas: 1 },
+    { cadeia: "Suinocultura", relacao: "Farelo de soja × suíno vivo (DF)", a: "farelo", b: "sdf", ler: "kg de suíno por tonelada de farelo", casas: 1 }
+  ]
+    .concat(UFS_BOI_MILHO.map(function (uf) { return { cadeia: "Bovinocultura de corte", relacao: "Milho × boi gordo (" + uf + ")", a: milho(uf), b: "ub_" + uf.toLowerCase(), ler: "@ de boi por saca de milho", casas: 2 }; }))
+    .concat(UFS_BOI_FARELO.map(function (uf) { return { cadeia: "Bovinocultura de corte", relacao: "Farelo de soja × boi gordo (" + uf + ")", a: farelo(uf), b: "ub_" + uf.toLowerCase(), ler: "@ de boi por tonelada de farelo", casas: 2 }; }))
+    .concat([
+      { cadeia: "Avicultura de corte", relacao: "Milho × frango vivo (GO)", a: "milho", b: "frgo", ler: "kg de frango por saca de milho", casas: 1 },
+      { cadeia: "Avicultura de corte", relacao: "Farelo de soja × frango vivo (GO)", a: "farelo", b: "frgo", ler: "kg de frango por tonelada de farelo", casas: 1 },
+      { cadeia: "Avicultura de postura", relacao: "Milho × ovo (GO)", a: "milho", b: "ovgo", ler: "dúzias de ovos por saca de milho", casas: 2 },
+      { cadeia: "Avicultura de postura", relacao: "Farelo de soja × ovo (GO)", a: "farelo", b: "ovgo", ler: "dúzias de ovos por tonelada de farelo", casas: 1 },
+      { cadeia: "Bovinocultura de leite", relacao: "Milho × leite (GO)", a: "milho", b: "lego", ler: "litros de leite por saca de milho", casas: 2 },
+      { cadeia: "Bovinocultura de leite", relacao: "Farelo de soja × leite (GO)", a: "farelo", b: "lego", ler: "litros de leite por tonelada de farelo", casas: 1 }
+    ]);
+
+  var RESUMO = [
+    ["Milho (GO)", "milho"], ["Farelo de soja (GO)", "farelo"], ["Suíno vivo (DF)", "sdf"],
+    ["Boi gordo (SP, Barretos, Scot)", "scb_spbar"], ["Frango vivo (GO)", "frgo"], ["Ovo (GO)", "ovgo"], ["Leite (GO)", "lego"]
+  ];
+  var PRECOS_DF = [
+    ["suino", "Suíno vivo DF", "sdf", "R$/kg", 2], ["milho", "Milho DF", "milho_df", "R$/sc 60 kg", 2],
+    ["soja", "Soja DF", "soja_df", "R$/sc 60 kg", 2], ["ovo", "Ovo DF", "ovdf", "R$/dúzia", 2],
+    ["leite", "Leite DF", "ledf", "R$/litro", 2], ["frango", "Frango vivo GO", "frgo", "R$/kg", 2],
+    ["tilapia", "Tilápia (Grandes Lagos)", "tilgl", "R$/kg", 2], ["farelo", "Farelo de soja GO", "farelo", "R$/t", 2]
+  ];
+  var DESTAQUES = ["Milho × suíno vivo (DF)", "Milho × boi gordo (SP)", "Milho × frango vivo (GO)", "Milho × leite (GO)", "Milho × ovo (GO)"];
+  function pos(x) { return typeof x === "number" && isFinite(x) && x > 0; }
+
+  /* Conferência automática da base do painel.
+     1) Estrutura: campos que o portal usa e que sumiram da base (o painel pode ter renomeado campos ou praças).
+     2) Valores atípicos: preço de uma praça muito distante das demais praças do mesmo produto no mesmo mês
+        (menos da metade ou mais de 1,5 vez a mediana das outras), ou variação de mais de 40% sobre o mês anterior. */
+  var PRACAS = {
+    "Frango vivo": { frgo: "GO", frpr: "PR", frsc: "SC", frsp: "SP", fres: "ES" },
+    "Milho": { milho: "GO", milho_df: "DF", milho_mg: "MG", milho_ms: "MS", milho_mt: "MT", milho_pr: "PR", milho_sc: "SC", milho_sp: "SP" },
+    "Farelo de soja": { farelo: "GO", farelo_mt: "MT", farelo_sc: "SC", farelo_sp: "SP" },
+    "Boi gordo": { ub_go: "GO", ub_mg: "MG", ub_ms: "MS", ub_mt: "MT", ub_pr: "PR", ub_sc: "SC", ub_sp: "SP" }
+  };
+  function mediana(v) { v = v.slice().sort(function (a, b) { return a - b; }); var n = v.length; return n % 2 ? v[(n - 1) / 2] : (v[n / 2 - 1] + v[n / 2]) / 2; }
+  function camposUsados() {
+    var s = {};
+    RELACOES.forEach(function (r) { s[r.a] = 1; s[r.b] = 1; });
+    RESUMO.forEach(function (x) { s[x[1]] = 1; });
+    PRECOS_DF.forEach(function (p) { s[p[2]] = 1; });
+    return Object.keys(s);
+  }
+  function verificar(meses, atual, anterior) {
+    var alertas = [], i = meses.indexOf(atual), recentes = meses.slice(Math.max(0, i - 3), i);
+    camposUsados().forEach(function (k) {
+      var nunca = !meses.some(function (m) { return k in m; });
+      var sumiu = !nunca && !(k in atual) && recentes.length && recentes.every(function (m) { return k in m; });
+      if (nunca) alertas.push({ tipo: "estrutura", campo: k, mes: atual.mes, texto: "Campo " + k + " não existe na base do painel. O painel pode ter mudado o nome do campo; ajuste src/painel-calc.js." });
+      else if (sumiu) alertas.push({ tipo: "estrutura", campo: k, mes: atual.mes, texto: "Campo " + k + " lançado nos meses anteriores e ausente em " + atual.mes + " (lançamento pendente ou campo renomeado)." });
+    });
+    Object.keys(PRACAS).forEach(function (prod) {
+      var ks = Object.keys(PRACAS[prod]).filter(function (k) { return pos(atual[k]); });
+      ks.forEach(function (k) {
+        var outros = ks.filter(function (j) { return j !== k; }).map(function (j) { return atual[j]; });
+        if (outros.length < 2) return;
+        var md = mediana(outros), r = atual[k] / md;
+        if (r < 0.5 || r > 1.5) alertas.push({ tipo: "valor", campo: k, mes: atual.mes,
+          texto: prod + " " + PRACAS[prod][k] + " em " + atual.mes + ": " + atual[k] + ", contra mediana de " + (+md.toFixed(2)) + " nas demais praças. Conferir unidade e série da fonte." });
+      });
+    });
+    if (anterior) camposUsados().forEach(function (k) {
+      if (pos(atual[k]) && pos(anterior[k]) && Math.abs(atual[k] / anterior[k] - 1) > 0.4 && !alertas.some(function (a) { return a.campo === k; }))
+        alertas.push({ tipo: "valor", campo: k, mes: atual.mes, texto: "Campo " + k + " variou " + Math.round((atual[k] / anterior[k] - 1) * 100) + "% de " + anterior.mes + " para " + atual.mes + ". Conferir." });
+    });
+    return alertas;
+  }
+
+  function calcular(docsMeses, docsLanc, docsIndices) {
+    var meses = mesclar(docsMeses, docsLanc);
+    var comDados = meses.filter(function (m) { return pos(m.milho) && pos(m.farelo); });
+    if (!comDados.length) return null;
+    var atual = comDados[comDados.length - 1], anterior = comDados.length > 1 ? comDados[comDados.length - 2] : null;
+    var ate = meses.filter(function (m) { return ordem(m.mes) <= ordem(atual.mes); });
+    var semaforo = [], alertas = verificar(meses, atual, anterior);
+    var suspeito = {}; alertas.forEach(function (a) { if (a.tipo === "valor") suspeito[a.campo] = 1; });
+    RELACOES.forEach(function (r) {
+      var serie = ate.filter(function (m) { return pos(m[r.a]) && pos(m[r.b]); }).map(function (m) { return m[r.a] / m[r.b]; });
+      if (!(pos(atual[r.a]) && pos(atual[r.b])) || !serie.length) return;
+      var irt = atual[r.a] / atual[r.b];
+      var media = serie.reduce(function (s, v) { return s + v; }, 0) / serie.length;
+      var desvio = irt / media - 1;
+      semaforo.push({ cadeia: r.cadeia, relacao: r.relacao, irt: +irt.toFixed(4), casas: r.casas, ler: r.ler,
+        media: +media.toFixed(4), meses: serie.length, sinal: desvio < -0.05 ? "favoravel" : desvio > 0.05 ? "desfavoravel" : "normal", conferir: !!(suspeito[r.a] || suspeito[r.b]) });
+    });
+    var resumo = RESUMO.map(function (x) {
+      var a = atual[x[1]], b = anterior ? anterior[x[1]] : null;
+      return pos(a) && pos(b) ? { item: x[0], variacao: +((a / b - 1) * 100).toFixed(2) } : null;
+    }).filter(Boolean);
+    var precos = {};
+    PRECOS_DF.forEach(function (p) {
+      var a = atual[p[2]], b = anterior ? anterior[p[2]] : null;
+      if (pos(a)) precos[p[0]] = { nome: p[1], valor: +a.toFixed(4), unidade: p[3], casas: p[4], variacao: pos(b) ? +((a / b - 1) * 100).toFixed(2) : null };
+    });
+    /* Séries para os gráficos do portal: últimos 13 meses até o mês em análise. */
+    var janela = ate.slice(-13), series = { meses: janela.map(function (m) { return m.mes; }), irt: {}, precos: {} };
+    RELACOES.forEach(function (r) {
+      if (DESTAQUES.indexOf(r.relacao) < 0) return;
+      series.irt[r.relacao] = janela.map(function (m) { return pos(m[r.a]) && pos(m[r.b]) ? +(m[r.a] / m[r.b]).toFixed(4) : null; });
+    });
+    ["sdf", "milho_df", "ovdf", "ledf"].forEach(function (k) {
+      series.precos[k] = janela.map(function (m) { return pos(m[k]) ? +m[k].toFixed(4) : null; });
+    });
+    var idx = (docsIndices || []).map(function (d) { return plano(d.fields); }).filter(function (i) { return i.mes === atual.mes; })[0] || {};
+    return {
+      mes: atual.mes, mes_anterior: anterior ? anterior.mes : null, base: "mai/26",
+      indices: { ipca: typeof idx.var_ipca === "number" ? idx.var_ipca : null, igpdi: typeof idx.var_igpdi === "number" ? idx.var_igpdi : null },
+      resumo: resumo, semaforo: semaforo, precos: precos, series: series, destaques: DESTAQUES,
+      gta_suinos: pos(atual.gta_ent_tot) || pos(atual.gta_sai_tot) ? { entrada: atual.gta_ent_tot || 0, saida: atual.gta_sai_tot || 0 } : null,
+      meses_registrados: comDados.length,
+      relacoes_esperadas: RELACOES.length,
+      alertas: alertas
+    };
+  }
+
+  /* Movimentação de animais (GTA) no DF, a partir do quadro GTA_DF publicado no código do painel. */
+  var ESPECIES = [["bov", "Bovinos"], ["ave", "Aves vivas"], ["cap", "Caprinos"], ["ovi", "Ovinos"]];
+  function gta(G, suinos, mesSuinos) {
+    if (!G || !G.meses) return null;
+    var i = G.meses.length - 1;
+    if (G.parcial && G.meses[i] === G.parcial) i -= 1;
+    if (i < 0) return null;
+    var linhas = ESPECIES.map(function (e) {
+      var s = G[e[0]]; if (!s || !s.entrada || !s.saida) return null;
+      return { especie: e[1], entrada: s.entrada.total[i] || 0, saida: s.saida.total[i] || 0, interno: s.interno ? (s.interno.total[i] || 0) : null };
+    }).filter(Boolean);
+    if (suinos && mesSuinos === G.meses[i]) linhas.unshift({ especie: "Suínos", entrada: suinos.entrada, saida: suinos.saida, interno: null });
+    return { mes: G.meses[i], parcial: G.parcial || null, ate: G.fim || null, linhas: linhas };
+  }
+
+  var api = { calcular: calcular, gta: gta, mesclar: mesclar, ordem: ordem, camposUsados: camposUsados };
+  if (typeof module !== "undefined" && module.exports) module.exports = api; else raiz.PainelNEAGRO = api;
+})(typeof window !== "undefined" ? window : this);
+</script>
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt=(v,c=2)=>Number(v).toLocaleString("pt-BR",{minimumFractionDigits:c,maximumFractionDigits:c});
+const fdate=iso=>{if(!iso)return"";const [y,m,d]=iso.split("-");return d?`${d}/${m}/${y}`:`${m}/${y}`};
+const MESES=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+const fmes=iso=>{const [y,m]=iso.split("-");return `${MESES[+m-1]} de ${y}`};
+const parse=id=>{try{return JSON.parse(document.getElementById(id).textContent)}catch(e){return null}};
+
+let D=parse("snapshot-dados"), B=parse("snapshot-boletins"), P=parse("snapshot-painel");
+const MESCURTO={jan:"janeiro",fev:"fevereiro",mar:"março",abr:"abril",mai:"maio",jun:"junho",jul:"julho",ago:"agosto",set:"setembro",out:"outubro",nov:"novembro",dez:"dezembro"};
+const mesExt=m=>{if(!m)return"";const [a,y]=m.split("/");return `${MESCURTO[a]||a} de 20${y}`};
+const SIG={favoravel:"Favorável",normal:"Normal",desfavoravel:"Desfavorável"};
+const sinalDe=rel=>P&&P.semaforo?P.semaforo.find(x=>x.relacao===rel):null;
+const pp=k=>P&&P.precos?P.precos[k]:null;
+const FT=(parse("snapshot-fotos")||{fotos:{}}).fotos;
+const foto=k=>FT[k]?FT[k].arquivo:"";
+const bg=k=>`background-image:url('${foto(k)}')`;
+const credito=k=>{const f=FT[k];return f?`Foto: ${esc(f.autor)}, <a href="${esc(f.fonte)}">${esc(f.licenca)}</a>`:""};
+const ind=id=>D.indicadores.find(i=>i.id===id);
+const reb=n=>{const r=D.df.ppm.rebanhos.find(x=>x[0]===n);return r?r[1]:null};
+const pamv=n=>{const r=D.df.pam.produtos.find(x=>x[0]===n);return r?r[1]:null};
+const kn=v=>v==null?"s/d":Number(v).toLocaleString("pt-BR");
+
+$("#hero-credit").innerHTML=credito("cerrado");
+
+/* ---------- Gráficos SVG ---------- */
+function hbars(el,rows,{fmtv=v=>fmt(v,1),hi=()=>false,labelW=150,W=560}={}){
+  const rowH=26,pad=6,H=rows.length*rowH+pad*2,max=Math.max(...rows.map(r=>r[1])),plotW=W-labelW-70;let g="";
+  rows.forEach((r,i)=>{const y=pad+i*rowH,w=Math.max(3,plotW*r[1]/max);
+    g+=`<text class="lbl" x="${labelW-8}" y="${y+16}" text-anchor="end">${esc(r[0])}</text><rect x="${labelW}" y="${y+4}" width="${w.toFixed(1)}" height="${rowH-9}" rx="4" fill="${hi(r)?"var(--bar-2)":"var(--bar)"}"></rect><text class="val" x="${(labelW+w+6).toFixed(1)}" y="${y+16}">${fmtv(r[1])}</text>`});
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Gráfico de barras">${g}</svg>`;
+}
+function line(el,serie,{casas=2,suf=""}={}){
+  const W=520,H=170,l=44,r=14,t=16,b=26,vals=serie.map(s=>s[1]);let mn=Math.min(...vals),mx=Math.max(...vals);const sp=(mx-mn)||1;mn-=sp*.15;mx+=sp*.2;
+  const x=i=>l+(W-l-r)*i/(serie.length-1),y=v=>t+(H-t-b)*(1-(v-mn)/(mx-mn));let grid="";
+  for(let k=0;k<=3;k++){const v=mn+(mx-mn)*k/3;grid+=`<line x1="${l}" x2="${W-r}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="var(--grid)"></line><text x="${l-6}" y="${(y(v)+4).toFixed(1)}" text-anchor="end">${fmt(v,casas)}</text>`}
+  const pts=serie.map((s,i)=>`${x(i).toFixed(1)},${y(s[1]).toFixed(1)}`).join(" ");const step=Math.ceil(serie.length/5);let xl="";
+  serie.forEach((s,i)=>{if(i%step===0||i===serie.length-1)xl+=`<text x="${x(i).toFixed(1)}" y="${H-8}" text-anchor="middle">${esc(s[0])}</text>`});
+  const last=serie[serie.length-1];
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Gráfico de linha">${grid}<polygon points="${l},${H-b} ${pts} ${W-r},${H-b}" fill="var(--bar)" opacity=".14"></polygon><polyline points="${pts}" fill="none" stroke="var(--bar)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="${x(serie.length-1).toFixed(1)}" cy="${y(last[1]).toFixed(1)}" r="5" fill="var(--bar-2)" stroke="var(--surface)" stroke-width="2"></circle><text class="val" x="${(x(serie.length-1)-10).toFixed(1)}" y="${(y(last[1])-10).toFixed(1)}" text-anchor="end">${fmt(last[1],casas)}${suf}</text>${xl}</svg>`;
+}
+function diverg(el,rows){
+  const W=360,rowH=28,H=rows.length*rowH+10,l=110,mid=l+(W-l-50)/2,max=Math.max(...rows.map(r=>Math.abs(r[1]))),sc=(W-l-60)/2/max;
+  let g=`<line x1="${mid}" x2="${mid}" y1="0" y2="${H}" stroke="var(--line)" stroke-width="2"></line>`;
+  rows.forEach((r,i)=>{const y=5+i*rowH,w=Math.abs(r[1])*sc,neg=r[1]<0;
+    g+=`<text class="lbl" x="${l-8}" y="${y+17}" text-anchor="end">${esc(r[0])}</text><rect x="${(neg?mid-w:mid).toFixed(1)}" y="${y+5}" width="${Math.max(2,w).toFixed(1)}" height="${rowH-10}" rx="4" fill="${neg?"var(--down)":"var(--up)"}"></rect><text class="val" x="${(neg?mid-w-5:mid+w+5).toFixed(1)}" y="${y+17}" text-anchor="${neg?"end":"start"}">${r[1]>0?"+":""}${fmt(r[1],1)}%</text>`});
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Variações percentuais">${g}</svg>`;
+}
+const srcLine=o=>`Fonte: <a href="${esc(o.link)}">${esc(o.fonte)}</a>. Extraído em ${fdate(o.extraido_em)}.`;
+
+/* ---------- Renderização ---------- */
+function renderTicker(){
+  const tkInd=D.indicadores.map(i=>{const v=i.variacao_pct,cls=v==null?"":(v>=0?"up":"down");
+    return `<div class="tk" title="${esc(i.fonte)}"><span class="n">${esc(i.nome)}</span><span class="v">${fmt(i.valor,i.casas)}<small>${esc(i.unidade)}</small></span><span class="d ${cls}">${v==null?esc(i.referencia):(v>=0?"▲ ":"▼ ")+fmt(Math.abs(v),2)+"% "+esc(i.variacao_desc||"")}</span></div>`}).join("");
+  const tkPn=(P&&P.precos?["suino","milho","ovo","leite"].map(k=>{const x=pp(k);if(!x)return"";const v=x.variacao;const cls=v==null?"":(v>=0?"up":"down");
+      return `<div class="tk" title="NEAGRO-DF, ${esc(P.mes)}"><span class="n">${esc(x.nome)} · NEAGRO</span><span class="v">${fmt(x.valor,x.casas)}<small>${esc(x.unidade)}</small></span><span class="d ${cls}">${v==null?esc(P.mes):(v>=0?"▲ ":"▼ ")+fmt(Math.abs(v),1)+"% sobre "+esc(P.mes_anterior)}</span></div>`}).join(""):"");
+  $("#ticker").innerHTML=tkPn+tkInd
+    +`<div class="tk-stamp">Atualizado em ${new Date(D.atualizado_em).toLocaleString("pt-BR",{dateStyle:"short",timeStyle:"short"})}</div>`;
+}
+/* Gráfico da relação de troca: linha do mês a mês, média tracejada e faixa normal (média ± 5%). */
+function irtChart(el,meses,vals,media,casas,ler){
+  const W=640,H=250,l=46,r=16,t=18,b=28,ok=vals.filter(v=>v!=null);if(!ok.length){el.innerHTML="";return}
+  let mn=Math.min(...ok,media*.95),mx=Math.max(...ok,media*1.05);const sp=(mx-mn)||1;mn-=sp*.12;mx+=sp*.15;
+  const x=i=>l+(W-l-r)*i/Math.max(1,meses.length-1),y=v=>t+(H-t-b)*(1-(v-mn)/(mx-mn));let g="";
+  for(let k=0;k<=3;k++){const v=mn+(mx-mn)*k/3;g+=`<line x1="${l}" x2="${W-r}" y1="${y(v).toFixed(1)}" y2="${y(v).toFixed(1)}" stroke="var(--grid)"></line><text x="${l-6}" y="${(y(v)+4).toFixed(1)}" text-anchor="end">${fmt(v,casas)}</text>`}
+  g+=`<rect x="${l}" y="${y(media*1.05).toFixed(1)}" width="${W-l-r}" height="${(y(media*.95)-y(media*1.05)).toFixed(1)}" fill="var(--grid)" opacity=".75"></rect>`;
+  g+=`<line x1="${l}" x2="${W-r}" y1="${y(media).toFixed(1)}" y2="${y(media).toFixed(1)}" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4"></line><text x="${W-r}" y="${(y(media)-6).toFixed(1)}" text-anchor="end">média ${fmt(media,casas)}</text>`;
+  let d="",pen=false;vals.forEach((v,i)=>{if(v==null){pen=false;return}d+=`${pen?"L":"M"}${x(i).toFixed(1)},${y(v).toFixed(1)}`;pen=true});
+  g+=`<path d="${d}" fill="none" stroke="var(--bar)" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"></path>`;
+  const step=Math.ceil(meses.length/7);meses.forEach((m,i)=>{if(i%step===0||i===meses.length-1)g+=`<text x="${x(i).toFixed(1)}" y="${H-8}" text-anchor="middle">${esc(m)}</text>`});
+  vals.forEach((v,i)=>{if(v==null)return;const last=i===vals.length-1;
+    g+=`<circle cx="${x(i).toFixed(1)}" cy="${y(v).toFixed(1)}" r="${last?5.5:3.5}" fill="${last?"var(--bar-2)":"var(--bar)"}" stroke="var(--surface)" stroke-width="2"></circle>`;
+    if(last)g+=`<text class="val" x="${(x(i)-10).toFixed(1)}" y="${(y(v)-11).toFixed(1)}" text-anchor="end">${fmt(v,casas)}</text>`;
+    const w=(W-l-r)/Math.max(1,meses.length-1);g+=`<rect x="${(x(i)-w/2).toFixed(1)}" y="${t}" width="${w.toFixed(1)}" height="${H-t-b}" fill="transparent"><title>${esc(meses[i])}: ${fmt(v,casas)} ${esc(ler)} (${v<media*.95?"favorável":v>media*1.05?"desfavorável":"normal"})</title></rect>`});
+  el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Gráfico de linha da relação de troca">${g}</svg>`;
+}
+let pnRel=null;
+function renderPainel(){
+  if(!P||!P.semaforo){$("#painel").hidden=true;return}
+  $("#painel").hidden=false;
+  $("#pn-titulo").textContent=`Relações de troca de ${mesExt(P.mes)}`;
+  const ix=P.indices||{};
+  $("#pn-chips").innerHTML=[`Mês em análise: ${P.mes}`,ix.ipca!=null?`IPCA ${P.mes}: ${ix.ipca>0?"+":""}${fmt(ix.ipca,2)}%`:"",ix.igpdi!=null?`IGP-DI ${P.mes}: ${ix.igpdi>0?"+":""}${fmt(ix.igpdi,2)}%`:"",`${P.meses_registrados} meses acompanhados`].filter(Boolean).map(t=>`<span>${esc(t)}</span>`).join("");
+  const dest=(P.destaques||[]).map(n=>P.semaforo.find(x=>x.relacao===n)).filter(Boolean);
+  $("#pn-kpis").innerHTML=dest.map(r=>{const dv=(r.irt/r.media-1)*100;
+    return `<div class="pn-kpi"><span class="k-n">${esc(r.relacao)}</span><span class="k-v">${fmt(r.irt,r.casas)}</span><span class="k-u">${esc(r.ler)}</span><span><span class="sig ${r.sinal}">${SIG[r.sinal]}</span> <span class="k-d note">${dv>=0?"+":""}${fmt(dv,1)}% sobre a média</span></span>${r.conferir?`<span class="note" style="font-size:.74rem">Valor em conferência pela equipe.</span>`:""}</div>`}).join("");
+  const S=P.series||{meses:[],irt:{},precos:{}};
+  if(!pnRel||!dest.some(r=>r.relacao===pnRel))pnRel=dest.length?dest[0].relacao:null;
+  const desenhar=()=>{const r=dest.find(x=>x.relacao===pnRel);if(!r||!S.irt[pnRel]){$("#pn-graf").innerHTML="";return}
+    $("#pn-graf-sub").textContent=`${r.relacao}: ${r.ler}, de ${S.meses[0]} a ${S.meses[S.meses.length-1]}.`;
+    irtChart($("#pn-graf"),S.meses,S.irt[pnRel],r.media,r.casas,r.ler);
+    $$("#pn-sel button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.r===pnRel?"true":"false"))};
+  $("#pn-sel").innerHTML=dest.map(r=>`<button type="button" data-r="${esc(r.relacao)}" aria-pressed="false">${esc(r.relacao.replace("Milho × ",""))}</button>`).join("");
+  $$("#pn-sel button").forEach(b=>b.onclick=()=>{pnRel=b.dataset.r;desenhar()});
+  desenhar();
+  $("#pn-resumo-sub").textContent=`Variação dos preços em relação a ${mesExt(P.mes_anterior)}`;
+  $("#pn-resumo").innerHTML=(P.resumo||[]).map(r=>`<li><span>${esc(r.item)}</span><span class="delta ${r.variacao>=0?"up":"down"}">${r.variacao>=0?"▲":"▼"} ${fmt(Math.abs(r.variacao),1)}%</span></li>`).join("");
+  const n=t=>P.semaforo.filter(x=>x.sinal===t).length;
+  $("#pn-cont-sub").textContent=`${P.semaforo.length} relações entre milho ou farelo de soja e suíno, boi, frango, ovo e leite, em várias praças.`;
+  $("#pn-cont").innerHTML=["favoravel","normal","desfavoravel"].map(t=>`<span class="sig ${t}">${n(t)} ${SIG[t].toLowerCase()}${n(t)===1?"":"s"}</span>`).join("");
+  const SP=[["sdf","suino","R$/kg"],["milho_df","milho","R$/saca 60 kg"],["ovdf","ovo","R$/dúzia"],["ledf","leite","R$/litro"]];
+  $("#pn-spark").innerHTML=SP.map(([k,c],i)=>{const x=pp(c);return x&&S.precos[k]?`<div class="card"><div class="s-n">${esc(x.nome)}</div><div class="s-v">R$ ${fmt(x.valor,x.casas)} <small class="note">${esc(x.unidade.replace("R$/","por "))}</small></div><div class="note" style="font-size:.78rem">${x.variacao!=null?`${x.variacao>=0?"▲ +":"▼ "}${fmt(x.variacao,1)}% sobre ${esc(P.mes_anterior)}`:""}</div><div id="pn-sp-${i}"></div></div>`:""}).join("");
+  SP.forEach(([k],i)=>{const el=$("#pn-sp-"+i);if(!el)return;const s=S.meses.map((m,j)=>[m,S.precos[k][j]]).filter(p=>p[1]!=null);if(s.length<2)return;
+    const W=260,H=64,v=s.map(p=>p[1]),mn=Math.min(...v),mx=Math.max(...v),x=j=>3+(W-6)*j/(s.length-1),y=q=>4+(H-8)*(1-(q-mn)/((mx-mn)||1));
+    const pts=s.map((p,j)=>`${x(j).toFixed(1)},${y(p[1]).toFixed(1)}`).join(" ");
+    el.innerHTML=`<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Evolução do preço de ${esc(s[0][0])} a ${esc(s[s.length-1][0])}"><polygon points="3,${H} ${pts} ${W-3},${H}" fill="var(--bar)" opacity=".12"></polygon><polyline points="${pts}" fill="none" stroke="var(--bar)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"></polyline><circle cx="${x(s.length-1).toFixed(1)}" cy="${y(v[v.length-1]).toFixed(1)}" r="4" fill="var(--bar-2)" stroke="var(--surface)" stroke-width="2"></circle>${s.map((p,j)=>`<rect x="${(x(j)-W/s.length/2).toFixed(1)}" y="0" width="${(W/s.length).toFixed(1)}" height="${H}" fill="transparent"><title>${esc(p[0])}: R$ ${fmt(p[1],2)}</title></rect>`).join("")}</svg><div class="s-r">${esc(s[0][0])} a ${esc(s[s.length-1][0])} · mín. R$ ${fmt(mn,2)} · máx. R$ ${fmt(mx,2)}</div>`});
+  const g=P.gta;
+  $("#pn-gta").innerHTML=g&&g.linhas?(()=>{const W=Math.max(320,Math.min(1000,($("#pn-gta").clientWidth||1000)-40)),lw=104,rowH=46,H=g.linhas.length*rowH+8,pw=Math.min(560,W-lw-90);let s="";
+    g.linhas.forEach((L,i)=>{const y0=4+i*rowH,mx=Math.max(L.entrada,L.saida)||1,sd=L.entrada-L.saida;
+      s+=`<text class="val" x="${lw-10}" y="${y0+17}" text-anchor="end">${esc(L.especie)}</text><text x="${lw-10}" y="${y0+32}" text-anchor="end">saldo ${sd>=0?"+":"−"}${Math.abs(sd)>=1e6?fmt(Math.abs(sd)/1e6,1)+" mi":kn(Math.abs(sd))}</text>`;
+      [["entrada","var(--bar)",0],["saida","var(--bar-2)",1]].forEach(([c,cor,o])=>{const w=Math.max(3,pw*L[c]/mx);
+        s+=`<rect x="${lw}" y="${y0+4+o*17}" width="${w.toFixed(1)}" height="14" rx="4" fill="${cor}"><title>${esc(L.especie)}, ${c==="entrada"?"entradas":"saídas"}: ${kn(L[c])}</title></rect><text class="val" x="${(lw+w+6).toFixed(1)}" y="${y0+15+o*17}">${kn(L[c])}</text>`});
+});
+    return `<h3>Movimentação de animais no DF, ${mesExt(g.mes)}</h3>
+    <div class="sub">Animais registrados em Guias de Trânsito Animal (GTA) que entraram no DF vindos de outras UFs e que saíram do DF. Cada espécie tem a própria escala; os números estão ao lado das barras.</div>
+    <div class="legend" style="margin-top:8px"><span><i class="lg-ent"></i>Entradas no DF</span><span><i class="lg-sai"></i>Saídas do DF</span></div>
+    <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Entradas e saídas de animais no DF por espécie">${s}</svg>
+    <div class="src">Fonte: ${esc(P.fonte.gta_fonte)}. Aves vivas em número de animais.</div>`})():"";
+  $("#pn-src").innerHTML=`Fonte: ${esc(P.fonte.nome)}. As fontes de preço de cada cadeia estão no boletim do mês. Dados de ${P.ao_vivo?"hoje":fdate(P.fonte.extraido_em)}. Relação de troca = preço do insumo ÷ preço do produto (CONAB, 2018; MELO, 1992).`;
+}
+const SERIE_FOTO={animal:"suino",morango:"morango",tilapia:"tilapia"};
+function renderBoletins(){
+  const ed=B.edicoes[0],serie=B.series.find(s=>s.id===ed.serie);
+  $("#feature").innerHTML=`
+    <div class="cover" aria-hidden="true">
+      <div class="ch"><img src="img/logo-neagro.png" alt=""><span>Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF)<br>FAV/UnB</span><img src="img/logo-unb.png" alt=""></div>
+      <div class="cn">Boletim nº ${esc(ed.numero)} · ${fdate(ed.data)}</div>
+      <div class="ct">${esc(ed.titulo)}</div>
+      <div class="cimg" style="${bg(SERIE_FOTO[ed.serie]||"suino")}"></div>
+      <div class="rows"><i></i><i></i><i></i><i></i></div>
+      <div class="tb">${"<i></i>".repeat(12)}</div>
+    </div>
+    <div class="feature-body">
+      <div><span class="tag">Edição mais recente</span></div>
+      <h3>${esc(ed.titulo)}</h3>
+      <div class="meta"><span>Nº ${esc(ed.numero)}</span><span>${fmes(ed.data)}</span><span>${esc(serie.periodicidade)}</span></div>
+      <p>${esc(ed.resumo)}</p>
+      ${ed.destaques&&ed.destaques.length?`<ul>${ed.destaques.map(d=>`<li>${esc(d)}</li>`).join("")}</ul>`:""}
+      <div class="chips">${ed.cadeias.map(c=>`<span class="chip">${esc(c)}</span>`).join("")}</div>
+      <div class="actions"><a class="btn sun" href="${esc(ed.pdf)}">${ed.pdf_e_pasta?"Abrir boletins de 2026":"Baixar o boletim (PDF)"}</a><a class="btn ghost" href="#calculadora">Calcular a relação de troca</a></div>
+      <p class="note">Coordenação: ${esc(serie.coordenacao)}.</p>
+    </div>`;
+  $("#series").innerHTML=B.series.map(s=>`
+    <div class="card serie"><div class="th" style="${bg(SERIE_FOTO[s.id]||"soja")}" role="img" aria-label="${esc((FT[SERIE_FOTO[s.id]]||{}).titulo||"")}"></div><div style="min-width:0">
+      <div class="serie-top"><h3>${esc(s.nome)}</h3><span class="per">${esc(s.periodicidade)}</span></div>
+      <p>${esc(s.descricao)}</p>
+      ${s.acervo.length?`<div class="years">${s.acervo.map(a=>`<a href="${esc(a.link)}">${esc(a.rotulo)}</a>`).join("")}</div>`:`<p class="note" style="margin-top:6px">Primeiras edições em preparação.</p>`}
+    </div></div>`).join("");
+}
+function renderCadeias(){
+  const boi=ind("boi"),milho=ind("milho"),soja=ind("soja");
+  const v=k=>{const x=pp(k);if(!x)return null;const u=x.unidade.replace("R$/","por ");return [`R$ ${fmt(x.valor,2)}`,/ DF$/.test(x.nome)?`${u} no DF (${P.mes})`:`${u}, ${x.nome} (${P.mes})`]};
+  const sl=rel=>{const x=sinalDe(rel);return x?`<p class="sigline">${esc(rel)}: <b>${fmt(x.irt,x.casas)}</b> ${esc(x.ler)} <span class="sig ${x.sinal}">${SIG[x.sinal]}</span></p>`:""};
+  const C=[
+    {n:"Bovinocultura de corte",f:"boi",d:"Arroba do boi gordo em 33 praças da Scot e relação de troca com milho e farelo de soja por estado.",s:[[`R$ ${fmt(boi.valor,2)}`,`arroba Cepea/Esalq, ${boi.referencia}`],[kn(reb("Bovinos")),"bovinos no DF"]],sig:sl("Milho × boi gordo (GO)"),calc:"boi"},
+    {n:"Bovinocultura de leite",f:"leite",d:"Leite ao produtor em dez praças, produção e vacas ordenhadas por UF.",s:[v("leite")],sig:sl("Milho × leite (GO)"),calc:"leite"},
+    {n:"Suinocultura",f:"suino",d:"Suíno vivo em oito praças, peso de carcaça, GTA no DF e exportações.",s:[v("suino"),[kn(reb("Suínos")),"suínos no DF"]],sig:sl("Milho × suíno vivo (DF)"),calc:"suino"},
+    {n:"Avicultura de corte e postura",f:"galinha",d:"Frango vivo, ovos, efetivo de galinhas e exportações de carne de frango.",s:[v("ovo"),[fmt(reb("Galináceos")/1e6,2)+" mi","galináceos no DF"]],sig:sl("Milho × ovo (GO)")},
+    {n:"Caprinocultura e ovinocultura",f:"ovino",d:"Carne e leite: carcaça de caprinos e ovinos, leite de cabra, rebanho e importações. Sem relação de troca, por serem sistemas majoritariamente a pasto.",s:[[kn(reb("Ovinos")),"ovinos no DF"],[kn(reb("Caprinos")),"caprinos no DF"]]},
+    {n:"Piscicultura",f:"tilapia",d:"Tilápia viva em quatro praças (Cepea/PeixeBR), produção por UF, GTA de peixes e comércio exterior.",s:[v("tilapia"),["782","aquicultores no DF"]]},
+    {n:"Morango",f:"morango",d:"Informativo semestral com o Índice de Relação de Troca (IRT) do morango.",s:[[`R$ ${fmt(pamv("Morango")/1000,1)} mi`,"produção no DF"]]},
+    {n:"Grãos e insumos",f:"soja",d:"Milho, farelo de soja, sorgo e soja em grãos por praça, mais IPCA e IGP-DI para deflacionar os preços.",s:[v("milho")||[`R$ ${fmt(milho.valor,2)}`,"saca de milho"],v("soja")||[`R$ ${fmt(soja.valor,2)}`,"saca de soja"]],calc:"boi"}
+  ];
+  $("#cad").innerHTML=C.map(c=>`<article class="card cad">
+    <figure class="ph"><img src="${esc(foto(c.f))}" alt="${esc((FT[c.f]||{}).titulo||c.n)}" loading="lazy"><figcaption>${credito(c.f)}</figcaption></figure>
+    <div class="bd"><h3>${esc(c.n)}</h3><p>${esc(c.d)}</p><div class="stats">${c.s.filter(Boolean).map(s=>`<div class="stat"><b>${esc(s[0])}</b><span>${esc(s[1])}</span></div>`).join("")}</div>${c.sig||""}
+    <div class="links"><a href="#boletins">Boletim</a><a href="#painel">Indicadores</a>${c.calc?`<a href="#calculadora" data-preset="${c.calc}">Calcular a troca</a>`:""}</div>
+    </div></article>`).join("");
+  $$("[data-preset]").forEach(a=>a.addEventListener("click",()=>setPreset(a.dataset.preset)));
+}
+const IND_FOTO={boi:"boi",soja:"soja",milho:"milho"}, IND_SIG={dolar:"US$",selic:"%",ipca12:"IPCA",fao:"FAO"};
+function renderIndicadores(){
+  $("#tbl-ind tbody").innerHTML=D.indicadores.map(i=>{const v=i.variacao_pct,f=IND_FOTO[i.id];
+    return `<tr><td><span class="mini"><span class="av" style="${f?bg(f):""}">${f?"":esc(IND_SIG[i.id]||"")}</span><b>${esc(i.nome)}</b></span></td><td class="r num" style="white-space:nowrap"><b>${fmt(i.valor,i.casas)}</b><br><span class="note">${esc(i.unidade)}</span></td><td class="num">${esc(i.referencia)}</td><td class="r">${v==null?"<span class='note'>–</span>":`<span class="delta ${v>=0?"up":"down"}">${v>=0?"▲":"▼"} ${fmt(Math.abs(v),2)}%</span>`}</td><td><a href="${esc(i.link)}">${esc(i.fonte.split(",")[0])}</a></td></tr>`}).join("");
+  const dol=ind("dolar"),ip=ind("ipca12");
+  if(dol&&dol.serie){line($("#ch-dolar"),dol.serie,{casas:2});$("#src-dolar").innerHTML=srcLine(dol)}
+  if(ip&&ip.serie){line($("#ch-ipca"),ip.serie,{casas:2,suf:"%"});$("#src-ipca").innerHTML=srcLine(ip)}
+}
+
+/* ---------- Calculadora ---------- */
+let presetAtual="suino";
+function presets(){
+  const boi=ind("boi"),milhoC=ind("milho"),sui=pp("suino"),mdf=pp("milho"),lei=pp("leite");
+  const L=[];
+  if(sui&&mdf)L.push({id:"suino",r:"Suíno × milho (DF)",pn:"Suíno vivo",pu:"kg",pp:sui.valor,inn:"Milho",iu:"saca 60 kg",ip:mdf.valor,fp:"suino",fi:"milho",rel:"Milho × suíno vivo (DF)",src:`Preços do DF, levantamento NEAGRO-DF, ${P.mes}.`});
+  if(lei&&mdf)L.push({id:"leite",r:"Leite × milho (DF)",pn:"Leite",pu:"litro",pp:lei.valor,inn:"Milho",iu:"saca 60 kg",ip:mdf.valor,fp:"leite",fi:"milho",src:`Preços do DF, levantamento NEAGRO-DF, ${P.mes}.`});
+  L.push({id:"boi",r:"Boi × milho",pn:"Boi gordo",pu:"arroba",pp:boi.valor,inn:"Milho",iu:"saca 60 kg",ip:mdf?mdf.valor:milhoC.valor,fp:"boi",fi:"milho",src:`Boi: ${boi.fonte}, ${boi.referencia}. Milho: ${mdf?"DF, levantamento NEAGRO-DF, "+P.mes:milhoC.fonte}.`});
+  L.push({id:"livre",r:"Meus preços",pn:"Suíno vivo",pu:"kg",pp:"",inn:"Milho",iu:"saca 60 kg",ip:mdf?mdf.valor:milhoC.valor,fp:"suino",fi:"milho",src:"Digite o preço do seu produto. O milho vem com a última cotação do DF."});
+  return L;
+}
+function setPreset(id){
+  const L=presets();const p=L.find(x=>x.id===id)||L[0];presetAtual=p.id;
+  $$("#presets button").forEach(b=>b.setAttribute("aria-pressed",String(b.dataset.p===p.id)));
+  $("#prod-n").value=p.pn;$("#prod-u").value=p.pu;$("#prod-p").value=p.pp===""?"":Number(p.pp).toFixed(2);
+  $("#ins-n").value=p.inn;$("#ins-u").value=p.iu;$("#ins-p").value=Number(p.ip).toFixed(2);$("#calc-src").textContent=p.src;calc();
+}
+function plural(u,n){if(n<2||u==="kg"||/s$/.test(u))return u;if(/^saca/.test(u))return u.replace(/^saca/,"sacas");if(/^dúzia/.test(u))return u.replace(/^dúzia/,"dúzias");return u+"s"}
+function calc(){
+  const p=presets().find(x=>x.id===presetAtual)||presets()[0];
+  const pv=parseFloat($("#prod-p").value),iv=parseFloat($("#ins-p").value);
+  const pn=$("#prod-n").value||"produto",pu=$("#prod-u").value||"unidade",inn=$("#ins-n").value||"insumo",iu=$("#ins-u").value||"unidade";
+  const pair=`<div class="pair"><div style="${bg(p.fp)}"><span>Vende: ${esc(pn)}</span></div><div style="${bg(p.fi)}"><span>Compra: ${esc(inn)}</span></div></div>`;
+  if(!(pv>0&&iv>0)){$("#calc-out").innerHTML=`<div><span class="eyebrow">Resultado</span><div class="big" style="margin-top:6px">?</div><p style="margin-top:8px">Preencha os dois preços para ver quanto de <b>${esc(pn.toLowerCase())}</b> você precisa vender para comprar uma unidade de <b>${esc(inn.toLowerCase())}</b>.</p></div>${pair}`;return}
+  const rt=iv/pv,inv=pv/iv,full=Math.floor(rt),part=rt-full;
+  let m="";if(rt>=1&&rt<=40){for(let i=0;i<full;i++)m+="<i></i>";if(part>.02)m+=`<i class="part" style="--p:${Math.round(part*100)}%"></i>`}
+  const ref=p.rel&&p.id!=="livre"?sinalDe(p.rel):null;
+  $("#calc-out").innerHTML=`<div><span class="eyebrow">Índice de relação de troca (IRT)</span>
+    <div class="big" style="margin-top:6px">${fmt(rt,rt<1?2:1)}</div>
+    <p><b>${esc(plural(pu,rt))}</b> de ${esc(pn.toLowerCase())} para comprar <b>1 ${esc(iu)}</b> de ${esc(inn.toLowerCase())}</p>
+    ${m?`<div class="meter" aria-hidden="true">${m}</div>`:""}
+    <p class="note" style="font-size:.9rem">Em outras palavras, 1 ${esc(pu)} de ${esc(pn.toLowerCase())} compra ${fmt(inv,inv<1?3:2)} ${esc(plural(iu,inv))} de ${esc(inn.toLowerCase())}. Quanto menor o IRT, maior o poder de compra do produtor.${ref?` NEAGRO-DF, ${esc(P.mes)}: média dos meses acompanhados de ${fmt(ref.media,ref.casas)}, sinal <span class="sig ${ref.sinal}">${SIG[ref.sinal]}</span>.`:""}</p></div>${pair}`;
+}
+let calcReady=false,calcTocado=false;
+function montarPresets(){
+  $("#presets").innerHTML=presets().map(p=>`<button type="button" data-p="${p.id}" aria-pressed="false">${esc(p.r)}</button>`).join("");
+  $$("#presets button").forEach(b=>b.addEventListener("click",()=>{calcTocado=false;setPreset(b.dataset.p)}));
+}
+function renderCalc(){
+  montarPresets();
+  $("#calc-form").addEventListener("input",()=>{calcTocado=true;calc()});
+  $("#calc-form").addEventListener("submit",e=>e.preventDefault());
+  setPreset(presets()[0].id);
+}
+
+/* ---------- Território ---------- */
+function renderTerritorio(){
+  const pam=D.df.pam,ppm=D.df.ppm,ride=D.ride;
+  const tot=ride.municipios.reduce((a,m)=>a+m[3],0),df=ride.municipios.find(m=>m[1]==="DF")[3];
+  const go=ride.municipios.filter(m=>m[1]==="GO").reduce((a,m)=>a+m[3],0),mg=ride.municipios.filter(m=>m[1]==="MG").reduce((a,m)=>a+m[3],0);
+  const top=[...ride.municipios].sort((a,b)=>b[3]-a[3]),ano=(pam.titulo.match(/\d{4}/)||[""])[0];
+  $("#ride-nota").textContent=ride.nota+" Valores da Produção Agrícola Municipal (PAM) e da Pesquisa da Pecuária Municipal (PPM) do IBGE.";
+  const POP_DF=2817381; // IBGE, Censo Demográfico 2022
+  const F=[
+    {f:"galinha",q:"O DF tem mais galinhas do que gente?",big:`${fmt(reb("Galináceos")/POP_DF,1)} por habitante`,t:`São ${fmt(reb("Galináceos")/1e6,2)} milhões de galináceos para ${fmt(POP_DF/1e6,2)} milhões de moradores.`,s:`IBGE, PPM ${ano} e Censo 2022`},
+    {f:"soja",q:"Qual lavoura gera mais renda no DF?",big:`${fmt(pam.produtos[0][1]/pam.total*100,0)}% vem da soja`,t:`Com o milho, os grãos somam ${fmt((pam.produtos[0][1]+pam.produtos[1][1])/pam.total*100,0)}% do valor agrícola do DF.`,s:`IBGE, PAM ${ano}`},
+    {f:"suino",q:"No DF há mais porcos ou bois?",big:`${fmt(reb("Suínos")/reb("Bovinos"),1)} porcos por boi`,t:`${kn(reb("Suínos"))} suínos contra ${kn(reb("Bovinos"))} bovinos.`,s:`IBGE, PPM ${ano}`},
+    {f:"milho",q:"Qual município puxa o agro da RIDE?",big:esc(top[0][0]),t:`Sozinho, responde por ${fmt(top[0][3]/tot*100,0)}% do valor agrícola dos ${ride.municipios.length} municípios da RIDE.`,s:`IBGE, PAM ${ano}`}
+  ];
+  $("#facts").innerHTML=F.map((f,i)=>`<button class="fact" type="button" aria-pressed="false" id="fact-${i}"><span class="in"><span class="f" style="${bg(f.f)}"><b>${esc(f.q)}</b><span>Toque para ver a resposta</span></span><span class="b"><strong>${f.big}</strong><p>${esc(f.t)}</p><small>Fonte: ${esc(f.s)}</small></span></span></button>`).join("");
+  $$(".fact").forEach(b=>b.addEventListener("click",()=>b.setAttribute("aria-pressed",String(b.getAttribute("aria-pressed")!=="true"))));
+  $("#kpis").innerHTML=[
+    ["Valor agrícola da RIDE",`R$ ${fmt(tot/1e6,2)} bi`,`${ride.municipios.length} municípios, ${ano}`],
+    ["Distrito Federal",`${fmt(df/tot*100,1)}%`,`R$ ${fmt(df/1e6,2)} bi`],
+    ["Municípios de Goiás",`${fmt(go/tot*100,1)}%`,`R$ ${fmt(go/1e6,2)} bi`],
+    ["Municípios de Minas",`${fmt(mg/tot*100,1)}%`,`R$ ${fmt(mg/1e6,2)} bi`]
+  ].map(k=>`<div class="kpi"><div class="k">${k[0]}</div><div class="v">${k[1]}</div><div class="s">${k[2]}</div></div>`).join("");
+  $("#pam-t").textContent=pam.titulo;$("#ppm-t").textContent=ppm.titulo;$("#ride-t").textContent=ride.titulo;
+  hbars($("#ch-pam"),pam.produtos.slice(0,10).map(p=>[p[0],p[1]/1000]),{labelW:90});
+  $("#src-pam").innerHTML=srcLine(pam);
+  hbars($("#ch-ppm"),ppm.rebanhos.map(r=>[r[0],r[0]==="Galináceos"?r[1]/1e6:r[1]/1e3]),{labelW:90});
+  $("#src-ppm").innerHTML=srcLine(ppm)+` População do DF: <a href="https://www.ibge.gov.br/cidades-e-estados/df">IBGE, Censo Demográfico 2022</a>.`;
+  hbars($("#ch-ride"),top.slice(0,15).map(m=>[`${m[0]} (${m[1]})`,m[3]/1000]),{labelW:210,W:1120,fmtv:v=>fmt(v,0),hi:r=>/\(DF\)$/.test(r[0])});
+  $("#src-ride").innerHTML=srcLine(ride);
+}
+function renderBrasil(){
+  const p=D.brasil.pib_trimestral,a=D.brasil.pib_agro_cepea,f=D.brasil.fao_subindices;
+  $("#pib").innerHTML=`<h3>${esc(p.titulo)}</h3><div class="sub">${esc(p.nota)}</div><table><thead><tr><th></th><th class="r">Trimestre</th><th class="r">Ano</th></tr></thead><tbody>${p.linhas.map(l=>`<tr><td><b>${esc(l.rotulo)}</b></td><td class="r"><span class="delta ${l.tri>=0?"up":"down"}">${l.tri>0?"+":""}${fmt(l.tri,1)}%</span></td><td class="r"><span class="delta ${l.anual>=0?"up":"down"}">${l.anual>0?"+":""}${fmt(l.anual,1)}%</span></td></tr>`).join("")}</tbody></table><div class="src">${srcLine(p)}</div>`;
+  $("#pibagro").innerHTML=`<h3>${esc(a.titulo)}</h3><div class="sub">Metodologia Cepea/Esalq, que o NEAGRO-DF também adota no PIB do agro do DF e da RIDE, em construção.</div><p style="font-family:var(--f-display);font-size:1.22rem;font-weight:600;line-height:1.3">${esc(a.texto)}</p><div class="src">${srcLine(a)}</div>`;
+  $("#faosub").innerHTML=`<h3>${esc(f.titulo)}</h3><div class="sub">Variação mensal dos subíndices</div><div id="ch-fao"></div><div class="src">${srcLine(f)}</div>`;
+  diverg($("#ch-fao"),f.linhas.map(l=>[l.rotulo,l.valor]));
+}
+function renderNoticias(){
+  const n=[...D.noticias].sort((a,b)=>(b.data||"").localeCompare(a.data||""));
+  $("#news").innerHTML=n.slice(0,10).map(x=>`<div class="card nw"><span class="t">${esc(x.tema)}</span><a href="${esc(x.link)}">${esc(x.titulo)}</a><div class="m"><span>${esc(x.veiculo)}</span>${x.data?`<span>${fdate(x.data)}</span>`:""}</div></div>`).join("");
+}
+function renderEquipe(){
+  const P=[["Profa. Dra. Mayra Batista Bitencourt Fagundes","Professora Titular, coordenadora","http://lattes.cnpq.br/4079190907053525","MF"],
+    ["Prof. Dr. Marlon Vinícius Brisola","Professor Associado, coordenador","http://lattes.cnpq.br/3935425474102940","MB"],
+    ["Profa. Dra. Elen Presotto","Professora Adjunta, produção vegetal e bioeconomia","http://lattes.cnpq.br/4777116367119422","EP"],
+    ["Prof. Dr. Thiago Dias Trombeta","Professor Adjunto, coordenador adjunto (piscicultura)","http://lattes.cnpq.br/2803207476967537","TT"]];
+  $("#people").innerHTML=P.map(p=>`<div class="card person"><div class="ini">${p[3]}</div><div><b>${esc(p[0])}</b><span>${esc(p[1])}</span><a href="${esc(p[2])}" style="font-size:.8rem">Currículo Lattes</a></div></div>`).join("");
+  const R=[["Suinocultura","André Marinho de Souza Filho e Matias Vicente dos Reis Mangabeiro (coordenadores de área); Ana Beatriz Liberal Dionizio; Teófilo Luiz Machado"],
+    ["Insumos e dados comuns","Dilson Thomas Fonseca e Antônio da Costa Ferreira Lima (coordenadores de área); Antônio José Lima Campos; Luiza Alvares da Silva Oliveira"],
+    ["Bovinocultura de corte e leite","Tatiana Paiva de Godoy (coordenadora de área); Rayssa Sales; Márcia Marina da Silva Brito"],
+    ["Avicultura de corte e postura","Ana Luisa Lopes Batista (coordenadora de área); Amanda Almeida Mattos; Israel Matos Vargas"],
+    ["Caprinocultura e ovinocultura","Jelson Luiz Dick (coordenador de área); Francisco Alerton Souza Mendes"],
+    ["Site","João Victor Medeiros Silva"],["Redes sociais e boletim","Kawany Cardoso Oliveira; Manuela Veloso Viegas Vidal"]];
+  $("#roster").innerHTML=R.map(r=>`<div><b>${esc(r[0])}</b>${esc(r[1])}</div>`).join("");
+}
+function renderFontes(){
+  const rows=[];D.indicadores.forEach(i=>rows.push([i.nome,i.fonte,i.link,i.endpoint,i.extraido_em,i.automatico]));
+  const add=(o,auto=true)=>rows.push([o.titulo,o.fonte,o.link,o.endpoint||"",o.extraido_em,auto]);
+  add(D.brasil.pib_trimestral);add(D.brasil.pib_agro_cepea,false);add(D.brasil.fao_subindices);add(D.df.pam);add(D.df.ppm);add(D.ride);
+  if(P&&P.fonte){rows.push(["Relações de troca e preços do DF",P.fonte.nome,"#painel",P.fonte.endpoint,P.fonte.extraido_em,true]);
+    rows.push(["Movimentação de animais no DF (GTA)",P.fonte.gta_fonte,"#painel",P.fonte.endpoint,P.fonte.extraido_em,true]);}
+  rows.push(["População do DF","IBGE, Censo Demográfico 2022","https://www.ibge.gov.br/cidades-e-estados/df","valor fixo (2.817.381 habitantes)","2026-10-20",false]);
+  $("#tbl-src tbody").innerHTML=rows.map(r=>`<tr><td><b>${esc(r[0])}</b></td><td><a href="${esc(r[2])}">${esc(r[1])}</a></td><td style="font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.74rem;word-break:break-all;min-width:220px">${esc(r[3])}</td><td class="num">${fdate(r[4])}</td><td><span class="pill ${r[5]?"auto":""}">${r[5]?"automático":"manual"}</span></td></tr>`).join("");
+  $("#credits").innerHTML=Object.values(FT).map(f=>`<div><b>${esc(f.titulo)}</b>: ${esc(f.autor)}, <a href="${esc(f.licenca_link)}">${esc(f.licenca)}</a>, via <a href="${esc(f.fonte)}">Wikimedia Commons</a>.</div>`).join("");
+  $("#stamp").textContent=`Dados atualizados em ${new Date(D.atualizado_em).toLocaleString("pt-BR",{dateStyle:"long",timeStyle:"short"})}.`;
+}
+/* ---------- Fale conosco ---------- */
+const CT=parse("snapshot-contato")||{};
+const IC={mail:'<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',
+  tel:'<svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-3 2a11 11 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>',
+  pin:'<svg viewBox="0 0 24 24"><path d="M12 21s-6-5.6-6-10a6 6 0 0 1 12 0c0 4.4-6 10-6 10z"/><circle cx="12" cy="11" r="2.2"/></svg>',
+  ig:'<svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5"/><circle cx="12" cy="12" r="3.5"/><path d="M17 7h.01"/></svg>'};
+async function copiar(txt,btn){
+  try{await navigator.clipboard.writeText(txt);btn.textContent="Copiado"}
+  catch(e){const r=document.createRange();const el=btn.previousElementSibling;if(el){r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)}btn.textContent="Selecionado, use Ctrl+C"}
+  setTimeout(()=>{btn.textContent="Copiar"},2500);
+}
+function renderContato(){
+  $("#canais").innerHTML=[
+    ["mail","E-mail",`<span class="val">${esc(CT.email)}</span><button type="button" class="copybtn" data-copy="${esc(CT.email)}">Copiar</button>`],
+    ["tel","Telefone",`<span class="val">${esc(CT.telefone)}</span>`],
+    ["pin","Endereço",`<span class="val" style="font-weight:600">${esc(CT.endereco)}</span>`],
+    ["ig","Instagram",`<a href="${esc(CT.instagram)}">${esc(CT.instagram_rotulo)}</a>`]
+  ].map(c=>`<div class="card canal"><div class="ico">${IC[c[0]]}</div><div><small>${c[1]}</small>${c[2]}</div></div>`).join("")
+   +`<p class="note">Canais oficiais publicados em <a href="${esc(CT.fonte)}">neagrodf.unb.br/contato</a>.</p>`;
+  $$("[data-copy]").forEach(b=>b.addEventListener("click",()=>copiar(b.dataset.copy,b)));
+  $("#ft-email").textContent=CT.email||"";$("#ft-tel").textContent=CT.telefone||"";
+}
+function initForm(){
+  const f=$("#fc-form");
+  f.addEventListener("submit",async e=>{
+    e.preventDefault();
+    const g=id=>$(id).value.trim();
+    const d={nome:g("#fc-nome"),email:g("#fc-email"),telefone:g("#fc-tel"),perfil:g("#fc-perfil"),instituicao:g("#fc-inst"),municipio:g("#fc-mun"),tipo:g("#fc-tipo"),cadeia:g("#fc-cadeia"),descricao:g("#fc-msg"),prazo:g("#fc-prazo")};
+    $("#e-nome").textContent=d.nome?"":"Informe seu nome.";
+    $("#e-email").textContent=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)?"":"Informe um e-mail válido, como nome@exemplo.com.";
+    $("#e-msg").textContent=d.descricao.length>=15?"":"Descreva sua necessidade (pelo menos 15 caracteres).";
+    $("#e-ok").textContent=$("#fc-ok").checked?"":"Marque a autorização para que possamos responder.";
+    if(!d.nome||$("#e-email").textContent||$("#e-msg").textContent||$("#e-ok").textContent)return;
+    const titulo=`[Demanda NEAGRO-DF] ${d.tipo}: ${d.cadeia}`;
+    const corpo=`Nome: ${d.nome}\nE-mail: ${d.email}\nTelefone: ${d.telefone||"não informado"}\nPerfil: ${d.perfil}\nPropriedade ou instituição: ${d.instituicao||"não informada"}\nMunicípio e UF: ${d.municipio||"não informado"}\nTipo de demanda: ${d.tipo}\nCadeia: ${d.cadeia}\nPrazo: ${d.prazo||"não informado"}\n\n${d.descricao}`;
+    const out=$("#fc-out"),btn=f.querySelector("button[type=submit]");
+    const ok=prot=>{out.innerHTML=`<div class="sent"><b>Demanda recebida.</b> A equipe do NEAGRO-DF vai analisar o pedido e responder no e-mail ${esc(d.email)}.${prot?` Seu protocolo: <b>${esc(prot)}</b>.`:""}</div>`;f.reset()};
+    btn.disabled=true;btn.textContent="Enviando…";
+    try{
+      if(CT.firestore_demandas&&CT.firestore_projeto){
+        const campos={};Object.entries(d).forEach(([k,v])=>campos[k]={stringValue:v.slice(0,4000)});
+        campos.status={stringValue:"nova"};campos.origem={stringValue:"portal"};campos.criado_em={timestampValue:new Date().toISOString()};
+        const r=await fetch(`https://firestore.googleapis.com/v1/projects/${CT.firestore_projeto}/databases/(default)/documents/demandas`,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({fields:campos})});
+        if(r.ok){const j=await r.json();ok(j.name.split("/").pop().slice(0,8).toUpperCase());return}
+      }else if(CT.formulario_endpoint){
+        const r=await fetch(CT.formulario_endpoint,{method:"POST",headers:{"Accept":"application/json","Content-Type":"application/json"},body:JSON.stringify(Object.assign({_subject:titulo},d))});
+        if(r.ok){ok("");return}
+      }
+    }catch(err){}
+    finally{btn.disabled=false;btn.textContent="Enviar demanda"}
+    const mailto=`mailto:${CT.email}?subject=${encodeURIComponent(titulo)}&body=${encodeURIComponent(corpo)}`;
+    out.innerHTML=`<div class="sent"><b>Sua demanda está pronta para envio.</b> Abra no seu programa de e-mail ou copie o texto e envie para <b>${esc(CT.email)}</b>.<pre id="fc-pre">${esc(titulo+"\n\n"+corpo)}</pre><div class="actions" style="margin-top:0"><a class="btn primary" href="${esc(mailto)}">Abrir no e-mail</a><button type="button" class="btn ghost" id="fc-copy">Copiar texto</button></div></div>`;
+    const b=$("#fc-copy");if(b)b.addEventListener("click",async()=>{try{await navigator.clipboard.writeText(titulo+"\n\n"+corpo);b.textContent="Texto copiado"}catch(err){const r=document.createRange();r.selectNodeContents($("#fc-pre"));const sel=getSelection();sel.removeAllRanges();sel.addRange(r);b.textContent="Texto selecionado, use Ctrl+C"}});
+  });
+}
+renderContato();initForm();
+
+function renderAll(){
+  const r=f=>{try{f()}catch(e){console.error(e)}};
+  r(renderTicker);r(renderBoletins);r(renderPainel);r(renderCadeias);r(renderIndicadores);r(renderTerritorio);r(renderBrasil);r(renderNoticias);r(renderEquipe);r(renderFontes);
+  if(!calcReady){r(renderCalc);calcReady=true}else if(!calcTocado){r(montarPresets);r(()=>setPreset(presetAtual))}else r(calc);
+}
+renderAll();
+
+/* ---------- Atualização ao vivo ----------
+   1) Lê data/*.json gerados pelo robô (site hospedado).  2) Consulta o Banco Central.
+   Se algo falhar, permanece o último retrato salvo. */
+async function getJSON(u){const r=await fetch(u,{cache:"no-store"});if(!r.ok)throw new Error(r.status);return r.json()}
+async function refresh(){
+  let changed=false;
+  try{const d=await getJSON("data/dados.json");if(d&&d.indicadores){D=d;changed=true}}catch(e){}
+  try{const b=await getJSON("data/boletins.json");if(b&&b.edicoes){B=b;changed=true}}catch(e){}
+  try{const x=await getJSON("data/painel.json");if(x&&x.semaforo){P=x;changed=true}}catch(e){}
+  /* Lê a base do núcleo e recalcula os indicadores na hora; se falhar, vale o retrato do robô. */
+  try{
+    if(window.PainelNEAGRO){
+      const FB="https://firestore.googleapis.com/v1/projects/neagro---df/databases/(default)/documents/";
+      const col=async n=>{let docs=[],tok="";do{const j=await getJSON(`${FB}${n}?pageSize=300${tok?"&pageToken="+encodeURIComponent(tok):""}`);docs=docs.concat(j.documents||[]);tok=j.nextPageToken||""}while(tok);return docs};
+      const [m,l,ix]=await Promise.all([col("meses"),col("lancamentos"),col("indices")]);
+      const novo=window.PainelNEAGRO.calcular(m,l,ix);
+      if(novo&&novo.semaforo.length){novo.gta=P&&P.gta&&P.gta.mes&&novo.mes&&P.gta.mes===novo.mes?P.gta:(P?P.gta:null);novo.fonte=Object.assign({},P?P.fonte:{},{extraido_em:new Date().toISOString().slice(0,10)});novo.ao_vivo=true;P=novo;changed=true}
+    }
+  }catch(e){}
+  const sgs=(cod,n)=>getJSON(`https://api.bcb.gov.br/dados/serie/bcdata.sgs.${cod}/dados/ultimos/${n}?formato=json`);
+  const hoje=new Date().toISOString().slice(0,10);
+  try{const s=await sgs(10813,20),i=ind("dolar");if(i&&s.length){const l=s[s.length-1];Object.assign(i,{valor:+l.valor,referencia:l.data,serie:s.map(p=>[p.data.slice(0,5),+p.valor]),extraido_em:hoje,variacao_pct:(l.valor/s[0].valor-1)*100,variacao_desc:"em 20 pregões"});changed=true}}catch(e){}
+  try{const s=await sgs(432,1),i=ind("selic");if(i&&s.length){i.valor=+s[0].valor;i.extraido_em=hoje;changed=true}}catch(e){}
+  try{const s=await sgs(13522,12),i=ind("ipca12");if(i&&s.length){const M=["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"],lab=p=>{const[,m,y]=p.data.split("/");return `${M[+m-1]}/${y.slice(2)}`};Object.assign(i,{serie:s.map(p=>[lab(p),+p.valor]),valor:+s[s.length-1].valor,referencia:lab(s[s.length-1]),extraido_em:hoje});changed=true}}catch(e){}
+  if(changed)renderAll();
+}
+refresh();
+
+/* ---------- Modo incorporado (WordPress) ----------
+   Ative com ?modo=wp no endereço do iframe. A página informa sua altura ao WordPress
+   e pede a rolagem da página-mãe quando o visitante usa os links internos. */
+const EMBED=/[?&]modo=wp\b/.test(location.search);
+if(EMBED){
+  document.documentElement.classList.add("embed");
+  const enviar=m=>{try{parent.postMessage(m,"*")}catch(e){}};
+  const altura=()=>enviar({tipo:"neagro-altura",altura:document.documentElement.scrollHeight});
+  new ResizeObserver(altura).observe(document.body);window.addEventListener("load",altura);altura();
+  document.addEventListener("click",e=>{
+    const a=e.target.closest("a");if(!a)return;
+    const h=a.getAttribute("href")||"";
+    if(h.startsWith("#")&&h.length>1){const alvo=document.querySelector(h);if(alvo){e.preventDefault();enviar({tipo:"neagro-ir",y:alvo.getBoundingClientRect().top+window.scrollY})}}
+    else if(/^https?:|^mailto:/.test(h)){a.target="_blank";a.rel="noopener"}
+  });
+}
+const anoEl=document.getElementById("ano");if(anoEl)anoEl.textContent=new Date().getFullYear();
+})();
+</script>

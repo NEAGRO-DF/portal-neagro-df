@@ -1,0 +1,27 @@
+<!--
+  Portal NEAGRO-DF incorporado ao WordPress de neagrodf.unb.br
+  Onde colar: Elementor > widget "HTML" (ou bloco "HTML personalizado") na página inicial.
+  Antes de colar, troque ENDERECO_DO_PORTAL (duas ocorrências) pelo endereço do portal
+  publicado no GitHub Pages, sem barra no final. Exemplo: https://neagrodf.github.io/portal
+-->
+<iframe id="neagro-portal"
+        src="ENDERECO_DO_PORTAL/?modo=wp"
+        title="Portal NEAGRO-DF: boletins, cotações e dados do agro do DF e da RIDE"
+        style="display:block;width:100%;border:0;min-height:1400px"
+        loading="eager"></iframe>
+<script>
+(function () {
+  var ORIGEM = new URL("ENDERECO_DO_PORTAL").origin;
+  var quadro = document.getElementById("neagro-portal");
+  window.addEventListener("message", function (e) {
+    if (e.origin !== ORIGEM || !e.data) return;
+    if (e.data.tipo === "neagro-altura") {
+      quadro.style.height = Math.ceil(e.data.altura) + "px";
+    }
+    if (e.data.tipo === "neagro-ir") {
+      var topo = quadro.getBoundingClientRect().top + window.scrollY + e.data.y - 90;
+      window.scrollTo({ top: topo, behavior: "smooth" });
+    }
+  });
+})();
+</script>

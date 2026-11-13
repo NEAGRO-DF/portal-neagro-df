@@ -1,0 +1,8 @@
+{
+  "_instrucoes": "Feeds RSS lidos pelo robô. 'filtrar': true mantém só manchetes com termos do agronegócio. Feeds que falharem são ignorados e registrados no log.",
+  "feeds": [
+    {"veiculo": "Canal Rural", "url": "https://www.canalrural.com.br/feed/", "tema": "Mercado", "filtrar": false},
+    {"veiculo": "Agência Brasil", "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml", "tema": "Economia", "filtrar": true},
+    {"veiculo": "Agência Gov", "url": "https://agenciagov.ebc.com.br/noticias/rss", "tema": "Governo", "filtrar": true}
+  ]
+}

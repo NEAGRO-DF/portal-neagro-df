@@ -1,0 +1,647 @@
+{
+  "atualizado_em": "2026-10-28T17:45:00-03:00",
+  "indicadores": [
+    {
+      "id": "dolar",
+      "nome": "Dólar comercial",
+      "valor": 5.3414,
+      "unidade": "R$/US$",
+      "casas": 4,
+      "referencia": "28/10/2026",
+      "variacao_pct": 3.11,
+      "variacao_desc": "no mês (desde 30/09)",
+      "grupo": "macro",
+      "serie": [
+        [
+          "30/09",
+          5.1803
+        ],
+        [
+          "01/10",
+          5.2073
+        ],
+        [
+          "02/10",
+          5.2232
+        ],
+        [
+          "05/10",
+          4.9853
+        ],
+        [
+          "06/10",
+          4.9692
+        ],
+        [
+          "07/10",
+          4.9929
+        ],
+        [
+          "08/10",
+          5.0113
+        ],
+        [
+          "09/10",
+          4.9886
+        ],
+        [
+          "13/10",
+          5.009
+        ],
+        [
+          "14/10",
+          5.0435
+        ],
+        [
+          "15/10",
+          5.0515
+        ],
+        [
+          "16/10",
+          5.082
+        ],
+        [
+          "19/10",
+          5.0558
+        ],
+        [
+          "20/10",
+          5.0134
+        ],
+        [
+          "21/10",
+          5.027
+        ],
+        [
+          "22/10",
+          5.0377
+        ],
+        [
+          "23/10",
+          5.0371
+        ],
+        [
+          "26/10",
+          5.4998
+        ],
+        [
+          "27/10",
+          5.334
+        ],
+        [
+          "28/10",
+          5.3414
+        ]
+      ],
+      "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)",
+      "link": "https://www3.bcb.gov.br/sgspub/",
+      "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.10813/dados/ultimos/20?formato=json",
+      "extraido_em": "2026-10-28",
+      "automatico": true
+    },
+    {
+      "id": "selic",
+      "nome": "Selic meta",
+      "valor": 13.75,
+      "unidade": "% a.a.",
+      "casas": 2,
+      "referencia": "vigente em out/2026",
+      "grupo": "macro",
+      "fonte": "Banco Central do Brasil, SGS série 432 (meta Selic definida pelo Copom)",
+      "link": "https://www.bcb.gov.br/controleinflacao/taxaselic",
+      "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/1?formato=json",
+      "extraido_em": "2026-10-28",
+      "automatico": true
+    },
+    {
+      "id": "ipca12",
+      "nome": "IPCA 12 meses",
+      "valor": 4.58,
+      "unidade": "%",
+      "casas": 2,
+      "referencia": "set/2026",
+      "variacao_desc": "ago/2026: 4,22%",
+      "grupo": "macro",
+      "serie": [
+        [
+          "out/25",
+          4.68
+        ],
+        [
+          "nov/25",
+          4.46
+        ],
+        [
+          "dez/25",
+          4.26
+        ],
+        [
+          "jan/26",
+          4.44
+        ],
+        [
+          "fev/26",
+          3.81
+        ],
+        [
+          "mar/26",
+          4.14
+        ],
+        [
+          "abr/26",
+          4.39
+        ],
+        [
+          "mai/26",
+          4.72
+        ],
+        [
+          "jun/26",
+          4.64
+        ],
+        [
+          "jul/26",
+          4.44
+        ],
+        [
+          "ago/26",
+          4.22
+        ],
+        [
+          "set/26",
+          4.58
+        ]
+      ],
+      "fonte": "IBGE via Banco Central do Brasil, SGS série 13522 (IPCA acumulado em 12 meses)",
+      "link": "https://www.ibge.gov.br/estatisticas/economicas/precos-e-custos/9256-indice-nacional-de-precos-ao-consumidor-amplo.html",
+      "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados/ultimos/12?formato=json",
+      "extraido_em": "2026-10-28",
+      "automatico": true
+    },
+    {
+      "id": "boi",
+      "nome": "Boi gordo Cepea/Esalq",
+      "valor": 386.3,
+      "unidade": "R$/@",
+      "casas": 2,
+      "referencia": "27/10/2026",
+      "variacao_pct": 6.04,
+      "variacao_desc": "no mês",
+      "grupo": "precos",
+      "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo)",
+      "link": "https://www.cepea.org.br/br/indicador/boi-gordo.aspx",
+      "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública",
+      "extraido_em": "2026-10-28",
+      "automatico": false
+    },
+    {
+      "id": "soja",
+      "nome": "Soja Paranaguá Cepea/Esalq",
+      "valor": 157.41,
+      "unidade": "R$/sc 60 kg",
+      "casas": 2,
+      "referencia": "27/10/2026",
+      "variacao_pct": -2.57,
+      "variacao_desc": "no mês",
+      "grupo": "precos",
+      "fonte": "Indicador da Soja Cepea/Esalq Paranaguá",
+      "link": "https://www.cepea.org.br/br/indicador/soja.aspx",
+      "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública",
+      "extraido_em": "2026-10-28",
+      "automatico": false
+    },
+    {
+      "id": "milho",
+      "nome": "Milho Esalq/B3",
+      "valor": 64.87,
+      "unidade": "R$/sc 60 kg",
+      "casas": 2,
+      "referencia": "27/10/2026",
+      "variacao_pct": -5.53,
+      "variacao_desc": "no mês",
+      "grupo": "precos",
+      "fonte": "Indicador do Milho Esalq/B3",
+      "link": "https://www.cepea.org.br/br/indicador/milho.aspx",
+      "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública",
+      "extraido_em": "2026-10-28",
+      "automatico": false
+    },
+    {
+      "id": "fao",
+      "nome": "Índice FAO de preços de alimentos",
+      "valor": 136.0,
+      "unidade": "pontos",
+      "casas": 1,
+      "referencia": "set/2026",
+      "variacao_pct": 1.5,
+      "variacao_desc": "sobre ago/2026",
+      "grupo": "mundo",
+      "fonte": "FAO, Food Price Index, conforme Canal Rural (02/10/2026)",
+      "link": "https://www.fao.org/worldfoodsituation/FoodPricesIndex/en",
+      "endpoint": "https://www.fao.org/worldfoodsituation/FoodPricesIndex/en (CSV mensal)",
+      "extraido_em": "2026-10-28",
+      "automatico": true
+    }
+  ],
+  "brasil": {
+    "pib_trimestral": {
+      "titulo": "PIB do Brasil, 2º trimestre de 2026",
+      "linhas": [
+        {
+          "rotulo": "PIB total",
+          "tri": 0.5,
+          "anual": 2.0
+        },
+        {
+          "rotulo": "Agropecuária",
+          "tri": 2.8,
+          "anual": 6.8
+        }
+      ],
+      "nota": "Variação sobre o trimestre anterior (com ajuste sazonal) e sobre o mesmo trimestre de 2025.",
+      "fonte": "IBGE, Contas Nacionais Trimestrais, conforme Canal Rural (01/09/2026)",
+      "link": "https://www.canalrural.com.br/agricultura/agronegocio/agropecuaria-cresce-28-e-impulsiona-pib-que-avanca-05-no-2o-trimestre-de-2026/",
+      "endpoint": "https://apisidra.ibge.gov.br/values/t/5932/n1/all/v/6564/p/last%201/c11255/90687,90707",
+      "extraido_em": "2026-10-20"
+    },
+    "pib_agro_cepea": {
+      "titulo": "PIB do agronegócio (Cepea/Esalq e CNA)",
+      "texto": "Após forte avanço em 2025, o PIB do agronegócio recuou 2,01% no 1º trimestre de 2026, segundo o Cepea.",
+      "fonte": "Cepea/Esalq e CNA, release do PIB-Agro",
+      "link": "https://cepea.org.br/br/releases/pib-agro-cepea-apos-forte-avanco-em-2025-pib-do-agro-recua-2-no-1-tri.aspx",
+      "extraido_em": "2026-10-20"
+    },
+    "fao_subindices": {
+      "titulo": "Índice FAO, variação em setembro de 2026",
+      "linhas": [
+        {
+          "rotulo": "Açúcar",
+          "valor": 6.1
+        },
+        {
+          "rotulo": "Cereais",
+          "valor": 5.1
+        },
+        {
+          "rotulo": "Óleos vegetais",
+          "valor": 0.9
+        },
+        {
+          "rotulo": "Lácteos",
+          "valor": -0.1
+        },
+        {
+          "rotulo": "Carnes",
+          "valor": -1.1
+        }
+      ],
+      "fonte": "FAO, conforme Canal Rural (02/10/2026)",
+      "link": "https://www.canalrural.com.br/economia/indice-de-alimentos-da-fao-sobe-15-em-setembro/",
+      "extraido_em": "2026-10-20"
+    }
+  },
+  "df": {
+    "pam": {
+      "titulo": "Valor da produção agrícola do Distrito Federal, 2025",
+      "unidade": "R$ mil",
+      "total": 1880752,
+      "produtos": [
+        [
+          "Soja",
+          639922
+        ],
+        [
+          "Milho",
+          430535
+        ],
+        [
+          "Feijão",
+          140016
+        ],
+        [
+          "Tomate",
+          105000
+        ],
+        [
+          "Sorgo",
+          88549
+        ],
+        [
+          "Morango",
+          69803
+        ],
+        [
+          "Alho",
+          68782
+        ],
+        [
+          "Pimentão",
+          39780
+        ],
+        [
+          "Goiaba",
+          37097
+        ],
+        [
+          "Café",
+          33343
+        ],
+        [
+          "Mandioca",
+          29482
+        ],
+        [
+          "Abacate",
+          27804
+        ]
+      ],
+      "fonte": "IBGE, Produção Agrícola Municipal (PAM), tabela 5457",
+      "link": "https://sidra.ibge.gov.br/tabela/5457",
+      "endpoint": "https://apisidra.ibge.gov.br/values/t/5457/n3/53/v/215/p/last%201/c782/allxt",
+      "extraido_em": "2026-10-20"
+    },
+    "ppm": {
+      "titulo": "Efetivo dos rebanhos do Distrito Federal, 2025",
+      "unidade": "cabeças",
+      "rebanhos": [
+        [
+          "Galináceos",
+          8164577
+        ],
+        [
+          "Suínos",
+          146753
+        ],
+        [
+          "Bovinos",
+          76003
+        ],
+        [
+          "Equinos",
+          17150
+        ],
+        [
+          "Ovinos",
+          15156
+        ],
+        [
+          "Caprinos",
+          3327
+        ],
+        [
+          "Bubalinos",
+          509
+        ]
+      ],
+      "fonte": "IBGE, Pesquisa da Pecuária Municipal (PPM), tabela 3939",
+      "link": "https://sidra.ibge.gov.br/tabela/3939",
+      "endpoint": "https://apisidra.ibge.gov.br/values/t/3939/n3/53/v/all/p/last%201/c79/allxt",
+      "extraido_em": "2026-10-20"
+    }
+  },
+  "ride": {
+    "titulo": "Valor da produção agrícola na RIDE-DF, 2025",
+    "unidade": "R$ mil",
+    "nota": "RIDE-DF segundo a Lei Complementar nº 163/2018: Distrito Federal, 29 municípios de Goiás e 4 de Minas Gerais.",
+    "municipios": [
+      [
+        "Brasília",
+        "DF",
+        5300108,
+        1880752
+      ],
+      [
+        "Abadiânia",
+        "GO",
+        5200100,
+        153650
+      ],
+      [
+        "Água Fria de Goiás",
+        "GO",
+        5200175,
+        713126
+      ],
+      [
+        "Águas Lindas de Goiás",
+        "GO",
+        5200258,
+        13278
+      ],
+      [
+        "Alexânia",
+        "GO",
+        5200308,
+        113346
+      ],
+      [
+        "Alto Paraíso de Goiás",
+        "GO",
+        5200605,
+        187465
+      ],
+      [
+        "Alvorada do Norte",
+        "GO",
+        5200803,
+        33163
+      ],
+      [
+        "Barro Alto",
+        "GO",
+        5203203,
+        218872
+      ],
+      [
+        "Cabeceiras",
+        "GO",
+        5204003,
+        465515
+      ],
+      [
+        "Cavalcante",
+        "GO",
+        5205307,
+        14168
+      ],
+      [
+        "Cidade Ocidental",
+        "GO",
+        5205497,
+        86744
+      ],
+      [
+        "Cocalzinho de Goiás",
+        "GO",
+        5205513,
+        181462
+      ],
+      [
+        "Corumbá de Goiás",
+        "GO",
+        5205802,
+        161673
+      ],
+      [
+        "Cristalina",
+        "GO",
+        5206206,
+        5447580
+      ],
+      [
+        "Flores de Goiás",
+        "GO",
+        5207907,
+        196353
+      ],
+      [
+        "Formosa",
+        "GO",
+        5208004,
+        389700
+      ],
+      [
+        "Goianésia",
+        "GO",
+        5208608,
+        292626
+      ],
+      [
+        "Luziânia",
+        "GO",
+        5212501,
+        1214123
+      ],
+      [
+        "Mimoso de Goiás",
+        "GO",
+        5213053,
+        182157
+      ],
+      [
+        "Niquelândia",
+        "GO",
+        5214606,
+        613827
+      ],
+      [
+        "Novo Gama",
+        "GO",
+        5215231,
+        10242
+      ],
+      [
+        "Padre Bernardo",
+        "GO",
+        5215603,
+        687477
+      ],
+      [
+        "Pirenópolis",
+        "GO",
+        5217302,
+        101107
+      ],
+      [
+        "Planaltina",
+        "GO",
+        5217609,
+        358752
+      ],
+      [
+        "Santo Antônio do Descoberto",
+        "GO",
+        5219753,
+        36000
+      ],
+      [
+        "São João d'Aliança",
+        "GO",
+        5220009,
+        633868
+      ],
+      [
+        "Simolândia",
+        "GO",
+        5220686,
+        11389
+      ],
+      [
+        "Valparaíso de Goiás",
+        "GO",
+        5221858,
+        1073
+      ],
+      [
+        "Vila Boa",
+        "GO",
+        5222203,
+        99632
+      ],
+      [
+        "Vila Propício",
+        "GO",
+        5222302,
+        531213
+      ],
+      [
+        "Arinos",
+        "MG",
+        3104502,
+        100815
+      ],
+      [
+        "Buritis",
+        "MG",
+        3109303,
+        1219241
+      ],
+      [
+        "Cabeceira Grande",
+        "MG",
+        3109451,
+        289688
+      ],
+      [
+        "Unaí",
+        "MG",
+        3170404,
+        2580368
+      ]
+    ],
+    "fonte": "IBGE, Produção Agrícola Municipal (PAM), tabela 5457, valor total da produção",
+    "link": "https://sidra.ibge.gov.br/tabela/5457",
+    "endpoint": "https://apisidra.ibge.gov.br/values/t/5457/n6/{códigos}/v/215/p/last%201/c782/0",
+    "extraido_em": "2026-10-20"
+  },
+  "noticias": [
+    {
+      "titulo": "Soja cai até 4,2% em outubro, enquanto boi gordo sobe 3,7%",
+      "veiculo": "Canal Rural",
+      "data": "2026-10-10",
+      "tema": "Preços",
+      "link": "https://www.canalrural.com.br/agricultura/agronegocio/soja-cai-ate-42-em-outubro-enquanto-boi-gordo-sobe-37/"
+    },
+    {
+      "titulo": "Índice de alimentos da FAO sobe 1,5% em setembro",
+      "veiculo": "Canal Rural",
+      "data": "2026-10-02",
+      "tema": "Mundo",
+      "link": "https://www.canalrural.com.br/economia/indice-de-alimentos-da-fao-sobe-15-em-setembro/"
+    },
+    {
+      "titulo": "Agropecuária cresce 2,8% e impulsiona PIB, que avança 0,5% no 2º trimestre de 2026",
+      "veiculo": "Canal Rural",
+      "data": "2026-09-01",
+      "tema": "Macroeconomia",
+      "link": "https://www.canalrural.com.br/agricultura/agronegocio/agropecuaria-cresce-28-e-impulsiona-pib-que-avanca-05-no-2o-trimestre-de-2026/"
+    },
+    {
+      "titulo": "PIB-Agro/Cepea: após forte avanço em 2025, PIB do agro recua 2% no 1º trimestre",
+      "veiculo": "Cepea/Esalq",
+      "data": null,
+      "tema": "PIB do agro",
+      "link": "https://cepea.org.br/br/releases/pib-agro-cepea-apos-forte-avanco-em-2025-pib-do-agro-recua-2-no-1-tri.aspx"
+    }
+  ]
+}
