@@ -178,15 +178,18 @@
   var ESPECIES = [["bov", "Bovinos"], ["ave", "Aves vivas"], ["cap", "Caprinos"], ["ovi", "Ovinos"]];
   function gta(G, suinos, mesSuinos) {
     if (!G || !G.meses) return null;
+    var MES_APROVADO = "set/26";
     var i = G.meses.length - 1;
-    if (G.parcial && G.meses[i] === G.parcial) i -= 1;
+    while (i >= 0 && (ordem(G.meses[i]) > ordem(MES_APROVADO) || G.meses[i] === G.parcial)) {
+      i -= 1;
+    }
     if (i < 0) return null;
     var linhas = ESPECIES.map(function (e) {
       var s = G[e[0]]; if (!s || !s.entrada || !s.saida) return null;
       return { especie: e[1], entrada: s.entrada.total[i] || 0, saida: s.saida.total[i] || 0, interno: s.interno ? (s.interno.total[i] || 0) : null };
     }).filter(Boolean);
     if (suinos && mesSuinos === G.meses[i]) linhas.unshift({ especie: "Suínos", entrada: suinos.entrada, saida: suinos.saida, interno: null });
-    return { mes: G.meses[i], parcial: G.parcial || null, ate: G.fim || null, linhas: linhas };
+    return { mes: G.meses[i], parcial: null, ate: null, linhas: linhas };
   }
 
   var api = { calcular: calcular, gta: gta, mesclar: mesclar, ordem: ordem, camposUsados: camposUsados };
