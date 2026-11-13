@@ -110,12 +110,30 @@
   }
 
   function calcular(docsMeses, docsLanc, docsIndices) {
-    var meses = mesclar(docsMeses, docsLanc);
-    var comDados = meses.filter(function (m) { return pos(m.milho) && pos(m.farelo); });
+    // Último mês aprovado para publicação pelo NEAGRO-DF
+    var MES_APROVADO = "set/26";
+
+    var meses = mesclar(docsMeses, docsLanc).filter(function (m) {
+      return ordem(m.mes) <= ordem(MES_APROVADO);
+    });
+
+    var comDados = meses.filter(function (m) {
+      return pos(m.milho) && pos(m.farelo);
+    });
+
     if (!comDados.length) return null;
-    var atual = comDados[comDados.length - 1], anterior = comDados.length > 1 ? comDados[comDados.length - 2] : null;
-    var ate = meses.filter(function (m) { return ordem(m.mes) <= ordem(atual.mes); });
+
+    var atual = comDados[comDados.length - 1];
+    var anterior = comDados.length > 1 ? comDados[comDados.length - 2] : null;
+
+    var ate = meses.filter(function (m) {
+      return ordem(m.mes) <= ordem(atual.mes);
+    });
+
     var semaforo = [], alertas = verificar(meses, atual, anterior);
+
+
+
     var suspeito = {}; alertas.forEach(function (a) { if (a.tipo === "valor") suspeito[a.campo] = 1; });
     RELACOES.forEach(function (r) {
       var serie = ate.filter(function (m) { return pos(m[r.a]) && pos(m[r.b]); }).map(function (m) { return m[r.a] / m[r.b]; });
