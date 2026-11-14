@@ -144,6 +144,222 @@
     },
     {
       "serie": "animal",
+      "numero": "6.0244",
+      "data": "2026-09-15",
+      "titulo": "Boletim de Mercado: Avicultura de corte e de postura, agosto de 2026",
+      "cadeias": [
+        "Avicultura de corte",
+        "Avicultura de postura"
+      ],
+      "resumo": "Mês de referência: agosto de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0244-boletim-aves-neagro-df-2026-09-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0243",
+      "data": "2026-09-15",
+      "titulo": "Boletim de Mercado: Suinocultura, agosto de 2026",
+      "cadeias": [
+        "Suinocultura"
+      ],
+      "resumo": "Mês de referência: agosto de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0243-boletim-suinos-neagro-df-2026-09-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0242",
+      "data": "2026-09-15",
+      "titulo": "Boletim de Mercado: Bovinocultura de corte e de leite, agosto de 2026",
+      "cadeias": [
+        "Bovinocultura de corte",
+        "Bovinocultura de leite"
+      ],
+      "resumo": "Mês de referência: agosto de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0242-boletim-bovinos-corte-e-leite-neagro-df-2026-09-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0241",
+      "data": "2026-09-15",
+      "titulo": "Boletim de Mercado: Insumos (milho, farelo de soja, sorgo e soja), agosto de 2026",
+      "cadeias": [
+        "Insumos"
+      ],
+      "resumo": "Mês de referência: agosto de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0241-boletim-insumos-neagro-df-2026-09-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0234",
+      "data": "2026-08-14",
+      "titulo": "Boletim de Mercado: Avicultura de corte e de postura, julho de 2026",
+      "cadeias": [
+        "Avicultura de corte",
+        "Avicultura de postura"
+      ],
+      "resumo": "Mês de referência: julho de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0234-boletim-aves-neagro-df-2026-08-14.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0233",
+      "data": "2026-08-14",
+      "titulo": "Boletim de Mercado: Suinocultura, julho de 2026",
+      "cadeias": [
+        "Suinocultura"
+      ],
+      "resumo": "Mês de referência: julho de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0233-boletim-suinos-neagro-df-2026-08-14.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0232",
+      "data": "2026-08-14",
+      "titulo": "Boletim de Mercado: Bovinocultura de corte e de leite, julho de 2026",
+      "cadeias": [
+        "Bovinocultura de corte",
+        "Bovinocultura de leite"
+      ],
+      "resumo": "Mês de referência: julho de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0232-boletim-bovinos-corte-e-leite-neagro-df-2026-08-14.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0231",
+      "data": "2026-08-14",
+      "titulo": "Boletim de Mercado: Insumos (milho, farelo de soja, sorgo e soja), julho de 2026",
+      "cadeias": [
+        "Insumos"
+      ],
+      "resumo": "Mês de referência: julho de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0231-boletim-insumos-neagro-df-2026-08-14.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0224",
+      "data": "2026-07-15",
+      "titulo": "Boletim de Mercado: Avicultura de corte e de postura, junho de 2026",
+      "cadeias": [
+        "Avicultura de corte",
+        "Avicultura de postura"
+      ],
+      "resumo": "Mês de referência: junho de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0224-boletim-aves-neagro-df-2026-07-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0223",
+      "data": "2026-07-15",
+      "titulo": "Boletim de Mercado: Suinocultura, junho de 2026",
+      "cadeias": [
+        "Suinocultura"
+      ],
+      "resumo": "Mês de referência: junho de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0223-boletim-suinos-neagro-df-2026-07-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0222",
+      "data": "2026-07-15",
+      "titulo": "Boletim de Mercado: Bovinocultura de corte e de leite, junho de 2026",
+      "cadeias": [
+        "Bovinocultura de corte",
+        "Bovinocultura de leite"
+      ],
+      "resumo": "Mês de referência: junho de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0222-boletim-bovinos-corte-e-leite-neagro-df-2026-07-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0221",
+      "data": "2026-07-15",
+      "titulo": "Boletim de Mercado: Insumos (milho, farelo de soja, sorgo e soja), junho de 2026",
+      "cadeias": [
+        "Insumos"
+      ],
+      "resumo": "Mês de referência: junho de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0221-boletim-insumos-neagro-df-2026-07-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0214",
+      "data": "2026-06-15",
+      "titulo": "Boletim de Mercado: Avicultura de corte e de postura, maio de 2026",
+      "cadeias": [
+        "Avicultura de corte",
+        "Avicultura de postura"
+      ],
+      "resumo": "Mês de referência: maio de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0214-boletim-aves-neagro-df-2026-06-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0213",
+      "data": "2026-06-15",
+      "titulo": "Boletim de Mercado: Suinocultura, maio de 2026",
+      "cadeias": [
+        "Suinocultura"
+      ],
+      "resumo": "Mês de referência: maio de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0213-boletim-suinos-neagro-df-2026-06-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0212",
+      "data": "2026-06-15",
+      "titulo": "Boletim de Mercado: Bovinocultura de corte e de leite, maio de 2026",
+      "cadeias": [
+        "Bovinocultura de corte",
+        "Bovinocultura de leite"
+      ],
+      "resumo": "Mês de referência: maio de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0212-boletim-bovinos-corte-e-leite-neagro-df-2026-06-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0211",
+      "data": "2026-06-15",
+      "titulo": "Boletim de Mercado: Insumos (milho, farelo de soja, sorgo e soja), maio de 2026",
+      "cadeias": [
+        "Insumos"
+      ],
+      "resumo": "Mês de referência: maio de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0211-boletim-insumos-neagro-df-2026-06-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
       "numero": "6.02",
       "data": "2026-04-24",
       "titulo": "Boletim de Mercado da Produção Animal do DF e Entorno",
