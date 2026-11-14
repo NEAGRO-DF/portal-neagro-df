@@ -96,6 +96,20 @@
   "edicoes": [
     {
       "serie": "animal",
+      "numero": "6.0255",
+      "data": "2026-10-15",
+      "titulo": "Boletim de Mercado: Caprinocultura e ovinocultura, setembro de 2026",
+      "cadeias": [
+        "Caprinocultura",
+        "Ovinocultura"
+      ],
+      "resumo": "Mês de referência: setembro de 2026. Cordeiro vivo e carcaça, carcaça caprina e leite de cabra por praça, movimentação de caprinos e ovinos por GTA no Distrito Federal, importações de carne ovina e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0255-boletim-caprinos-e-ovinos-neagro-df-2026-10-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
       "numero": "6.0254",
       "data": "2026-10-15",
       "titulo": "Boletim de Mercado: Avicultura de corte e de postura, setembro de 2026",
@@ -178,6 +192,20 @@
     },
     {
       "serie": "animal",
+      "numero": "6.0245",
+      "data": "2026-09-15",
+      "titulo": "Boletim de Mercado: Caprinocultura e ovinocultura, agosto de 2026",
+      "cadeias": [
+        "Caprinocultura",
+        "Ovinocultura"
+      ],
+      "resumo": "Mês de referência: agosto de 2026. Cordeiro vivo e carcaça, carcaça caprina e leite de cabra por praça, movimentação de caprinos e ovinos por GTA no Distrito Federal, importações de carne ovina e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0245-boletim-caprinos-e-ovinos-neagro-df-2026-09-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
       "numero": "6.0244",
       "data": "2026-09-15",
       "titulo": "Boletim de Mercado: Avicultura de corte e de postura, agosto de 2026",
@@ -228,6 +256,20 @@
       "resumo": "Mês de referência: agosto de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0241-boletim-insumos-neagro-df-2026-09-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0235",
+      "data": "2026-08-14",
+      "titulo": "Boletim de Mercado: Caprinocultura e ovinocultura, julho de 2026",
+      "cadeias": [
+        "Caprinocultura",
+        "Ovinocultura"
+      ],
+      "resumo": "Mês de referência: julho de 2026. Cordeiro vivo e carcaça, carcaça caprina e leite de cabra por praça, movimentação de caprinos e ovinos por GTA no Distrito Federal, importações de carne ovina e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0235-boletim-caprinos-e-ovinos-neagro-df-2026-08-14.pdf",
       "origem": "manual"
     },
     {
@@ -286,6 +328,20 @@
     },
     {
       "serie": "animal",
+      "numero": "6.0225",
+      "data": "2026-07-15",
+      "titulo": "Boletim de Mercado: Caprinocultura e ovinocultura, junho de 2026",
+      "cadeias": [
+        "Caprinocultura",
+        "Ovinocultura"
+      ],
+      "resumo": "Mês de referência: junho de 2026. Cordeiro vivo e carcaça, carcaça caprina e leite de cabra por praça, movimentação de caprinos e ovinos por GTA no Distrito Federal, importações de carne ovina e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0225-boletim-caprinos-e-ovinos-neagro-df-2026-07-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
       "numero": "6.0224",
       "data": "2026-07-15",
       "titulo": "Boletim de Mercado: Avicultura de corte e de postura, junho de 2026",
@@ -336,6 +392,20 @@
       "resumo": "Mês de referência: junho de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0221-boletim-insumos-neagro-df-2026-07-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0215",
+      "data": "2026-06-15",
+      "titulo": "Boletim de Mercado: Caprinocultura e ovinocultura, maio de 2026",
+      "cadeias": [
+        "Caprinocultura",
+        "Ovinocultura"
+      ],
+      "resumo": "Mês de referência: maio de 2026. Cordeiro vivo e carcaça, carcaça caprina e leite de cabra por praça, movimentação de caprinos e ovinos por GTA no Distrito Federal, importações de carne ovina e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0215-boletim-caprinos-e-ovinos-neagro-df-2026-06-15.pdf",
       "origem": "manual"
     },
     {
@@ -394,6 +464,20 @@
     },
     {
       "serie": "animal",
+      "numero": "6.0145",
+      "data": "2026-05-15",
+      "titulo": "Boletim de Mercado: Caprinocultura e ovinocultura, abril de 2026",
+      "cadeias": [
+        "Caprinocultura",
+        "Ovinocultura"
+      ],
+      "resumo": "Mês de referência: abril de 2026. Cordeiro vivo e carcaça, carcaça caprina e leite de cabra por praça, movimentação de caprinos e ovinos por GTA no Distrito Federal, importações de carne ovina e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0145-boletim-caprinos-e-ovinos-neagro-df-2026-05-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
       "numero": "6.02",
       "data": "2026-04-24",
       "titulo": "Boletim de Mercado da Produção Animal do DF e Entorno",
@@ -413,6 +497,20 @@
     },
     {
       "serie": "animal",
+      "numero": "6.0135",
+      "data": "2026-04-15",
+      "titulo": "Boletim de Mercado: Caprinocultura e ovinocultura, março de 2026",
+      "cadeias": [
+        "Caprinocultura",
+        "Ovinocultura"
+      ],
+      "resumo": "Mês de referência: março de 2026. Cordeiro vivo e carcaça, carcaça caprina e leite de cabra por praça, movimentação de caprinos e ovinos por GTA no Distrito Federal, importações de carne ovina e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0135-boletim-caprinos-e-ovinos-neagro-df-2026-04-15.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
       "numero": "6.01",
       "data": "2026-03-24",
       "titulo": "Boletim de Mercado da Produção Animal do DF e Entorno",
@@ -429,6 +527,34 @@
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6-01-boletim-producao-animal-do-df-e-entorno-neagro-df-2026-03-24.pdf",
       "origem": "drive",
       "pdf_original": "https://drive.google.com/file/d/1OfSYjlTBJ_3FkHgS-jTQ74zlzRDuKbHa/view"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0125",
+      "data": "2026-03-13",
+      "titulo": "Boletim de Mercado: Caprinocultura e ovinocultura, fevereiro de 2026",
+      "cadeias": [
+        "Caprinocultura",
+        "Ovinocultura"
+      ],
+      "resumo": "Mês de referência: fevereiro de 2026. Cordeiro vivo e carcaça, carcaça caprina e leite de cabra por praça, movimentação de caprinos e ovinos por GTA no Distrito Federal, importações de carne ovina e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0125-boletim-caprinos-e-ovinos-neagro-df-2026-03-13.pdf",
+      "origem": "manual"
+    },
+    {
+      "serie": "animal",
+      "numero": "6.0115",
+      "data": "2026-02-13",
+      "titulo": "Boletim de Mercado: Caprinocultura e ovinocultura, janeiro de 2026",
+      "cadeias": [
+        "Caprinocultura",
+        "Ovinocultura"
+      ],
+      "resumo": "Mês de referência: janeiro de 2026. Cordeiro vivo e carcaça, carcaça caprina e leite de cabra por praça, movimentação de caprinos e ovinos por GTA no Distrito Federal, importações de carne ovina e contexto de mercado.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0115-boletim-caprinos-e-ovinos-neagro-df-2026-02-13.pdf",
+      "origem": "manual"
     },
     {
       "serie": "animal",
