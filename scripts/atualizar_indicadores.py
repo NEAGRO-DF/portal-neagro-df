@@ -72,6 +72,12 @@ def pct(v) -> str:
     return "" if v is None else f"{'+' if v > 0 else ''}{fbr(v)}%"
 
 
+def curto(txt: str, n: int = 40) -> str:
+    """Nome do produto sem o detalhamento após a vírgula e cortado em palavra inteira."""
+    t = re.sub(r",.*", "", txt).strip()
+    return t if len(t) <= n else t[:n].rsplit(" ", 1)[0].rstrip(" ;,(") + "…"
+
+
 def cartao(**k) -> dict:
     k.setdefault("extraido_em", HOJE)
     k.setdefault("automatico", True)
@@ -98,9 +104,11 @@ def pib_municipal(dados: dict) -> list[dict]:
     ano = linhas[0][ka]
     pib = sorted(((nomes[l[kc]], num(l["V"])) for l in linhas if num(l["V"])), key=lambda x: -x[1])
     total = sum(v for _, v in pib)
+    df = sum(v for n, v in pib if n.endswith("(DF)"))
     c1 = cartao(id="pib_ride", titulo=f"PIB dos municípios da RIDE-DF, {ano}",
-                sub=f"R$ bilhões, a preços correntes. Total da RIDE-DF: R$ {fbr(total / 1e6)} bilhões",
-                tipo="barras", barras=[[n, round(v / 1e6, 2), n.endswith("(DF)")] for n, v in pib[:12]], casas=1,
+                sub=(f"Total da RIDE-DF: R$ {fbr(total / 1e6)} bilhões, dos quais R$ {fbr(df / 1e6)} bilhões no Distrito Federal "
+                     f"({fbr(df / total * 100)}%). Abaixo, os demais municípios, em R$ bilhões a preços correntes"),
+                tipo="barras", barras=[[n, round(v / 1e6, 2), False] for n, v in pib if not n.endswith("(DF)")][:12], casas=2,
                 fonte="IBGE, PIB dos Municípios, tabela 5938", link="https://sidra.ibge.gov.br/tabela/5938",
                 endpoint=url)
     # Valor adicionado por setor: o SIDRA ainda não traz a abertura setorial dos anos mais recentes,
@@ -179,7 +187,7 @@ def comex_ride(dados: dict, ano: int, mes: int) -> dict:
                   sub=(f"US$ milhões FOB por produto (SH4). Total: US$ {fbr(tot / 1e6)} milhões"
                        + (f", {pct(v)} sobre o mesmo período de {ano - 1}" if v is not None else "")),
                   tipo="barras", casas=1,
-                  barras=[[re.sub(r",.*", "", x["heading"])[:42], round(num(x["metricFOB"]) / 1e6, 1), False] for x in prods],
+                  barras=[[curto(x["heading"]), round(num(x["metricFOB"]) / 1e6, 1), False] for x in prods],
                   nota="Soma dos 34 municípios da RIDE-DF, pelo domicílio fiscal da empresa exportadora.",
                   fonte="MDIC/Secex, ComexStat, exportações por município", link="https://comexstat.mdic.gov.br/pt/municipio",
                   endpoint=f"{COMEX}/cities")
@@ -242,7 +250,7 @@ def comex_ue(ano: int, mes: int) -> dict:
                   sub=(f"Exportações: US$ {fx(tot)} bilhões{sinal(var(tot, ex0))}. Importações: US$ {fx(im)} bilhões"
                        f"{sinal(var(im, im0))}. Principais produtos exportados, US$ milhões FOB"),
                   tipo="barras", casas=0,
-                  barras=[[re.sub(r",.*", "", x["heading"])[:42], round(num(x["metricFOB"]) / 1e6), False] for x in top],
+                  barras=[[curto(x["heading"]), round(num(x["metricFOB"]) / 1e6), False] for x in top],
                   nota="Variação sobre o mesmo período do ano anterior. Bloco econômico União Europeia (27 países).",
                   fonte="MDIC/Secex, ComexStat, bloco União Europeia", link=COMEX_LINK, endpoint=f"{COMEX}/general")
 
@@ -301,7 +309,7 @@ def precos_ue() -> dict:
     for nome, rota, un in UE_ITENS:
         try:
             url = f"{UE_API}/{rota}/prices?memberStateCodes=EU&beginDate={ini}&endDate={hoje:%d/%m/%Y}"
-            reg = json.loads(baixar(url).decode("utf-8"))
+            reg = json.loads(baixar(url, timeout=20).decode("utf-8"))
             alvo = {"beef": "R3", "pigmeat": "E"}.get(rota)
             if alvo:  # prefere a classe de referência quando a API informa a classificação
                 reg = [r for r in reg if any(str(v).upper().strip() in (alvo, "CLASS " + alvo) or str(v).upper().startswith(alvo + " ")
