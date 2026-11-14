@@ -238,6 +238,25 @@ section{padding-block:56px}
 .acervo .d,.acervo .n{color:var(--muted);font-size:.8rem}
 .acervo .c{display:block;color:var(--muted);font-size:.76rem;margin-top:2px}
 @media (max-width:640px){.acervo li a{grid-template-columns:1fr;gap:2px}}
+.porcad{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:14px}
+.pc{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.pc .ph{position:relative;aspect-ratio:16/9;margin:0;overflow:hidden;background:var(--sunk)}
+.pc .ph img{width:100%;height:100%;object-fit:cover;display:block}
+.pc .ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:18px 10px 4px;font-size:.6rem;color:#FFFFFF;background:linear-gradient(transparent,rgba(0,0,0,.6));text-align:right}
+.pc .ph figcaption a{color:#FFFFFF}
+.pc .bd{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px}
+.pc h4{font-family:var(--f-display);font-size:1.05rem;margin:0}
+.pc .q{font-size:.8rem;color:var(--muted);font-weight:700}
+.pc .lst{max-height:300px;overflow:auto;border-top:1px solid var(--line);margin-top:4px}
+.pc details summary{cursor:pointer;padding:7px 0;font-weight:800;color:var(--brand);font-size:.88rem}
+.pc details summary span{font-weight:600;color:var(--muted);font-size:.76rem;margin-left:6px}
+.pc ul{list-style:none;margin:0 0 6px;padding:0}
+.pc li a{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-top:1px dashed var(--line);text-decoration:none;color:inherit;font-size:.82rem}
+.pc li a:hover{color:var(--brand);text-decoration:underline}
+.pc li .n{color:var(--muted);font-size:.76rem;white-space:nowrap}
+.pc .vazio{font-size:.82rem;color:var(--muted)}
+@media (max-width:980px){.porcad{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.porcad{grid-template-columns:1fr}}
 
 /* Cadeias */
 .cadeias{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
@@ -927,15 +946,32 @@ function renderBoletins(){
       <div class="actions"><a class="btn sun" href="${esc(ed.pdf)}">${ed.pdf_e_pasta?"Abrir boletins de 2026":"Baixar o boletim (PDF)"}</a><a class="btn ghost" href="#calculadora">Calcular a relação de troca</a></div>
       <p class="note">Coordenação: ${esc(serie.coordenacao)}.</p>
     </div>`;
+  const ORIG={};B.edicoes.forEach(e=>{if(e.pdf_original)ORIG[e.pdf_original]=e.pdf});
+  const linkAno=a=>ORIG[a.link]||(/drive\.google\.com\/drive\/folders/.test(a.link)?"#ano-"+String(a.rotulo).slice(0,4):a.link);
   $("#series").innerHTML=B.series.map(s=>`
     <div class="card serie"><div class="th" style="${bg(SERIE_FOTO[s.id]||"soja")}" role="img" aria-label="${esc((FT[SERIE_FOTO[s.id]]||{}).titulo||"")}"></div><div style="min-width:0">
       <div class="serie-top"><h3>${esc(s.nome)}</h3><span class="per">${esc(s.periodicidade)}</span></div>
       <p>${esc(s.descricao)}</p>
-      ${s.acervo.length?`<div class="years">${s.acervo.map(a=>`<a href="${esc(a.link)}">${esc(a.rotulo)}</a>`).join("")}</div>`:`<p class="note" style="margin-top:6px">Primeiras edições em preparação.</p>`}
+      ${s.acervo.length?`<div class="years">${s.acervo.map(a=>`<a href="${esc(linkAno(a))}"${/^#/.test(linkAno(a))?"":` target="_blank" rel="noopener"`}>${esc(a.rotulo)}</a>`).join("")}</div>`:`<p class="note" style="margin-top:6px">Primeiras edições em preparação.</p>`}
     </div></div>`).join("");
   const porAno={};B.edicoes.forEach(e=>{const a=(e.data||"").slice(0,4)||"Outros";(porAno[a]=porAno[a]||[]).push(e)});
   const anos=Object.keys(porAno).sort().reverse();
-  $("#acervo").innerHTML=`<div class="acervo-head"><h3>Todos os boletins publicados</h3><p>${B.edicoes.length} edições, da mais recente para a mais antiga. Clique para abrir o PDF.</p></div>`+anos.map((a,i)=>`<details class="ano"${i===0?" open":""}><summary>${esc(a)}<span>${porAno[a].length} ${porAno[a].length>1?"boletins":"boletim"}</span></summary><ul>${porAno[a].map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener"><span class="d">${e.data?fdate(e.data):""}</span><span><span class="t">${esc(e.titulo)}</span>${e.cadeias&&e.cadeias.length&&e.cadeias.length<6?`<span class="c">${e.cadeias.map(esc).join(" · ")}</span>`:""}</span><span class="n">${e.numero?"nº "+esc(e.numero):""}</span></a></li>`).join("")}</ul></details>`).join("");
+  const CAD_BOL=[
+    {n:"Bovinocultura de corte",f:"boi",m:c=>c==="Bovinocultura de corte"},
+    {n:"Bovinocultura de leite",f:"leite",m:c=>c==="Bovinocultura de leite"},
+    {n:"Suinocultura",f:"suino",m:c=>c==="Suinocultura"},
+    {n:"Avicultura de corte e postura",f:"galinha",m:c=>/^Avicultura/.test(c)},
+    {n:"Grãos e insumos",f:"milho",m:c=>c==="Insumos"||/^Grãos/.test(c)},
+    {n:"Morango",f:"morango",m:c=>c==="Morango"},
+    {n:"Caprinocultura e ovinocultura",f:"ovino",m:c=>/^Caprino|^Ovino/.test(c)},
+    {n:"Piscicultura",f:"tilapia",m:c=>/^Pisci|Tilápia/.test(c)}];
+  const curto=e=>{const t=(e.titulo||"").replace(/^\s*Boletim de Mercado\s*:?\s*(?:d[ao]s?\s+)?/i,"").trim();return t?t[0].toUpperCase()+t.slice(1):(e.titulo||"Boletim")};
+  const blocoCad=c=>{const ed=B.edicoes.filter(e=>(e.cadeias||[]).some(c.m));const pa={};ed.forEach(e=>{const a=(e.data||"").slice(0,4)||"Outros";(pa[a]=pa[a]||[]).push(e)});const an=Object.keys(pa).sort().reverse();
+    return `<article class="card pc"><figure class="ph"><img src="${esc(foto(c.f))}" alt="${esc((FT[c.f]||{}).titulo||c.n)}" loading="lazy"><figcaption>${credito(c.f)}</figcaption></figure>
+    <div class="bd"><h4>${esc(c.n)}</h4>${ed.length?`<span class="q">${ed.length} ${ed.length>1?"boletins":"boletim"} · ${an[an.length-1]}${an.length>1?"–"+an[0]:""}</span><div class="lst">${an.map((a,i)=>`<details${i===0?" open":""}><summary>${esc(a)}<span>${pa[a].length}</span></summary><ul>${pa[a].map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener"><span>${e.data?fdate(e.data):""} · ${esc(curto(e))}</span><span class="n">${e.numero?"nº "+esc(e.numero):""}</span></a></li>`).join("")}</ul></details>`).join("")}</div>`:`<p class="vazio">Os dados desta cadeia estão no painel de indicadores; os boletins próprios estão em preparação.</p>`}</div></article>`};
+  $("#acervo").innerHTML=`<div class="acervo-head"><h3>Boletins por cadeia produtiva</h3><p>Cada cadeia reúne todas as edições em que aparece, das mais recentes às mais antigas. As edições conjuntas aparecem em todas as cadeias que analisam.</p></div><div class="porcad">${CAD_BOL.map(blocoCad).join("")}</div>`+
+  `<div class="acervo-head" style="margin-top:26px"><h3>Todos os boletins publicados</h3><p>${B.edicoes.length} edições, da mais recente para a mais antiga. Clique para abrir o PDF.</p></div>`+anos.map((a,i)=>`<details class="ano" id="ano-${esc(a)}"${i===0?" open":""}><summary>${esc(a)}<span>${porAno[a].length} ${porAno[a].length>1?"boletins":"boletim"}</span></summary><ul>${porAno[a].map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener"><span class="d">${e.data?fdate(e.data):""}</span><span><span class="t">${esc(e.titulo)}</span>${e.cadeias&&e.cadeias.length&&e.cadeias.length<6?`<span class="c">${e.cadeias.map(esc).join(" · ")}</span>`:""}</span><span class="n">${e.numero?"nº "+esc(e.numero):""}</span></a></li>`).join("")}</ul></details>`).join("");
+  $$('.years a[href^="#ano-"]').forEach(x=>x.addEventListener("click",()=>{const d=document.querySelector(x.getAttribute("href"));if(d)d.open=true}));
 }
 function renderCadeias(){
   const boi=ind("boi"),milho=ind("milho"),soja=ind("soja");
