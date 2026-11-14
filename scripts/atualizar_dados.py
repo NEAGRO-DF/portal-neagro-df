@@ -148,8 +148,16 @@ def sidra(caminho: str):
 
 
 def coluna(cab: dict, inicio: str) -> str:
+    """Chave da coluna do SIDRA: nome exato primeiro; depois o que começa pelo nome, sem pegar a coluna "(Código)"."""
+    alvo = inicio.lower()
     for k, v in cab.items():
-        if str(v).lower().startswith(inicio.lower()):
+        if str(v).lower() == alvo:
+            return k
+    for k, v in cab.items():
+        if str(v).lower().startswith(alvo) and "(código)" not in str(v).lower():
+            return k
+    for k, v in cab.items():
+        if str(v).lower().startswith(alvo):
             return k
     raise KeyError(inicio)
 
