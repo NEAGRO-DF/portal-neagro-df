@@ -307,6 +307,45 @@ def atualizar_noticias(dados: dict) -> None:
     dados["noticias"] = saida[:20]
 
 
+# ---------------------------------------------------------------- Cepea/Esalq (via Notícias Agrícolas)
+CEPEA_NA = {
+    "boi": ("https://www.noticiasagricolas.com.br/cotacoes/boi-gordo/boi-gordo-indicador-esalq-bmf",
+            "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo), à vista, divulgado pelo Notícias Agrícolas",
+            "https://www.cepea.org.br/br/indicador/boi-gordo.aspx"),
+    "soja": ("https://www.noticiasagricolas.com.br/cotacoes/soja/soja-indicador-cepea-esalq-porto-paranagua",
+             "Indicador da Soja Cepea/Esalq Paranaguá, divulgado pelo Notícias Agrícolas",
+             "https://www.cepea.org.br/br/indicador/soja.aspx"),
+    "milho": ("https://www.noticiasagricolas.com.br/cotacoes/milho/indicador-cepea-esalq-milho",
+              "Indicador do Milho Esalq/B3 (Campinas), divulgado pelo Notícias Agrícolas",
+              "https://www.cepea.org.br/br/indicador/milho.aspx"),
+}
+LINHA_NA = re.compile(r"<tbody[^>]*>\s*<tr>\s*<td>(\d{2}/\d{2}/\d{4})</td>\s*<td>([\d.,]+)</td>\s*<td>(-?[\d.,]+)%</td>", re.S)
+
+
+def atualizar_cepea(ind: list) -> None:
+    """O site do Cepea bloqueia robôs; o Notícias Agrícolas republica os indicadores diários do Cepea/Esalq."""
+    alvo = {i["id"]: i for i in ind}
+    for k, (url, fonte, link) in CEPEA_NA.items():
+        try:
+            m = LINHA_NA.search(baixar(url).decode("utf-8", "replace"))
+            if not m or k not in alvo:
+                raise ValueError("tabela não encontrada")
+            data, valor, var = m.groups()
+            alvo[k].update(valor=float(valor.replace(".", "").replace(",", ".")), referencia=data,
+                           variacao_pct=float(var.replace(".", "").replace(",", ".")), variacao_desc="no dia",
+                           fonte=fonte, link=link, endpoint=url, extraido_em=HOJE, automatico=True)
+            log(f"Cepea {k}: {valor} em {data}")
+        except Exception as e:  # noqa: BLE001
+            log(f"Cepea {k}: falhou ({e}); mantido o valor anterior")
+
+
+def _data_ref(i: dict):
+    try:
+        return datetime.strptime(str(i.get("referencia", "")), "%d/%m/%Y")
+    except ValueError:
+        return None
+
+
 # ---------------------------------------------------------------- Entradas manuais
 def aplicar_manual(dados: dict) -> None:
     if not MANUAL.exists():
@@ -315,6 +354,9 @@ def aplicar_manual(dados: dict) -> None:
     alvo = {i["id"]: i for i in dados["indicadores"]}
     for m in man.get("indicadores", []):
         if m["id"] in alvo:
+            a, b = _data_ref(alvo[m["id"]]), _data_ref(m)
+            if a and b and a > b:  # valor automático mais recente que o lançado à mão: fica o automático
+                continue
             alvo[m["id"]].update(m)
         else:
             dados["indicadores"].append(m)
@@ -333,6 +375,7 @@ def main() -> None:
     atualizar_ppm_df(dados["df"])
     atualizar_ride(dados["ride"])
     atualizar_noticias(dados)
+    atualizar_cepea(dados["indicadores"])
     aplicar_manual(dados)
     dados["atualizado_em"] = datetime.now(BRT).isoformat(timespec="minutes")
     DADOS.write_text(json.dumps(dados, ensure_ascii=False, indent=2), encoding="utf-8")
