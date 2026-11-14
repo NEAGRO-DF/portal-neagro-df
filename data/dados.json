@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-14T19:04-03:00",
+  "atualizado_em": "2026-11-14T19:11-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -213,49 +213,49 @@
     {
       "id": "boi",
       "nome": "Boi gordo Cepea/Esalq",
-      "valor": 386.3,
+      "valor": 395.4,
       "unidade": "R$/@",
       "casas": 2,
-      "referencia": "27/10/2026",
-      "variacao_pct": 6.04,
-      "variacao_desc": "no mês",
+      "referencia": "13/11/2026",
+      "variacao_pct": 0.28,
+      "variacao_desc": "no dia",
       "grupo": "precos",
-      "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo)",
+      "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo), divulgado pelo Notícias Agrícolas",
       "link": "https://www.cepea.org.br/br/indicador/boi-gordo.aspx",
       "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública",
-      "extraido_em": "2026-10-28",
+      "extraido_em": "2026-11-14",
       "automatico": false
     },
     {
       "id": "soja",
       "nome": "Soja Paranaguá Cepea/Esalq",
-      "valor": 157.41,
+      "valor": 164.49,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "referencia": "27/10/2026",
-      "variacao_pct": -2.57,
-      "variacao_desc": "no mês",
+      "referencia": "13/11/2026",
+      "variacao_pct": 1.34,
+      "variacao_desc": "no dia",
       "grupo": "precos",
-      "fonte": "Indicador da Soja Cepea/Esalq Paranaguá",
+      "fonte": "Indicador da Soja Cepea/Esalq Paranaguá, divulgado pelo Notícias Agrícolas",
       "link": "https://www.cepea.org.br/br/indicador/soja.aspx",
       "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública",
-      "extraido_em": "2026-10-28",
+      "extraido_em": "2026-11-14",
       "automatico": false
     },
     {
       "id": "milho",
       "nome": "Milho Esalq/B3",
-      "valor": 64.87,
+      "valor": 67.34,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "referencia": "27/10/2026",
-      "variacao_pct": -5.53,
-      "variacao_desc": "no mês",
+      "referencia": "13/11/2026",
+      "variacao_pct": 0.09,
+      "variacao_desc": "no dia",
       "grupo": "precos",
-      "fonte": "Indicador do Milho Esalq/B3",
+      "fonte": "Indicador do Milho Esalq/B3, divulgado pelo Notícias Agrícolas",
       "link": "https://www.cepea.org.br/br/indicador/milho.aspx",
       "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública",
-      "extraido_em": "2026-10-28",
+      "extraido_em": "2026-11-14",
       "automatico": false
     },
     {
@@ -659,6 +659,13 @@
   },
   "noticias": [
     {
+      "titulo": "Tempestade com chuva de 50 mm e ventania de até 60 km/h pode atingir 10 estados no feriado",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-14",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/tempestade-com-chuva-de-50-mm-e-ventania-de-ate-60-km-h-pode-atingir-10-estados-no-feriado/"
+    },
+    {
       "titulo": "Entenda as condições para o aproveitamento de créditos na importação de máquinas agrícolas",
       "veiculo": "Canal Rural",
       "data": "2026-11-14",
@@ -790,13 +797,6 @@
       "data": "2026-11-13",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/aves-e-suinos/exportacoes-brasileiras-de-ovos-somam-21-mil-toneladas-em-outubro/"
-    },
-    {
-      "titulo": "Petróleo lidera exportações brasileiras em outubro e amplia superávit, diz Icomex",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-13",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/petroleo-lidera-exportacoes-brasileiras-em-outubro-e-amplia-superavit-diz-icomex/"
     }
   ],
   "cartoes": [
