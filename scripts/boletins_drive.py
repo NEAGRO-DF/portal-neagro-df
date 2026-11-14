@@ -112,7 +112,8 @@ def ler_pasta(fid: str, conteudo: str | None = None) -> list[tuple[str, str]]:
 def main() -> None:
     bol = json.loads(ARQ.read_text(encoding="utf-8"))
     edicoes = bol.get("edicoes", [])
-    vistos = {e.get("pdf") for e in edicoes}
+    # "ignorar": links de PDF do Drive que não devem entrar no portal (ex.: edição ainda incompleta)
+    vistos = {e.get("pdf") for e in edicoes} | set(bol.get("ignorar", []))
     novas = 0
     for s in bol.get("series", []):
         for a in s.get("acervo", []):
