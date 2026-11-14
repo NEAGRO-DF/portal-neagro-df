@@ -13,7 +13,7 @@ const RAIZ = path.resolve(__dirname, "..");
 const SAIDA = path.join(RAIZ, "data", "painel.json");
 const PROJETO = "neagro---df";
 const BASE = `https://firestore.googleapis.com/v1/projects/${PROJETO}/databases/(default)/documents/`;
-const PAINEL = "https://neagrodf.netlify.app/";
+const PAINEL = process.env.PAINEL_URL || ""; /* endereço do painel guardado no secret PAINEL_URL do repositório */
 const log = m => console.error(`[painel] ${m}`);
 const NO_ACTIONS = !!process.env.GITHUB_ACTIONS;
 /* Avisos aparecem no resumo da execução do GitHub Actions; erros de estrutura fazem a etapa de conferência falhar,
@@ -49,6 +49,7 @@ async function colecao(nome) {
 }
 
 async function quadroGTA() {
+  if (!PAINEL) throw new Error("endereço do painel não configurado (secret PAINEL_URL)");
   const r = await fetch(PAINEL, { headers: { "User-Agent": "NEAGRO-DF portal" } });
   if (!r.ok) throw new Error(`painel: HTTP ${r.status}`);
   const html = await r.text();
