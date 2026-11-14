@@ -75,13 +75,33 @@ def baixar_bytes(url: str) -> bytes:
         return r.read()
 
 
+def baixar_sharepoint(link: str) -> bytes:
+    """Link de compartilhamento público do SharePoint/OneDrive da UnB: abrir o link libera o acesso de convidado
+    (cookie); a página indica o caminho do arquivo, baixado em seguida por download.aspx."""
+    import http.cookiejar
+    from urllib.parse import quote, unquote, urlsplit
+    abridor = urllib.request.build_opener(urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()))
+    abridor.addheaders = [("User-Agent", "Mozilla/5.0 (NEAGRO-DF portal)")]
+    with abridor.open(link.split("&download=")[0], timeout=120) as r:
+        pagina = r.read().decode("utf-8", "replace")
+        final = r.geturl()
+    m = re.search(r"[?&]id=([^&\"'\\ ]+)", final) or re.search(r"onedrive\.aspx\?id=([^&\"'\\ ]+)", pagina)
+    if not m:
+        raise ValueError("a página do SharePoint não indicou o arquivo")
+    caminho = unquote(m.group(1))
+    pessoal = re.match(r"(/personal/[^/]+)/", caminho)
+    if not pessoal:
+        raise ValueError("caminho do SharePoint inesperado")
+    base = "{0.scheme}://{0.netloc}".format(urlsplit(link))
+    with abridor.open(f"{base}{pessoal.group(1)}/_layouts/15/download.aspx?SourceUrl={quote(caminho)}", timeout=120) as r:
+        return r.read()
+
+
 def url_download(link: str) -> str:
     """Endereço de download direto do PDF, conforme o serviço onde ele está guardado."""
     m = re.search(r"drive\.google\.com/file/d/([\w-]+)", link)
     if m:
         return f"https://drive.usercontent.google.com/download?id={m.group(1)}&export=download&confirm=t"
-    if "sharepoint.com" in link:
-        return link + ("&" if "?" in link else "?") + "download=1"
     return link
 
 
@@ -113,7 +133,7 @@ def espelhar(edicoes: list[dict], ignorar: set[str]) -> int:
         ano = (e.get("data") or "")[:4] or "outros"
         destino = PASTA_PDF / ano / nome_pdf(e)
         try:
-            dados = baixar_bytes(url_download(link))
+            dados = baixar_sharepoint(link) if "sharepoint.com" in link else baixar_bytes(url_download(link))
             if not dados.startswith(b"%PDF"):
                 raise ValueError("o endereço não devolveu um PDF (arquivo privado ou link expirado?)")
             if destino.exists() and destino.read_bytes() != dados:
