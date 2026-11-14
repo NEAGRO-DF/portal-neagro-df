@@ -284,6 +284,9 @@ section{padding-block:56px}
 .card h3{margin-bottom:2px}
 .card .sub{font-size:.84rem;color:var(--muted);margin-bottom:12px}
 .tscroll{overflow-x:auto}
+.cgrp{margin:34px 0 14px;font-size:1.15rem}.cgrp:first-child{margin-top:0}
+.ctab td,.ctab th{white-space:nowrap}.ctab td:first-child{white-space:normal}
+.clinks{margin:0;padding-left:18px;display:grid;gap:8px}.clinks a{font-weight:600}
 table{width:100%;border-collapse:collapse;font-size:.9rem}
 th{text-align:left;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:800;padding:8px 10px;border-bottom:2px solid var(--line)}
 td{padding:10px;border-bottom:1px solid var(--line);vertical-align:middle}
@@ -421,6 +424,7 @@ section[id]{scroll-margin-top:60px}
     <a href="#boletins">Boletins</a>
     <a href="#painel">Indicadores</a>
     <a href="#cotacoes">Cotações</a>
+    <a href="#economia">Economia e comércio</a>
     <a href="#df-ride">DF e RIDE</a>
     <a href="#sobre">Quem somos</a>
     <a class="cta" href="#contato">Fale conosco</a>
@@ -590,6 +594,19 @@ section[id]{scroll-margin-top:60px}
           <div class="card"><h3>Inflação (IPCA 12 meses)</h3><div class="sub">%, últimos 12 meses</div><div id="ch-ipca"></div><div class="src" id="src-ipca"></div></div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="economia">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Indicadores</span>
+          <h2>Economia, comércio exterior e mercado mundial</h2>
+          <p>PIB, valor adicionado, comércio exterior e oferta mundial, lidos direto das fontes oficiais (IBGE, MDIC, USDA e Comissão Europeia) a cada atualização do portal. Cada cartão traz o link da fonte e a data da extração.</p>
+        </div>
+      </div>
+      <div id="cartoes"></div>
     </div>
   </section>
 
@@ -941,7 +958,7 @@ function renderCadeias(){
     </div></article>`).join("");
   $$("[data-preset]").forEach(a=>a.addEventListener("click",()=>setPreset(a.dataset.preset)));
 }
-const IND_FOTO={boi:"boi",soja:"soja",milho:"milho"}, IND_SIG={dolar:"US$",selic:"%",ipca12:"IPCA",fao:"FAO"};
+const IND_FOTO={boi:"boi",soja:"soja",milho:"milho"}, IND_SIG={dolar:"US$",euro:"€",selic:"%",ipca12:"IPCA",igpm12:"IGP",fao:"FAO"};
 function renderIndicadores(){
   $("#tbl-ind tbody").innerHTML=D.indicadores.map(i=>{const v=i.variacao_pct,f=IND_FOTO[i.id];
     return `<tr><td><span class="mini"><span class="av" style="${f?bg(f):""}">${f?"":esc(IND_SIG[i.id]||"")}</span><b>${esc(i.nome)}</b></span></td><td class="r num" style="white-space:nowrap"><b>${fmt(i.valor,i.casas)}</b><br><span class="note">${esc(i.unidade)}</span></td><td class="num">${esc(i.referencia)}</td><td class="r">${v==null?"<span class='note'>–</span>":`<span class="delta ${v>=0?"up":"down"}">${v>=0?"▲":"▼"} ${fmt(Math.abs(v),2)}%</span>`}</td><td><a href="${esc(i.link)}">${esc(i.fonte.split(",")[0])}</a></td></tr>`}).join("");
@@ -1032,6 +1049,18 @@ function renderBrasil(){
   $("#faosub").innerHTML=`<h3>${esc(f.titulo)}</h3><div class="sub">Variação mensal dos subíndices</div><div id="ch-fao"></div><div class="src">${srcLine(f)}</div>`;
   diverg($("#ch-fao"),f.linhas.map(l=>[l.rotulo,l.valor]));
 }
+function renderCartoes(){
+  const G=D.cartoes||[],el=$("#cartoes");if(!el)return;
+  if(!G.length){el.innerHTML=`<p class="note">Os indicadores desta seção serão carregados na próxima atualização automática do portal.</p>`;return}
+  const cel=(v,h,c)=>{if(v==null||v==="")return`<td class="r note">–</td>`;if(typeof v!=="number")return`<td>${esc(v)}</td>`;
+    if(/^Var/.test(h))return`<td class="r"><span class="delta ${v>=0?"up":"down"}">${v>0?"+":""}${fmt(v,1)}%</span></td>`;return`<td class="r num">${fmt(v,c)}</td>`};
+  const corpo=c=>{if(c.tipo==="tabela")return`<div class="tscroll"><table class="ctab"><thead><tr>${c.colunas.map((h,i)=>`<th${i?' class="r"':""}>${esc(h)}</th>`).join("")}</tr></thead><tbody>${c.linhas.map(l=>`<tr><td><b>${esc(l[0])}</b></td>${l.slice(1).map((v,i)=>cel(v,c.colunas[i+1],c.casas==null?1:c.casas)).join("")}</tr>`).join("")}</tbody></table></div>`;
+    if(c.tipo==="barras")return`<div id="cb-${esc(c.id)}"></div>`;
+    if(c.tipo==="links")return`<ul class="clinks">${c.links.map(l=>`<li><a href="${esc(l[1])}">${esc(l[0])}</a></li>`).join("")}</ul>`;return""};
+  const larga=c=>c.tipo==="tabela"&&c.colunas.length>5;
+  el.innerHTML=G.map(g=>`<h3 class="cgrp">${esc(g.titulo)}</h3><div class="grid12">${g.cartoes.map(c=>`<div class="card ${larga(c)?"span12":"span6"}"><h3>${esc(c.titulo)}</h3>${c.sub?`<div class="sub">${esc(c.sub)}</div>`:""}${corpo(c)}${c.nota?`<p class="note" style="margin-top:10px">${esc(c.nota)}</p>`:""}<div class="src">${srcLine(c)}${c.link2?` Ver também <a href="${esc(c.link2)}">Agrostat/MAPA</a>.`:""}</div></div>`).join("")}</div>`).join("");
+  G.forEach(g=>g.cartoes.forEach(c=>{if(c.tipo==="barras"&&c.barras&&c.barras.length){const e=$("#cb-"+c.id);if(e)hbars(e,c.barras,{labelW:230,W:600,fmtv:v=>fmt(v,c.casas==null?1:c.casas),hi:r=>!!r[2]})}}));
+}
 function renderNoticias(){
   const n=[...D.noticias].sort((a,b)=>(b.data||"").localeCompare(a.data||""));
   $("#news").innerHTML=n.slice(0,10).map(x=>`<div class="card nw"><span class="t">${esc(x.tema)}</span><a href="${esc(x.link)}">${esc(x.titulo)}</a><div class="m"><span>${esc(x.veiculo)}</span>${x.data?`<span>${fdate(x.data)}</span>`:""}</div></div>`).join("");
@@ -1054,6 +1083,7 @@ function renderFontes(){
   const rows=[];D.indicadores.forEach(i=>rows.push([i.nome,i.fonte,i.link,i.endpoint,i.extraido_em,i.automatico]));
   const add=(o,auto=true)=>rows.push([o.titulo,o.fonte,o.link,o.endpoint||"",o.extraido_em,auto]);
   add(D.brasil.pib_trimestral);add(D.brasil.pib_agro_cepea,false);add(D.brasil.fao_subindices);add(D.df.pam);add(D.df.ppm);add(D.ride);
+  (D.cartoes||[]).forEach(g=>g.cartoes.forEach(c=>add(c,c.automatico!==false)));
   if(P&&P.fonte){rows.push(["Relações de troca e preços do DF",P.fonte.nome,"#painel",P.fonte.endpoint,P.fonte.extraido_em,true]);
     rows.push(["Movimentação de animais no DF (GTA)",P.fonte.gta_fonte,"#painel",P.fonte.endpoint,P.fonte.extraido_em,true]);}
   rows.push(["População do DF","IBGE, Censo Demográfico 2022","https://www.ibge.gov.br/cidades-e-estados/df","valor fixo (2.817.381 habitantes)","2026-10-20",false]);
@@ -1120,7 +1150,7 @@ renderContato();initForm();
 
 function renderAll(){
   const r=f=>{try{f()}catch(e){console.error(e)}};
-  r(renderTicker);r(renderBoletins);r(renderPainel);r(renderCadeias);r(renderIndicadores);r(renderTerritorio);r(renderBrasil);r(renderNoticias);r(renderEquipe);r(renderFontes);
+  r(renderTicker);r(renderBoletins);r(renderPainel);r(renderCadeias);r(renderIndicadores);r(renderTerritorio);r(renderCartoes);r(renderBrasil);r(renderNoticias);r(renderEquipe);r(renderFontes);
   if(!calcReady){r(renderCalc);calcReady=true}else if(!calcTocado){r(montarPresets);r(()=>setPreset(presetAtual))}else r(calc);
 }
 renderAll();
