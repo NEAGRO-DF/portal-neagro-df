@@ -26,6 +26,9 @@ jobs:
           node-version: "20"
       - name: Buscar dados públicos
         run: python scripts/atualizar_dados.py
+      - name: Indicadores de economia, comércio exterior e mercado mundial
+        run: python scripts/atualizar_indicadores.py
+        timeout-minutes: 15
       - name: Ler o painel NEAGRO-DF (relações de troca e GTA)
         run: node scripts/painel.js
         env:
