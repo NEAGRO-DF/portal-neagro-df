@@ -28,6 +28,8 @@ jobs:
         run: python scripts/atualizar_dados.py
       - name: Ler o painel NEAGRO-DF (relações de troca e GTA)
         run: node scripts/painel.js
+        env:
+          PAINEL_URL: ${{ secrets.PAINEL_URL }}
       - name: Montar a página
         run: python scripts/montar_site.py
       - name: Gravar alterações
