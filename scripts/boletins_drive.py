@@ -3,6 +3,8 @@
 Lê as pastas listadas no "acervo" de cada série de data/boletins.json (somente links de pastas do
 Google Drive), encontra os PDFs e acrescenta à lista "edicoes" os boletins que ainda não estão nela.
 Basta salvar o PDF na pasta do ano no Drive: na execução seguinte do robô o boletim aparece no portal.
+Todo PDF que estiver fora do portal (Drive, SharePoint ou outro site) é copiado para boletins/<ano>/,
+e o catálogo passa a apontar para essa cópia; o endereço de origem fica guardado em "pdf_original".
 
 Padrão de nome esperado: "6.032 - Boletim BOVINOS - NEAGRO-DF - 26.09.2026.pdf".
 Arquivos fora do padrão entram com o nome do arquivo e a data da última modificação no Drive.
@@ -12,14 +14,18 @@ Uso:  python scripts/boletins_drive.py
 """
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import re
+import unicodedata
 import urllib.request
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
 ARQ = RAIZ / "data" / "boletins.json"
+PASTA_PDF = RAIZ / "boletins"
+SITE = "https://neagro-df.github.io/portal-neagro-df/"
 LISTA = "https://drive.google.com/embeddedfolderview?id={}"
 
 ENTRADA = re.compile(
@@ -61,6 +67,66 @@ def baixar(url: str) -> str:
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (NEAGRO-DF portal)"})
     with urllib.request.urlopen(req, timeout=60) as r:
         return r.read().decode("utf-8", "replace")
+
+
+def baixar_bytes(url: str) -> bytes:
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (NEAGRO-DF portal)"})
+    with urllib.request.urlopen(req, timeout=120) as r:
+        return r.read()
+
+
+def url_download(link: str) -> str:
+    """Endereço de download direto do PDF, conforme o serviço onde ele está guardado."""
+    m = re.search(r"drive\.google\.com/file/d/([\w-]+)", link)
+    if m:
+        return f"https://drive.usercontent.google.com/download?id={m.group(1)}&export=download&confirm=t"
+    if "sharepoint.com" in link:
+        return link + ("&" if "?" in link else "?") + "download=1"
+    return link
+
+
+def slug(txt: str) -> str:
+    t = unicodedata.normalize("NFD", txt)
+    t = "".join(c for c in t if unicodedata.category(c) != "Mn").lower()
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+
+
+def nome_pdf(e: dict) -> str:
+    if e.get("serie") == "animal":
+        tit = re.sub(r"^\s*boletim de mercado\s*:?\s*(?:d[ao]s?\s+)?", "", e.get("titulo", ""), flags=re.I)
+        assunto = slug(tit)[:60].strip("-") or "producao-animal"
+    else:
+        assunto = slug(e.get("serie", "")) or "boletim"
+    num = slug(e.get("numero", "")) or hashlib.sha1(e.get("pdf", "").encode()).hexdigest()[:8]
+    data = e.get("data") or "sem-data"
+    return f"{num}-boletim-{assunto}-neagro-df-{data}.pdf"
+
+
+def espelhar(edicoes: list[dict], ignorar: set[str]) -> int:
+    """Copia para o portal (pasta boletins/<ano>/) os PDFs que ainda estão no Google Drive ou em outros sites,
+    e passa o catálogo a apontar para a cópia do portal. O link original fica em "pdf_original"."""
+    feitos = 0
+    for e in edicoes:
+        link = e.get("pdf", "")
+        if not link or link.startswith(SITE) or link in ignorar:
+            continue
+        ano = (e.get("data") or "")[:4] or "outros"
+        destino = PASTA_PDF / ano / nome_pdf(e)
+        try:
+            dados = baixar_bytes(url_download(link))
+            if not dados.startswith(b"%PDF"):
+                raise ValueError("o endereço não devolveu um PDF (arquivo privado ou link expirado?)")
+            if destino.exists() and destino.read_bytes() != dados:
+                destino = destino.with_name(destino.stem + "-" + hashlib.sha1(dados).hexdigest()[:6] + ".pdf")
+            destino.parent.mkdir(parents=True, exist_ok=True)
+            destino.write_bytes(dados)
+            e["pdf_original"] = link
+            e["pdf"] = SITE + destino.relative_to(RAIZ).as_posix()
+            feitos += 1
+            print(f"[boletins] copiado para o portal: {destino.relative_to(RAIZ)} ({len(dados) // 1024} KB)")
+        except Exception as erro:  # noqa: BLE001
+            print(f"[boletins] não foi possível copiar {e.get('numero') or e.get('titulo')} ({erro}); mantido o link externo")
+    return feitos
 
 
 def cadeias(tipo: str) -> list[str]:
@@ -113,7 +179,8 @@ def main() -> None:
     bol = json.loads(ARQ.read_text(encoding="utf-8"))
     edicoes = bol.get("edicoes", [])
     # "ignorar": links de PDF do Drive que não devem entrar no portal (ex.: edição ainda incompleta)
-    vistos = {e.get("pdf") for e in edicoes} | set(bol.get("ignorar", []))
+    ignorar = set(bol.get("ignorar", []))
+    vistos = {e.get("pdf") for e in edicoes} | {e.get("pdf_original") for e in edicoes} | ignorar
     novas = 0
     for s in bol.get("series", []):
         for a in s.get("acervo", []):
@@ -131,10 +198,11 @@ def main() -> None:
                     edicoes.append(ed)
                     vistos.add(ed["pdf"])
                     novas += 1
+    copiados = espelhar(edicoes, ignorar)
     edicoes.sort(key=lambda e: (e.get("data") or "", e.get("numero") or ""), reverse=True)
     bol["edicoes"] = edicoes
     ARQ.write_text(json.dumps(bol, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    print(f"[boletins] {novas} boletim(ns) novo(s); {len(edicoes)} no total")
+    print(f"[boletins] {novas} boletim(ns) novo(s); {copiados} copiado(s) para o portal; {len(edicoes)} no total")
 
 
 if __name__ == "__main__":
