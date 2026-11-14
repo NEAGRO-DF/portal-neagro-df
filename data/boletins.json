@@ -1,5 +1,5 @@
 {
-  "_instrucoes": "Para publicar um boletim novo, acrescente um objeto no início da lista 'edicoes' (a mais recente primeiro). O site destaca automaticamente a primeira edição. Campos: serie (animal | tilapia | morango), numero, data (AAAA-MM-DD), titulo, cadeias (lista), resumo (2 a 3 frases), destaques (até 3 frases curtas), pdf (link direto do arquivo).",
+  "_instrucoes": "Os boletins da Produção Animal entram sozinhos: basta salvar o PDF na pasta do ano no Google Drive (link no 'acervo' da série) com o nome no padrão '6.035 - Boletim SUÍNOS - NEAGRO-DF - 28.11.2026.pdf'. O robô (scripts/boletins_drive.py) lê as pastas a cada execução e acrescenta os novos boletins em 'edicoes'. Ao abrir a pasta de um ano novo no Drive, acrescente o link dela no início do 'acervo' da série. Edições de outras séries (morango, tilápia) são lançadas à mão em 'edicoes', com os campos: serie, numero, data (AAAA-MM-DD), titulo, cadeias, resumo, destaques, pdf. O site destaca a edição mais recente.",
   "series": [
     {
       "id": "animal",
@@ -70,6 +70,10 @@
         {
           "rotulo": "2022/2",
           "link": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/ESRjfzGyapNNso0b2Bcr4KMBQFtwkQiORCjAvoQbbJTj2g?e=cXNxEE"
+        },
+        {
+          "rotulo": "2022/1",
+          "link": "https://neagrodf.unb.br/wp-content/uploads/2024/10/Informativo-2022.1.pdf"
         }
       ]
     },
@@ -137,21 +141,6 @@
       "destaques": [],
       "pdf": "https://drive.google.com/file/d/1aJMDUV7yqURiejqghj0aIsrWkc7m6jP2/view",
       "origem": "drive"
-    },
-    {
-      "serie": "animal",
-      "numero": "190626",
-      "data": "2026-06-19",
-      "titulo": "Boletim de Mercado da Produção Animal do DF e Entorno",
-      "cadeias": [
-        "Suinocultura",
-        "Bovinocultura de corte",
-        "Insumos"
-      ],
-      "resumo": "Edição com os preços de insumos e produtos das cadeias de produção animal acompanhadas pelo NEAGRO-DF, relações de troca entre insumo e produto e preços deflacionados pelo IPCA e IGP-DI.",
-      "destaques": [],
-      "pdf": "https://drive.google.com/drive/folders/1y9kC1L_vhePxyCGWAqWFPnF98zo3_0it?usp=sharing",
-      "pdf_e_pasta": true
     },
     {
       "serie": "animal",
@@ -604,6 +593,20 @@
       "origem": "drive"
     },
     {
+      "serie": "morango",
+      "numero": "2024/2",
+      "data": "2024-12-31",
+      "titulo": "Informativo Semestral do Morango 2024/2",
+      "cadeias": [
+        "Morango",
+        "Insumos"
+      ],
+      "resumo": "Análise semestral do Índice de Relação de Troca (IRT) do morango no Distrito Federal: quantidade de produto necessária para adquirir uma unidade comercial de cada insumo selecionado.",
+      "destaques": [],
+      "pdf": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/EeBcbL4dKvVKr5F9ElTwDx8BP97MJqRHrInH6gBtjLV2AA?e=nLOhf5",
+      "origem": "manual"
+    },
+    {
       "serie": "animal",
       "numero": "4.26",
       "data": "2024-12-13",
@@ -928,6 +931,20 @@
       "origem": "drive"
     },
     {
+      "serie": "morango",
+      "numero": "2024/1",
+      "data": "2024-06-30",
+      "titulo": "Informativo Semestral do Morango 2024/1",
+      "cadeias": [
+        "Morango",
+        "Insumos"
+      ],
+      "resumo": "Análise semestral do Índice de Relação de Troca (IRT) do morango no Distrito Federal: quantidade de produto necessária para adquirir uma unidade comercial de cada insumo selecionado.",
+      "destaques": [],
+      "pdf": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/EU4DYebcX4xHhLkOEl7YhtsBKuu18rELwabRkm-5sjixzw?e=fPfB3o",
+      "origem": "manual"
+    },
+    {
       "serie": "animal",
       "numero": "4.08",
       "data": "2024-06-26",
@@ -1070,6 +1087,20 @@
       "destaques": [],
       "pdf": "https://drive.google.com/file/d/1dUMOQUagoZqKCk_jKXCn2NBQ2Mlj61RN/view",
       "origem": "drive"
+    },
+    {
+      "serie": "morango",
+      "numero": "2023/2",
+      "data": "2023-12-31",
+      "titulo": "Informativo Semestral do Morango 2023/2",
+      "cadeias": [
+        "Morango",
+        "Insumos"
+      ],
+      "resumo": "Análise semestral do Índice de Relação de Troca (IRT) do morango no Distrito Federal: quantidade de produto necessária para adquirir uma unidade comercial de cada insumo selecionado.",
+      "destaques": [],
+      "pdf": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/Ec1llS3EzUNOu9I_sxRccB4Bzs8Ec0OTLpwRNxHCmaV-Tg?e=icVccY",
+      "origem": "manual"
     },
     {
       "serie": "animal",
@@ -1306,6 +1337,48 @@
       "destaques": [],
       "pdf": "https://drive.google.com/file/d/1E-lkr9jyCxgUDfDs1zMbVQyAw5yZriBf/view",
       "origem": "drive"
+    },
+    {
+      "serie": "morango",
+      "numero": "2023/1",
+      "data": "2023-06-30",
+      "titulo": "Informativo Semestral do Morango 2023/1",
+      "cadeias": [
+        "Morango",
+        "Insumos"
+      ],
+      "resumo": "Análise semestral do Índice de Relação de Troca (IRT) do morango no Distrito Federal: quantidade de produto necessária para adquirir uma unidade comercial de cada insumo selecionado.",
+      "destaques": [],
+      "pdf": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/Ec-VSKEvDKxOhwupoF3mSlcBlGdIuQTzvigPmuvE2Bo4EA?e=DoQCzX",
+      "origem": "manual"
+    },
+    {
+      "serie": "morango",
+      "numero": "2022/2",
+      "data": "2022-12-31",
+      "titulo": "Informativo Semestral do Morango 2022/2",
+      "cadeias": [
+        "Morango",
+        "Insumos"
+      ],
+      "resumo": "Análise semestral do Índice de Relação de Troca (IRT) do morango no Distrito Federal: quantidade de produto necessária para adquirir uma unidade comercial de cada insumo selecionado.",
+      "destaques": [],
+      "pdf": "https://unbbr-my.sharepoint.com/:b:/g/personal/elen_presotto_unb_br/ESRjfzGyapNNso0b2Bcr4KMBQFtwkQiORCjAvoQbbJTj2g?e=cXNxEE",
+      "origem": "manual"
+    },
+    {
+      "serie": "morango",
+      "numero": "2022/1",
+      "data": "2022-06-30",
+      "titulo": "Informativo Semestral do Morango 2022/1",
+      "cadeias": [
+        "Morango",
+        "Insumos"
+      ],
+      "resumo": "Análise semestral do Índice de Relação de Troca (IRT) do morango no Distrito Federal: quantidade de produto necessária para adquirir uma unidade comercial de cada insumo selecionado.",
+      "destaques": [],
+      "pdf": "https://neagrodf.unb.br/wp-content/uploads/2024/10/Informativo-2022.1.pdf",
+      "origem": "manual"
     }
   ]
 }
