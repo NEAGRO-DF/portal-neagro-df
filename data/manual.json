@@ -3,33 +3,33 @@
  "indicadores": [
   {
    "id": "boi",
-   "valor": 386.3,
-   "referencia": "27/10/2026",
-   "variacao_pct": 6.04,
-   "variacao_desc": "no mês",
-   "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo)",
+   "valor": 395.4,
+   "referencia": "13/11/2026",
+   "variacao_pct": 0.28,
+   "variacao_desc": "no dia",
+   "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo), divulgado pelo Notícias Agrícolas",
    "link": "https://www.cepea.org.br/br/indicador/boi-gordo.aspx",
-   "extraido_em": "2026-10-28"
+   "extraido_em": "2026-11-14"
   },
   {
    "id": "soja",
-   "valor": 157.41,
-   "referencia": "27/10/2026",
-   "variacao_pct": -2.57,
-   "variacao_desc": "no mês",
-   "fonte": "Indicador da Soja Cepea/Esalq Paranaguá",
+   "valor": 164.49,
+   "referencia": "13/11/2026",
+   "variacao_pct": 1.34,
+   "variacao_desc": "no dia",
+   "fonte": "Indicador da Soja Cepea/Esalq Paranaguá, divulgado pelo Notícias Agrícolas",
    "link": "https://www.cepea.org.br/br/indicador/soja.aspx",
-   "extraido_em": "2026-10-28"
+   "extraido_em": "2026-11-14"
   },
   {
    "id": "milho",
-   "valor": 64.87,
-   "referencia": "27/10/2026",
-   "variacao_pct": -5.53,
-   "variacao_desc": "no mês",
-   "fonte": "Indicador do Milho Esalq/B3",
+   "valor": 67.34,
+   "referencia": "13/11/2026",
+   "variacao_pct": 0.09,
+   "variacao_desc": "no dia",
+   "fonte": "Indicador do Milho Esalq/B3, divulgado pelo Notícias Agrícolas",
    "link": "https://www.cepea.org.br/br/indicador/milho.aspx",
-   "extraido_em": "2026-10-28"
+   "extraido_em": "2026-11-14"
   }
  ]
 }
