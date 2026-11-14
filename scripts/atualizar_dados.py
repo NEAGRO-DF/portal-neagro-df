@@ -5,9 +5,11 @@ registrando para cada item a fonte, o endpoint e a data de extração.
 Se uma fonte falhar, o valor anterior é mantido e o erro vai para o log.
 
 Fontes automáticas
-  Banco Central (SGS): câmbio (10813), Selic meta (432), IPCA 12 meses (13522)
+  Banco Central (SGS): dólar (10813), euro (21619), Selic meta (432), IPCA 12 meses (13522),
+      IGP-M (189, acumulado em 12 meses)
   IBGE (SIDRA): PAM tabela 5457 (DF e municípios da RIDE), PPM tabela 3939 (DF)
-  FAO: Food Price Index (CSV mensal)
+  IBGE (SIDRA): Contas Nacionais Trimestrais, tabela 5932 (PIB por setor)
+  FAO: Food Price Index e subíndices (CSV mensal da FAO)
   Notícias: feeds RSS listados em data/fontes_noticias.json
 
 Entradas manuais
@@ -98,6 +100,43 @@ def atualizar_bcb(ind: dict) -> None:
         log("IPCA atualizado")
     except Exception as e:  # noqa: BLE001
         log(f"IPCA: falhou ({e})")
+    def novo(base: dict) -> dict:
+        """Devolve o indicador já existente ou o cria logo depois dos indicadores macro."""
+        if base["id"] not in alvo:
+            pos = max((k for k, x in enumerate(ind) if x.get("grupo") == "macro"), default=len(ind) - 1) + 1
+            ind.insert(pos, base)
+            alvo[base["id"]] = base
+        return alvo[base["id"]]
+
+    try:
+        url, s = sgs(21619, 20)
+        i = novo({"id": "euro", "nome": "Euro", "unidade": "R$/€", "casas": 4, "grupo": "macro",
+                  "fonte": "Banco Central do Brasil, SGS série 21619 (taxa de câmbio livre, euro, venda)",
+                  "link": "https://www3.bcb.gov.br/sgspub/", "automatico": True})
+        i.update(valor=float(s[-1]["valor"]), referencia=s[-1]["data"], endpoint=url, extraido_em=HOJE,
+                 variacao_pct=round((float(s[-1]["valor"]) / float(s[0]["valor"]) - 1) * 100, 2),
+                 variacao_desc="em 20 pregões")
+        log("Euro atualizado")
+    except Exception as e:  # noqa: BLE001
+        log(f"Euro: falhou ({e})")
+    try:
+        url, s = sgs(189, 13)  # IGP-M mensal (FGV); acumulado em 12 meses calculado pelo produto das variações
+
+        def ac(lista):
+            f = 1.0
+            for p in lista:
+                f *= 1 + float(p["valor"]) / 100
+            return (f - 1) * 100
+
+        _, m, y = s[-1]["data"].split("/")
+        i = novo({"id": "igpm12", "nome": "IGP-M 12 meses", "unidade": "%", "casas": 2, "grupo": "macro",
+                  "fonte": "FGV via Banco Central do Brasil, SGS série 189 (IGP-M mensal, acumulado em 12 meses)",
+                  "link": "https://portalibre.fgv.br/igp", "automatico": True})
+        i.update(valor=round(ac(s[-12:]), 2), referencia=f"{MESES[int(m) - 1]}/{y}", endpoint=url, extraido_em=HOJE,
+                 variacao_pct=None, variacao_desc=f"no mês: {s[-1]['valor'].replace('.', ',')}%")
+        log("IGP-M atualizado")
+    except Exception as e:  # noqa: BLE001
+        log(f"IGP-M: falhou ({e})")
 
 
 # ---------------------------------------------------------------- IBGE / SIDRA
@@ -169,27 +208,60 @@ def atualizar_ride(ride: dict) -> None:
 
 
 # ---------------------------------------------------------------- FAO
-def atualizar_fao(ind: dict) -> None:
-    pagina = "https://www.fao.org/worldfoodsituation/FoodPricesIndex/en"
+FAO_PAGINA = "https://www.fao.org/worldfoodsituation/foodpricesindex/en/"
+FAO_SUB = [("Carnes", 2), ("Lácteos", 3), ("Cereais", 4), ("Óleos vegetais", 5), ("Açúcar", 6)]
+
+
+def atualizar_fao(dados: dict) -> None:
+    """Índice FAO de preços de alimentos e subíndices, lidos do CSV oficial da FAO."""
     try:
-        html = baixar(pagina).decode("utf-8", "ignore")
-        m = re.search(r'href="([^"]+food_price_indices_data[^"]*\.csv)"', html, re.I) or \
-            re.search(r'href="([^"]+\.csv)"', html, re.I)
+        html = baixar(FAO_PAGINA).decode("utf-8", "ignore").replace("&amp;", "&")
+        m = re.search(r'href="([^"]*food_price_indices_data[^"]*\.csv[^"]*)"', html, re.I)
         if not m:
             raise ValueError("link do CSV não encontrado na página")
         csv_url = m.group(1) if m.group(1).startswith("http") else "https://www.fao.org" + m.group(1)
-        linhas = list(csv.reader(io.StringIO(baixar(csv_url).decode("utf-8", "ignore"))))
-        dados = [l for l in linhas if l and re.match(r"\d{4}-\d{2}", l[0]) and num(l[1])]
-        ult, ant = dados[-1], dados[-2]
-        y, mth = ult[0][:7].split("-")
-        i = next(x for x in ind if x["id"] == "fao")
-        i.update(valor=round(num(ult[1]), 1), referencia=f"{MESES[int(mth) - 1]}/{y}",
+        linhas = list(csv.reader(io.StringIO(baixar(csv_url).decode("utf-8-sig", "ignore"))))
+        serie = [l for l in linhas if l and re.match(r"\d{4}-\d{2}$", l[0].strip()) and num(l[1])]
+        ult, ant = serie[-1], serie[-2]
+        y, mth = ult[0].strip()[:7].split("-")
+        ym, ya = f"{MESES[int(mth) - 1]}/{y}", ant[0].strip()[:7].split("-")
+        i = next(x for x in dados["indicadores"] if x["id"] == "fao")
+        i.update(valor=round(num(ult[1]), 1), referencia=ym,
                  variacao_pct=round((num(ult[1]) / num(ant[1]) - 1) * 100, 2),
-                 variacao_desc="sobre o mês anterior", fonte="FAO, Food Price Index",
-                 endpoint=csv_url, extraido_em=HOJE)
-        log("Índice FAO atualizado")
+                 variacao_desc=f"sobre {MESES[int(ya[1]) - 1]}/{ya[0]}",
+                 fonte="FAO, Food Price Index (2014-2016 = 100)", link=FAO_PAGINA,
+                 endpoint=csv_url.split("?")[0], extraido_em=HOJE, automatico=True)
+        dados["brasil"]["fao_subindices"].update(
+            titulo=f"Índice FAO, variação em {ym}",
+            linhas=[{"rotulo": r, "valor": round((num(ult[c]) / num(ant[c]) - 1) * 100, 1)} for r, c in FAO_SUB],
+            fonte="FAO, Food Price Index, subíndices (2014-2016 = 100)", link=FAO_PAGINA,
+            endpoint=csv_url.split("?")[0], extraido_em=HOJE)
+        log(f"Índice FAO {ym} atualizado")
     except Exception as e:  # noqa: BLE001
         log(f"FAO: falhou ({e}); mantido o valor anterior")
+
+
+# ---------------------------------------------------------------- PIB trimestral (IBGE)
+PIB_SETORES = [("90707", "PIB total"), ("90687", "Agropecuária"), ("90691", "Indústria"), ("90696", "Serviços")]
+
+
+def atualizar_pib_trimestral(dados: dict) -> None:
+    """Contas Nacionais Trimestrais, SIDRA 5932: variação sobre o trimestre anterior (6564) e anual (6561)."""
+    try:
+        cats = ",".join(c for c, _ in PIB_SETORES)
+        url, cab, linhas = sidra(f"/t/5932/n1/all/v/6561,6564/p/last%201/c11255/{cats}")
+        kv, kc, kp = coluna(cab, "Variável (Código)"), coluna(cab, "Setores e subsetores (Código)"), next(k for k, v in cab.items() if v == "Trimestre")
+        val = {(l[kv], l[kc]): num(l["V"]) for l in linhas}
+        tri = linhas[0][kp]
+        dados["brasil"]["pib_trimestral"].update(
+            titulo=f"PIB do Brasil, {tri}",
+            linhas=[{"rotulo": r, "tri": val.get(("6564", c)), "anual": val.get(("6561", c))} for c, r in PIB_SETORES],
+            nota="Variação sobre o trimestre anterior (com ajuste sazonal) e sobre o mesmo trimestre do ano anterior.",
+            fonte="IBGE, Contas Nacionais Trimestrais, tabela 5932", link="https://sidra.ibge.gov.br/tabela/5932",
+            endpoint=url, extraido_em=HOJE)
+        log(f"PIB trimestral ({tri}) atualizado")
+    except Exception as e:  # noqa: BLE001
+        log(f"PIB trimestral: falhou ({e}); mantido o valor anterior")
 
 
 # ---------------------------------------------------------------- Notícias (RSS)
@@ -247,7 +319,8 @@ def aplicar_manual(dados: dict) -> None:
 def main() -> None:
     dados = json.loads(DADOS.read_text(encoding="utf-8"))
     atualizar_bcb(dados["indicadores"])
-    atualizar_fao(dados["indicadores"])
+    atualizar_fao(dados)
+    atualizar_pib_trimestral(dados)
     atualizar_pam_df(dados["df"])
     atualizar_ppm_df(dados["df"])
     atualizar_ride(dados["ride"])
