@@ -24,7 +24,7 @@ Portal do Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF
 
 ## Integração com o painel (uso interno)
 
-O Painel de Relações de Troca (https://neagrodf.netlify.app/) é de uso interno da equipe e não tem link no portal. Os grupos continuam lançando os dados no painel; a seção **Indicadores** do portal mostra apenas resultados selecionados e gráficos: cinco relações de troca em destaque, a evolução de 13 meses com média e faixa normal, o resumo de variações, a contagem do semáforo, quatro preços do DF e a movimentação de animais (GTA). A regra é a mesma do painel (IRT = insumo ÷ produto; favorável abaixo de 95% da média dos meses registrados, desfavorável acima de 105%).
+O Painel de Relações de Troca é de uso interno da equipe e não tem link no portal. O endereço do painel fica guardado no secret `PAINEL_URL` do repositório (Settings > Secrets and variables > Actions), lido pelo robô em `scripts/painel.js`. Os grupos continuam lançando os dados no painel; a seção **Indicadores** do portal mostra apenas resultados selecionados e gráficos: cinco relações de troca em destaque, a evolução de 13 meses com média e faixa normal, o resumo de variações, a contagem do semáforo, quatro preços do DF e a movimentação de animais (GTA). A regra é a mesma do painel (IRT = insumo ÷ produto; favorável abaixo de 95% da média dos meses registrados, desfavorável acima de 105%).
 
 Base lida: `https://firestore.googleapis.com/v1/projects/neagro---df/databases/(default)/documents/{meses,lancamentos,indices}` e o quadro `GTA_DF` no código do painel.
 
