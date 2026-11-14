@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-14T18:36-03:00",
+  "atualizado_em": "2026-11-14T18:41-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -350,52 +350,52 @@
       "total": 1880752,
       "produtos": [
         [
-          "40124",
+          "Soja",
           639922
         ],
         [
-          "40122",
+          "Milho",
           430535
         ],
         [
-          "40112",
+          "Feijão",
           140016
         ],
         [
-          "40126",
+          "Tomate",
           105000
         ],
         [
-          "40125",
+          "Sorgo",
           88549
         ],
         [
-          "83396",
+          "Morango",
           69803
         ],
         [
-          "40100",
+          "Alho",
           68782
         ],
         [
-          "83397",
+          "Pimentão",
           39780
         ],
         [
-          "40149",
+          "Goiaba",
           37097
         ],
         [
-          "40139",
+          "Café",
           33343
         ],
         [
-          "40140",
-          33343
-        ],
-        [
-          "40119",
+          "Mandioca",
           29482
+        ],
+        [
+          "Abacate",
+          27804
         ]
       ],
       "fonte": "IBGE, Produção Agrícola Municipal (PAM), tabela 5457",
@@ -406,7 +406,36 @@
     "ppm": {
       "titulo": "Efetivo dos rebanhos do Distrito Federal, 2025",
       "unidade": "cabeças",
-      "rebanhos": [],
+      "rebanhos": [
+        [
+          "Galináceos",
+          8164577
+        ],
+        [
+          "Suínos",
+          146753
+        ],
+        [
+          "Bovinos",
+          76003
+        ],
+        [
+          "Equinos",
+          17150
+        ],
+        [
+          "Ovinos",
+          15156
+        ],
+        [
+          "Caprinos",
+          3327
+        ],
+        [
+          "Bubalinos",
+          509
+        ]
+      ],
       "fonte": "IBGE, Pesquisa da Pecuária Municipal (PPM), tabela 3939",
       "link": "https://sidra.ibge.gov.br/tabela/3939",
       "endpoint": "https://apisidra.ibge.gov.br/values/t/3939/n3/53/v/all/p/last%201/c79/allxt",
