@@ -225,6 +225,19 @@ section{padding-block:56px}
 .years{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
 .years a{font-size:.8rem;text-decoration:none;border-radius:6px;padding:3px 10px;color:var(--brand);background:var(--sunk);border:1px solid var(--line)}
 .years a:hover{background:var(--brand);color:var(--on-brand)}
+.acervo{margin-top:28px}
+.acervo-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px}
+.acervo-head h3{font-size:1.1rem}
+.acervo-head p{font-size:.84rem;color:var(--muted)}
+.acervo .ano{border:1px solid var(--line);border-radius:10px;background:var(--surface);margin-top:10px}
+.acervo summary{cursor:pointer;padding:10px 14px;font-weight:800;color:var(--brand)}
+.acervo summary span{font-weight:600;color:var(--muted);font-size:.8rem;margin-left:8px}
+.acervo ul{list-style:none;margin:0;padding:0 14px 8px}
+.acervo li a{display:grid;grid-template-columns:96px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:8px 0;border-top:1px solid var(--line);text-decoration:none;color:inherit;font-size:.86rem}
+.acervo li a:hover .t{color:var(--brand);text-decoration:underline}
+.acervo .d,.acervo .n{color:var(--muted);font-size:.8rem}
+.acervo .c{display:block;color:var(--muted);font-size:.76rem;margin-top:2px}
+@media (max-width:640px){.acervo li a{grid-template-columns:1fr;gap:2px}}
 
 /* Cadeias */
 .cadeias{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
@@ -445,6 +458,7 @@ section[id]{scroll-margin-top:60px}
         <article class="card feature" id="feature"></article>
         <div class="series" id="series"></div>
       </div>
+      <div class="acervo" id="acervo"></div>
     </div>
   </section>
 
@@ -902,6 +916,9 @@ function renderBoletins(){
       <p>${esc(s.descricao)}</p>
       ${s.acervo.length?`<div class="years">${s.acervo.map(a=>`<a href="${esc(a.link)}">${esc(a.rotulo)}</a>`).join("")}</div>`:`<p class="note" style="margin-top:6px">Primeiras edições em preparação.</p>`}
     </div></div>`).join("");
+  const porAno={};B.edicoes.forEach(e=>{const a=(e.data||"").slice(0,4)||"Outros";(porAno[a]=porAno[a]||[]).push(e)});
+  const anos=Object.keys(porAno).sort().reverse();
+  $("#acervo").innerHTML=`<div class="acervo-head"><h3>Todos os boletins publicados</h3><p>${B.edicoes.length} edições, da mais recente para a mais antiga. Clique para abrir o PDF.</p></div>`+anos.map((a,i)=>`<details class="ano"${i===0?" open":""}><summary>${esc(a)}<span>${porAno[a].length} ${porAno[a].length>1?"boletins":"boletim"}</span></summary><ul>${porAno[a].map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener"><span class="d">${e.data?fdate(e.data):""}</span><span><span class="t">${esc(e.titulo)}</span>${e.cadeias&&e.cadeias.length&&e.cadeias.length<6?`<span class="c">${e.cadeias.map(esc).join(" · ")}</span>`:""}</span><span class="n">${e.numero?"nº "+esc(e.numero):""}</span></a></li>`).join("")}</ul></details>`).join("");
 }
 function renderCadeias(){
   const boi=ind("boi"),milho=ind("milho"),soja=ind("soja");
