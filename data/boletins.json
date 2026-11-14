@@ -1,5 +1,9 @@
 {
-  "_instrucoes": "Os boletins da Produção Animal entram sozinhos: basta salvar o PDF na pasta do ano no Google Drive (link no 'acervo' da série) com o nome no padrão '6.035 - Boletim SUÍNOS - NEAGRO-DF - 28.11.2026.pdf'. O robô (scripts/boletins_drive.py) lê as pastas a cada execução e acrescenta os novos boletins em 'edicoes'. Ao abrir a pasta de um ano novo no Drive, acrescente o link dela no início do 'acervo' da série. Edições de outras séries (morango, tilápia) são lançadas à mão em 'edicoes', com os campos: serie, numero, data (AAAA-MM-DD), titulo, cadeias, resumo, destaques, pdf. O site destaca a edição mais recente.",
+  "_instrucoes": "Os boletins da Produção Animal entram sozinhos: basta salvar o PDF na pasta do ano no Google Drive (link no 'acervo' da série) com o nome no padrão '6.035 - Boletim SUÍNOS - NEAGRO-DF - 28.11.2026.pdf'. O robô (scripts/boletins_drive.py) lê as pastas a cada execução e acrescenta os novos boletins em 'edicoes'. Ao abrir a pasta de um ano novo no Drive, acrescente o link dela no início do 'acervo' da série. Edições de outras séries (morango, tilápia) são lançadas à mão em 'edicoes', com os campos: serie, numero, data (AAAA-MM-DD), titulo, cadeias, resumo, destaques, pdf. O site destaca a edição mais recente. Para manter fora do portal um PDF que está na pasta do Drive (por exemplo, edição de mês ainda incompleto), inclua o link dele na lista 'ignorar'; para publicá-lo depois, retire o link dessa lista.",
+  "ignorar": [
+    "https://drive.google.com/file/d/1EYeEvHPTZ_rlFfrGdtZnVytFqVb2NkX2/view",
+    "https://drive.google.com/file/d/1MNVOG3_1sddJc34e9Zf4s1eaJUt2GEx-/view"
+  ],
   "series": [
     {
       "id": "animal",
@@ -90,32 +94,6 @@
     }
   ],
   "edicoes": [
-    {
-      "serie": "animal",
-      "numero": "6.034",
-      "data": "2026-10-29",
-      "titulo": "Boletim de Mercado: Suinocultura",
-      "cadeias": [
-        "Suinocultura"
-      ],
-      "resumo": "Preços de insumos e produtos nas praças acompanhadas pelo NEAGRO-DF no DF e Entorno, relações de troca entre insumo e produto e análise do comportamento do mercado no período.",
-      "destaques": [],
-      "pdf": "https://drive.google.com/file/d/1EYeEvHPTZ_rlFfrGdtZnVytFqVb2NkX2/view",
-      "origem": "drive"
-    },
-    {
-      "serie": "animal",
-      "numero": "6.033",
-      "data": "2026-10-26",
-      "titulo": "Boletim de Mercado: Bovinocultura de corte",
-      "cadeias": [
-        "Bovinocultura de corte"
-      ],
-      "resumo": "Preços de insumos e produtos nas praças acompanhadas pelo NEAGRO-DF no DF e Entorno, relações de troca entre insumo e produto e análise do comportamento do mercado no período.",
-      "destaques": [],
-      "pdf": "https://drive.google.com/file/d/1MNVOG3_1sddJc34e9Zf4s1eaJUt2GEx-/view",
-      "origem": "drive"
-    },
     {
       "serie": "animal",
       "numero": "6.032",
