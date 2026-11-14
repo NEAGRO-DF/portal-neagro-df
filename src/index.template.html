@@ -927,10 +927,20 @@ function renderPainel(){
 const SERIE_FOTO={animal:"suino",morango:"morango",tilapia:"tilapia"};
 function renderBoletins(){
   const ed=B.edicoes[0],serie=B.series.find(s=>s.id===ed.serie);
+  const CAD_BOL=[
+    {n:"Bovinocultura de corte e leite",f:"boi",m:c=>/^Bovinocultura/.test(c)},
+    {n:"Suinocultura",f:"suino",m:c=>c==="Suinocultura"},
+    {n:"Avicultura de corte e postura",f:"galinha",m:c=>/^Avicultura/.test(c)},
+    {n:"Grãos e insumos",f:"milho",m:c=>c==="Insumos"||/^Grãos/.test(c)},
+    {n:"Morango",f:"morango",m:c=>c==="Morango"},
+    {n:"Caprinocultura e ovinocultura",f:"ovino",m:c=>/^Caprino|^Ovino/.test(c)},
+    {n:"Piscicultura",f:"tilapia",m:c=>/^Pisci|Tilápia/.test(c)}];
+  const NUM={};CAD_BOL.forEach(c=>{let k=0;B.edicoes.filter(e=>(e.cadeias||[]).some(c.m)).sort((a,b)=>((a.data||"")+(a.numero||"")).localeCompare((b.data||"")+(b.numero||""))).forEach(e=>{k++;(NUM[e.pdf]=NUM[e.pdf]||{})[c.n]=k})});
+  const numTxt=(e,longo)=>{const x=Object.entries(NUM[e.pdf]||{});if(!x.length)return "";if(x.length===1)return (longo?x[0][0]+", ":"")+"nº "+x[0][1];return longo?x.map(([n,k])=>n+" nº "+k).join(" · "):"edição conjunta"};
   $("#feature").innerHTML=`
     <div class="cover" aria-hidden="true">
       <div class="ch"><img src="img/logo-neagro.png" alt=""><span>Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF)<br>FAV/UnB</span><img src="img/logo-unb.png" alt=""></div>
-      <div class="cn">Boletim nº ${esc(ed.numero)} · ${fdate(ed.data)}</div>
+      <div class="cn">${esc(numTxt(ed,true))} · ${fdate(ed.data)}</div>
       <div class="ct">${esc(ed.titulo)}</div>
       <div class="cimg" style="${bg(SERIE_FOTO[ed.serie]||"suino")}"></div>
       <div class="rows"><i></i><i></i><i></i><i></i></div>
@@ -939,7 +949,7 @@ function renderBoletins(){
     <div class="feature-body">
       <div><span class="tag">Edição mais recente</span></div>
       <h3>${esc(ed.titulo)}</h3>
-      <div class="meta"><span>Nº ${esc(ed.numero)}</span><span>${fmes(ed.data)}</span><span>${esc(serie.periodicidade)}</span></div>
+      <div class="meta"><span>${esc(numTxt(ed,true))}</span><span>${fmes(ed.data)}</span><span>${esc(serie.periodicidade)}</span></div>
       <p>${esc(ed.resumo)}</p>
       ${ed.destaques&&ed.destaques.length?`<ul>${ed.destaques.map(d=>`<li>${esc(d)}</li>`).join("")}</ul>`:""}
       <div class="chips">${ed.cadeias.map(c=>`<span class="chip">${esc(c)}</span>`).join("")}</div>
@@ -956,20 +966,12 @@ function renderBoletins(){
     </div></div>`).join("");
   const porAno={};B.edicoes.forEach(e=>{const a=(e.data||"").slice(0,4)||"Outros";(porAno[a]=porAno[a]||[]).push(e)});
   const anos=Object.keys(porAno).sort().reverse();
-  const CAD_BOL=[
-    {n:"Bovinocultura de corte e leite",f:"boi",m:c=>/^Bovinocultura/.test(c)},
-    {n:"Suinocultura",f:"suino",m:c=>c==="Suinocultura"},
-    {n:"Avicultura de corte e postura",f:"galinha",m:c=>/^Avicultura/.test(c)},
-    {n:"Grãos e insumos",f:"milho",m:c=>c==="Insumos"||/^Grãos/.test(c)},
-    {n:"Morango",f:"morango",m:c=>c==="Morango"},
-    {n:"Caprinocultura e ovinocultura",f:"ovino",m:c=>/^Caprino|^Ovino/.test(c)},
-    {n:"Piscicultura",f:"tilapia",m:c=>/^Pisci|Tilápia/.test(c)}];
   const curto=e=>{const t=(e.titulo||"").replace(/^\s*Boletim de Mercado\s*:?\s*(?:d[ao]s?\s+)?/i,"").trim();return t?t[0].toUpperCase()+t.slice(1):(e.titulo||"Boletim")};
   const blocoCad=c=>{const ed=B.edicoes.filter(e=>(e.cadeias||[]).some(c.m));const pa={};ed.forEach(e=>{const a=(e.data||"").slice(0,4)||"Outros";(pa[a]=pa[a]||[]).push(e)});const an=Object.keys(pa).sort().reverse();
     return `<article class="card pc"><figure class="ph"><img src="${esc(foto(c.f))}" alt="${esc((FT[c.f]||{}).titulo||c.n)}" loading="lazy"><figcaption>${credito(c.f)}</figcaption></figure>
-    <div class="bd"><h4>${esc(c.n)}</h4>${ed.length?`<span class="q">${ed.length} ${ed.length>1?"boletins":"boletim"} · ${an[an.length-1]}${an.length>1?"–"+an[0]:""}</span><div class="lst">${an.map((a,i)=>`<details${i===0?" open":""}><summary>${esc(a)}<span>${pa[a].length}</span></summary><ul>${pa[a].map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener"><span>${e.data?fdate(e.data):""} · ${esc(curto(e))}</span><span class="n">${e.numero?"nº "+esc(e.numero):""}</span></a></li>`).join("")}</ul></details>`).join("")}</div>`:`<p class="vazio">Os dados desta cadeia estão no painel de indicadores; os boletins próprios estão em preparação.</p>`}</div></article>`};
-  $("#acervo").innerHTML=`<div class="acervo-head"><h3>Boletins por cadeia produtiva</h3><p>Cada cadeia reúne todas as edições em que aparece, das mais recentes às mais antigas. As edições conjuntas aparecem em todas as cadeias que analisam.</p></div><div class="porcad">${CAD_BOL.map(blocoCad).join("")}</div>`+
-  `<div class="acervo-head" style="margin-top:26px"><h3>Todos os boletins publicados</h3><p>${B.edicoes.length} edições, da mais recente para a mais antiga. Clique para abrir o PDF.</p></div>`+anos.map((a,i)=>`<details class="ano" id="ano-${esc(a)}"${i===0?" open":""}><summary>${esc(a)}<span>${porAno[a].length} ${porAno[a].length>1?"boletins":"boletim"}</span></summary><ul>${porAno[a].map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener"><span class="d">${e.data?fdate(e.data):""}</span><span><span class="t">${esc(e.titulo)}</span>${e.cadeias&&e.cadeias.length&&e.cadeias.length<6?`<span class="c">${e.cadeias.map(esc).join(" · ")}</span>`:""}</span><span class="n">${e.numero?"nº "+esc(e.numero):""}</span></a></li>`).join("")}</ul></details>`).join("");
+    <div class="bd"><h4>${esc(c.n)}</h4>${ed.length?`<span class="q">${ed.length>1?"Edições nº 1 a "+ed.length:"Edição nº 1"} · ${an[an.length-1]}${an.length>1?"–"+an[0]:""}</span><div class="lst">${an.map((a,i)=>`<details${i===0?" open":""}><summary>${esc(a)}<span>${pa[a].length}</span></summary><ul>${pa[a].map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener"><span>${e.data?fdate(e.data):""} · ${esc(curto(e))}</span><span class="n">nº ${(NUM[e.pdf]||{})[c.n]||""}</span></a></li>`).join("")}</ul></details>`).join("")}</div>`:`<p class="vazio">Os dados desta cadeia estão no painel de indicadores; os boletins próprios estão em preparação.</p>`}</div></article>`};
+  $("#acervo").innerHTML=`<div class="acervo-head"><h3>Boletins por cadeia produtiva</h3><p>Cada cadeia tem numeração própria, em ordem cronológica, a partir da primeira edição. Até abril de 2026, o boletim era único para a produção animal; essas edições conjuntas recebem número em cada cadeia que analisam.</p></div><div class="porcad">${CAD_BOL.map(blocoCad).join("")}</div>`+
+  `<div class="acervo-head" style="margin-top:26px"><h3>Todos os boletins publicados</h3><p>${B.edicoes.length} edições, da mais recente para a mais antiga. Clique para abrir o PDF.</p></div>`+anos.map((a,i)=>`<details class="ano" id="ano-${esc(a)}"${i===0?" open":""}><summary>${esc(a)}<span>${porAno[a].length} ${porAno[a].length>1?"boletins":"boletim"}</span></summary><ul>${porAno[a].map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener"><span class="d">${e.data?fdate(e.data):""}</span><span><span class="t">${esc(e.titulo)}</span>${e.cadeias&&e.cadeias.length&&e.cadeias.length<6?`<span class="c">${e.cadeias.map(esc).join(" · ")}</span>`:""}</span><span class="n">${esc(numTxt(e))}</span></a></li>`).join("")}</ul></details>`).join("");
   $$('.years a[href^="#ano-"]').forEach(x=>x.addEventListener("click",()=>{const d=document.querySelector(x.getAttribute("href"));if(d)d.open=true}));
 }
 function renderCadeias(){
