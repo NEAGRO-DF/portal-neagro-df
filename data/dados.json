@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-14T17:24-03:00",
+  "atualizado_em": "2026-11-14T17:33-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -630,6 +630,13 @@
   },
   "noticias": [
     {
+      "titulo": "Entenda as condições para o aproveitamento de créditos na importação de máquinas agrícolas",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-14",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/entenda-as-condicoes-para-o-aproveitamento-de-creditos-na-importacao-de-maquinas-agricolas/"
+    },
+    {
       "titulo": "Governo abre consulta pública sobre enfrentamento ao calor extremo",
       "veiculo": "Canal Rural",
       "data": "2026-11-14",
@@ -761,13 +768,6 @@
       "data": "2026-11-13",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/petroleo-lidera-exportacoes-brasileiras-em-outubro-e-amplia-superavit-diz-icomex/"
-    },
-    {
-      "titulo": "Máximas devem chegar a 37 °C em Roraima",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-13",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/rr/maximas-devem-chegar-a-37-c-em-roraima/"
     }
   ],
   "cartoes": [
@@ -778,14 +778,9 @@
         {
           "id": "pib_ride",
           "titulo": "PIB dos municípios da RIDE-DF, 2023",
-          "sub": "R$ bilhões, a preços correntes. Total da RIDE-DF: R$ 416,6 bilhões",
+          "sub": "Total da RIDE-DF: R$ 416,6 bilhões, dos quais R$ 365,7 bilhões no Distrito Federal (87,8%). Abaixo, os demais municípios, em R$ bilhões a preços correntes",
           "tipo": "barras",
           "barras": [
-            [
-              "Brasília (DF)",
-              365.67,
-              true
-            ],
             [
               "Luziânia (GO)",
               6.26,
@@ -840,9 +835,14 @@
               "Niquelândia (GO)",
               1.52,
               false
+            ],
+            [
+              "Buritis (MG)",
+              1.45,
+              false
             ]
           ],
-          "casas": 1,
+          "casas": 2,
           "fonte": "IBGE, PIB dos Municípios, tabela 5938",
           "link": "https://sidra.ibge.gov.br/tabela/5938",
           "endpoint": "https://apisidra.ibge.gov.br/values/t/5938/n6/5300108,5200100,5200175,5200258,5200308,5200605,5200803,5203203,5204003,5205307,5205497,5205513,5205802,5206206,5207907,5208004,5208608,5212501,5213053,5214606,5215231,5215603,5217302,5217609,5219753,5220009,5220686,5221858,5222203,5222302,3104502,3109303,3109451,3170404/v/37/p/last%201",
@@ -910,7 +910,7 @@
               false
             ],
             [
-              "Óleos de petróleo ou de minerais betuminos",
+              "Óleos de petróleo ou de minerais…",
               64.1,
               false
             ],
@@ -920,7 +920,7 @@
               false
             ],
             [
-              "Açúcares de cana ou de beterraba e sacaros",
+              "Açúcares de cana ou de beterraba e…",
               29.9,
               false
             ],
@@ -1061,7 +1061,7 @@
           "casas": 0,
           "barras": [
             [
-              "Óleos brutos de petróleo ou de minerais be",
+              "Óleos brutos de petróleo ou de minerais…",
               10914,
               false
             ],
@@ -1076,7 +1076,7 @@
               false
             ],
             [
-              "Tortas e outros resíduos sólidos da extraç",
+              "Tortas e outros resíduos sólidos da…",
               3620,
               false
             ],
@@ -1091,12 +1091,12 @@
               false
             ],
             [
-              "Óleos de petróleo ou de minerais betuminos",
+              "Óleos de petróleo ou de minerais…",
               1450,
               false
             ],
             [
-              "Sumos de frutas (incluídos os mostos de uv",
+              "Sumos de frutas (incluídos os mostos de…",
               930,
               false
             ]
