@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-14T15:17-03:00",
+  "atualizado_em": "2026-11-14T16:47-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -587,6 +587,13 @@
   },
   "noticias": [
     {
+      "titulo": "‘O mundo quer marmoreio’, afirma Wilson Brochmann sobre produção de carne",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-14",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/o-mundo-quer-marmoreio-afirma-wilson-brochmann-sobre-producao-de-carne/"
+    },
+    {
       "titulo": "André de Paula destaca comércio de carne suína em fórum Brasil-Filipinas",
       "veiculo": "Canal Rural",
       "data": "2026-11-14",
@@ -718,13 +725,6 @@
       "data": "2026-11-13",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/conab-estima-safra-de-graos-2026-27-em-3661-milhoes-de-toneladas/"
-    },
-    {
-      "titulo": "Alerta para chuva: acumulados podem passar de 200 mm em dois estados na próxima semana; veja quais",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-13",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/alerta-para-chuva-acumulados-podem-passar-de-200-mm-em-dois-estados-na-proxima-semana-veja-quais/"
     }
   ]
 }
