@@ -43,6 +43,8 @@ TODAS = ["Suinocultura", "Bovinocultura de corte", "Bovinocultura de leite", "Av
          "Avicultura de postura", "Insumos"]
 CADEIAS = [
     (r"insumo", ["Insumos"]),
+    (r"caprin|ovin", ["Caprinocultura", "Ovinocultura"]),
+    (r"pisci|til[aá]pia", ["Piscicultura"]),
     (r"corte e leite", ["Bovinocultura de corte", "Bovinocultura de leite"]),
     (r"bovino", ["Bovinocultura de corte"]),
     (r"su[ií]no.*ave", ["Suinocultura", "Avicultura de corte", "Avicultura de postura"]),
@@ -55,6 +57,8 @@ TITULOS = {
     "Insumos": "Boletim de Mercado: Insumos (milho e farelo de soja)",
     "Bovinocultura de corte": "Boletim de Mercado: Bovinocultura de corte",
     "Suinocultura": "Boletim de Mercado: Suinocultura",
+    "Caprinocultura": "Boletim de Mercado: Caprinocultura e ovinocultura",
+    "Piscicultura": "Boletim de Mercado: Piscicultura",
 }
 
 
@@ -190,9 +194,20 @@ def edicao(serie: str, fid: str, nome: str) -> dict | None:
     }
 
 
-def ler_pasta(fid: str, conteudo: str | None = None) -> list[tuple[str, str]]:
+def ler_pasta(fid: str, conteudo: str | None = None, nivel: int = 0) -> list[tuple[str, str]]:
+    """Arquivos da pasta pública do Drive, incluindo as subpastas (por exemplo, uma pasta para cada mês)."""
     texto = conteudo if conteudo is not None else baixar(LISTA.format(fid))
-    return [(i, html.unescape(t).strip()) for i, t, _ in ENTRADA.findall(texto)]
+    saida = []
+    for i, t, _ in ENTRADA.findall(texto):
+        nome = html.unescape(t).strip()
+        if "." not in nome[-6:] and nivel < 2:  # sem extensão: tratada como subpasta
+            try:
+                saida += ler_pasta(i, nivel=nivel + 1)
+            except Exception as e:  # noqa: BLE001
+                print(f"[boletins] subpasta {nome} não lida ({e})")
+            continue
+        saida.append((i, nome))
+    return saida
 
 
 def main() -> None:
