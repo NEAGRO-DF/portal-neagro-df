@@ -957,8 +957,7 @@ function renderBoletins(){
   const porAno={};B.edicoes.forEach(e=>{const a=(e.data||"").slice(0,4)||"Outros";(porAno[a]=porAno[a]||[]).push(e)});
   const anos=Object.keys(porAno).sort().reverse();
   const CAD_BOL=[
-    {n:"Bovinocultura de corte",f:"boi",m:c=>c==="Bovinocultura de corte"},
-    {n:"Bovinocultura de leite",f:"leite",m:c=>c==="Bovinocultura de leite"},
+    {n:"Bovinocultura de corte e leite",f:"boi",m:c=>/^Bovinocultura/.test(c)},
     {n:"Suinocultura",f:"suino",m:c=>c==="Suinocultura"},
     {n:"Avicultura de corte e postura",f:"galinha",m:c=>/^Avicultura/.test(c)},
     {n:"Grãos e insumos",f:"milho",m:c=>c==="Insumos"||/^Grãos/.test(c)},
