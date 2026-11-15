@@ -175,7 +175,7 @@
       "irt": 5.9769,
       "casas": 2,
       "ler": "@ de boi por tonelada de farelo",
-      "media": 5.4485,
+      "media": 5.5365,
       "meses": 21,
       "sinal": "desfavoravel",
       "conferir": false
@@ -517,6 +517,6 @@
     "link": "",
     "endpoint": "base de dados interna do NEAGRO-DF",
     "gta_fonte": "SEAGRI-DF, GTAs emitidas e recebidas no DF, compiladas pelo NEAGRO-DF",
-    "extraido_em": "2026-11-14"
+    "extraido_em": "2026-11-15"
   }
 }
