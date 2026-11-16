@@ -103,7 +103,7 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:20px 0 40px
   document.getElementById("lista-atual").innerHTML=N.length?bloco(N[0],true):'<p class="sub">Sem números publicados.</p>';
   document.getElementById("lista-anteriores").innerHTML=N.slice(1).map(g=>bloco(g,true)).join("")||'<p class="sub">O primeiro número com este título é o Vol. 4, No. 8 (ago. 2026).</p>';
   const A=grupos(ed.filter(e=>!novo(e)));
-  document.getElementById("lista-titulo-anterior").innerHTML=A.map(g=>`<div class="num"><h3>${fmt(g.v,g.n)}</h3><ul>${g.e.sort((a,b)=>(a.data||"").localeCompare(b.data||"")).map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener">${esc(e.titulo)}</a></li>`).join("")}</ul></div>`).join("");
+  document.getElementById("lista-titulo-anterior").innerHTML=A.map(g=>`<div class="num"><h3>${MES[g.n-1].replace(/^./,c=>c.toUpperCase())} ${g.v+2022}</h3><ul>${g.e.sort((a,b)=>(a.data||"").localeCompare(b.data||"")).map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener">${esc((e.numero?"Boletim NEAGRO-DF nº "+e.numero+": ":"Boletim NEAGRO-DF: ")+(e.titulo||"").replace(/^\s*Boletim de Mercado(?:\s+NEAGRO-DF)?\s*:?\s*(?:d[ao]s?\s+)?/i,"").replace(/^./,c=>c.toUpperCase()))}</a></li>`).join("")}</ul></div>`).join("");
 })();
 </script>
 </body>
