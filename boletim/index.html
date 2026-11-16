@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boletim de Mercado NEAGRO-DF</title>
+<meta name="description" content="Boletim de Mercado NEAGRO-DF: publicação mensal, online e de acesso aberto do Núcleo de Estudos sobre o Agronegócio do Distrito Federal (FAV/UnB).">
+<style>
+:root{--brand:#1f5e3b;--ink:#1d2621;--muted:#5b675f;--line:#dfe6e1;--bg:#f6f8f6}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+header{background:#fff;border-bottom:1px solid var(--line)}
+.top{display:grid;grid-template-columns:90px 1fr 90px;align-items:center;gap:16px;padding:18px 0}
+.top img{max-width:80px;max-height:70px;justify-self:center}
+.top .inst{text-align:center;font-size:.9rem;color:var(--muted)}
+.titulo{text-align:center;padding:10px 0 22px}
+.titulo h1{margin:0;font-size:2rem;color:var(--brand)}
+.titulo .issn{margin:6px 0 0;font-size:.95rem;color:var(--muted)}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;padding:0 0 18px}
+nav a{padding:7px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font-weight:700;font-size:.9rem;color:var(--brand);text-decoration:none}
+nav a:hover{background:var(--brand);color:#fff}
+section{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 24px;margin:22px 0}
+section h2{margin:0 0 4px;font-size:1.25rem;color:var(--brand)}
+section .sub{margin:0 0 14px;color:var(--muted);font-size:.95rem}
+.num{border-top:1px solid var(--line);padding:14px 0}
+.num:first-of-type{border-top:0}
+.num h3{margin:0 0 8px;font-size:1.05rem}
+.num ul{margin:0;padding-left:20px}
+.num li{margin:3px 0}
+a{color:var(--brand)}
+dl{display:grid;grid-template-columns:200px minmax(0,1fr);gap:8px 16px;margin:0;font-size:.95rem}
+dt{font-weight:700;color:var(--brand)}dd{margin:0}
+details summary{cursor:pointer;font-weight:700;color:var(--brand);padding:6px 0}
+footer{text-align:center;color:var(--muted);font-size:.85rem;padding:20px 0 40px}
+@media (max-width:640px){.top{grid-template-columns:60px 1fr 60px}.top img{max-width:56px}dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:8px}.titulo h1{font-size:1.5rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <img src="../img/logo-neagro.png" alt="NEAGRO-DF">
+      <div class="inst">Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF)<br>Faculdade de Agronomia e Medicina Veterinária, Universidade de Brasília (FAV/UnB)</div>
+      <img src="../img/logo-unb.png" alt="UnB">
+    </div>
+    <div class="titulo">
+      <h1>Boletim de Mercado NEAGRO-DF</h1>
+      <p class="issn">ISSN em solicitação ao Centro Brasileiro do ISSN (Ibict)</p>
+    </div>
+    <nav aria-label="Boletim de Mercado NEAGRO-DF"><a href="#apresentacao">Apresentação</a><a href="#atual">Edição atual</a><a href="#anteriores">Edições anteriores</a><a href="#expediente">Expediente</a></nav>
+  </div>
+</header>
+<main class="wrap">
+  <section id="apresentacao">
+    <h2>Boletim de Mercado NEAGRO-DF: apresentação</h2>
+    <p>O Boletim de Mercado NEAGRO-DF é uma publicação mensal, online e de acesso aberto do Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF), da Faculdade de Agronomia e Medicina Veterinária da Universidade de Brasília. Cada número acompanha os preços de insumos e de produtos da produção animal nas praças do Distrito Federal e Entorno, calcula as relações de troca entre insumo e produto e interpreta o comportamento do mercado no mês de referência.</p>
+    <p>Cada número reúne cadernos por cadeia produtiva: bovinocultura de corte e leite, suinocultura, avicultura de corte e postura, caprinocultura e ovinocultura, e grãos e insumos.</p>
+  </section>
+  <section id="atual">
+    <h2>Boletim de Mercado NEAGRO-DF: edição atual</h2>
+    <div id="lista-atual"><p class="sub">Carregando...</p></div>
+  </section>
+  <section id="anteriores">
+    <h2>Boletim de Mercado NEAGRO-DF: edições anteriores</h2>
+    <p class="sub">Números publicados, do mais recente para o mais antigo. Cada caderno abre em PDF.</p>
+    <div id="lista-anteriores"></div>
+    <details id="titulo-anterior"><summary>Título anterior: Boletim NEAGRO-DF (set. 2023 a jul. 2026, sem ISSN)</summary><div id="lista-titulo-anterior"></div></details>
+  </section>
+  <section id="expediente">
+    <h2>Boletim de Mercado NEAGRO-DF: expediente</h2>
+    <dl>
+      <dt>Título</dt><dd>Boletim de Mercado NEAGRO-DF</dd>
+      <dt>ISSN</dt><dd>Em solicitação ao Centro Brasileiro do ISSN (Ibict)</dd>
+      <dt>Editora responsável</dt><dd>Profa. Dra. Mayra Batista Bitencourt Fagundes (FAV/UnB)</dd>
+      <dt>Corpo editorial</dt><dd>Coordenação geral: Prof. Dr. Marlon Vinícius Brisola e Profa. Dra. Mayra Batista Bitencourt Fagundes. Coordenadores de área: Tatiana Paiva de Godoy (bovinocultura de corte e leite); André Marinho de Souza Filho e Matias Vicente dos Reis Mangabeiro (suinocultura); Ana Luisa Lopes Batista (avicultura de corte e postura); Jelson Luiz Dick (caprinocultura e ovinocultura); Dilson Thomas Fonseca e Antônio da Costa Ferreira Lima (grãos e insumos)</dd>
+      <dt>Instituição responsável</dt><dd>Universidade de Brasília (UnB), Faculdade de Agronomia e Medicina Veterinária (FAV), Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF). Campus Universitário Darcy Ribeiro, Asa Norte, Brasília, DF, CEP 70910-900, Brasil</dd>
+      <dt>Contato</dt><dd>mayra.fagundes@unb.br</dd>
+      <dt>Periodicidade</dt><dd>Mensal</dd>
+      <dt>Designação numérica</dt><dd>Volume, número e ano civil. Cada volume corresponde a um ano e reúne os números mensais, de No. 1 (janeiro) a No. 12 (dezembro). Exemplo: Vol. 4, No. 9 (set. 2026).</dd>
+      <dt>Suporte e acesso</dt><dd>Publicação online, em português, de acesso aberto e gratuito</dd>
+    </dl>
+  </section>
+</main>
+<footer>Boletim de Mercado NEAGRO-DF · NEAGRO-DF, FAV/UnB · Brasília, DF</footer>
+<script>
+(async()=>{
+  const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+  const MES=["jan.","fev.","mar.","abr.","maio","jun.","jul.","ago.","set.","out.","nov.","dez."];
+  const ORD=[/Bovino/i,/Suino|Suíno/i,/Avicultura/i,/Caprino|Ovino/i,/Insumo|Grão|Milho/i];
+  const NOME=["Bovinocultura de corte e leite","Suinocultura","Avicultura de corte e postura","Caprinocultura e ovinocultura","Grãos e insumos"];
+  const cad=e=>{const c=(e.cadeias||[]).join(" ");const i=ORD.findIndex(r=>r.test(c));return i<0?99:i};
+  const nomeCad=e=>{const i=cad(e);return i<99?NOME[i]:(e.cadeias||[]).join(", ")};
+  const parse=d=>{const m=String(d||"").match(/(\d+)\D+(\d+)/);return m?[+m[1],+m[2]]:null};
+  const fmt=(v,n)=>`Vol. ${v}, No. ${n} (${MES[n-1]} ${v+2022})`;
+  let B;try{B=await (await fetch("../data/boletins.json",{cache:"no-store"})).json()}catch(x){document.getElementById("lista-atual").innerHTML='<p class="sub">Não foi possível carregar a lista de edições.</p>';return}
+  const ed=B.edicoes.filter(e=>e.serie==="animal"&&e.designacao&&parse(e.designacao));
+  const novo=e=>{const [v,n]=parse(e.designacao);return (v>4||(v===4&&n>=8))&&(e.origem==="manual"||(e.data||"")>"2026-10-15")};
+  const grupos=(lista)=>{const G={};lista.forEach(e=>{const [v,n]=parse(e.designacao);const k=v*100+n;(G[k]=G[k]||{v,n,e:[]}).e.push(e)});return Object.values(G).sort((a,b)=>(b.v*100+b.n)-(a.v*100+a.n))};
+  const bloco=(g,titulo)=>`<div class="num"><h3>${titulo?"Boletim de Mercado NEAGRO-DF, ":""}${fmt(g.v,g.n)}</h3><ul>${g.e.sort((a,b)=>cad(a)-cad(b)).map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener">Caderno ${esc(nomeCad(e))}</a></li>`).join("")}</ul></div>`;
+  const N=grupos(ed.filter(novo));
+  document.getElementById("lista-atual").innerHTML=N.length?bloco(N[0],true):'<p class="sub">Sem números publicados.</p>';
+  document.getElementById("lista-anteriores").innerHTML=N.slice(1).map(g=>bloco(g,true)).join("")||'<p class="sub">O primeiro número com este título é o Vol. 4, No. 8 (ago. 2026).</p>';
+  const A=grupos(ed.filter(e=>!novo(e)));
+  document.getElementById("lista-titulo-anterior").innerHTML=A.map(g=>`<div class="num"><h3>${fmt(g.v,g.n)}</h3><ul>${g.e.sort((a,b)=>(a.data||"").localeCompare(b.data||"")).map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener">${esc(e.titulo)}</a></li>`).join("")}</ul></div>`).join("");
+})();
+</script>
+</body>
+</html>
