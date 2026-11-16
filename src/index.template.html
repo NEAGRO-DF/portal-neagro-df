@@ -486,7 +486,7 @@ section[id]{scroll-margin-top:60px}
           <p>O Boletim de Mercado NEAGRO-DF é uma publicação mensal, online e de acesso aberto do Núcleo de Estudos sobre o Agronegócio do Distrito Federal (FAV/UnB). Todo mês, as equipes coletam preços de insumos e produtos nas praças do DF e Entorno, calculam as relações de troca entre insumo e produto e explicam o que mudou no mercado. Cada número reúne cadernos por cadeia produtiva: bovinocultura de corte e leite, suinocultura, avicultura de corte e postura, caprinocultura e ovinocultura, e grãos e insumos.</p>
         </div>
       </div>
-      <nav class="bol-nav" aria-label="Navegação do boletim"><a href="#apresentacao">Apresentação</a><a href="#feature">Edição atual</a><a href="#acervo">Edições anteriores</a><a href="#expediente">Expediente</a></nav>
+      <nav class="bol-nav" aria-label="Navegação do boletim"><a href="#apresentacao">Apresentação</a><a href="#feature">Edição atual</a><a href="#acervo">Edições anteriores</a><a href="#expediente">Expediente</a><a href="boletim/">Página do Boletim</a></nav>
       <div class="bol-grid">
         <article class="card feature" id="feature"></article>
         <div class="series" id="series"></div>
@@ -501,8 +501,8 @@ section[id]{scroll-margin-top:60px}
           <dt>Corpo editorial</dt><dd>Coordenação geral: Prof. Dr. Marlon Vinícius Brisola e Profa. Dra. Mayra Batista Bitencourt Fagundes. Coordenadores de área: Tatiana Paiva de Godoy (bovinocultura de corte e leite); André Marinho de Souza Filho e Matias Vicente dos Reis Mangabeiro (suinocultura); Ana Luisa Lopes Batista (avicultura de corte e postura); Jelson Luiz Dick (caprinocultura e ovinocultura); Dilson Thomas Fonseca e Antônio da Costa Ferreira Lima (grãos e insumos)</dd>
           <dt>Instituição responsável</dt><dd>Universidade de Brasília (UnB), Faculdade de Agronomia e Medicina Veterinária (FAV), Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF). Campus Universitário Darcy Ribeiro, Asa Norte, Brasília, DF, CEP 70910-900, Brasil</dd>
           <dt>Periodicidade</dt><dd>Mensal (de outubro de 2023 ao primeiro semestre de 2025, os números foram semanais ou quinzenais)</dd>
-          <dt>Designação</dt><dd>O volume corresponde ao ano (v. 1, 2023; v. 2, 2024; v. 3, 2025; v. 4, 2026) e o número, ao mês de referência. Cada número reúne os cadernos das cadeias produtivas acompanhadas, com numeração própria por cadeia.</dd>
-          <dt>Suporte e acesso</dt><dd>Publicação online, em português, de acesso aberto e gratuito, em <a href="https://neagro-df.github.io/portal-neagro-df/#boletins">neagro-df.github.io/portal-neagro-df</a>. Todas as edições anteriores estão listadas acima.</dd>
+          <dt>Designação</dt><dd>Volume, número e ano civil. Cada volume corresponde a um ano (Vol. 1, 2023; Vol. 2, 2024; Vol. 3, 2025; Vol. 4, 2026) e o número, ao mês de referência, recomeçando em No. 1 a cada ano. Exemplo: Vol. 4, No. 9 (set. 2026). Cada número reúne os cadernos das cadeias produtivas acompanhadas.</dd>
+          <dt>Suporte e acesso</dt><dd>Publicação online, em português, de acesso aberto e gratuito, em endereço exclusivo e permanente: <a href="https://neagro-df.github.io/portal-neagro-df/boletim/">neagro-df.github.io/portal-neagro-df/boletim</a>, que reúne a edição atual e todas as edições anteriores.</dd>
           <dt>Contato</dt><dd>Ver a seção <a href="#contato">Contato</a>.</dd>
         </dl>
       </div>
@@ -960,7 +960,7 @@ function renderBoletins(){
     {n:"Caprinocultura e ovinocultura",f:"ovino",m:c=>/^Caprino|^Ovino/.test(c)},
     {n:"Piscicultura",f:"tilapia",m:c=>/^Pisci|Tilápia/.test(c)}];
   const NUM={};CAD_BOL.forEach(c=>{let k=0;B.edicoes.filter(e=>(e.cadeias||[]).some(c.m)).sort((a,b)=>((a.data||"")+(a.numero||"")).localeCompare((b.data||"")+(b.numero||""))).forEach(e=>{k++;(NUM[e.pdf]=NUM[e.pdf]||{})[c.n]=k})});
-  const desig=e=>{if(e.designacao)return e.designacao;if(e.serie!=="animal"||!e.data||e.data<"2026")return "";let[y,m]=e.data.split("-").map(Number);m--;if(!m){m=12;y--}return `v. ${y-2022}, n. ${m}, ${["jan","fev","mar","abr","mai","jun","jul","ago","set","out","nov","dez"][m-1]}. ${y}`};
+  const desig=e=>{if(e.designacao)return e.designacao;if(e.serie!=="animal"||!e.data||e.data<"2026")return "";let[y,m]=e.data.split("-").map(Number);m--;if(!m){m=12;y--}return `Vol. ${y-2022}, No. ${m} (${["jan.","fev.","mar.","abr.","maio","jun.","jul.","ago.","set.","out.","nov.","dez."][m-1]} ${y})`};
   const numTxt=(e,longo)=>{const x=Object.entries(NUM[e.pdf]||{});if(!x.length)return "";if(x.length===1)return (longo?x[0][0]+", ":"")+"nº "+x[0][1];return longo?x.map(([n,k])=>n+" nº "+k).join(" · "):"edição conjunta"};
   $("#feature").innerHTML=`
     <div class="cover" aria-hidden="true">
@@ -991,7 +991,7 @@ function renderBoletins(){
     </div></div>`).join("");
   const porAno={};B.edicoes.forEach(e=>{const a=(e.data||"").slice(0,4)||"Outros";(porAno[a]=porAno[a]||[]).push(e)});
   const anos=Object.keys(porAno).sort().reverse();
-  const curto=e=>{const t=(e.titulo||"").replace(/^\s*Boletim de Mercado\s*:?\s*(?:d[ao]s?\s+)?/i,"").trim();return t?t[0].toUpperCase()+t.slice(1):(e.titulo||"Boletim")};
+  const curto=e=>{const t=(e.titulo||"").replace(/^\s*Boletim de Mercado(?:\s+NEAGRO-DF)?\s*:?\s*(?:d[ao]s?\s+)?/i,"").trim();return t?t[0].toUpperCase()+t.slice(1):(e.titulo||"Boletim")};
   const blocoCad=c=>{const ed=B.edicoes.filter(e=>(e.cadeias||[]).some(c.m));const pa={};ed.forEach(e=>{const a=(e.data||"").slice(0,4)||"Outros";(pa[a]=pa[a]||[]).push(e)});const an=Object.keys(pa).sort().reverse();
     return `<article class="card pc"><figure class="ph"><img src="${esc(foto(c.f))}" alt="${esc((FT[c.f]||{}).titulo||c.n)}" loading="lazy"><figcaption>${credito(c.f)}</figcaption></figure>
     <div class="bd"><h4>${esc(c.n)}</h4>${ed.length?`<span class="q">${ed.length>1?"Edições nº 1 a "+ed.length:"Edição nº 1"} · ${an[an.length-1]}${an.length>1?"–"+an[0]:""}</span><div class="lst">${an.map((a,i)=>`<details${i===0?" open":""}><summary>${esc(a)}<span>${pa[a].length}</span></summary><ul>${pa[a].map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener"><span>${e.data?fdate(e.data):""} · ${esc(curto(e))}</span><span class="n">nº ${(NUM[e.pdf]||{})[c.n]||""}</span></a></li>`).join("")}</ul></details>`).join("")}</div>`:`<p class="vazio">Os dados desta cadeia estão no painel de indicadores; os boletins próprios estão em preparação.</p>`}</div></article>`};
