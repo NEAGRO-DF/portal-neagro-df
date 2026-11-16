@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-16T13:24-03:00",
+  "atualizado_em": "2026-11-16T18:59-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -187,11 +187,11 @@
       "fonte": "Banco Central do Brasil, SGS série 21619 (taxa de câmbio livre, euro, venda)",
       "link": "https://www3.bcb.gov.br/sgspub/",
       "automatico": true,
-      "valor": 6.2334,
-      "referencia": "13/11/2026",
+      "valor": 6.3102,
+      "referencia": "16/11/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.21619/dados/ultimos/20?formato=json",
       "extraido_em": "2026-11-16",
-      "variacao_pct": 9.19,
+      "variacao_pct": 11.33,
       "variacao_desc": "em 20 pregões"
     },
     {
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Dólar sobe 2,17% e fecha no maior nível desde abril de 2025",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/dolar-sobe-217-e-fecha-no-maior-nivel-desde-abril-de-2025/"
+    },
+    {
+      "titulo": "Juros futuros sobem na B3 com dólar em alta e incerteza fiscal",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/juros-futuros-sobem-na-b3-com-dolar-em-alta-e-incerteza-fiscal/"
+    },
+    {
+      "titulo": "Brasil projeta 9,7 milhões de veículos eletrificados até 2036",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/brasil-projeta-97-milhoes-de-veiculos-eletrificados-ate-2036/"
+    },
+    {
+      "titulo": "Soja abre a semana no Brasil em alta significativa mesmo com baixa em Chicago",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/soja-abre-a-semana-no-brasil-em-alta-significativa-mesmo-com-baixa-em-chicago/"
+    },
+    {
+      "titulo": "Faesp Show reúne 15 mil pessoas e destaca estratégia para valorizar produtos rurais",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/faesp-show-reune-15-mil-pessoas-e-destaca-estrategia-para-valorizar-produtos-rurais/"
+    },
+    {
+      "titulo": "Carne bovina brasileira movimenta US$ 170 milhões na CIIE 2026, na China",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/carne-bovina-brasileira-movimenta-us-170-milhoes-na-ciie-2026-na-china/"
+    },
+    {
+      "titulo": "CNA recebe delegação de Moçambique para discutir cooperação no agro",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/cna-recebe-delegacao-de-mocambique-para-discutir-cooperacao-no-agro/"
+    },
+    {
+      "titulo": "Riscos do El Niño e petróleo mais barato devem ditar preços do milho",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/riscos-do-el-nino-e-petroleo-mais-barato-devem-ditar-precos-do-milho/"
+    },
+    {
+      "titulo": "Petróleo cai mais de 3% com recuperação de embarques no Estreito de Ormuz",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/petroleo-cai-mais-de-3-com-recuperacao-de-embarques-no-estreito-de-ormuz/"
+    },
+    {
+      "titulo": "CNA debate sucessão familiar e formação de lideranças no agro",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/cna-debate-sucessao-familiar-e-formacao-de-liderancas-no-agro/"
+    },
+    {
       "titulo": "Tereza Cristina defende fundo de catástrofe e garantidor para ampliar seguro rural",
       "veiculo": "Canal Rural",
       "data": "2026-11-16",
@@ -727,76 +797,6 @@
       "data": "2026-11-16",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/tarcisio-critica-ajuste-fiscal-e-cobra-medidas-estruturais-sobre-gasto-e-divida/"
-    },
-    {
-      "titulo": "Intenção de confinamento em Mato Grosso chega a 1,4 milhão de cabeças em 2026",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/intencao-de-confinamento-em-mato-grosso-chega-a-14-milhao-de-cabecas-em-2026/"
-    },
-    {
-      "titulo": "Programa Café Seguro debate LMRs e boas práticas na cafeicultura em Minas Gerais",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/programa-cafe-seguro-debate-lmrs-e-boas-praticas-na-cafeicultura-em-minas-gerais/"
-    },
-    {
-      "titulo": "Mediana do Focus para o IGP-M de 2026 sobe para 6,22%",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/mediana-do-focus-para-o-igp-m-de-2026-sobe-para-622/"
-    },
-    {
-      "titulo": "Embrapa identifica quais condições mais prejudicam o cultivo da noz-pecã",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/embrapa-identifica-quais-condicoes-mais-prejudicam-o-cultivo-da-noz-peca/"
-    },
-    {
-      "titulo": "El Niño deve atingir pico entre novembro e janeiro, diz Inmet",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/el-nino-deve-atingir-pico-entre-novembro-e-janeiro-diz-inmet/"
-    },
-    {
-      "titulo": "Mercado eleva previsão da Selic no fim de 2027 para 12,75%",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/mercado-eleva-previsao-da-selic-no-fim-de-2027-para-1275/"
-    },
-    {
-      "titulo": "Amaggi coloca em operação pá carregadeira movida a etanol em fazenda de MT",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/amaggi-coloca-em-operacao-pa-carregadeira-movida-a-etanol-em-fazenda-de-mt/"
-    },
-    {
-      "titulo": "Preço do feijão sobe e importações atingem maior volume desde 2021",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/feijao/preco-do-feijao-sobe-e-importacoes-atingem-maior-volume-desde-2021/"
-    },
-    {
-      "titulo": "Milho sobe com dólar forte, mas exportações freiam valorização no Brasil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/milho/milho-sobe-com-dolar-forte-mas-exportacoes-freiam-valorizacao-no-brasil/"
-    },
-    {
-      "titulo": "Dólar em alta impulsiona preço da soja ao maior nível desde março de 2023",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/soja/dolar-em-alta-impulsiona-preco-da-soja-ao-maior-nivel-desde-marco-de-2023/"
     }
   ],
   "cartoes": [
