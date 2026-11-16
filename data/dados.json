@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-16T08:30-03:00",
+  "atualizado_em": "2026-11-16T09:03-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,20 @@
   },
   "noticias": [
     {
+      "titulo": "Dólar em alta impulsiona preço da soja ao maior nível desde março de 2023",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/soja/dolar-em-alta-impulsiona-preco-da-soja-ao-maior-nivel-desde-marco-de-2023/"
+    },
+    {
+      "titulo": "IPC-S mantém alta de 0,38% na 2ª quadrissemana de novembro",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/ipc-s-mantem-alta-de-038-na-2a-quadrissemana-de-novembro/"
+    },
+    {
       "titulo": "Semana começa com frente fria e temporais; veja a previsão",
       "veiculo": "Canal Rural",
       "data": "2026-11-16",
@@ -783,20 +797,6 @@
       "data": "2026-11-15",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/projeto-reflora-rs-coleta-material-genetico-de-goiabeira-serrana-em-maquine/"
-    },
-    {
-      "titulo": "Você viu? Filha abandona sonho de carreira internacional para ajudar o pai na fazenda e se torna referência na pecuária",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-14",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/voce-viu-filha-abandona-sonho-de-carreira-internacional-para-ajudar-o-pai-na-fazenda-e-se-torna-referencia-na-pecuaria/"
-    },
-    {
-      "titulo": "Semana da soja é marcada por recuperação dos contratos em Chicago após relatório do USDA",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-14",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/semana-da-soja-e-marcada-por-recuperacao-dos-contratos-em-chicago-apos-relatorio-do-usda/"
     }
   ],
   "cartoes": [
