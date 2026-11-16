@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-16T09:03-03:00",
+  "atualizado_em": "2026-11-16T09:08-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,27 @@
   },
   "noticias": [
     {
+      "titulo": "Amaggi coloca em operação pá carregadeira movida a etanol em fazenda de MT",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/amaggi-coloca-em-operacao-pa-carregadeira-movida-a-etanol-em-fazenda-de-mt/"
+    },
+    {
+      "titulo": "Preço do feijão sobe e importações atingem maior volume desde 2021",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/feijao/preco-do-feijao-sobe-e-importacoes-atingem-maior-volume-desde-2021/"
+    },
+    {
+      "titulo": "Milho sobe com dólar forte, mas exportações freiam valorização no Brasil",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/milho/milho-sobe-com-dolar-forte-mas-exportacoes-freiam-valorizacao-no-brasil/"
+    },
+    {
       "titulo": "Dólar em alta impulsiona preço da soja ao maior nível desde março de 2023",
       "veiculo": "Canal Rural",
       "data": "2026-11-16",
@@ -776,27 +797,6 @@
       "data": "2026-11-15",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/previsao-do-tempo/to/chuva-pode-chegar-a-105-mm-em-24-horas-em-alvorada-no-tocantins/"
-    },
-    {
-      "titulo": "Máximas devem chegar a 37 °C por três dias seguidos em Roraima",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-15",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/rr/maximas-devem-chegar-a-37-c-por-tres-dias-seguidos-em-roraima/"
-    },
-    {
-      "titulo": "Máximas devem chegar a 28 °C em dois municípios de Santa Catarina",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-15",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/sc/maximas-devem-chegar-a-28-c-em-dois-municipios-de-santa-catarina/"
-    },
-    {
-      "titulo": "Projeto Reflora RS coleta material genético de goiabeira-serrana em Maquiné",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-15",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/projeto-reflora-rs-coleta-material-genetico-de-goiabeira-serrana-em-maquine/"
     }
   ],
   "cartoes": [
