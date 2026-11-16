@@ -54,11 +54,11 @@ CADEIAS = [
     (r"sistemas animais", TODAS),
 ]
 TITULOS = {
-    "Insumos": "Boletim de Mercado: Insumos (milho e farelo de soja)",
-    "Bovinocultura de corte": "Boletim de Mercado: Bovinocultura de corte",
-    "Suinocultura": "Boletim de Mercado: Suinocultura",
-    "Caprinocultura": "Boletim de Mercado: Caprinocultura e ovinocultura",
-    "Piscicultura": "Boletim de Mercado: Piscicultura",
+    "Insumos": "Boletim de Mercado NEAGRO-DF: Insumos (milho e farelo de soja)",
+    "Bovinocultura de corte": "Boletim de Mercado NEAGRO-DF: Bovinocultura de corte",
+    "Suinocultura": "Boletim de Mercado NEAGRO-DF: Suinocultura",
+    "Caprinocultura": "Boletim de Mercado NEAGRO-DF: Caprinocultura e ovinocultura",
+    "Piscicultura": "Boletim de Mercado NEAGRO-DF: Piscicultura",
 }
 
 
@@ -161,6 +161,15 @@ def cadeias(tipo: str) -> list[str]:
     return TODAS
 
 
+MESES_ABREV = ["jan.", "fev.", "mar.", "abr.", "maio", "jun.", "jul.", "ago.", "set.", "out.", "nov.", "dez."]
+
+
+def designacao(ano: str, mes: str) -> str:
+    """Designação no formato do CBISSN: Vol. = ano de circulação (2023 = Vol. 1); No. = mês, recomeçando a cada ano."""
+    a, m = int(ano), int(mes)
+    return f"Vol. {a - 2022}, No. {m} ({MESES_ABREV[m - 1]} {a})"
+
+
 def edicao(serie: str, fid: str, nome: str) -> dict | None:
     if not nome.lower().endswith(".pdf"):
         return None
@@ -172,17 +181,18 @@ def edicao(serie: str, fid: str, nome: str) -> dict | None:
     tipo = m["tipo"].strip()
     cad = cadeias(tipo)
     if cad == TODAS:
-        titulo = "Boletim de Mercado da Produção Animal do DF e Entorno"
+        titulo = "Boletim de Mercado NEAGRO-DF: Produção animal do DF e Entorno"
     elif "Suinocultura" in cad and "Avicultura de corte" in cad:
-        titulo = "Boletim de Mercado: Suinocultura e avicultura"
+        titulo = "Boletim de Mercado NEAGRO-DF: Suinocultura e avicultura"
     elif "Bovinocultura de leite" in cad and "Bovinocultura de corte" in cad:
-        titulo = "Boletim de Mercado: Bovinocultura de corte e de leite"
+        titulo = "Boletim de Mercado NEAGRO-DF: Bovinocultura de corte e de leite"
     else:
-        titulo = TITULOS.get(cad[0], f"Boletim de Mercado: {tipo.title()}")
+        titulo = TITULOS.get(cad[0], f"Boletim de Mercado NEAGRO-DF: {tipo.title()}")
     data = f"{m['a']}-{m['m']}-{m['d']}"
     return {
         "serie": serie,
         "numero": m["num"],
+        "designacao": designacao(m["a"], m["m"]),
         "data": data,
         "titulo": titulo,
         "cadeias": cad,
