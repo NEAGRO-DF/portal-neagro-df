@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-16T09:08-03:00",
+  "atualizado_em": "2026-11-16T09:21-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,48 @@
   },
   "noticias": [
     {
+      "titulo": "Intenção de confinamento em Mato Grosso chega a 1,4 milhão de cabeças em 2026",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/intencao-de-confinamento-em-mato-grosso-chega-a-14-milhao-de-cabecas-em-2026/"
+    },
+    {
+      "titulo": "Programa Café Seguro debate LMRs e boas práticas na cafeicultura em Minas Gerais",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/programa-cafe-seguro-debate-lmrs-e-boas-praticas-na-cafeicultura-em-minas-gerais/"
+    },
+    {
+      "titulo": "Mediana do Focus para o IGP-M de 2026 sobe para 6,22%",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/mediana-do-focus-para-o-igp-m-de-2026-sobe-para-622/"
+    },
+    {
+      "titulo": "Embrapa identifica quais condições mais prejudicam o cultivo da noz-pecã",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/embrapa-identifica-quais-condicoes-mais-prejudicam-o-cultivo-da-noz-peca/"
+    },
+    {
+      "titulo": "El Niño deve atingir pico entre novembro e janeiro, diz Inmet",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/diversos/el-nino-deve-atingir-pico-entre-novembro-e-janeiro-diz-inmet/"
+    },
+    {
+      "titulo": "Mercado eleva previsão da Selic no fim de 2027 para 12,75%",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-16",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/mercado-eleva-previsao-da-selic-no-fim-de-2027-para-1275/"
+    },
+    {
       "titulo": "Amaggi coloca em operação pá carregadeira movida a etanol em fazenda de MT",
       "veiculo": "Canal Rural",
       "data": "2026-11-16",
@@ -755,48 +797,6 @@
       "data": "2026-11-15",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/queda-na-cobertura-e-nova-lei-acendem-alerta-sobre-contratos-de-seguro-rural/"
-    },
-    {
-      "titulo": "A China fez o mundo depender dela para depender menos",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-15",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/opiniao-noticias/a-china-fez-o-mundo-depender-dela-para-depender-menos/"
-    },
-    {
-      "titulo": "André de Paula acompanha Lula na 49ª Cúpula da ASEAN, em Manila",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-15",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/andre-de-paula-acompanha-lula-na-49a-cupula-da-asean-em-manila/"
-    },
-    {
-      "titulo": "Programa da Embrapa orientará produção de trigo baixo carbono no Brasil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-15",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/trigo/programa-da-embrapa-orientara-producao-de-trigo-baixo-carbono-no-brasil/"
-    },
-    {
-      "titulo": "Máximas devem chegar a 36 °C em quatro municípios de Roraima",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-15",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/rr/maximas-devem-chegar-a-36-c-em-quatro-municipios-de-roraima/"
-    },
-    {
-      "titulo": "Máximas devem chegar a 31 °C em Santa Catarina",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-15",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/sc/maximas-devem-chegar-a-31-c-em-santa-catarina/"
-    },
-    {
-      "titulo": "Chuva pode chegar a 105 mm em 24 horas em Alvorada, no Tocantins",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-15",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/to/chuva-pode-chegar-a-105-mm-em-24-horas-em-alvorada-no-tocantins/"
     }
   ],
   "cartoes": [
