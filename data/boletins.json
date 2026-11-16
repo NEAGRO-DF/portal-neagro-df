@@ -7,9 +7,9 @@
   "series": [
     {
       "id": "animal",
-      "nome": "Informações de Mercado da Produção Animal",
+      "nome": "Boletim de Mercado NEAGRO-DF",
       "periodicidade": "Mensal",
-      "descricao": "Levantamento semanal de preços de insumos (milho e farelo de soja) e de produtos das cadeias de produção animal nas praças de interesse do Distrito Federal e Entorno, com relações de troca e preços deflacionados.",
+      "descricao": "Publicação mensal com preços de insumos (milho e farelo de soja) e de produtos das cadeias de produção animal nas praças do Distrito Federal e Entorno, relações de troca entre insumo e produto e preços deflacionados.",
       "cadeias": [
         "Suinocultura",
         "Bovinocultura de corte",
