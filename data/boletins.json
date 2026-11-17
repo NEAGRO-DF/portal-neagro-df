@@ -2,7 +2,93 @@
   "_instrucoes": "Os boletins da Produção Animal entram sozinhos: basta salvar o PDF na pasta do ano no Google Drive (link no 'acervo' da série) com o nome no padrão '6.035 - Boletim SUÍNOS - NEAGRO-DF - 28.11.2026.pdf'. O robô (scripts/boletins_drive.py) lê as pastas a cada execução e acrescenta os novos boletins em 'edicoes'. Ao abrir a pasta de um ano novo no Drive, acrescente o link dela no início do 'acervo' da série. Edições de outras séries (morango, tilápia) são lançadas à mão em 'edicoes', com os campos: serie, numero, data (AAAA-MM-DD), titulo, cadeias, resumo, destaques, pdf. O site destaca a edição mais recente. Para manter fora do portal um PDF que está na pasta do Drive (por exemplo, edição de mês ainda incompleto), inclua o link dele na lista 'ignorar'; para publicá-lo depois, retire o link dessa lista.",
   "ignorar": [
     "https://drive.google.com/file/d/1EYeEvHPTZ_rlFfrGdtZnVytFqVb2NkX2/view",
-    "https://drive.google.com/file/d/1MNVOG3_1sddJc34e9Zf4s1eaJUt2GEx-/view"
+    "https://drive.google.com/file/d/1MNVOG3_1sddJc34e9Zf4s1eaJUt2GEx-/view",
+    "https://drive.google.com/file/d/1JcRFaLauWF7KCu76DQWcKvK62ZI29XsG/view",
+    "https://drive.google.com/file/d/1aJMDUV7yqURiejqghj0aIsrWkc7m6jP2/view",
+    "https://drive.google.com/file/d/16S1ocV6dNaXXKOILa7t4NzXybSdJ7_hP/view",
+    "https://drive.google.com/file/d/1xeKMSyWN9QE3wmBRHJR631xRusllubWn/view",
+    "https://drive.google.com/file/d/1RS07e3h4fSSg48ghLz3bgBCiTn_8Nroz/view",
+    "https://drive.google.com/file/d/1-MZuWhHvw_rkl4Svw-g8XSmDweaPX4w5/view",
+    "https://drive.google.com/file/d/1GE-p5LoqqaEn94AFAiuXoxZSGben73Jk/view",
+    "https://drive.google.com/file/d/1O8IOcDbZw5lKKRWniyGngfOu_EIE_lHE/view",
+    "https://drive.google.com/file/d/1ZUUrV-ntbWdzP4ixy4KC3NoiVY6WTGjS/view",
+    "https://drive.google.com/file/d/1wURDjKeN40xCFOMGskmObdVZgf-Drx17/view",
+    "https://drive.google.com/file/d/1rXaW04UAYbOQlYvs8fKGrOnMpE2ajTRk/view",
+    "https://drive.google.com/file/d/1vVxmZPst9fafnld72DawBgBCsyLwFMZL/view",
+    "https://drive.google.com/file/d/1pOB1hg-PJwInlt2uzDD8hfs8wY--yIBA/view",
+    "https://drive.google.com/file/d/1Z5JTBuT7OpkMOPQeTO5qQOKWB4MzEhRw/view",
+    "https://drive.google.com/file/d/1AO6J_m3Z8Ke_mYvgUEJXzuGTW5AJLM6-/view",
+    "https://drive.google.com/file/d/1mZIpqDoVP2C0we85GqQsl7-wlcioqZ7z/view",
+    "https://drive.google.com/file/d/1Nzl8dhrgxAJxCMQ_Z3dmLONK4PpTu-Mt/view",
+    "https://drive.google.com/file/d/1nb02AZQtaUbZ5665dVdf24qQWAslDpF8/view",
+    "https://drive.google.com/file/d/1fVmfpnX9Dyk-4-JcYGsAi34LuVH3DGs-/view",
+    "https://drive.google.com/file/d/1Bhh8D89wb__6fs__RnuadBI9gcZeuzLS/view",
+    "https://drive.google.com/file/d/1OfSYjlTBJ_3FkHgS-jTQ74zlzRDuKbHa/view",
+    "https://drive.google.com/file/d/1AWrIbjXMkJ7JRMaCuX9ZG7plHvTpQr2b/view",
+    "https://drive.google.com/file/d/1FVTX62g3I8eVh05XxNeVzo6DkvvkUf-h/view",
+    "https://drive.google.com/file/d/1wAyOQR-B_vhQZLtfSXOz37I7Vs-mNPu5/view",
+    "https://drive.google.com/file/d/13HFUaT8k7ppsQj-9808EAH9h8mMX9B2c/view",
+    "https://drive.google.com/file/d/1DGyHFeHwzyCNYDdM53Sp85xOAHIBA6SU/view",
+    "https://drive.google.com/file/d/1JHjJBFyRpzJ8F_JZeNwmnX1SxiTXxFhC/view",
+    "https://drive.google.com/file/d/1GKvuUaRN9T7ZVizOqE3ETY8sRDvkbt6t/view",
+    "https://drive.google.com/file/d/1YBUOANemOs-f0dKYF8tEP1N_Lqrgnwul/view",
+    "https://drive.google.com/file/d/1D9dAlrU0LxGFyq_ntXEO-oggjxrtuCm1/view",
+    "https://drive.google.com/file/d/1J3Ghm_GWfNwxv6Nk_Bkq_tVYJ-aNUwvL/view",
+    "https://drive.google.com/file/d/1bGCSkR0KKfmb4v3saYaYF-EXuCkP9DL6/view",
+    "https://drive.google.com/file/d/1lqNwNapwzZRPRcIVuKAU_76DOIXuyD50/view",
+    "https://drive.google.com/file/d/1q3mJDRqUAMLb31fy_I9yFfZm-k2YcxRc/view",
+    "https://drive.google.com/file/d/1qfQfC12pnwGcfI4D2TOkzTFuG5jNOdag/view",
+    "https://drive.google.com/file/d/1qSn1jLZlAf87gg5CdTZBnPiifW7QwQOz/view",
+    "https://drive.google.com/file/d/1Ed7llyieLyYtKwXRJ-ycCdDL6j4rHy8Y/view",
+    "https://drive.google.com/file/d/1asqkfcbhX6Z_2FU5c5W2sPbgs8IweAEV/view",
+    "https://drive.google.com/file/d/14Ihd5q6dlCBVoVr4WyiWbZ6lRgNN4fQJ/view",
+    "https://drive.google.com/file/d/1AuHrdM1XUqfUtqamC_hVwKf8eijeU7S2/view",
+    "https://drive.google.com/file/d/19_5vfzf7I0V-s2iNFokbLErpgVgrfX_P/view",
+    "https://drive.google.com/file/d/15QXs_AGsafR4CYG2g39b_mbGP_rJ_vFk/view",
+    "https://drive.google.com/file/d/1vvLUkHvLpRjx7olEE4ob9VP-FGzP5h6G/view",
+    "https://drive.google.com/file/d/1nmzgxm165bU80Zwq7NzOzCMcx0h90xzX/view",
+    "https://drive.google.com/file/d/1nkDQYDZbgFm8DDo3kc8zeuu2S_fKc101/view",
+    "https://drive.google.com/file/d/1Po64NwJSvOfrFEU3f57fQlq785vAN0xH/view",
+    "https://drive.google.com/file/d/1hItyuYOnncATa2gOV4q1VxP5CnGsqwbg/view",
+    "https://drive.google.com/file/d/1FRKyxN4MT_kpJbGEA_PpY1PrN_2JC96h/view",
+    "https://drive.google.com/file/d/1w-6KTwfXnIXYY-4kacyXGpriaudSw2vW/view",
+    "https://drive.google.com/file/d/1f9-h_xKawZpbAlciEfZMBz2ZLztnncY5/view",
+    "https://drive.google.com/file/d/1VJpjH1yNkaV6As6AQSpdnMa3LXEsQN0w/view",
+    "https://drive.google.com/file/d/1EY-WoVcdsMiJfZzrU_mUH9_P1-lZ0RVb/view",
+    "https://drive.google.com/file/d/1uEZg8indn-t4pkonNUy3KpX3CyU68rzd/view",
+    "https://drive.google.com/file/d/14MVtkCrkT95kX3zIYml9gu6X7qosIobO/view",
+    "https://drive.google.com/file/d/1owvjraZ3TPUJtnMs3dI1pLwxn1Oei-7t/view",
+    "https://drive.google.com/file/d/1ieEJ-er1b3Sd6SfSD7PuLfNgSkEaeTfy/view",
+    "https://drive.google.com/file/d/1o59L1Ex2r3UsnusUf_H3UuPSpEGbm1qE/view",
+    "https://drive.google.com/file/d/1nFkIoVA5NKd6cW9Vm_NwSMkmnx7CfYez/view",
+    "https://drive.google.com/file/d/1mFOETwyNZ6SzyuumyeTvHLgTK7vb6onG/view",
+    "https://drive.google.com/file/d/1PTkLvAtLVQ-Q0ii_L3IY0qaHctGKHb8T/view",
+    "https://drive.google.com/file/d/1laIdvlQ35gV9VF8TYbRDuwYttjPb3yWQ/view",
+    "https://drive.google.com/file/d/1HmVu6MnA89guF5KmQ8CYR7jW_0yj7Op3/view",
+    "https://drive.google.com/file/d/1ABfjBUit-ekkhgPaY6H6tBA-LkdDK56o/view",
+    "https://drive.google.com/file/d/119QOjG41GFxFWNUZ0MzCI9wT7sQ4WsFQ/view",
+    "https://drive.google.com/file/d/1rsNTBM4cjhXS2-F2TGYE2AuGvgRyRP4D/view",
+    "https://drive.google.com/file/d/1lFTyvY6qbF1aNpRn3Xx4xR59CR8XUhh9/view",
+    "https://drive.google.com/file/d/1g6IM6RPIaJTv8gS8XrRoeyVoaH7JAkUp/view",
+    "https://drive.google.com/file/d/1UP1sqIXJ0hw8g83GRbnE_zqnHYB5PPai/view",
+    "https://drive.google.com/file/d/1HX1Se1CJx-bKLdX_fjPOjmtH9jZ2Utvv/view",
+    "https://drive.google.com/file/d/1i2qjAXnod7x0Z_LOOwfBB3WlzzGVLY9g/view",
+    "https://drive.google.com/file/d/1dUMOQUagoZqKCk_jKXCn2NBQ2Mlj61RN/view",
+    "https://drive.google.com/file/d/1HTg64KT35TsfPmj0mvYxerOPevuljpgx/view",
+    "https://drive.google.com/file/d/15k8IvObEArexP8TLCn0O9iRhZpzGfsqp/view",
+    "https://drive.google.com/file/d/13tMYOAkIUuh9lQV87AgexjgK1TIyxqn3/view",
+    "https://drive.google.com/file/d/1xFmZx-IBzWpPJqVy5sbv-ao5embo-SUk/view",
+    "https://drive.google.com/file/d/1GJNhZCI4qvpWzC8017eY54bsYXpL4VWB/view",
+    "https://drive.google.com/file/d/1Fo6FwaJ7oPmLbGtgnDYt-KQ-wPmEIQo2/view",
+    "https://drive.google.com/file/d/1G0s_W3t22zMuzS9n60T8shZs79ZDPafS/view",
+    "https://drive.google.com/file/d/1myGj75hf4E09Yp46UmKz6hxBM7VruT-Y/view",
+    "https://drive.google.com/file/d/1n7F1-7diC4aEAVyaH7E0IQPiYlmqJ_H-/view",
+    "https://drive.google.com/file/d/1huohQ0pimKkkiRjnhHTRQTgFCqWWTY6L/view",
+    "https://drive.google.com/file/d/1XUgcuYrB8-3HdpYg-wHHw67gFXtolF4Z/view",
+    "https://drive.google.com/file/d/1XaSSPLybanZKDM_TIjGT3656CwVVy2l2/view",
+    "https://drive.google.com/file/d/1BA3kvOj90cLnzlbXl3eRaSDfu4Vlldqg/view",
+    "https://drive.google.com/file/d/1DxeQKN571ELuv3Jm7Ww4DB3toNrUztk-/view",
+    "https://drive.google.com/file/d/1E-lkr9jyCxgUDfDs1zMbVQyAw5yZriBf/view"
   ],
   "series": [
     {
@@ -184,7 +270,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6-032-boletim-bovinocultura-de-corte-neagro-df-2026-09-26.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1JcRFaLauWF7KCu76DQWcKvK62ZI29XsG/view",
+      "pdf_original": "https://drive.google.com/file/d/1f2rh7-L6eNQmwrluZ1O57AUCYrv4S9MP/view",
       "designacao": "Vol. 4, No. 8 (ago. 2026)"
     },
     {
@@ -199,7 +285,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6-031-boletim-insumos-milho-e-farelo-de-soja-neagro-df-2026-09-16.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1aJMDUV7yqURiejqghj0aIsrWkc7m6jP2/view",
+      "pdf_original": "https://drive.google.com/file/d/1m3Wlhbhm1p6xGUKUlWSzLKbCQdrF1swy/view",
       "designacao": "Vol. 4, No. 8 (ago. 2026)"
     },
     {
@@ -293,7 +379,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0235-boletim-caprinos-e-ovinos-neagro-df-2026-08-14.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/16S1ocV6dNaXXKOILa7t4NzXybSdJ7_hP/view",
+      "pdf_original": "https://drive.google.com/file/d/1TbY3m77Za5okTG-xZmE0uv6jmC-M0foL/view",
       "designacao": "Vol. 4, No. 7 (jul. 2026)"
     },
     {
@@ -309,7 +395,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0234-boletim-aves-neagro-df-2026-08-14.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1xeKMSyWN9QE3wmBRHJR631xRusllubWn/view",
+      "pdf_original": "https://drive.google.com/file/d/12FL1JKiM0vDv3z9rtPo3ko73pEticzl3/view",
       "designacao": "Vol. 4, No. 7 (jul. 2026)"
     },
     {
@@ -324,7 +410,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0233-boletim-suinos-neagro-df-2026-08-14.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1RS07e3h4fSSg48ghLz3bgBCiTn_8Nroz/view",
+      "pdf_original": "https://drive.google.com/file/d/1leTOQ-_DUNF6J9guDaCpTK_j6kaMmCzd/view",
       "designacao": "Vol. 4, No. 7 (jul. 2026)"
     },
     {
@@ -340,7 +426,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0232-boletim-bovinos-corte-e-leite-neagro-df-2026-08-14.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1-MZuWhHvw_rkl4Svw-g8XSmDweaPX4w5/view",
+      "pdf_original": "https://drive.google.com/file/d/1nq43kT3HmCSAgv1hZMhwczK4mlsMhkmb/view",
       "designacao": "Vol. 4, No. 7 (jul. 2026)"
     },
     {
@@ -355,7 +441,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0231-boletim-insumos-neagro-df-2026-08-14.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1GE-p5LoqqaEn94AFAiuXoxZSGben73Jk/view",
+      "pdf_original": "https://drive.google.com/file/d/193YYrlOFew5775lsBch4bZ6BxEXTjqD-/view",
       "designacao": "Vol. 4, No. 7 (jul. 2026)"
     },
     {
@@ -371,7 +457,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0225-boletim-caprinos-e-ovinos-neagro-df-2026-07-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1O8IOcDbZw5lKKRWniyGngfOu_EIE_lHE/view",
+      "pdf_original": "https://drive.google.com/file/d/1t9mGEX0hCvPKKwhUFS7J13jGReNlF_tr/view",
       "designacao": "Vol. 4, No. 6 (jun. 2026)"
     },
     {
@@ -387,7 +473,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0224-boletim-aves-neagro-df-2026-07-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1ZUUrV-ntbWdzP4ixy4KC3NoiVY6WTGjS/view",
+      "pdf_original": "https://drive.google.com/file/d/1MGKRZk19NANuJ0lhRdXLl85tMi2wbIm-/view",
       "designacao": "Vol. 4, No. 6 (jun. 2026)"
     },
     {
@@ -402,7 +488,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0223-boletim-suinos-neagro-df-2026-07-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1wURDjKeN40xCFOMGskmObdVZgf-Drx17/view",
+      "pdf_original": "https://drive.google.com/file/d/1unXozRNqvGW8gvVvPVe-1ImujryWW_8c/view",
       "designacao": "Vol. 4, No. 6 (jun. 2026)"
     },
     {
@@ -418,7 +504,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0222-boletim-bovinos-corte-e-leite-neagro-df-2026-07-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1rXaW04UAYbOQlYvs8fKGrOnMpE2ajTRk/view",
+      "pdf_original": "https://drive.google.com/file/d/1nw-hkaKEwZ6r5FUESBnQlWf7AHdQh3jg/view",
       "designacao": "Vol. 4, No. 6 (jun. 2026)"
     },
     {
@@ -433,7 +519,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0221-boletim-insumos-neagro-df-2026-07-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1vVxmZPst9fafnld72DawBgBCsyLwFMZL/view",
+      "pdf_original": "https://drive.google.com/file/d/1Bzo1irb14M6SmJHeKjTe0OBIgF8RtStc/view",
       "designacao": "Vol. 4, No. 6 (jun. 2026)"
     },
     {
@@ -449,7 +535,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0215-boletim-caprinos-e-ovinos-neagro-df-2026-06-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1pOB1hg-PJwInlt2uzDD8hfs8wY--yIBA/view",
+      "pdf_original": "https://drive.google.com/file/d/1K6DW0ZqviA5OwstJEJNNZCFj-hPW8Q38/view",
       "designacao": "Vol. 4, No. 5 (maio 2026)"
     },
     {
@@ -465,7 +551,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0214-boletim-aves-neagro-df-2026-06-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1Z5JTBuT7OpkMOPQeTO5qQOKWB4MzEhRw/view",
+      "pdf_original": "https://drive.google.com/file/d/1ybUu6G54PaM1zI0ChMhjKAdG4OXwEWMX/view",
       "designacao": "Vol. 4, No. 5 (maio 2026)"
     },
     {
@@ -480,7 +566,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0213-boletim-suinos-neagro-df-2026-06-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1AO6J_m3Z8Ke_mYvgUEJXzuGTW5AJLM6-/view",
+      "pdf_original": "https://drive.google.com/file/d/1smnpJlpLJefUj-5yd4Nv8sYZMGJKlaJR/view",
       "designacao": "Vol. 4, No. 5 (maio 2026)"
     },
     {
@@ -496,7 +582,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0212-boletim-bovinos-corte-e-leite-neagro-df-2026-06-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1mZIpqDoVP2C0we85GqQsl7-wlcioqZ7z/view",
+      "pdf_original": "https://drive.google.com/file/d/115ZO4SZLaJ_imXyStakeVYCuwpIS8Fgs/view",
       "designacao": "Vol. 4, No. 5 (maio 2026)"
     },
     {
@@ -511,7 +597,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0211-boletim-insumos-neagro-df-2026-06-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1Nzl8dhrgxAJxCMQ_Z3dmLONK4PpTu-Mt/view",
+      "pdf_original": "https://drive.google.com/file/d/1Nz_1ThxXXxKhi6FTw__O4QMryfJVrPTr/view",
       "designacao": "Vol. 4, No. 5 (maio 2026)"
     },
     {
@@ -527,7 +613,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0145-boletim-caprinos-e-ovinos-neagro-df-2026-05-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1nb02AZQtaUbZ5665dVdf24qQWAslDpF8/view",
+      "pdf_original": "https://drive.google.com/file/d/10qVP0GaAdcqwbSQQn7nBvPES99lLvrz2/view",
       "designacao": "Vol. 4, No. 4 (abr. 2026)"
     },
     {
@@ -547,7 +633,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6-02-boletim-producao-animal-do-df-e-entorno-neagro-df-2026-04-24.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1fVmfpnX9Dyk-4-JcYGsAi34LuVH3DGs-/view",
+      "pdf_original": "https://drive.google.com/file/d/1sfbnGXDyMRmFnM9vmfmKz9l36mgphNbb/view",
       "designacao": "Vol. 4, No. 3 (mar. 2026)"
     },
     {
@@ -563,7 +649,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0135-boletim-caprinos-e-ovinos-neagro-df-2026-04-15.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1Bhh8D89wb__6fs__RnuadBI9gcZeuzLS/view",
+      "pdf_original": "https://drive.google.com/file/d/1yiSDPCfoQii26NwaBwXtAz6aXsnNd7Ei/view",
       "designacao": "Vol. 4, No. 3 (mar. 2026)"
     },
     {
@@ -583,7 +669,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6-01-boletim-producao-animal-do-df-e-entorno-neagro-df-2026-03-24.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1OfSYjlTBJ_3FkHgS-jTQ74zlzRDuKbHa/view",
+      "pdf_original": "https://drive.google.com/file/d/1VKq8Yo4xNke0oAZCgcSYsA3SFrh4PYuQ/view",
       "designacao": "Vol. 4, No. 2 (fev. 2026)"
     },
     {
@@ -599,7 +685,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0125-boletim-caprinos-e-ovinos-neagro-df-2026-03-13.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1AWrIbjXMkJ7JRMaCuX9ZG7plHvTpQr2b/view",
+      "pdf_original": "https://drive.google.com/file/d/1ZoCf4WHw4CAhQ-i5MjvgMLbZPi7WFg5i/view",
       "designacao": "Vol. 4, No. 2 (fev. 2026)"
     },
     {
@@ -615,7 +701,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0115-boletim-caprinos-e-ovinos-neagro-df-2026-02-13.pdf",
       "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1FVTX62g3I8eVh05XxNeVzo6DkvvkUf-h/view",
+      "pdf_original": "https://drive.google.com/file/d/1Li1bTX7oUIaJwHDsEaPkhElrCrLnGFWw/view",
       "designacao": "Vol. 4, No. 1 (jan. 2026)"
     },
     {
@@ -635,8 +721,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-22-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-12-19.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1wAyOQR-B_vhQZLtfSXOz37I7Vs-mNPu5/view",
-      "designacao": "Vol. 3, No. 12 (dez. 2025)"
+      "pdf_original": "https://drive.google.com/file/d/1PHryFl32K5VwrsnonGJArLaMO0FmZLll/view",
+      "designacao": "Vol. 3, No. 11 (dez. 2025)"
     },
     {
       "serie": "animal",
@@ -655,7 +741,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-21-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-11-27.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/13HFUaT8k7ppsQj-9808EAH9h8mMX9B2c/view",
+      "pdf_original": "https://drive.google.com/file/d/1IWOyHsNj6u41wknl5dwa7zhV-FilAPVD/view",
       "designacao": "Vol. 3, No. 10 (out. 2025)"
     },
     {
@@ -675,7 +761,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-20-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-10-24.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1DGyHFeHwzyCNYDdM53Sp85xOAHIBA6SU/view",
+      "pdf_original": "https://drive.google.com/file/d/14GGeviIzlSfVp8or2W8MGQTdAyXzuYFY/view",
       "designacao": "Vol. 3, No. 10 (out. 2025)"
     },
     {
@@ -695,7 +781,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-19-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-09-23.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1JHjJBFyRpzJ8F_JZeNwmnX1SxiTXxFhC/view",
+      "pdf_original": "https://drive.google.com/file/d/1idnnWShyWOGpJxoU0Z8QtTLmXhrCb_EB/view",
       "designacao": "Vol. 3, No. 9 (set. 2025)"
     },
     {
@@ -715,7 +801,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-18-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-09-05.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1GKvuUaRN9T7ZVizOqE3ETY8sRDvkbt6t/view",
+      "pdf_original": "https://drive.google.com/file/d/1lvuQrk1LB_g9_e_1jlPEgDs92mxIE7V8/view",
       "designacao": "Vol. 3, No. 8 (ago. 2025)"
     },
     {
@@ -735,7 +821,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-17-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-07-23.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1YBUOANemOs-f0dKYF8tEP1N_Lqrgnwul/view",
+      "pdf_original": "https://drive.google.com/file/d/1VucGBI2KMIWqQKtxItemw7FWp6cBT1qw/view",
       "designacao": "Vol. 3, No. 7 (jul. 2025)"
     },
     {
@@ -755,7 +841,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-16-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-06-27.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1D9dAlrU0LxGFyq_ntXEO-oggjxrtuCm1/view",
+      "pdf_original": "https://drive.google.com/file/d/1ErGWohPLenxoKAE3TC3Zo3dVi1LhXgrT/view",
       "designacao": "Vol. 3, No. 6 (jun. 2025)"
     },
     {
@@ -795,7 +881,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-14-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-06-01.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1J3Ghm_GWfNwxv6Nk_Bkq_tVYJ-aNUwvL/view",
+      "pdf_original": "https://drive.google.com/file/d/1bFmZv5UTsQ_EycuwS13zIjE7LjR2HdH_/view",
       "designacao": "Vol. 3, No. 5 (maio 2025)"
     },
     {
@@ -815,7 +901,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-13-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-05-26.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1bGCSkR0KKfmb4v3saYaYF-EXuCkP9DL6/view",
+      "pdf_original": "https://drive.google.com/file/d/1RyOmuahmYZu2lmEAbhqQAW-9gCyp3tdM/view",
       "designacao": "Vol. 3, No. 5 (maio 2025)"
     },
     {
@@ -835,7 +921,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-12-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-05-08.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1lqNwNapwzZRPRcIVuKAU_76DOIXuyD50/view",
+      "pdf_original": "https://drive.google.com/file/d/1hw6PjeyIY03GYT_QXcL9Qga_t3uZprg1/view",
       "designacao": "Vol. 3, No. 5 (maio 2025)"
     },
     {
@@ -855,7 +941,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-11-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-04-25.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1q3mJDRqUAMLb31fy_I9yFfZm-k2YcxRc/view",
+      "pdf_original": "https://drive.google.com/file/d/1U3k8-pPNvq_Lhqho4ndiamE0MO6ft4AW/view",
       "designacao": "Vol. 3, No. 4 (abr. 2025)"
     },
     {
@@ -875,7 +961,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-10-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-04-11.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1qfQfC12pnwGcfI4D2TOkzTFuG5jNOdag/view",
+      "pdf_original": "https://drive.google.com/file/d/1Rv9rRsNaFItOFJa-WcapSm-bMKJ9nzj6/view",
       "designacao": "Vol. 3, No. 4 (abr. 2025)"
     },
     {
@@ -895,7 +981,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-09-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-04-04.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1qSn1jLZlAf87gg5CdTZBnPiifW7QwQOz/view",
+      "pdf_original": "https://drive.google.com/file/d/1tmAF7Wje8YDds78x8zfdlg3P0LT_MY35/view",
       "designacao": "Vol. 3, No. 3 (mar. 2025)"
     },
     {
@@ -915,7 +1001,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-08-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-03-28.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1Ed7llyieLyYtKwXRJ-ycCdDL6j4rHy8Y/view",
+      "pdf_original": "https://drive.google.com/file/d/1JOtfuo_Pa3sY_7W6-N4iXWveoxpYbPrs/view",
       "designacao": "Vol. 3, No. 3 (mar. 2025)"
     },
     {
@@ -935,7 +1021,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-07-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-02-22.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1asqkfcbhX6Z_2FU5c5W2sPbgs8IweAEV/view",
+      "pdf_original": "https://drive.google.com/file/d/1FRAwDn1sEEb4lHDTpcRNvKtixzZlfFy4/view",
       "designacao": "Vol. 3, No. 2 (fev. 2025)"
     },
     {
@@ -955,7 +1041,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-06-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-02-15.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/14Ihd5q6dlCBVoVr4WyiWbZ6lRgNN4fQJ/view",
+      "pdf_original": "https://drive.google.com/file/d/1oL9pqZEHFEXSA62wskCFk-g5UHYKzREe/view",
       "designacao": "Vol. 3, No. 2 (fev. 2025)"
     },
     {
@@ -975,7 +1061,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-05-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-02-07.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1AuHrdM1XUqfUtqamC_hVwKf8eijeU7S2/view",
+      "pdf_original": "https://drive.google.com/file/d/1wIekRZvWqyxdtjbGZldl7Xw56GRLNAok/view",
       "designacao": "Vol. 3, No. 1 (jan. 2025)"
     },
     {
@@ -995,7 +1081,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-04-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-01-31.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/19_5vfzf7I0V-s2iNFokbLErpgVgrfX_P/view",
+      "pdf_original": "https://drive.google.com/file/d/16oGG97xD-1esfDoSb2Gh4UNRVIGhUleN/view",
       "designacao": "Vol. 3, No. 1 (jan. 2025)"
     },
     {
@@ -1015,7 +1101,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-03-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-01-22.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/15QXs_AGsafR4CYG2g39b_mbGP_rJ_vFk/view",
+      "pdf_original": "https://drive.google.com/file/d/1GJsczuhw3II6XHm_rqyotlD9CQ7InS6x/view",
       "designacao": "Vol. 3, No. 1 (jan. 2025)"
     },
     {
@@ -1035,7 +1121,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-02-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-01-17.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1vvLUkHvLpRjx7olEE4ob9VP-FGzP5h6G/view",
+      "pdf_original": "https://drive.google.com/file/d/1mOPKOXfLzIH9otfHwabWqX0cPnAdZ_Hh/view",
       "designacao": "Vol. 3, No. 1 (jan. 2025)"
     },
     {
@@ -1055,7 +1141,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-01-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-01-09.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1nmzgxm165bU80Zwq7NzOzCMcx0h90xzX/view",
+      "pdf_original": "https://drive.google.com/file/d/1wemXCpzJc5eaa07IetmaB6zKZj29nzsL/view",
       "designacao": "Vol. 3, No. 1 (jan. 2025)"
     },
     {
@@ -1075,7 +1161,7 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/4-27-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-01-09.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1nkDQYDZbgFm8DDo3kc8zeuu2S_fKc101/view",
+      "pdf_original": "https://drive.google.com/file/d/1uCieV27wn95EDjAIKIV8Kpnk3qdwRELz/view",
       "designacao": "Vol. 3, No. 1 (jan. 2025)"
     },
     {
@@ -1109,8 +1195,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-26-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-12-13.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1Po64NwJSvOfrFEU3f57fQlq785vAN0xH/view",
-      "designacao": "Vol. 2, No. 12 (dez. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1lGZCdR8oxxInam5wmDA9yIpCxBTt90UV/view",
+      "designacao": "Vol. 2, No. 8 (dez. 2024)"
     },
     {
       "serie": "animal",
@@ -1129,8 +1215,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-25-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-12-05.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1hItyuYOnncATa2gOV4q1VxP5CnGsqwbg/view",
-      "designacao": "Vol. 2, No. 11 (nov. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1KYP8B3h72IsTApbuB8c201aQeTvGU22r/view",
+      "designacao": "Vol. 2, No. 7 (nov. 2024)"
     },
     {
       "serie": "animal",
@@ -1149,8 +1235,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-24-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-11-29.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1FRKyxN4MT_kpJbGEA_PpY1PrN_2JC96h/view",
-      "designacao": "Vol. 2, No. 11 (nov. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1aC3hEpuuT1OSo_9Tz4JR1CZJtogqcIZu/view",
+      "designacao": "Vol. 2, No. 7 (nov. 2024)"
     },
     {
       "serie": "animal",
@@ -1169,8 +1255,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-23-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-11-15.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1w-6KTwfXnIXYY-4kacyXGpriaudSw2vW/view",
-      "designacao": "Vol. 2, No. 11 (nov. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1FyzrBohGeP9Zu-ZoKuULhEXrGnHtGHF_/view",
+      "designacao": "Vol. 2, No. 7 (nov. 2024)"
     },
     {
       "serie": "animal",
@@ -1189,8 +1275,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-22-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-10-30.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1f9-h_xKawZpbAlciEfZMBz2ZLztnncY5/view",
-      "designacao": "Vol. 2, No. 10 (out. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1NSgVlwXu3CsyquDGrNps5Q7ahJXUZXdc/view",
+      "designacao": "Vol. 2, No. 6 (out. 2024)"
     },
     {
       "serie": "animal",
@@ -1209,8 +1295,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-21-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-10-23.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1VJpjH1yNkaV6As6AQSpdnMa3LXEsQN0w/view",
-      "designacao": "Vol. 2, No. 10 (out. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/13CojaX-ZI7oy6anz7pJBiDC2UG91O6W4/view",
+      "designacao": "Vol. 2, No. 6 (out. 2024)"
     },
     {
       "serie": "animal",
@@ -1229,8 +1315,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-20-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-10-18.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1EY-WoVcdsMiJfZzrU_mUH9_P1-lZ0RVb/view",
-      "designacao": "Vol. 2, No. 10 (out. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1JqfVq3O0fAj_G-U0qskhYNphtyCBxRI5/view",
+      "designacao": "Vol. 2, No. 6 (out. 2024)"
     },
     {
       "serie": "animal",
@@ -1249,8 +1335,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-19-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-09-11.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1uEZg8indn-t4pkonNUy3KpX3CyU68rzd/view",
-      "designacao": "Vol. 2, No. 9 (set. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1mJAE0-UoUfGFlA8caEhef890GKWdIZJ4/view",
+      "designacao": "Vol. 2, No. 5 (set. 2024)"
     },
     {
       "serie": "animal",
@@ -1269,8 +1355,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-18-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-09-04.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/14MVtkCrkT95kX3zIYml9gu6X7qosIobO/view",
-      "designacao": "Vol. 2, No. 8 (ago. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1jhnk67jsfJXK9s6cEbjtNvbN6UJ05YVF/view",
+      "designacao": "Vol. 2, No. 4 (ago. 2024)"
     },
     {
       "serie": "animal",
@@ -1289,8 +1375,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-17-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-08-28.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1owvjraZ3TPUJtnMs3dI1pLwxn1Oei-7t/view",
-      "designacao": "Vol. 2, No. 8 (ago. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1xGh-zNkGStBY5X_lT-IlVVd229gPNLZC/view",
+      "designacao": "Vol. 2, No. 4 (ago. 2024)"
     },
     {
       "serie": "animal",
@@ -1309,8 +1395,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-16-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-08-21.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1ieEJ-er1b3Sd6SfSD7PuLfNgSkEaeTfy/view",
-      "designacao": "Vol. 2, No. 8 (ago. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1kxmRxypu7EuyrjMP2KKxRMwd6AhjJACt/view",
+      "designacao": "Vol. 2, No. 4 (ago. 2024)"
     },
     {
       "serie": "animal",
@@ -1329,8 +1415,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-15-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-08-15.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1o59L1Ex2r3UsnusUf_H3UuPSpEGbm1qE/view",
-      "designacao": "Vol. 2, No. 8 (ago. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/14uuPClzHmZMAgppTZXJHuMIvW-teOh22/view",
+      "designacao": "Vol. 2, No. 4 (ago. 2024)"
     },
     {
       "serie": "animal",
@@ -1349,8 +1435,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-14-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-08-07.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1nFkIoVA5NKd6cW9Vm_NwSMkmnx7CfYez/view",
-      "designacao": "Vol. 2, No. 8 (ago. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1P8de-8PL-UEyxRhmQdLBDznh7M7AoLC0/view",
+      "designacao": "Vol. 2, No. 4 (ago. 2024)"
     },
     {
       "serie": "animal",
@@ -1369,8 +1455,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-13-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-07-31.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1mFOETwyNZ6SzyuumyeTvHLgTK7vb6onG/view",
-      "designacao": "Vol. 2, No. 7 (jul. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1oiwpq2_VUQWCPFdtoYjbgqq0ClarOy4S/view",
+      "designacao": "Vol. 2, No. 3 (jul. 2024)"
     },
     {
       "serie": "animal",
@@ -1389,8 +1475,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-12-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-07-24.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1PTkLvAtLVQ-Q0ii_L3IY0qaHctGKHb8T/view",
-      "designacao": "Vol. 2, No. 7 (jul. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1uIQ1gA1Jp6lodSm35GEbnsRGY1sESJ4L/view",
+      "designacao": "Vol. 2, No. 3 (jul. 2024)"
     },
     {
       "serie": "animal",
@@ -1409,8 +1495,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-11-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-07-17.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1laIdvlQ35gV9VF8TYbRDuwYttjPb3yWQ/view",
-      "designacao": "Vol. 2, No. 7 (jul. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1prqiVRyLcJJ8P4kpdqgfEhTI_Xz1-Ohv/view",
+      "designacao": "Vol. 2, No. 3 (jul. 2024)"
     },
     {
       "serie": "animal",
@@ -1429,8 +1515,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-10-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-07-10.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1HmVu6MnA89guF5KmQ8CYR7jW_0yj7Op3/view",
-      "designacao": "Vol. 2, No. 7 (jul. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1QvCPfH_RVBb0ndzb4gZi7aFaNuULiVOY/view",
+      "designacao": "Vol. 2, No. 3 (jul. 2024)"
     },
     {
       "serie": "animal",
@@ -1449,8 +1535,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-09-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-07-03.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1ABfjBUit-ekkhgPaY6H6tBA-LkdDK56o/view",
-      "designacao": "Vol. 2, No. 6 (jun. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1H6l-KgWjPDL0ZtzC2HBbh6wb_6dOPXi2/view",
+      "designacao": "Vol. 2, No. 2 (jun. 2024)"
     },
     {
       "serie": "morango",
@@ -1483,8 +1569,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-08-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-06-26.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/119QOjG41GFxFWNUZ0MzCI9wT7sQ4WsFQ/view",
-      "designacao": "Vol. 2, No. 6 (jun. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/17fPv37YvcdFINGMknqO_qnHWPZuCaVnA/view",
+      "designacao": "Vol. 2, No. 2 (jun. 2024)"
     },
     {
       "serie": "animal",
@@ -1503,8 +1589,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-07-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-06-19.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1rsNTBM4cjhXS2-F2TGYE2AuGvgRyRP4D/view",
-      "designacao": "Vol. 2, No. 6 (jun. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/16_7cEA1Ww78G3-4OP3TzFiSTWJ8zvxgk/view",
+      "designacao": "Vol. 2, No. 2 (jun. 2024)"
     },
     {
       "serie": "animal",
@@ -1523,8 +1609,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-06-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-06-12.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1lFTyvY6qbF1aNpRn3Xx4xR59CR8XUhh9/view",
-      "designacao": "Vol. 2, No. 6 (jun. 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1f6QBs8UzgoIQY31y2Ysc3I-pgAGn5uA8/view",
+      "designacao": "Vol. 2, No. 2 (jun. 2024)"
     },
     {
       "serie": "animal",
@@ -1543,8 +1629,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-05-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-06-05.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1g6IM6RPIaJTv8gS8XrRoeyVoaH7JAkUp/view",
-      "designacao": "Vol. 2, No. 5 (maio 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1hBwtaiDCFzER1QpErOBgodc7cZhBuRGA/view",
+      "designacao": "Vol. 2, No. 1 (maio 2024)"
     },
     {
       "serie": "animal",
@@ -1563,8 +1649,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-04-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-05-29.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1UP1sqIXJ0hw8g83GRbnE_zqnHYB5PPai/view",
-      "designacao": "Vol. 2, No. 5 (maio 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1KCdQY-8FlTpvAxG8u6SYiNvT27eshzkq/view",
+      "designacao": "Vol. 2, No. 1 (maio 2024)"
     },
     {
       "serie": "animal",
@@ -1583,8 +1669,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-03-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-05-22.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1HX1Se1CJx-bKLdX_fjPOjmtH9jZ2Utvv/view",
-      "designacao": "Vol. 2, No. 5 (maio 2024)"
+      "pdf_original": "https://drive.google.com/file/d/14GMuT1iQQ2OXSjqLfc8qt2NtGS1jJazt/view",
+      "designacao": "Vol. 2, No. 1 (maio 2024)"
     },
     {
       "serie": "animal",
@@ -1603,8 +1689,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-02-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-05-15.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1i2qjAXnod7x0Z_LOOwfBB3WlzzGVLY9g/view",
-      "designacao": "Vol. 2, No. 5 (maio 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1yuEGs1spqZmVhJE2V4Hqs_qPCwfioo3a/view",
+      "designacao": "Vol. 2, No. 1 (maio 2024)"
     },
     {
       "serie": "animal",
@@ -1623,8 +1709,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2024/4-01-boletim-producao-animal-do-df-e-entorno-neagro-df-2024-05-08.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1dUMOQUagoZqKCk_jKXCn2NBQ2Mlj61RN/view",
-      "designacao": "Vol. 2, No. 5 (maio 2024)"
+      "pdf_original": "https://drive.google.com/file/d/1NSBJQY9deFeSnvLXN56gSXIQb8R7Pxvc/view",
+      "designacao": "Vol. 2, No. 1 (maio 2024)"
     },
     {
       "serie": "morango",
@@ -1657,8 +1743,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/3-05-boletim-producao-animal-do-df-e-entorno-neagro-df-2023-12-13.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1HTg64KT35TsfPmj0mvYxerOPevuljpgx/view",
-      "designacao": "Vol. 1, No. 12 (dez. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/10ZHDF5O2lQ_fawo9Ax9wkf5XGL8mnHcE/view",
+      "designacao": "Vol. 1, No. 4 (dez. 2023)"
     },
     {
       "serie": "animal",
@@ -1677,8 +1763,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/3-04-boletim-producao-animal-do-df-e-entorno-neagro-df-2023-12-06.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/15k8IvObEArexP8TLCn0O9iRhZpzGfsqp/view",
-      "designacao": "Vol. 1, No. 12 (dez. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1PLuvB31zlENhg_NiaUXVuUIYjaw9dRaR/view",
+      "designacao": "Vol. 1, No. 4 (dez. 2023)"
     },
     {
       "serie": "animal",
@@ -1697,8 +1783,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/3-03-boletim-producao-animal-do-df-e-entorno-neagro-df-2023-11-29.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/13tMYOAkIUuh9lQV87AgexjgK1TIyxqn3/view",
-      "designacao": "Vol. 1, No. 11 (nov. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1oUk-YnnodbcwS7V9K9orHGnJRU9amxVu/view",
+      "designacao": "Vol. 1, No. 3 (nov. 2023)"
     },
     {
       "serie": "animal",
@@ -1717,8 +1803,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/3-02-boletim-producao-animal-do-df-e-entorno-neagro-df-2023-11-22.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1xFmZx-IBzWpPJqVy5sbv-ao5embo-SUk/view",
-      "designacao": "Vol. 1, No. 11 (nov. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1rlUwgpFYGFRRCf9JWWYeUaaUiFly9JeC/view",
+      "designacao": "Vol. 1, No. 3 (nov. 2023)"
     },
     {
       "serie": "animal",
@@ -1737,8 +1823,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/3-01-boletim-producao-animal-do-df-e-entorno-neagro-df-2023-11-15.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1GJNhZCI4qvpWzC8017eY54bsYXpL4VWB/view",
-      "designacao": "Vol. 1, No. 11 (nov. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1wc93OsIJIrfbmkZR6JRBXgd8CHGQ_fMF/view",
+      "designacao": "Vol. 1, No. 3 (nov. 2023)"
     },
     {
       "serie": "animal",
@@ -1754,8 +1840,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/2-06-boletim-suinocultura-e-avicultura-neagro-df-2023-11-08.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1Fo6FwaJ7oPmLbGtgnDYt-KQ-wPmEIQo2/view",
-      "designacao": "Vol. 1, No. 11 (nov. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1Mbe7NNuFHYBhAwI6ba3CSIXd2GiipChM/view",
+      "designacao": "Vol. 1, No. 3 (nov. 2023)"
     },
     {
       "serie": "animal",
@@ -1770,8 +1856,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/1-04-boletim-bovinocultura-de-corte-e-de-leite-neagro-df-2023-11-08.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1G0s_W3t22zMuzS9n60T8shZs79ZDPafS/view",
-      "designacao": "Vol. 1, No. 11 (nov. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1hO8QSeSbKW3LiT-on2aj27FVWbU_-FDV/view",
+      "designacao": "Vol. 1, No. 3 (nov. 2023)"
     },
     {
       "serie": "animal",
@@ -1787,8 +1873,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/2-05-boletim-suinocultura-e-avicultura-neagro-df-2023-11-01.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1myGj75hf4E09Yp46UmKz6hxBM7VruT-Y/view",
-      "designacao": "Vol. 1, No. 10 (out. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1HBz3GAB07vZ_qRaVvkFBc83eu8UCB0sD/view",
+      "designacao": "Vol. 1, No. 2 (out. 2023)"
     },
     {
       "serie": "animal",
@@ -1803,8 +1889,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/1-03-boletim-bovinocultura-de-corte-e-de-leite-neagro-df-2023-11-01.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1n7F1-7diC4aEAVyaH7E0IQPiYlmqJ_H-/view",
-      "designacao": "Vol. 1, No. 10 (out. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1CeNTuBICL_OsFcKRobFcn_CinoAC7p8z/view",
+      "designacao": "Vol. 1, No. 2 (out. 2023)"
     },
     {
       "serie": "animal",
@@ -1820,8 +1906,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/2-04-boletim-suinocultura-e-avicultura-neagro-df-2023-10-25.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1huohQ0pimKkkiRjnhHTRQTgFCqWWTY6L/view",
-      "designacao": "Vol. 1, No. 10 (out. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/16X3BudTKSK8IGgEUqlscEjyObtlV2VnM/view",
+      "designacao": "Vol. 1, No. 2 (out. 2023)"
     },
     {
       "serie": "animal",
@@ -1837,8 +1923,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/2-03-boletim-suinocultura-e-avicultura-neagro-df-2023-10-18.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1XUgcuYrB8-3HdpYg-wHHw67gFXtolF4Z/view",
-      "designacao": "Vol. 1, No. 10 (out. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1l8eNxn7-MnO9_iDwkIy44CKP6tHPIaX0/view",
+      "designacao": "Vol. 1, No. 2 (out. 2023)"
     },
     {
       "serie": "animal",
@@ -1853,8 +1939,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/1-02-boletim-bovinocultura-de-corte-e-de-leite-neagro-df-2023-10-18.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1XaSSPLybanZKDM_TIjGT3656CwVVy2l2/view",
-      "designacao": "Vol. 1, No. 10 (out. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1wKN-hAXEAvcJWEw3c_-edQIalOQHUw2g/view",
+      "designacao": "Vol. 1, No. 2 (out. 2023)"
     },
     {
       "serie": "animal",
@@ -1870,8 +1956,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/2-02-boletim-suinocultura-e-avicultura-neagro-df-2023-10-11.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1BA3kvOj90cLnzlbXl3eRaSDfu4Vlldqg/view",
-      "designacao": "Vol. 1, No. 10 (out. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1QdkZhcGyJoaAl5DrGHREf_f6ukiZ9tQ8/view",
+      "designacao": "Vol. 1, No. 2 (out. 2023)"
     },
     {
       "serie": "animal",
@@ -1887,8 +1973,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/2-01-boletim-suinocultura-e-avicultura-neagro-df-2023-10-03.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1DxeQKN571ELuv3Jm7Ww4DB3toNrUztk-/view",
-      "designacao": "Vol. 1, No. 9 (set. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/1673W0CBdObuDhnZV9fbyZxOw-JaHaTVs/view",
+      "designacao": "Vol. 1, No. 1 (set. 2023)"
     },
     {
       "serie": "animal",
@@ -1903,8 +1989,8 @@
       "destaques": [],
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2023/1-01-boletim-bovinocultura-de-corte-e-de-leite-neagro-df-2023-10-03.pdf",
       "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1E-lkr9jyCxgUDfDs1zMbVQyAw5yZriBf/view",
-      "designacao": "Vol. 1, No. 9 (set. 2023)"
+      "pdf_original": "https://drive.google.com/file/d/10ouBPLaPyx1oKCBL2yrRgVhyw1DIQNfj/view",
+      "designacao": "Vol. 1, No. 1 (set. 2023)"
     },
     {
       "serie": "morango",
