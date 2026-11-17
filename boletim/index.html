@@ -25,7 +25,8 @@ section h2{margin:0 0 4px;font-size:1.25rem;color:var(--brand)}
 section .sub{margin:0 0 14px;color:var(--muted);font-size:.95rem}
 .num{border-top:1px solid var(--line);padding:14px 0}
 .num:first-of-type{border-top:0}
-.num h3{margin:0 0 8px;font-size:1.05rem}
+.num h3,.num h4{margin:0 0 8px;font-size:1.05rem}
+h3.vol{margin:22px 0 4px;font-size:1.15rem;color:var(--brand);border-bottom:2px solid var(--line);padding-bottom:4px}
 .num ul{margin:0;padding-left:20px}
 .num li{margin:3px 0}
 a{color:var(--brand)}
@@ -63,9 +64,8 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:20px 0 40px
   </section>
   <section id="anteriores">
     <h2>Boletim de Mercado NEAGRO-DF: edições anteriores</h2>
-    <p class="sub">Números publicados, do mais recente para o mais antigo. Cada caderno abre em PDF.</p>
+    <p class="sub">Todos os números publicados, do mais recente para o mais antigo, por volume. Cada caderno abre em PDF.</p>
     <div id="lista-anteriores"></div>
-    <details id="titulo-anterior"><summary>Título anterior: Boletim NEAGRO-DF (set. 2023 a jul. 2026, sem ISSN)</summary><div id="lista-titulo-anterior"></div></details>
   </section>
   <section id="expediente">
     <h2>Boletim de Mercado NEAGRO-DF: expediente</h2>
@@ -76,8 +76,8 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:20px 0 40px
       <dt>Corpo editorial</dt><dd>Coordenação geral: Prof. Dr. Marlon Vinícius Brisola e Profa. Dra. Mayra Batista Bitencourt Fagundes. Coordenadores de área: Tatiana Paiva de Godoy (bovinocultura de corte e leite); André Marinho de Souza Filho e Matias Vicente dos Reis Mangabeiro (suinocultura); Ana Luisa Lopes Batista (avicultura de corte e postura); Jelson Luiz Dick (caprinocultura e ovinocultura); Dilson Thomas Fonseca e Antônio da Costa Ferreira Lima (grãos e insumos)</dd>
       <dt>Instituição responsável</dt><dd>Universidade de Brasília (UnB), Faculdade de Agronomia e Medicina Veterinária (FAV), Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF). Campus Universitário Darcy Ribeiro, Asa Norte, Brasília, DF, CEP 70910-900, Brasil</dd>
       <dt>Contato</dt><dd>mayra.fagundes@unb.br</dd>
-      <dt>Periodicidade</dt><dd>Mensal</dd>
-      <dt>Designação numérica</dt><dd>Volume, número e ano civil. Cada volume corresponde a um ano e reúne os números mensais, de No. 1 (janeiro) a No. 12 (dezembro). Exemplo: Vol. 4, No. 9 (set. 2026).</dd>
+      <dt>Periodicidade</dt><dd>Mensal. De set. 2023 a 2025, cada número mensal reuniu fascículos semanais ou quinzenais; a partir de 2026, cada número reúne os cadernos por cadeia produtiva.</dd>
+      <dt>Designação numérica</dt><dd>Volume, número e ano civil. Cada volume corresponde a um ano civil (Vol. 1, 2023; Vol. 2, 2024; Vol. 3, 2025; Vol. 4, 2026). O número indica a ordem sequencial de publicação dentro do volume e recomeça em No. 1 a cada ano; o mês e o ano de referência aparecem entre parênteses. O primeiro número é o Vol. 1, No. 1 (set. 2023). Exemplo: Vol. 4, No. 9 (set. 2026).</dd>
       <dt>Suporte e acesso</dt><dd>Publicação online, em português, de acesso aberto e gratuito, no endereço permanente <a href="https://neagro-df.github.io/portal-neagro-df/boletim/">neagro-df.github.io/portal-neagro-df/boletim</a></dd>
       <dt>Preservação digital</dt><dd>Os arquivos PDF de todos os números ficam hospedados no próprio site, em repositório versionado mantido pelo NEAGRO-DF (GitHub), com cópia de segurança no acervo institucional do núcleo</dd>
     </dl>
@@ -87,23 +87,22 @@ footer{text-align:center;color:var(--muted);font-size:.85rem;padding:20px 0 40px
 <script>
 (async()=>{
   const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-  const MES=["jan.","fev.","mar.","abr.","maio","jun.","jul.","ago.","set.","out.","nov.","dez."];
   const ORD=[/Bovino/i,/Suino|Suíno/i,/Avicultura/i,/Caprino|Ovino/i,/Insumo|Grão|Milho/i];
   const NOME=["Bovinocultura de corte e leite","Suinocultura","Avicultura de corte e postura","Caprinocultura e ovinocultura","Grãos e insumos"];
-  const cad=e=>{const c=(e.cadeias||[]).join(" ");const i=ORD.findIndex(r=>r.test(c));return i<0?99:i};
-  const nomeCad=e=>{const i=cad(e);return i<99?NOME[i]:(e.cadeias||[]).join(", ")};
-  const parse=d=>{const m=String(d||"").match(/(\d+)\D+(\d+)/);return m?[+m[1],+m[2]]:null};
-  const fmt=(v,n)=>`Vol. ${v}, No. ${n} (${MES[n-1]} ${v+2022})`;
-  let B;try{B=await (await fetch("../data/boletins.json",{cache:"no-store"})).json()}catch(x){document.getElementById("lista-atual").innerHTML='<p class="sub">Não foi possível carregar a lista de edições.</p>';return}
-  const ed=B.edicoes.filter(e=>e.serie==="animal"&&e.designacao&&parse(e.designacao));
-  const novo=e=>{const [v,n]=parse(e.designacao);return (v>4||(v===4&&n>=8))&&(e.origem==="manual"||(e.data||"")>"2026-10-15")};
-  const grupos=(lista)=>{const G={};lista.forEach(e=>{const [v,n]=parse(e.designacao);const k=v*100+n;(G[k]=G[k]||{v,n,e:[]}).e.push(e)});return Object.values(G).sort((a,b)=>(b.v*100+b.n)-(a.v*100+a.n))};
-  const bloco=(g,titulo)=>`<div class="num"><h3>${titulo?"Boletim de Mercado NEAGRO-DF, ":""}${fmt(g.v,g.n)}</h3><ul>${g.e.sort((a,b)=>cad(a)-cad(b)).map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener">Caderno ${esc(nomeCad(e))}</a></li>`).join("")}</ul></div>`;
-  const N=grupos(ed.filter(novo));
-  document.getElementById("lista-atual").innerHTML=N.length?bloco(N[0],true):'<p class="sub">Sem números publicados.</p>';
-  document.getElementById("lista-anteriores").innerHTML=N.slice(1).map(g=>bloco(g,true)).join("")||'<p class="sub">O primeiro número com este título é o Vol. 4, No. 8 (ago. 2026).</p>';
-  const A=grupos(ed.filter(e=>!novo(e)));
-  document.getElementById("lista-titulo-anterior").innerHTML=A.map(g=>`<div class="num"><h3>${MES[g.n-1].replace(/^./,c=>c.toUpperCase())} ${g.v+2022}</h3><ul>${g.e.sort((a,b)=>(a.data||"").localeCompare(b.data||"")).map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener">${esc((e.numero?"Boletim NEAGRO-DF nº "+e.numero+": ":"Boletim NEAGRO-DF: ")+(e.titulo||"").replace(/^\s*Boletim de Mercado(?:\s+NEAGRO-DF)?\s*:?\s*(?:d[ao]s?\s+)?/i,"").replace(/^./,c=>c.toUpperCase()))}</a></li>`).join("")}</ul></div>`).join("");
+  const cad=e=>{const c=(e.cadeias||[]).join(" ");if((e.cadeias||[]).length>2)return 98;const i=ORD.findIndex(r=>r.test(c));return i<0?99:i};
+  const parse=d=>{const m=String(d||"").match(/^Vol\. (\d+), No\. (\d+) \(([^)]+)\)$/);return m?{v:+m[1],n:+m[2],c:m[3]}:null};
+  const curto=e=>{const t=(e.titulo||"").replace(/^\s*Boletim de Mercado(?:\s+NEAGRO-DF)?\s*:?\s*(?:d[ao]s?\s+)?/i,"").replace(/,\s*\S+ de \d{4}$/,"").trim();return t?t[0].toUpperCase()+t.slice(1):"Produção animal do DF e Entorno"};
+  const dt=d=>{const m=String(d||"").match(/(\d{4})-(\d{2})-(\d{2})/);return m?`${m[3]}/${m[2]}/${m[1]}`:""};
+  let B;try{B=await (await fetch("../data/boletins.json",{cache:"no-store"})).json()}catch(x){document.getElementById("lista-atual").innerHTML='<p class="sub">Não foi possível carregar a lista de números.</p>';return}
+  const G={};B.edicoes.filter(e=>e.serie==="animal"&&parse(e.designacao)).forEach(e=>{const p=parse(e.designacao);const k=p.v*100+p.n;(G[k]=G[k]||{...p,e:[]}).e.push(e)});
+  const gs=Object.values(G).sort((a,b)=>(b.v*100+b.n)-(a.v*100+a.n));
+  const desig=g=>`Boletim de Mercado NEAGRO-DF, Vol. ${g.v}, No. ${g.n} (${g.c})`;
+  const itens=g=>{const L=g.e.slice().sort((a,b)=>cad(a)-cad(b)||(a.data||"").localeCompare(b.data||""));const unico=new Set(L.map(cad)).size===L.length&&L.every(e=>cad(e)<98);
+    return L.map(e=>`<li><a href="${esc(e.pdf)}" target="_blank" rel="noopener">${unico?"Caderno "+esc(NOME[cad(e)]):esc(curto(e))+(e.data?", publicado em "+dt(e.data):"")}</a></li>`).join("")};
+  const bloco=(g,tag)=>`<div class="num"><${tag}>${desig(g)}</${tag}><ul>${itens(g)}</ul></div>`;
+  document.getElementById("lista-atual").innerHTML=gs.length?bloco(gs[0],"h3"):'<p class="sub">Sem números publicados.</p>';
+  const vols=[...new Set(gs.slice(1).map(g=>g.v))];
+  document.getElementById("lista-anteriores").innerHTML=vols.map(v=>`<h3 class="vol">Vol. ${v} (${v+2022})</h3>`+gs.slice(1).filter(g=>g.v===v).map(g=>bloco(g,"h4")).join("")).join("");
 })();
 </script>
 </body>
