@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-17T13:33-03:00",
+  "atualizado_em": "2026-11-17T19:04-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,83 @@
   },
   "noticias": [
     {
+      "titulo": "Juros futuros recuam com alívio parcial após reuniões de Lula sobre ajuste fiscal",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/juros-futuros-recuam-com-alivio-parcial-apos-reunioes-de-lula-sobre-ajuste-fiscal/"
+    },
+    {
+      "titulo": "Projeto que atualiza pesquisa agrícola para adaptação climática avança na Câmara",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/projeto-que-atualiza-pesquisa-agricola-para-adaptacao-climatica-avanca-na-camara-2/"
+    },
+    {
+      "titulo": "Reforma Tributária exige CNPJ de produtores rurais a partir de janeiro de 2027",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/reforma-tributaria-exige-cnpj-de-produtores-rurais-a-partir-de-janeiro-de-2027/"
+    },
+    {
+      "titulo": "Projeto que atualiza pesquisa agrícola para adaptação climática avança na Câmara",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/projeto-que-atualiza-pesquisa-agricola-para-adaptacao-climatica-avanca-na-camara/"
+    },
+    {
+      "titulo": "Votação de destaques do PLP do ajuste fiscal é adiada no Senado",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/votacao-de-destaques-do-plp-do-ajuste-fiscal-e-adiada-no-senado/"
+    },
+    {
+      "titulo": "Soja: câmbio segue sustentando os preços do grão no Brasil",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/soja-cambio-segue-sustentando-os-precos-do-grao-no-brasil/"
+    },
+    {
+      "titulo": "Assunção inicia primeiro mutirão do Programa Terras do Brasil",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/assuncao-inicia-primeiro-mutirao-do-programa-terras-do-brasil/"
+    },
+    {
+      "titulo": "Etanol sobe 2,81% na primeira quinzena de novembro, aponta monitor",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/etanol-sobe-281-na-primeira-quinzena-de-novembro-aponta-monitor/"
+    },
+    {
+      "titulo": "Senado aprova MP com R$ 22,6 bilhões em crédito para empresas afetadas por tarifaço",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/senado-aprova-mp-com-r-226-bilhoes-em-credito-para-empresas-afetadas-por-tarifaco/"
+    },
+    {
+      "titulo": "Petróleo sobe com ataques a embarcações no Estreito de Ormuz",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/petroleo-sobe-com-ataques-a-embarcacoes-no-estreito-de-ormuz/"
+    },
+    {
+      "titulo": "Brasil simplifica exportação de cosméticos para América Latina",
+      "veiculo": "Agência Brasil",
+      "data": "2026-11-17",
+      "tema": "Economia",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-simplifica-exportacao-de-cosmeticos-para-america-latina"
+    },
+    {
       "titulo": "USDA informa colheita de milho em 88% e de soja em 96% nos EUA",
       "veiculo": "Canal Rural",
       "data": "2026-11-17",
@@ -720,83 +797,6 @@
       "data": "2026-11-17",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/frigol-tem-lucro-de-r-112-milhoes-no-terceiro-trimestre-com-queda-de-80/"
-    },
-    {
-      "titulo": "USDA eleva projeções de custos e prevê despesas recordes nas lavouras dos EUA em 2027",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/usda-eleva-projecoes-de-custos-e-preve-despesas-recordes-nas-lavouras-dos-eua-em-2027/"
-    },
-    {
-      "titulo": "Soja e milho: dólar ajuda agora, mas pode pesar depois",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/agronegocio/soja-e-milho-dolar-ajuda-agora-mas-pode-pesar-depois/"
-    },
-    {
-      "titulo": "Mapa reage a adiamento da União Europeia sobre carne de aves e mel",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/mapa-reage-a-adiamento-da-uniao-europeia-sobre-carne-de-aves-e-mel/"
-    },
-    {
-      "titulo": "Frente fria avança e provoca temporais; veja a previsão",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/frente-fria-avanca-e-provoca-temporais-veja-a-previsao/"
-    },
-    {
-      "titulo": "IPC-Fipe sobe 0,43% na 2ª quadrissemana de novembro em São Paulo",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/ipc-fipe-sobe-043-na-2a-quadrissemana-de-novembro-em-sao-paulo/"
-    },
-    {
-      "titulo": "Petrobras recebe novas parcelas de subvenção econômica do diesel",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/petrobras-recebe-novas-parcelas-de-subvencao-economica-do-diesel/"
-    },
-    {
-      "titulo": "A mediocridade política ameaça o futuro do Brasil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/opiniao-noticias/a-mediocridade-politica-ameaca-o-futuro-do-brasil/"
-    },
-    {
-      "titulo": "Eleições das Mesas Diretoras do Congresso: o que o agro precisa monitorar a partir de agora",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/opiniao-noticias/eleicoes-das-mesas-diretoras-do-congresso-o-que-o-agro-precisa-monitorar-a-partir-de-agora/"
-    },
-    {
-      "titulo": "Arroba do boi gordo estreia a semana com altas mais comedidas",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/arroba-do-boi-gordo-estreia-a-semana-com-altas-mais-comedidas/"
-    },
-    {
-      "titulo": "Operação Fronteira 2026 apreende R$ 581 milhões em mercadorias ilícitas e drogas",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/operacao-fronteira-2026-apreende-r-581-milhoes-em-mercadorias-ilicitas-e-drogas/"
-    },
-    {
-      "titulo": "Mais de 200 queijos brasileiros são barrados na alfândega da Espanha e ficam fora de mundial",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/internacional/mais-de-200-queijos-brasileiros-sao-barrados-na-alfandega-da-espanha-e-ficam-fora-de-mundial/"
     }
   ],
   "cartoes": [
