@@ -1,21 +1,17 @@
 {
-  "atualizado_em": "2026-11-17T12:38-03:00",
+  "atualizado_em": "2026-11-17T13:33-03:00",
   "indicadores": [
     {
       "id": "dolar",
       "nome": "Dólar comercial",
-      "valor": 5.7318,
+      "valor": 5.7845,
       "unidade": "R$/US$",
       "casas": 4,
-      "referencia": "16/11/2026",
-      "variacao_pct": 13.37,
+      "referencia": "17/11/2026",
+      "variacao_pct": 15.38,
       "variacao_desc": "em 20 pregões",
       "grupo": "macro",
       "serie": [
-        [
-          "19/10",
-          5.0558
-        ],
         [
           "20/10",
           5.0134
@@ -91,6 +87,10 @@
         [
           "16/11",
           5.7318
+        ],
+        [
+          "17/11",
+          5.7845
         ]
       ],
       "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)",
@@ -187,11 +187,11 @@
       "fonte": "Banco Central do Brasil, SGS série 21619 (taxa de câmbio livre, euro, venda)",
       "link": "https://www3.bcb.gov.br/sgspub/",
       "automatico": true,
-      "valor": 6.3102,
-      "referencia": "16/11/2026",
+      "valor": 6.3659,
+      "referencia": "17/11/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.21619/dados/ultimos/20?formato=json",
       "extraido_em": "2026-11-17",
-      "variacao_pct": 11.33,
+      "variacao_pct": 13.04,
       "variacao_desc": "em 20 pregões"
     },
     {
@@ -659,6 +659,20 @@
   },
   "noticias": [
     {
+      "titulo": "USDA informa colheita de milho em 88% e de soja em 96% nos EUA",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/usda-informa-colheita-de-milho-em-88-e-de-soja-em-96-nos-eua/"
+    },
+    {
+      "titulo": "ANP homologa resultados do 6º Ciclo de Concessão e do 4º Ciclo de Partilha",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/anp-homologa-resultados-do-6o-ciclo-de-concessao-e-do-4o-ciclo-de-partilha/"
+    },
+    {
       "titulo": "União Europeia adia decisão sobre frango e mel brasileiros para dezembro",
       "veiculo": "Canal Rural",
       "data": "2026-11-17",
@@ -783,20 +797,6 @@
       "data": "2026-11-16",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/internacional/mais-de-200-queijos-brasileiros-sao-barrados-na-alfandega-da-espanha-e-ficam-fora-de-mundial/"
-    },
-    {
-      "titulo": "Ibovespa cai 1,83% e dólar comercial sobe para R$ 5,7777 no fechamento",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/ibovespa-cai-183-e-dolar-comercial-sobe-para-r-57777-no-fechamento/"
-    },
-    {
-      "titulo": "Dólar sobe 2,17% e fecha no maior nível desde abril de 2025",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/dolar-sobe-217-e-fecha-no-maior-nivel-desde-abril-de-2025/"
     }
   ],
   "cartoes": [
