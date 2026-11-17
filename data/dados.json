@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-17T08:10-03:00",
+  "atualizado_em": "2026-11-17T12:20-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "União Europeia adia decisão sobre frango e mel brasileiros para dezembro",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/internacional/uniao-europeia-adia-decisao-sobre-frango-e-mel-brasileiros-para-dezembro/"
+    },
+    {
+      "titulo": "Plantio de soja alcança 78% da área no Brasil, diz AgRural",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/plantio-de-soja-alcanca-78-da-area-no-brasil-diz-agrural/"
+    },
+    {
+      "titulo": "Mapa promove imersão sobre a cafeicultura brasileira para profissionais latino-americanos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/mapa-promove-imersao-sobre-a-cafeicultura-brasileira-para-profissionais-latino-americanos/"
+    },
+    {
+      "titulo": "ABPA critica adiamento de votação da União Europeia sobre carne de aves do Brasil",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/aves-e-suinos/abpa-critica-adiamento-de-votacao-da-uniao-europeia-sobre-carne-de-aves-do-brasil/"
+    },
+    {
+      "titulo": "Máximas devem chegar a 36 °C em dois municípios de Rondônia",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/ro/maximas-devem-chegar-a-36-c-em-dois-municipios-de-rondonia-2/"
+    },
+    {
+      "titulo": "Chuva pode chegar a 65 mm em 24 horas em Santa Catarina",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/sc/chuva-pode-chegar-a-65-mm-em-24-horas-em-santa-catarina-2/"
+    },
+    {
+      "titulo": "FriGol tem lucro de R$ 11,2 milhões no terceiro trimestre, com queda de 80%",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/frigol-tem-lucro-de-r-112-milhoes-no-terceiro-trimestre-com-queda-de-80/"
+    },
+    {
+      "titulo": "USDA eleva projeções de custos e prevê despesas recordes nas lavouras dos EUA em 2027",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/usda-eleva-projecoes-de-custos-e-preve-despesas-recordes-nas-lavouras-dos-eua-em-2027/"
+    },
+    {
+      "titulo": "Soja e milho: dólar ajuda agora, mas pode pesar depois",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/agronegocio/soja-e-milho-dolar-ajuda-agora-mas-pode-pesar-depois/"
+    },
+    {
+      "titulo": "Mapa reage a adiamento da União Europeia sobre carne de aves e mel",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-17",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/mapa-reage-a-adiamento-da-uniao-europeia-sobre-carne-de-aves-e-mel/"
+    },
+    {
       "titulo": "Frente fria avança e provoca temporais; veja a previsão",
       "veiculo": "Canal Rural",
       "data": "2026-11-17",
@@ -727,76 +797,6 @@
       "data": "2026-11-16",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/dolar-sobe-217-e-fecha-no-maior-nivel-desde-abril-de-2025/"
-    },
-    {
-      "titulo": "Juros futuros sobem na B3 com dólar em alta e incerteza fiscal",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/juros-futuros-sobem-na-b3-com-dolar-em-alta-e-incerteza-fiscal/"
-    },
-    {
-      "titulo": "Brasil projeta 9,7 milhões de veículos eletrificados até 2036",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/brasil-projeta-97-milhoes-de-veiculos-eletrificados-ate-2036/"
-    },
-    {
-      "titulo": "Soja abre a semana no Brasil em alta significativa mesmo com baixa em Chicago",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/soja-abre-a-semana-no-brasil-em-alta-significativa-mesmo-com-baixa-em-chicago/"
-    },
-    {
-      "titulo": "Faesp Show reúne 15 mil pessoas e destaca estratégia para valorizar produtos rurais",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/faesp-show-reune-15-mil-pessoas-e-destaca-estrategia-para-valorizar-produtos-rurais/"
-    },
-    {
-      "titulo": "Carne bovina brasileira movimenta US$ 170 milhões na CIIE 2026, na China",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/carne-bovina-brasileira-movimenta-us-170-milhoes-na-ciie-2026-na-china/"
-    },
-    {
-      "titulo": "CNA recebe delegação de Moçambique para discutir cooperação no agro",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/cna-recebe-delegacao-de-mocambique-para-discutir-cooperacao-no-agro/"
-    },
-    {
-      "titulo": "Riscos do El Niño e petróleo mais barato devem ditar preços do milho",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/riscos-do-el-nino-e-petroleo-mais-barato-devem-ditar-precos-do-milho/"
-    },
-    {
-      "titulo": "Petróleo cai mais de 3% com recuperação de embarques no Estreito de Ormuz",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/petroleo-cai-mais-de-3-com-recuperacao-de-embarques-no-estreito-de-ormuz/"
-    },
-    {
-      "titulo": "CNA debate sucessão familiar e formação de lideranças no agro",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/cna-debate-sucessao-familiar-e-formacao-de-liderancas-no-agro/"
-    },
-    {
-      "titulo": "Tereza Cristina defende fundo de catástrofe e garantidor para ampliar seguro rural",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-16",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/tereza-cristina-defende-fundo-de-catastrofe-e-garantidor-para-ampliar-seguro-rural/"
     }
   ],
   "cartoes": [
