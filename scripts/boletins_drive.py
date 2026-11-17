@@ -117,7 +117,7 @@ def slug(txt: str) -> str:
 
 def nome_pdf(e: dict) -> str:
     if e.get("serie") == "animal":
-        tit = re.sub(r"^\s*boletim de mercado\s*:?\s*(?:d[ao]s?\s+)?", "", e.get("titulo", ""), flags=re.I)
+        tit = re.sub(r"^\s*boletim de mercado(?:\s+neagro-df)?\s*:?\s*(?:d[ao]s?\s+)?", "", e.get("titulo", ""), flags=re.I)
         assunto = slug(tit)[:60].strip("-") or "producao-animal"
     else:
         assunto = slug(e.get("serie", "")) or "boletim"
@@ -165,9 +165,31 @@ MESES_ABREV = ["jan.", "fev.", "mar.", "abr.", "maio", "jun.", "jul.", "ago.", "
 
 
 def designacao(ano: str, mes: str) -> str:
-    """Designação no formato do CBISSN: Vol. = ano de circulação (2023 = Vol. 1); No. = mês, recomeçando a cada ano."""
+    """Designação provisória (Vol. = ano de circulação, 2023 = Vol. 1); o No. definitivo é dado por numerar()."""
     a, m = int(ano), int(mes)
     return f"Vol. {a - 2022}, No. {m} ({MESES_ABREV[m - 1]} {a})"
+
+
+DESIG = re.compile(r"^Vol\. (\d+), No\. (\d+) \((.+)\)$")
+
+
+def numerar(edicoes: list[dict], novas: list[dict]) -> None:
+    """Designação do CBISSN: o No. é a ordem sequencial do número dentro do volume (ano) e recomeça em 1 a cada ano.
+    Um boletim novo de um mês que já tem número entra nesse número; um mês novo recebe o número seguinte."""
+    ids = {id(e) for e in novas}
+    for e in sorted(novas, key=lambda x: x.get("data") or ""):
+        m = DESIG.match(e.get("designacao", ""))
+        if not m:
+            continue
+        vol, ref = m[1], m[3]
+        mesmos = [DESIG.match(x.get("designacao", "")) for x in edicoes if id(x) not in ids or x.get("_ok")]
+        mesmos = [d for d in mesmos if d and d[1] == vol]
+        igual = [d for d in mesmos if d[3] == ref]
+        no = int(igual[0][2]) if igual else max([int(d[2]) for d in mesmos], default=0) + 1
+        e["designacao"] = f"Vol. {vol}, No. {no} ({ref})"
+        e["_ok"] = True
+    for e in novas:
+        e.pop("_ok", None)
 
 
 def edicao(serie: str, fid: str, nome: str) -> dict | None:
@@ -227,6 +249,7 @@ def main() -> None:
     ignorar = set(bol.get("ignorar", []))
     vistos = {e.get("pdf") for e in edicoes} | {e.get("pdf_original") for e in edicoes} | ignorar
     novas = 0
+    lista_novas = []
     for s in bol.get("series", []):
         for a in s.get("acervo", []):
             fid = pasta(a.get("link", ""))
@@ -241,8 +264,10 @@ def main() -> None:
                 ed = edicao(s["id"], arq_id, nome)
                 if ed and ed["pdf"] not in vistos:
                     edicoes.append(ed)
+                    lista_novas.append(ed)
                     vistos.add(ed["pdf"])
                     novas += 1
+    numerar(edicoes, lista_novas)
     copiados = espelhar(edicoes, ignorar)
     edicoes.sort(key=lambda e: (e.get("data") or "", e.get("numero") or ""), reverse=True)
     bol["edicoes"] = edicoes
