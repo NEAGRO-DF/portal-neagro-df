@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-18T11:54-03:00",
+  "atualizado_em": "2026-11-18T12:35-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,20 @@
   },
   "noticias": [
     {
+      "titulo": "Complexo do Agronegócio do Cavalo gera R$ 61,2 bilhões por ano no Brasil, diz estudo",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/complexo-do-agronegocio-do-cavalo-gera-r-612-bilhoes-por-ano-no-brasil-diz-estudo/"
+    },
+    {
+      "titulo": "USDA eleva previsão para safra 2026/27 de café do Brasil",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/usda-eleva-previsao-para-safra-2026-27-de-cafe-do-brasil/"
+    },
+    {
       "titulo": "Monitor do PIB da FGV mostra queda de 0,2% no terceiro trimestre de 2026",
       "veiculo": "Canal Rural",
       "data": "2026-11-18",
@@ -783,20 +797,6 @@
       "data": "2026-11-17",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/juros-futuros-recuam-com-alivio-parcial-apos-reunioes-de-lula-sobre-ajuste-fiscal/"
-    },
-    {
-      "titulo": "Projeto que atualiza pesquisa agrícola para adaptação climática avança na Câmara",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/projeto-que-atualiza-pesquisa-agricola-para-adaptacao-climatica-avanca-na-camara-2/"
-    },
-    {
-      "titulo": "Reforma Tributária exige CNPJ de produtores rurais a partir de janeiro de 2027",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/reforma-tributaria-exige-cnpj-de-produtores-rurais-a-partir-de-janeiro-de-2027/"
     }
   ],
   "cartoes": [
