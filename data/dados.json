@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-18T08:11-03:00",
+  "atualizado_em": "2026-11-18T11:54-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Monitor do PIB da FGV mostra queda de 0,2% no terceiro trimestre de 2026",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/monitor-do-pib-da-fgv-mostra-queda-de-02-no-terceiro-trimestre-de-2026/"
+    },
+    {
+      "titulo": "Jornada Exportadora aproxima fornecedores brasileiros do varejo canadense",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/jornada-exportadora-aproxima-fornecedores-brasileiros-do-varejo-canadense/"
+    },
+    {
+      "titulo": "Concurso Café Qualidade Paraná premia os melhores cafés da edição de 2026",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/concurso-cafe-qualidade-parana-premia-os-melhores-cafes-da-edicao-de-2026/"
+    },
+    {
+      "titulo": "Dólar em alta e previsão de safra menor impulsionam preços do arroz no RS",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/arroz/dolar-em-alta-e-previsao-de-safra-menor-impulsionam-precos-do-arroz-no-rs/"
+    },
+    {
+      "titulo": "Exportações de café do Brasil batem recorde histórico e pressionam preços do arábica",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/cafe/exportacoes-de-cafe-do-brasil-batem-recorde-historico-e-pressionam-precos-do-arabica/"
+    },
+    {
+      "titulo": "Juros futuros sobem após adiamento de votação do ajuste fiscal no Senado",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/juros-futuros-sobem-apos-adiamento-de-votacao-do-ajuste-fiscal-no-senado/"
+    },
+    {
+      "titulo": "Boi gordo sobe R$ 10 em Goiás, enquanto contrato futuro da arroba recua na B3",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-sobe-r-10-em-goias-enquanto-contrato-futuro-da-arroba-recua-na-b3/"
+    },
+    {
+      "titulo": "Dólar segue pressionado e bolsas americanas em queda; veja o que está no radar do mercado",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/dolar-segue-pressionado-e-bolsas-americanas-em-queda-veja-o-que-esta-no-radar-do-mercado/"
+    },
+    {
+      "titulo": "Parque do Albardão completa oito meses com efeitos distintos sobre a pesca",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/parque-do-albardao-completa-oito-meses-com-efeitos-distintos-sobre-a-pesca/"
+    },
+    {
+      "titulo": "Soja recua com avanço da safra nos EUA e dólar em alta",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/soja/soja-recua-com-avanco-da-safra-nos-eua-e-dolar-em-alta/"
+    },
+    {
       "titulo": "Trump anuncia acordo comercial com as Filipinas",
       "veiculo": "Canal Rural",
       "data": "2026-11-18",
@@ -671,6 +741,13 @@
       "data": "2026-11-18",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/conab-adquire-500-quilos-de-sementes-agroecologicas-de-hortalicas-no-rs/"
+    },
+    {
+      "titulo": "Brasil simplifica exportação de cosméticos para América Latina",
+      "veiculo": "Agência Brasil",
+      "data": "2026-11-17",
+      "tema": "Economia",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-simplifica-exportacao-de-cosmeticos-para-america-latina"
     },
     {
       "titulo": "Conab fará leilões para comprar 73 mil toneladas de arroz",
@@ -720,83 +797,6 @@
       "data": "2026-11-17",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/reforma-tributaria-exige-cnpj-de-produtores-rurais-a-partir-de-janeiro-de-2027/"
-    },
-    {
-      "titulo": "Projeto que atualiza pesquisa agrícola para adaptação climática avança na Câmara",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/projeto-que-atualiza-pesquisa-agricola-para-adaptacao-climatica-avanca-na-camara/"
-    },
-    {
-      "titulo": "Brasil simplifica exportação de cosméticos para América Latina",
-      "veiculo": "Agência Brasil",
-      "data": "2026-11-17",
-      "tema": "Economia",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-simplifica-exportacao-de-cosmeticos-para-america-latina"
-    },
-    {
-      "titulo": "Votação de destaques do PLP do ajuste fiscal é adiada no Senado",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/votacao-de-destaques-do-plp-do-ajuste-fiscal-e-adiada-no-senado/"
-    },
-    {
-      "titulo": "Soja: câmbio segue sustentando os preços do grão no Brasil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/soja-cambio-segue-sustentando-os-precos-do-grao-no-brasil/"
-    },
-    {
-      "titulo": "Assunção inicia primeiro mutirão do Programa Terras do Brasil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/assuncao-inicia-primeiro-mutirao-do-programa-terras-do-brasil/"
-    },
-    {
-      "titulo": "Etanol sobe 2,81% na primeira quinzena de novembro, aponta monitor",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/etanol-sobe-281-na-primeira-quinzena-de-novembro-aponta-monitor/"
-    },
-    {
-      "titulo": "Senado aprova MP com R$ 22,6 bilhões em crédito para empresas afetadas por tarifaço",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/senado-aprova-mp-com-r-226-bilhoes-em-credito-para-empresas-afetadas-por-tarifaco/"
-    },
-    {
-      "titulo": "Petróleo sobe com ataques a embarcações no Estreito de Ormuz",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/petroleo-sobe-com-ataques-a-embarcacoes-no-estreito-de-ormuz/"
-    },
-    {
-      "titulo": "USDA informa colheita de milho em 88% e de soja em 96% nos EUA",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/usda-informa-colheita-de-milho-em-88-e-de-soja-em-96-nos-eua/"
-    },
-    {
-      "titulo": "ANP homologa resultados do 6º Ciclo de Concessão e do 4º Ciclo de Partilha",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/anp-homologa-resultados-do-6o-ciclo-de-concessao-e-do-4o-ciclo-de-partilha/"
-    },
-    {
-      "titulo": "União Europeia adia decisão sobre frango e mel brasileiros para dezembro",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/internacional/uniao-europeia-adia-decisao-sobre-frango-e-mel-brasileiros-para-dezembro/"
     }
   ],
   "cartoes": [
