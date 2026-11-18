@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-18T17:19-03:00",
+  "atualizado_em": "2026-11-18T19:02-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Explosão em caldeira da Klabin deixa 10 feridos em Santa Catarina",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/nacional/explosao-em-caldeira-da-klabin-deixa-10-feridos-em-santa-catarina/"
+    },
+    {
+      "titulo": "Plantio de arroz no RS atinge 85,01% da área prevista",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/plantio-de-arroz-no-rs-atinge-8501-da-area-prevista/"
+    },
+    {
+      "titulo": "Soja registra baixa movimentação e variações pontuais nos preços internos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/soja/soja-registra-baixa-movimentacao-e-variacoes-pontuais-nos-precos-internos/"
+    },
+    {
+      "titulo": "Defesa Civil de SP emite 17 alertas de chuvas fortes no estado",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/diversos/defesa-civil-de-sp-emite-17-alertas-de-chuvas-fortes-no-estado/"
+    },
+    {
+      "titulo": "Fiesp reduz projeção de alta do PIB para 1,5% em 2026 e 0,4% em 2027",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/fiesp-reduz-projecao-de-alta-do-pib-para-15-em-2026-e-04-em-2027/"
+    },
+    {
+      "titulo": "ProVB ganha unidade em Presidente Prudente para venda de milho a pequenos criadores",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/provb-ganha-unidade-em-presidente-prudente-para-venda-de-milho-a-pequenos-criadores/"
+    },
+    {
+      "titulo": "Repasses adicionais dos preços da carne ao consumidor tendem a limitar altas da arroba, diz Itaú BBA",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/repasses-adicionais-dos-precos-da-carne-ao-consumidor-tendem-a-limitar-altas-da-arroba-diz-itau-bba/"
+    },
+    {
+      "titulo": "Itamaraty busca reverter exclusão do Brasil da lista de fornecedores da UE",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/itamaraty-busca-reverter-exclusao-do-brasil-da-lista-de-fornecedores-da-ue/"
+    },
+    {
+      "titulo": "Anvisa apreende mais de 40 mil produtos derivados do tabaco sem registro sanitário",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/seguranca/anvisa-apreende-mais-de-40-mil-produtos-derivados-de-tabaco-sem-registro-sanitario/"
+    },
+    {
+      "titulo": "Petróleo fecha em queda com avanço da oferta e dólar forte",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/petroleo-fecha-em-queda-com-avanco-da-oferta-e-dolar-forte/"
+    },
+    {
       "titulo": "Etiópia recebe primeira remessa de carne bovina brasileira",
       "veiculo": "Canal Rural",
       "data": "2026-11-18",
@@ -727,76 +797,6 @@
       "data": "2026-11-18",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/politica/camara-avanca-em-pedidos-de-esclarecimento-ao-banco-do-brasil-sobre-inadimplencia-no-agro/"
-    },
-    {
-      "titulo": "Durigan descarta controle de capital e mudança na meta de inflação",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/durigan-descarta-controle-de-capital-e-mudanca-na-meta-de-inflacao/"
-    },
-    {
-      "titulo": "Complexo do Agronegócio do Cavalo gera R$ 61,2 bilhões por ano no Brasil, diz estudo",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/complexo-do-agronegocio-do-cavalo-gera-r-612-bilhoes-por-ano-no-brasil-diz-estudo/"
-    },
-    {
-      "titulo": "USDA eleva previsão para safra 2026/27 de café do Brasil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/usda-eleva-previsao-para-safra-2026-27-de-cafe-do-brasil/"
-    },
-    {
-      "titulo": "Monitor do PIB da FGV mostra queda de 0,2% no terceiro trimestre de 2026",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/monitor-do-pib-da-fgv-mostra-queda-de-02-no-terceiro-trimestre-de-2026/"
-    },
-    {
-      "titulo": "Jornada Exportadora aproxima fornecedores brasileiros do varejo canadense",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/jornada-exportadora-aproxima-fornecedores-brasileiros-do-varejo-canadense/"
-    },
-    {
-      "titulo": "Concurso Café Qualidade Paraná premia os melhores cafés da edição de 2026",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/concurso-cafe-qualidade-parana-premia-os-melhores-cafes-da-edicao-de-2026/"
-    },
-    {
-      "titulo": "Dólar em alta e previsão de safra menor impulsionam preços do arroz no RS",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/arroz/dolar-em-alta-e-previsao-de-safra-menor-impulsionam-precos-do-arroz-no-rs/"
-    },
-    {
-      "titulo": "Exportações de café do Brasil batem recorde histórico e pressionam preços do arábica",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/cafe/exportacoes-de-cafe-do-brasil-batem-recorde-historico-e-pressionam-precos-do-arabica/"
-    },
-    {
-      "titulo": "Juros futuros sobem após adiamento de votação do ajuste fiscal no Senado",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/juros-futuros-sobem-apos-adiamento-de-votacao-do-ajuste-fiscal-no-senado/"
-    },
-    {
-      "titulo": "Boi gordo sobe R$ 10 em Goiás, enquanto contrato futuro da arroba recua na B3",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-sobe-r-10-em-goias-enquanto-contrato-futuro-da-arroba-recua-na-b3/"
     }
   ],
   "cartoes": [
