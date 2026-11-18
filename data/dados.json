@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-18T16:44-03:00",
+  "atualizado_em": "2026-11-18T17:19-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,13 @@
   },
   "noticias": [
     {
+      "titulo": "Etiópia recebe primeira remessa de carne bovina brasileira",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/etiopia-recebe-primeira-remessa-de-carne-bovina-brasileira/"
+    },
+    {
       "titulo": "CNA debate fortalecimento dos sindicatos rurais com federações estaduais",
       "veiculo": "Canal Rural",
       "data": "2026-11-18",
@@ -790,13 +797,6 @@
       "data": "2026-11-18",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-sobe-r-10-em-goias-enquanto-contrato-futuro-da-arroba-recua-na-b3/"
-    },
-    {
-      "titulo": "Dólar segue pressionado e bolsas americanas em queda; veja o que está no radar do mercado",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/dolar-segue-pressionado-e-bolsas-americanas-em-queda-veja-o-que-esta-no-radar-do-mercado/"
     }
   ],
   "cartoes": [
