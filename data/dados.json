@@ -1,21 +1,17 @@
 {
-  "atualizado_em": "2026-11-18T12:35-03:00",
+  "atualizado_em": "2026-11-18T16:44-03:00",
   "indicadores": [
     {
       "id": "dolar",
       "nome": "Dólar comercial",
-      "valor": 5.7845,
+      "valor": 5.8096,
       "unidade": "R$/US$",
       "casas": 4,
-      "referencia": "17/11/2026",
-      "variacao_pct": 15.38,
+      "referencia": "18/11/2026",
+      "variacao_pct": 15.57,
       "variacao_desc": "em 20 pregões",
       "grupo": "macro",
       "serie": [
-        [
-          "20/10",
-          5.0134
-        ],
         [
           "21/10",
           5.027
@@ -91,6 +87,10 @@
         [
           "17/11",
           5.7845
+        ],
+        [
+          "18/11",
+          5.8096
         ]
       ],
       "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)",
@@ -187,11 +187,11 @@
       "fonte": "Banco Central do Brasil, SGS série 21619 (taxa de câmbio livre, euro, venda)",
       "link": "https://www3.bcb.gov.br/sgspub/",
       "automatico": true,
-      "valor": 6.3659,
-      "referencia": "17/11/2026",
+      "valor": 6.372,
+      "referencia": "18/11/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.21619/dados/ultimos/20?formato=json",
       "extraido_em": "2026-11-18",
-      "variacao_pct": 13.04,
+      "variacao_pct": 12.96,
       "variacao_desc": "em 20 pregões"
     },
     {
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "CNA debate fortalecimento dos sindicatos rurais com federações estaduais",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/cna-debate-fortalecimento-dos-sindicatos-rurais-com-federacoes-estaduais/"
+    },
+    {
+      "titulo": "Banco do Brasil nega ligação de crédito rural com “fazendas fantasmas”",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/banco-do-brasil-nega-ligacao-de-credito-rural-com-fazendas-fantasmas/"
+    },
+    {
+      "titulo": "Usinas solares lideram avanço sobre vegetação nativa da Caatinga",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/diversos/usinas-solares-lideram-avanco-sobre-vegetacao-nativa-da-caatinga/"
+    },
+    {
+      "titulo": "Temporais causam perdas de R$ 24 milhões em uvas no RS e preocupam setor de espumantes",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/temporais-causam-perdas-de-r-24-milhoes-em-uvas-no-rs-e-preocupam-setor-de-espumantes/"
+    },
+    {
+      "titulo": "Produção de etanol nos EUA recua para 1,126 milhão de barris por dia",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/producao-de-etanol-nos-eua-recua-para-1126-milhao-de-barris-por-dia/"
+    },
+    {
+      "titulo": "Instituto Desidério Finamor retoma sigla IPVDF no Rio Grande do Sul",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/instituto-desiderio-finamor-retoma-sigla-ipvdf-no-rio-grande-do-sul/"
+    },
+    {
+      "titulo": "Vendas de máquinas agrícolas devem registrar alta de 3% em 2027, estima Abimaq",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/vendas-de-maquinas-agricolas-devem-registrar-alta-de-3-em-2027-estima-abimaq/"
+    },
+    {
+      "titulo": "Mapa lança portfólio para orientar emendas ao agro no PLOA de 2027",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/mapa-lanca-portfolio-para-orientar-emendas-ao-agro-no-ploa-de-2027/"
+    },
+    {
+      "titulo": "Câmara avança em pedidos de esclarecimento ao Banco do Brasil sobre inadimplência no agro",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/camara-avanca-em-pedidos-de-esclarecimento-ao-banco-do-brasil-sobre-inadimplencia-no-agro/"
+    },
+    {
+      "titulo": "Durigan descarta controle de capital e mudança na meta de inflação",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-18",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/durigan-descarta-controle-de-capital-e-mudanca-na-meta-de-inflacao/"
+    },
+    {
       "titulo": "Complexo do Agronegócio do Cavalo gera R$ 61,2 bilhões por ano no Brasil, diz estudo",
       "veiculo": "Canal Rural",
       "data": "2026-11-18",
@@ -727,76 +797,6 @@
       "data": "2026-11-18",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/dolar-segue-pressionado-e-bolsas-americanas-em-queda-veja-o-que-esta-no-radar-do-mercado/"
-    },
-    {
-      "titulo": "Parque do Albardão completa oito meses com efeitos distintos sobre a pesca",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/parque-do-albardao-completa-oito-meses-com-efeitos-distintos-sobre-a-pesca/"
-    },
-    {
-      "titulo": "Soja recua com avanço da safra nos EUA e dólar em alta",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/soja/soja-recua-com-avanco-da-safra-nos-eua-e-dolar-em-alta/"
-    },
-    {
-      "titulo": "Trump anuncia acordo comercial com as Filipinas",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/trump-anuncia-acordo-comercial-com-as-filipinas/"
-    },
-    {
-      "titulo": "Conab adquire 500 quilos de sementes agroecológicas de hortaliças no RS",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/conab-adquire-500-quilos-de-sementes-agroecologicas-de-hortalicas-no-rs/"
-    },
-    {
-      "titulo": "Brasil simplifica exportação de cosméticos para América Latina",
-      "veiculo": "Agência Brasil",
-      "data": "2026-11-17",
-      "tema": "Economia",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-simplifica-exportacao-de-cosmeticos-para-america-latina"
-    },
-    {
-      "titulo": "Conab fará leilões para comprar 73 mil toneladas de arroz",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/conab-fara-leiloes-para-comprar-73-mil-toneladas-de-arroz-2/"
-    },
-    {
-      "titulo": "Conab compra 500 quilos de sementes agroecológicas de hortaliças no RS",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/conab-compra-500-quilos-de-sementes-agroecologicas-de-hortalicas-no-rs/"
-    },
-    {
-      "titulo": "Redução dos repasses da Lei Kandir pode fazer produtor pagar a conta do ajuste fiscal, diz Daoud",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/reducao-dos-repasses-da-lei-kandir-pode-fazer-produtor-pagar-a-conta-do-ajuste-fiscal-diz-daoud/"
-    },
-    {
-      "titulo": "Arroba do boi gordo começa a dar sinais de desaceleração; confira as cotações",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/arroba-do-boi-gordo-comeca-a-dar-sinais-de-desaceleracao-confira-as-cotacoes/"
-    },
-    {
-      "titulo": "Juros futuros recuam com alívio parcial após reuniões de Lula sobre ajuste fiscal",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-17",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/juros-futuros-recuam-com-alivio-parcial-apos-reunioes-de-lula-sobre-ajuste-fiscal/"
     }
   ],
   "cartoes": [
