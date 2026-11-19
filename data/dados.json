@@ -1,21 +1,17 @@
 {
-  "atualizado_em": "2026-11-19T12:38-03:00",
+  "atualizado_em": "2026-11-19T19:02-03:00",
   "indicadores": [
     {
       "id": "dolar",
       "nome": "Dólar comercial",
-      "valor": 5.8096,
+      "valor": 5.8883,
       "unidade": "R$/US$",
       "casas": 4,
-      "referencia": "18/11/2026",
-      "variacao_pct": 15.57,
+      "referencia": "19/11/2026",
+      "variacao_pct": 16.88,
       "variacao_desc": "em 20 pregões",
       "grupo": "macro",
       "serie": [
-        [
-          "21/10",
-          5.027
-        ],
         [
           "22/10",
           5.0377
@@ -91,6 +87,10 @@
         [
           "18/11",
           5.8096
+        ],
+        [
+          "19/11",
+          5.8883
         ]
       ],
       "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)",
@@ -187,11 +187,11 @@
       "fonte": "Banco Central do Brasil, SGS série 21619 (taxa de câmbio livre, euro, venda)",
       "link": "https://www3.bcb.gov.br/sgspub/",
       "automatico": true,
-      "valor": 6.372,
-      "referencia": "18/11/2026",
+      "valor": 6.4672,
+      "referencia": "19/11/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.21619/dados/ultimos/20?formato=json",
       "extraido_em": "2026-11-19",
-      "variacao_pct": 12.96,
+      "variacao_pct": 14.48,
       "variacao_desc": "em 20 pregões"
     },
     {
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Caramuru inaugura sistema de carregamento de navios no Porto de Santana",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/caramuru-inaugura-sistema-de-carregamento-de-navios-no-porto-de-santana-2/"
+    },
+    {
+      "titulo": "Caramuru inaugura sistema de carregamento de navios no Porto de Santana",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/caramuru-inaugura-sistema-de-carregamento-de-navios-no-porto-de-santana/"
+    },
+    {
+      "titulo": "IBGE abre seleção com 27.279 vagas para recenseadores do Censo Agropecuário",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/ibge-abre-selecao-com-27-279-vagas-para-recenseadores-do-censo-agropecuario/"
+    },
+    {
+      "titulo": "MDA instala grupo de trabalho para proteção dos babaçuais",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/mda-instala-grupo-de-trabalho-para-protecao-dos-babacuais/"
+    },
+    {
+      "titulo": "Petróleo fecha perto da estabilidade com foco em Irã e oferta global",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/petroleo-fecha-perto-da-estabilidade-com-foco-em-ira-e-oferta-global/"
+    },
+    {
+      "titulo": "Georgieva diz que avanço da IA sustenta crescimento global, mas pressiona inflação e juros",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/georgieva-diz-que-avanco-da-ia-sustenta-crescimento-global-mas-pressiona-inflacao-e-juros/"
+    },
+    {
+      "titulo": "VBP de outubro é estimado em R$ 1,46 trilhão",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/vbp-de-outubro-e-estimado-em-r-146-trilhao/"
+    },
+    {
+      "titulo": "Preço da soja ultrapassa R$ 140 por saca e atinge maior patamar em mais de dois anos no Paraná, aponta Deral",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/preco-da-soja-ultrapassa-r-140-por-saca-e-atinge-maior-patamar-em-mais-de-dois-anos-no-parana-aponta-deral/"
+    },
+    {
+      "titulo": "BNDES rebate crítica sobre efeito do banco na política monetária",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/bndes-rebate-critica-sobre-efeito-do-banco-na-politica-monetaria/"
+    },
+    {
+      "titulo": "Carne bovina perde competitividade e alta da arroba encontra resistência",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/opiniao-noticias/carne-bovina-perde-competitividade-e-alta-da-arroba-encontra-resistencia/"
+    },
+    {
       "titulo": "Alfama Foods investirá 13,57 milhões de euros em fábrica de proteínas em Portugal",
       "veiculo": "Canal Rural",
       "data": "2026-11-19",
@@ -727,76 +797,6 @@
       "data": "2026-11-19",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/pecuaria/abate-de-bovinos-recua-134-no-terceiro-trimestre-de-2026-diz-ibge/"
-    },
-    {
-      "titulo": "AIE vê queda estrutural da dependência do Estreito de Ormuz",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/aie-ve-queda-estrutural-da-dependencia-do-estreito-de-ormuz/"
-    },
-    {
-      "titulo": "Chuva pode chegar a 75 mm em 24 horas em Santa Catarina",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/sc/chuva-pode-chegar-a-75-mm-em-24-horas-em-santa-catarina/"
-    },
-    {
-      "titulo": "Impacto de PLP do ajuste fiscal cai para R$ 50 bilhões em 2027 no Senado",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/impacto-de-plp-do-ajuste-fiscal-cai-para-r-50-bilhoes-em-2027-no-senado/"
-    },
-    {
-      "titulo": "Ajuste fiscal segue à Câmara após emenda sobre crédito tributário",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/ajuste-fiscal-segue-a-camara-apos-emenda-sobre-credito-tributario/"
-    },
-    {
-      "titulo": "Senado rejeita mudanças no texto e aprova ajuste fiscal do governo",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/senado-rejeita-mudancas-no-texto-e-aprova-ajuste-fiscal-do-governo/"
-    },
-    {
-      "titulo": "Sicredi aumenta liberação de crédito rural em 4,3% no 1º trimestre da safra 2026/27",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/sicredi-aumenta-liberacao-de-credito-rural-em-43-no-1o-trimestre-da-safra-2026-27/"
-    },
-    {
-      "titulo": "Senado conclui votação do PLP do ajuste fiscal e envia texto à Câmara",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/senado-conclui-votacao-do-plp-do-ajuste-fiscal-e-envia-texto-a-camara/"
-    },
-    {
-      "titulo": "Inmet celebra 117 anos com ampliação da rede meteorológica",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/inmet-celebra-117-anos-com-ampliacao-da-rede-meteorologica/"
-    },
-    {
-      "titulo": "PLP do ajuste fiscal avança com quatro emendas aprovadas no Senado",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/plp-do-ajuste-fiscal-avanca-com-quatro-emendas-aprovadas-no-senado/"
-    },
-    {
-      "titulo": "Preços do boi gordo voltam a apresentar alta mais consistente",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/precos-do-boi-gordo-voltam-a-apresentar-alta-mais-consistente/"
     }
   ],
   "cartoes": [
