@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-19T08:08-03:00",
+  "atualizado_em": "2026-11-19T12:38-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Alfama Foods investirá 13,57 milhões de euros em fábrica de proteínas em Portugal",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/alfama-foods-investira-1357-milhoes-de-euros-em-fabrica-de-proteinas-em-portugal/"
+    },
+    {
+      "titulo": "ABPA marca 50 anos da ABEF e destaca avanço das exportações de frango",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/aves-e-suinos/abpa-marca-50-anos-da-abef-e-destaca-avanco-das-exportacoes-de-frango/"
+    },
+    {
+      "titulo": "CNPJ para produtor rural é adiado até 2028; veja quem está dispensado",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/cnpj-para-produtor-rural-e-adiado-ate-2028-veja-quem-esta-dispensado/"
+    },
+    {
+      "titulo": "Moção contra presidente do BB e audiência sobre crédito rural avançam na Câmara",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/mocao-contra-presidente-do-bb-e-audiencia-sobre-credito-rural-avancam-na-camara/"
+    },
+    {
+      "titulo": "Captação de leite e recebimento de couro caem no 3º trimestre, diz IBGE",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/captacao-de-leite-e-recebimento-de-couro-caem-no-3o-trimestre-diz-ibge/"
+    },
+    {
+      "titulo": "Trump, Jinping e Putin à mesma mesa: um passo para a paz ou apenas promessas?",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/opiniao-noticias/trump-jinping-e-putin-a-mesma-mesa-um-passo-para-a-paz-ou-apenas-promessas/"
+    },
+    {
+      "titulo": "ANP debate regulamentação do programa de combustível sustentável de aviação",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/anp-debate-regulamentacao-do-programa-de-combustivel-sustentavel-de-aviacao/"
+    },
+    {
+      "titulo": "Preço do suíno vivo cai em novembro e alta do milho pressiona produtores",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/suino/preco-do-suino-vivo-cai-em-novembro-e-alta-do-milho-pressiona-produtores/"
+    },
+    {
+      "titulo": "ANP adia para segunda-feira publicação de levantamento de preços",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/anp-adia-para-segunda-feira-publicacao-de-levantamento-de-precos/"
+    },
+    {
+      "titulo": "Abate de bovinos recua 13,4% no terceiro trimestre de 2026, diz IBGE",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-19",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/abate-de-bovinos-recua-134-no-terceiro-trimestre-de-2026-diz-ibge/"
+    },
+    {
       "titulo": "AIE vê queda estrutural da dependência do Estreito de Ormuz",
       "veiculo": "Canal Rural",
       "data": "2026-11-19",
@@ -727,76 +797,6 @@
       "data": "2026-11-18",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/pecuaria/precos-do-boi-gordo-voltam-a-apresentar-alta-mais-consistente/"
-    },
-    {
-      "titulo": "Explosão em caldeira da Klabin deixa 10 feridos em Santa Catarina",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/nacional/explosao-em-caldeira-da-klabin-deixa-10-feridos-em-santa-catarina/"
-    },
-    {
-      "titulo": "Plantio de arroz no RS atinge 85,01% da área prevista",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/plantio-de-arroz-no-rs-atinge-8501-da-area-prevista/"
-    },
-    {
-      "titulo": "Soja registra baixa movimentação e variações pontuais nos preços internos",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/soja/soja-registra-baixa-movimentacao-e-variacoes-pontuais-nos-precos-internos/"
-    },
-    {
-      "titulo": "Defesa Civil de SP emite 17 alertas de chuvas fortes no estado",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/defesa-civil-de-sp-emite-17-alertas-de-chuvas-fortes-no-estado/"
-    },
-    {
-      "titulo": "Fiesp reduz projeção de alta do PIB para 1,5% em 2026 e 0,4% em 2027",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/fiesp-reduz-projecao-de-alta-do-pib-para-15-em-2026-e-04-em-2027/"
-    },
-    {
-      "titulo": "ProVB ganha unidade em Presidente Prudente para venda de milho a pequenos criadores",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/provb-ganha-unidade-em-presidente-prudente-para-venda-de-milho-a-pequenos-criadores/"
-    },
-    {
-      "titulo": "Repasses adicionais dos preços da carne ao consumidor tendem a limitar altas da arroba, diz Itaú BBA",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/repasses-adicionais-dos-precos-da-carne-ao-consumidor-tendem-a-limitar-altas-da-arroba-diz-itau-bba/"
-    },
-    {
-      "titulo": "Itamaraty busca reverter exclusão do Brasil da lista de fornecedores da UE",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/itamaraty-busca-reverter-exclusao-do-brasil-da-lista-de-fornecedores-da-ue/"
-    },
-    {
-      "titulo": "Anvisa apreende mais de 40 mil produtos derivados do tabaco sem registro sanitário",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/seguranca/anvisa-apreende-mais-de-40-mil-produtos-derivados-de-tabaco-sem-registro-sanitario/"
-    },
-    {
-      "titulo": "Petróleo fecha em queda com avanço da oferta e dólar forte",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-18",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/petroleo-fecha-em-queda-com-avanco-da-oferta-e-dolar-forte/"
     }
   ],
   "cartoes": [
