@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-20T08:10-03:00",
+  "atualizado_em": "2026-11-20T12:36-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "‘Destruição total’: produtor perde 150 hectares de milho e tem maquinário atingido por tempestade no RS",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-20",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/nacional/rio-grande-do-sul/destruicao-total-produtor-perde-150-hectares-de-milho-e-tem-maquinario-atingido-por-tempestade-no-rs/"
+    },
+    {
+      "titulo": "Extensão de trégua entre EUA e China depende de negociação sobre terras raras",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-20",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/extensao-de-tregua-entre-eua-e-china-depende-de-negociacao-sobre-terras-raras/"
+    },
+    {
+      "titulo": "Tempestade deixa rastro de destruição em Tupanciretã (RS); Defesa Civil investiga possível tornado",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-20",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/nacional/rio-grande-do-sul/tempestade-deixa-rastro-de-destruicao-em-tupancireta-rs/"
+    },
+    {
+      "titulo": "Levantamento classifica 89,4% das usinas eólicas do país com alerta socioambiental",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-20",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/diversos/levantamento-classifica-894-das-usinas-eolicas-do-pais-com-alerta-socioambiental/"
+    },
+    {
+      "titulo": "Chuva pode chegar a 83 mm em 24 horas em Mato Grosso do Sul",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-20",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/ms/chuva-pode-chegar-a-83-mm-em-24-horas-em-mato-grosso-do-sul/"
+    },
+    {
+      "titulo": "Chuva pode chegar a 76 mm em 24 horas no Paraná",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-20",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/pr/chuva-pode-chegar-a-76-mm-em-24-horas-no-parana/"
+    },
+    {
+      "titulo": "Máximas devem chegar a 38 °C em Rondônia",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-20",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/ro/maximas-devem-chegar-a-38-c-em-rondonia/"
+    },
+    {
+      "titulo": "Máximas devem chegar a 38 °C em Roraima no domingo (22)",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-20",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/rr/maximas-devem-chegar-a-38-c-em-roraima-no-domingo-22/"
+    },
+    {
+      "titulo": "Máximas devem chegar a 38 °C em São Paulo no domingo (22)",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-20",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/sp/maximas-devem-chegar-a-38-c-em-sao-paulo-no-domingo-22/"
+    },
+    {
+      "titulo": "Dentista abandona consultório e ajuda a expandir granja da família para 300 mil frangos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-20",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/aves-e-suinos/dentista-abandona-consultorio-e-ajuda-a-expandir-granja-da-familia-para-300-mil-frangos/"
+    },
+    {
       "titulo": "Setor de cavalos vive transformação e revela força bilionária que transcende fazendas",
       "veiculo": "Canal Rural",
       "data": "2026-11-20",
@@ -727,76 +797,6 @@
       "data": "2026-11-19",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/georgieva-diz-que-avanco-da-ia-sustenta-crescimento-global-mas-pressiona-inflacao-e-juros/"
-    },
-    {
-      "titulo": "VBP de outubro é estimado em R$ 1,46 trilhão",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/vbp-de-outubro-e-estimado-em-r-146-trilhao/"
-    },
-    {
-      "titulo": "Preço da soja ultrapassa R$ 140 por saca e atinge maior patamar em mais de dois anos no Paraná, aponta Deral",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/preco-da-soja-ultrapassa-r-140-por-saca-e-atinge-maior-patamar-em-mais-de-dois-anos-no-parana-aponta-deral/"
-    },
-    {
-      "titulo": "BNDES rebate crítica sobre efeito do banco na política monetária",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/bndes-rebate-critica-sobre-efeito-do-banco-na-politica-monetaria/"
-    },
-    {
-      "titulo": "Carne bovina perde competitividade e alta da arroba encontra resistência",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/opiniao-noticias/carne-bovina-perde-competitividade-e-alta-da-arroba-encontra-resistencia/"
-    },
-    {
-      "titulo": "Alfama Foods investirá 13,57 milhões de euros em fábrica de proteínas em Portugal",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/alfama-foods-investira-1357-milhoes-de-euros-em-fabrica-de-proteinas-em-portugal/"
-    },
-    {
-      "titulo": "ABPA marca 50 anos da ABEF e destaca avanço das exportações de frango",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/aves-e-suinos/abpa-marca-50-anos-da-abef-e-destaca-avanco-das-exportacoes-de-frango/"
-    },
-    {
-      "titulo": "CNPJ para produtor rural é adiado até 2028; veja quem está dispensado",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/cnpj-para-produtor-rural-e-adiado-ate-2028-veja-quem-esta-dispensado/"
-    },
-    {
-      "titulo": "Moção contra presidente do BB e audiência sobre crédito rural avançam na Câmara",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/mocao-contra-presidente-do-bb-e-audiencia-sobre-credito-rural-avancam-na-camara/"
-    },
-    {
-      "titulo": "Captação de leite e recebimento de couro caem no 3º trimestre, diz IBGE",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/captacao-de-leite-e-recebimento-de-couro-caem-no-3o-trimestre-diz-ibge/"
-    },
-    {
-      "titulo": "Trump, Jinping e Putin à mesma mesa: um passo para a paz ou apenas promessas?",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-19",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/opiniao-noticias/trump-jinping-e-putin-a-mesma-mesa-um-passo-para-a-paz-ou-apenas-promessas/"
     }
   ],
   "cartoes": [
