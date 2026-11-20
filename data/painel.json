@@ -295,7 +295,7 @@
       "valor": 9.48,
       "unidade": "R$/kg",
       "casas": 2,
-      "variacao": -0.42
+      "variacao": -0.32
     },
     "farelo": {
       "nome": "Farelo de soja GO",
@@ -517,6 +517,6 @@
     "link": "",
     "endpoint": "base de dados interna do NEAGRO-DF",
     "gta_fonte": "SEAGRI-DF, GTAs emitidas e recebidas no DF, compiladas pelo NEAGRO-DF",
-    "extraido_em": "2026-11-19"
+    "extraido_em": "2026-11-20"
   }
 }
