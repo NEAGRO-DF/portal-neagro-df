@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-23T08:14-03:00",
+  "atualizado_em": "2026-11-23T12:43-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Temporal compromete operações da Sementes Estrela e da Futura Agrícola no RS",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/temporal-compromete-operacoes-da-sementes-estrela-e-da-futura-agricola-no-rs/"
+    },
+    {
+      "titulo": "Soja sobe em Chicago com avanço do plantio no Brasil",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/soja-sobe-em-chicago-com-avanco-do-plantio-no-brasil/"
+    },
+    {
+      "titulo": "Ibovespa cai com pressão externa e expectativa por votação fiscal",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/ibovespa-cai-com-pressao-externa-e-expectativa-por-votacao-fiscal/"
+    },
+    {
+      "titulo": "Plantio de milho na Argentina chega a 51,5% e soja avança para 30,4%",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/plantio-de-milho-na-argentina-chega-a-515-e-soja-avanca-para-304/"
+    },
+    {
+      "titulo": "Galípolo descarta debate no governo sobre mudança da meta de inflação",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/galipolo-descarta-debate-no-governo-sobre-mudanca-da-meta-de-inflacao/"
+    },
+    {
+      "titulo": "VBP da agropecuária em 2027 é projetado em R$ 1,503 trilhão",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/vbp-da-agropecuaria-em-2027-e-projetado-em-r-1503-trilhao/"
+    },
+    {
+      "titulo": "Galípolo defende equilíbrio para reduzir tensão entre fiscal e monetária",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/galipolo-defende-equilibrio-para-reduzir-tensao-entre-fiscal-e-monetaria/"
+    },
+    {
+      "titulo": "Boi gordo acumula alta de 1,44% em novembro",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-acumula-alta-de-144-em-novembro/"
+    },
+    {
+      "titulo": "Máximas devem chegar a 37 °C em Rondônia na quarta-feira (25)",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/ro/maximas-devem-chegar-a-37-c-em-rondonia-na-quarta-feira-25/"
+    },
+    {
+      "titulo": "Chuva pode chegar a 63 mm em 24 horas no Paraná",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/pr/chuva-pode-chegar-a-63-mm-em-24-horas-no-parana/"
+    },
+    {
       "titulo": "Máximas devem chegar a 39 °C em quatro municípios de Roraima",
       "veiculo": "Canal Rural",
       "data": "2026-11-23",
@@ -727,76 +797,6 @@
       "data": "2026-11-22",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/nacional/temporal-deixa-cinco-mortos-mais-de-250-feridos-e-destruicao-em-tupancireta-rs/"
-    },
-    {
-      "titulo": "O que é supercélula? Entenda o fenômeno que provocou destruição em Tupanciretã (RS)",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-20",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/o-que-e-supercelula-entenda-o-fenomeno-que-provocou-destruicao-em-tupancireta-rs/"
-    },
-    {
-      "titulo": "Petróleo sobe no dia, mas acumula terceira semana seguida de queda",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-20",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/petroleo-sobe-no-dia-mas-acumula-terceira-semana-seguida-de-queda/"
-    },
-    {
-      "titulo": "Trump diz que Filipinas comprarão 100% dos produtos agrícolas dos EUA",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-20",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/trump-diz-que-filipinas-comprarao-100-dos-produtos-agricolas-dos-eua/"
-    },
-    {
-      "titulo": "Tempestade em Tupanciretã (RS) causa danos em unidades do Grupo Vega; veja fotos",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-20",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/nacional/rio-grande-do-sul/tempestade-em-tupancireta-rs-causa-danos-em-unidades-do-grupo-vega-veja-fotos/"
-    },
-    {
-      "titulo": "Bessent critica Fed por discutir alta maior de juros nos EUA",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-20",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/bessent-critica-fed-por-discutir-alta-maior-de-juros-nos-eua/"
-    },
-    {
-      "titulo": "Tupanciretã registra três mortes após temporal; governo estadual destina R$ 2 milhões à cidade",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-20",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/nacional/rio-grande-do-sul/tupancireta-registra-tres-mortes-apos-temporal-governo-estadual-destina-r-2-milhoes-a-cidade/"
-    },
-    {
-      "titulo": "‘Destruição total’: produtor perde 150 hectares de milho e tem maquinário atingido por tempestade no RS",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-20",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/nacional/rio-grande-do-sul/destruicao-total-produtor-perde-150-hectares-de-milho-e-tem-maquinario-atingido-por-tempestade-no-rs/"
-    },
-    {
-      "titulo": "O Brasil que a população negra plantou",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-20",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/opiniao-noticias/o-brasil-que-a-populacao-negra-plantou/"
-    },
-    {
-      "titulo": "Extensão de trégua entre EUA e China depende de negociação sobre terras raras",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-20",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/extensao-de-tregua-entre-eua-e-china-depende-de-negociacao-sobre-terras-raras/"
-    },
-    {
-      "titulo": "Cinco frutas brasileiras podem ajudar a prevenir doenças crônicas, aponta estudo da USP",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-20",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/cinco-frutas-brasileiras-podem-ajudar-a-prevenir-doencas-cronicas-aponta-estudo-da-usp/"
     }
   ],
   "cartoes": [
@@ -1209,23 +1209,52 @@
         {
           "id": "precos_ue",
           "titulo": "Preços agropecuários na União Europeia",
-          "tipo": "links",
-          "automatico": true,
-          "sub": "A API pública da Comissão Europeia está fora do ar; o robô tenta de novo a cada atualização. Consulte os painéis oficiais:",
-          "links": [
+          "sub": "Média da UE no último período informado e variação em cerca de quatro meses, %",
+          "tipo": "tabela",
+          "casas": 2,
+          "colunas": [
+            "Produto",
+            "Preço",
+            "Unidade",
+            "Período",
+            "Var. %"
+          ],
+          "linhas": [
             [
-              "Agri-food Data Portal: carnes, leite, grãos e insumos",
-              "https://agridata.ec.europa.eu/extensions/DataPortal/home.html"
+              "Carcaça bovina (classe R3)",
+              667.51,
+              "€/100Kg",
+              "09/11/2026",
+              9.7
             ],
             [
-              "Observatórios de mercado da Comissão Europeia",
-              "https://agriculture.ec.europa.eu/data-and-analysis/markets/overviews/market-observatories_en"
+              "Carcaça suína (classe E)",
+              141.85,
+              "100 KG",
+              "09/11/2026",
+              -5.8
+            ],
+            [
+              "Frango inteiro",
+              287.43,
+              "national currency/100kg",
+              "09/11/2026",
+              -54.4
+            ],
+            [
+              "Leite cru ao produtor",
+              44.54,
+              "100KG",
+              "01/09/2026",
+              -24.2
             ]
           ],
+          "nota": "",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
-          "extraido_em": "2026-11-14"
+          "extraido_em": "2026-11-23",
+          "automatico": true
         },
         {
           "id": "projecoes",
