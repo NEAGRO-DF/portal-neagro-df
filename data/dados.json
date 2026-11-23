@@ -1,21 +1,17 @@
 {
-  "atualizado_em": "2026-11-23T12:43-03:00",
+  "atualizado_em": "2026-11-23T19:03-03:00",
   "indicadores": [
     {
       "id": "dolar",
       "nome": "Dólar comercial",
-      "valor": 5.8883,
+      "valor": 5.9702,
       "unidade": "R$/US$",
       "casas": 4,
-      "referencia": "19/11/2026",
-      "variacao_pct": 16.88,
+      "referencia": "23/11/2026",
+      "variacao_pct": 18.52,
       "variacao_desc": "em 20 pregões",
       "grupo": "macro",
       "serie": [
-        [
-          "22/10",
-          5.0377
-        ],
         [
           "23/10",
           5.0371
@@ -91,6 +87,10 @@
         [
           "19/11",
           5.8883
+        ],
+        [
+          "23/11",
+          5.9702
         ]
       ],
       "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)",
@@ -187,11 +187,11 @@
       "fonte": "Banco Central do Brasil, SGS série 21619 (taxa de câmbio livre, euro, venda)",
       "link": "https://www3.bcb.gov.br/sgspub/",
       "automatico": true,
-      "valor": 6.4672,
-      "referencia": "19/11/2026",
+      "valor": 6.5076,
+      "referencia": "23/11/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.21619/dados/ultimos/20?formato=json",
       "extraido_em": "2026-11-23",
-      "variacao_pct": 14.48,
+      "variacao_pct": 15.34,
       "variacao_desc": "em 20 pregões"
     },
     {
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Juros futuros caem com sinalização sobre diretorias no BC",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/juros-futuros-caem-com-sinalizacao-sobre-diretorias-no-bc/"
+    },
+    {
+      "titulo": "Farsul pede a bancos prorrogação de dívidas para produtores de Tupanciretã",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/farsul-pede-a-bancos-prorrogacao-de-dividas-para-produtores-de-tupancireta/"
+    },
+    {
+      "titulo": "CLP propõe mudanças no Imposto Seletivo para bebidas, tabaco e veículos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/clp-propoe-mudancas-no-imposto-seletivo-para-bebidas-tabaco-e-veiculos/"
+    },
+    {
+      "titulo": "Brasil adere a compromisso da FAO por equidade de gênero no meio rural",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/brasil-adere-a-compromisso-da-fao-por-equidade-de-genero-no-meio-rural/"
+    },
+    {
+      "titulo": "Fazenda descarta recessão em 2027 e projeta desaceleração da economia",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/fazenda-descarta-recessao-em-2027-e-projeta-desaceleracao-da-economia/"
+    },
+    {
+      "titulo": "Farsul pede prorrogação de dívidas e crédito emergencial após tempestade no RS",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/farsul-pede-prorrogacao-de-dividas-e-credito-emergencial-apos-tempestade-no-rs/"
+    },
+    {
+      "titulo": "Brent cai 3,46% e fecha abaixo de US$ 90 com maior oferta do Oriente Médio",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/brent-cai-346-e-fecha-abaixo-de-us-90-com-maior-oferta-do-oriente-medio/"
+    },
+    {
+      "titulo": "Plantio de soja em Mato Grosso alcança 99,86% da área prevista",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/plantio-de-soja-em-mato-grosso-alcanca-9986-da-area-prevista/"
+    },
+    {
+      "titulo": "Ministra defende políticas para ampliar autonomia econômica de mulheres rurais na FAO",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/ministra-defende-politicas-para-ampliar-autonomia-economica-de-mulheres-rurais-na-fao/"
+    },
+    {
+      "titulo": "Dólar cai para R$ 5,92 e juros futuros ampliam baixa",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-23",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/dolar-cai-para-r-592-e-juros-futuros-ampliam-baixa/"
+    },
+    {
       "titulo": "Temporal compromete operações da Sementes Estrela e da Futura Agrícola no RS",
       "veiculo": "Canal Rural",
       "data": "2026-11-23",
@@ -727,76 +797,6 @@
       "data": "2026-11-23",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/previsao-do-tempo/pr/chuva-pode-chegar-a-63-mm-em-24-horas-no-parana/"
-    },
-    {
-      "titulo": "Máximas devem chegar a 39 °C em quatro municípios de Roraima",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/rr/maximas-devem-chegar-a-39-c-em-quatro-municipios-de-roraima-2/"
-    },
-    {
-      "titulo": "Agricultores paulistas investem em frutas vermelhas para diversificar a produção",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-22",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/agricultores-paulistas-investem-em-frutas-vermelhas-para-diversificar-a-producao/"
-    },
-    {
-      "titulo": "Jornalista do Canal Rural está entre os indicados ao Prêmio Abag/RP de Jornalismo",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-22",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/jornalista-do-canal-rural-esta-entre-os-indicados-ao-premio-abag-rp-de-jornalismo/"
-    },
-    {
-      "titulo": "Mais de 25 mil pessoas são afetadas por temporais no Rio Grande do Sul, informa Defesa Civil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-22",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/nacional/mais-de-25-mil-pessoas-sao-afetadas-por-temporais-no-rio-grande-do-sul-informa-defesa-civil/"
-    },
-    {
-      "titulo": "COP31 termina sem acordo e deixa para o futuro decisões urgentes sobre o clima",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-22",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/opiniao-noticias/cop31-termina-sem-acordo-e-deixa-para-o-futuro-decisoes-urgentes-sobre-o-clima/"
-    },
-    {
-      "titulo": "COP31 termina sem consenso sobre a redução do uso de combustíveis fósseis",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-22",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/internacional/cop31-termina-sem-consenso-sobre-a-reducao-do-uso-de-combustiveis-fosseis/"
-    },
-    {
-      "titulo": "Portaria define período e regras para a captura de lulas; confira o que muda",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-22",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/nacional/portaria-define-periodo-e-regras-para-a-captura-de-lulas-confira-o-que-muda/"
-    },
-    {
-      "titulo": "ICMS sobre diesel sobe 735,7% desde 2002, mostra EPE",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-22",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/icms-sobre-diesel-sobe-7357-desde-2002-mostra-epe/"
-    },
-    {
-      "titulo": "Calamidade pública é reconhecida em Tupanciretã após temporal",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-22",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/calamidade-publica-e-reconhecida-em-tupancireta-apos-temporal/"
-    },
-    {
-      "titulo": "Temporal deixa cinco mortos, mais de 250 feridos e destruição em Tupanciretã (RS)",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-22",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/nacional/temporal-deixa-cinco-mortos-mais-de-250-feridos-e-destruicao-em-tupancireta-rs/"
     }
   ],
   "cartoes": [
