@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-24T08:00-03:00",
+  "atualizado_em": "2026-11-24T12:42-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Instituições articulam projeto de conservação do solo em Doutor Maurício Cardoso",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/instituicoes-articulam-projeto-de-conservacao-do-solo-em-doutor-mauricio-cardoso/"
+    },
+    {
+      "titulo": "BNDES aprova R$ 8,3 bilhões para ampliar produção de fertilizantes no Brasil",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/bndes-aprova-r-83-bilhoes-para-ampliar-producao-de-fertilizantes-no-brasil/"
+    },
+    {
+      "titulo": "Temporal atinge 440 propriedades e provoca perdas de até 95% em lavouras de soja em cidade do Sul; saiba qual",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/temporal-atinge-440-propriedades-e-provoca-perdas-de-ate-95-em-lavouras-de-soja-em-cidade-do-sul-saiba-qual/"
+    },
+    {
+      "titulo": "Crédito Fundiário entrega imóveis rurais a 69 famílias no Ceará",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/diversos/credito-fundiario-entrega-imoveis-rurais-a-69-familias-no-ceara/"
+    },
+    {
+      "titulo": "Cecafé discute uso da Plataforma AB+S para atender exigências do mercado externo",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/cecafe-discute-uso-da-plataforma-abs-para-atender-exigencias-do-mercado-externo/"
+    },
+    {
+      "titulo": "Mapa lança programa nacional para conservação de recursos genéticos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/mapa-lanca-programa-nacional-para-conservacao-de-recursos-geneticos/"
+    },
+    {
+      "titulo": "Fonterra eleva projeção de preço ao produtor para a temporada 2026/27",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/fonterra-eleva-projecao-de-preco-ao-produtor-para-a-temporada-2026-27/"
+    },
+    {
+      "titulo": "Caravana da Adapar sobre uso de defensivos agrícolas começa em Curitiba e região metropolitana",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/caravana-da-adapar-sobre-uso-de-defensivos-agricolas-comeca-em-curitiba-e-regiao-metropolitana/"
+    },
+    {
+      "titulo": "Soja sobe em Chicago, mas avanço do plantio no Brasil limita ganhos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/soja/soja-sobe-em-chicago-mas-avanco-do-plantio-no-brasil-limita-ganhos/"
+    },
+    {
+      "titulo": "Exportações do agro aos países árabes crescem 15,94% em outubro",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/exportacoes-do-agro-aos-paises-arabes-crescem-1594-em-outubro/"
+    },
+    {
       "titulo": "Agroflorestas reduzem temperatura em até 15°C e armazenam carbono no solo, mostra estudo da Embrapa",
       "veiculo": "Canal Rural",
       "data": "2026-11-24",
@@ -727,76 +797,6 @@
       "data": "2026-11-23",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/petrobras-eleva-capex-para-us-122-bilhoes-no-plano-2027-2031/"
-    },
-    {
-      "titulo": "Juros futuros caem com sinalização sobre diretorias no BC",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/juros-futuros-caem-com-sinalizacao-sobre-diretorias-no-bc/"
-    },
-    {
-      "titulo": "Farsul pede a bancos prorrogação de dívidas para produtores de Tupanciretã",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/farsul-pede-a-bancos-prorrogacao-de-dividas-para-produtores-de-tupancireta/"
-    },
-    {
-      "titulo": "CLP propõe mudanças no Imposto Seletivo para bebidas, tabaco e veículos",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/clp-propoe-mudancas-no-imposto-seletivo-para-bebidas-tabaco-e-veiculos/"
-    },
-    {
-      "titulo": "Brasil adere a compromisso da FAO por equidade de gênero no meio rural",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/brasil-adere-a-compromisso-da-fao-por-equidade-de-genero-no-meio-rural/"
-    },
-    {
-      "titulo": "Fazenda descarta recessão em 2027 e projeta desaceleração da economia",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/fazenda-descarta-recessao-em-2027-e-projeta-desaceleracao-da-economia/"
-    },
-    {
-      "titulo": "Farsul pede prorrogação de dívidas e crédito emergencial após tempestade no RS",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/farsul-pede-prorrogacao-de-dividas-e-credito-emergencial-apos-tempestade-no-rs/"
-    },
-    {
-      "titulo": "Brent cai 3,46% e fecha abaixo de US$ 90 com maior oferta do Oriente Médio",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/brent-cai-346-e-fecha-abaixo-de-us-90-com-maior-oferta-do-oriente-medio/"
-    },
-    {
-      "titulo": "Plantio de soja em Mato Grosso alcança 99,86% da área prevista",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/plantio-de-soja-em-mato-grosso-alcanca-9986-da-area-prevista/"
-    },
-    {
-      "titulo": "Ministra defende políticas para ampliar autonomia econômica de mulheres rurais na FAO",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/ministra-defende-politicas-para-ampliar-autonomia-economica-de-mulheres-rurais-na-fao/"
-    },
-    {
-      "titulo": "Dólar cai para R$ 5,92 e juros futuros ampliam baixa",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/dolar-cai-para-r-592-e-juros-futuros-ampliam-baixa/"
     }
   ],
   "cartoes": [
@@ -1235,6 +1235,13 @@
               -5.8
             ],
             [
+              "Frango inteiro",
+              287.43,
+              "national currency/100kg",
+              "09/11/2026",
+              -54.4
+            ],
+            [
               "Leite cru ao produtor",
               44.54,
               "100KG",
@@ -1242,7 +1249,7 @@
               -24.2
             ]
           ],
-          "nota": "Sem dados recentes para: Frango inteiro.",
+          "nota": "",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
