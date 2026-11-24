@@ -1,21 +1,17 @@
 {
-  "atualizado_em": "2026-11-24T12:42-03:00",
+  "atualizado_em": "2026-11-24T19:11-03:00",
   "indicadores": [
     {
       "id": "dolar",
       "nome": "Dólar comercial",
-      "valor": 5.9702,
+      "valor": 5.8567,
       "unidade": "R$/US$",
       "casas": 4,
-      "referencia": "23/11/2026",
-      "variacao_pct": 18.52,
+      "referencia": "24/11/2026",
+      "variacao_pct": 6.49,
       "variacao_desc": "em 20 pregões",
       "grupo": "macro",
       "serie": [
-        [
-          "23/10",
-          5.0371
-        ],
         [
           "26/10",
           5.4998
@@ -91,6 +87,10 @@
         [
           "23/11",
           5.9702
+        ],
+        [
+          "24/11",
+          5.8567
         ]
       ],
       "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)",
@@ -187,11 +187,11 @@
       "fonte": "Banco Central do Brasil, SGS série 21619 (taxa de câmbio livre, euro, venda)",
       "link": "https://www3.bcb.gov.br/sgspub/",
       "automatico": true,
-      "valor": 6.5076,
-      "referencia": "23/11/2026",
+      "valor": 6.426,
+      "referencia": "24/11/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.21619/dados/ultimos/20?formato=json",
       "extraido_em": "2026-11-24",
-      "variacao_pct": 15.34,
+      "variacao_pct": 4.51,
       "variacao_desc": "em 20 pregões"
     },
     {
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Lei antidesmatamento da UE: Aprosoja alerta para risco de ‘transtornos e multas’ na comercialização de soja",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/lei-antidesmatamento-da-ue-aprosoja-alerta-para-risco-de-transtornos-e-multas-na-comercializacao-de-soja/"
+    },
+    {
+      "titulo": "Fazenda reduz projeção do PIB para 1,9% em 2026 e 1,8% em 2027",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/fazenda-reduz-projecao-do-pib-para-19-em-2026-e-18-em-2027/"
+    },
+    {
+      "titulo": "Pra cima! Preços de soja sobem e seguem nos melhores níveis do ano; confira o fechamento de mercado",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/subiu-precos-de-soja-sobem-e-seguem-nos-melhores-niveis-do-ano-confira-o-fechamento-de-mercado/"
+    },
+    {
+      "titulo": "Ministro critica adiamento da UE sobre retorno do Brasil em aves e mel",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/ministro-critica-adiamento-da-ue-sobre-retorno-do-brasil-em-aves-e-mel/"
+    },
+    {
+      "titulo": "CNI critica ajuste fiscal e vê impacto sobre investimento das empresas",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/cni-critica-ajuste-fiscal-e-ve-impacto-sobre-investimento-das-empresas/"
+    },
+    {
+      "titulo": "Portaria atualiza regras para peixe congelado e inclui filé com aditivos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/portaria-atualiza-regras-para-peixe-congelado-e-inclui-file-com-aditivos/"
+    },
+    {
+      "titulo": "Plano Nacional de Mulheres do Agro é lançado em Brasília",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/plano-nacional-de-mulheres-do-agro-e-lancado-em-brasilia/"
+    },
+    {
+      "titulo": "Anater articula apoio à agricultura familiar no Oeste do Pará",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/anater-articula-apoio-a-agricultura-familiar-no-oeste-do-para/"
+    },
+    {
+      "titulo": "Brasil pode importar até 10 milhões de toneladas de trigo em 2027",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/trigo/brasil-pode-importar-ate-10-milhoes-de-toneladas-de-trigo-em-2027/"
+    },
+    {
+      "titulo": "Após aprovação pela Câmara, ajuste fiscal é sancionado por Lula",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/lula-sanciona-sem-vetos-lei-complementar-do-ajuste-fiscal/"
+    },
+    {
       "titulo": "Instituições articulam projeto de conservação do solo em Doutor Maurício Cardoso",
       "veiculo": "Canal Rural",
       "data": "2026-11-24",
@@ -727,76 +797,6 @@
       "data": "2026-11-24",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/exportacoes-do-agro-aos-paises-arabes-crescem-1594-em-outubro/"
-    },
-    {
-      "titulo": "Agroflorestas reduzem temperatura em até 15°C e armazenam carbono no solo, mostra estudo da Embrapa",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/agroflorestas-reduzem-temperatura-em-ate-15c-e-armazenam-carbono-no-solo-mostra-estudo-da-embrapa/"
-    },
-    {
-      "titulo": "Projeto de ajuste fiscal é aprovado na Câmara com 353 votos",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/projeto-de-ajuste-fiscal-e-aprovado-na-camara-com-353-votos/"
-    },
-    {
-      "titulo": "Máximas devem chegar a 38 °C em quatro municípios de Roraima",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/rr/maximas-devem-chegar-a-38-c-em-quatro-municipios-de-roraima/"
-    },
-    {
-      "titulo": "Câmara aprova urgência para votação do projeto de ajuste fiscal",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/camara-aprova-urgencia-para-votacao-do-projeto-de-ajuste-fiscal/"
-    },
-    {
-      "titulo": "Petrobras prevê US$ 13,1 bilhões para transição energética no plano 2027-2031",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/petrobras-preve-us-131-bilhoes-para-transicao-energetica-no-plano-2027-2031/"
-    },
-    {
-      "titulo": "Petrobras aprova plano de US$ 122 bilhões para 2027 a 2031",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/petrobras-aprova-plano-de-us-122-bilhoes-para-2027-a-2031/"
-    },
-    {
-      "titulo": "Seapi faz intercâmbio técnico sobre bananicultura em Santa Catarina",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/seapi-faz-intercambio-tecnico-sobre-bananicultura-em-santa-catarina/"
-    },
-    {
-      "titulo": "Petrobras projeta ampliar capacidade de refino para 2,173 milhões de bpd até 2031",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/petrobras-projeta-ampliar-capacidade-de-refino-para-2173-milhoes-de-bpd-ate-2031/"
-    },
-    {
-      "titulo": "Urgência para PLP do ajuste fiscal é aprovada na Câmara",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/urgencia-para-plp-do-ajuste-fiscal-e-aprovada-na-camara/"
-    },
-    {
-      "titulo": "Petrobras eleva Capex para US$ 122 bilhões no plano 2027-2031",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-23",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/petrobras-eleva-capex-para-us-122-bilhoes-no-plano-2027-2031/"
     }
   ],
   "cartoes": [
