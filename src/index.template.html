@@ -454,6 +454,7 @@ section[id]{scroll-margin-top:60px}
     <a href="#cotacoes">Cotações</a>
     <a href="#economia">Economia e comércio</a>
     <a href="#df-ride">DF e RIDE</a>
+    <a href="#producao">Produção</a>
     <a href="#sobre">Quem somos</a>
     <a class="cta" href="#contato">Fale conosco</a>
   </div>
@@ -674,6 +675,26 @@ section[id]{scroll-margin-top:60px}
     </div>
   </section>
 
+  <section id="producao" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <span class="eyebrow">Cadeias produtivas</span>
+          <h2>Produção, trânsito animal e comércio exterior</h2>
+          <p id="pq-nota"></p>
+        </div>
+      </div>
+      <div class="grid12">
+        <div class="card span12"><h3>Rebanhos e produção por UF</h3><div class="sub" id="pq-prod-sub"></div><div class="tscroll"><table class="ctab" id="pq-prod"></table></div><div class="src" id="pq-prod-src"></div></div>
+        <div class="card span7"><h3>Trânsito de suínos no DF (GTA)</h3><div class="sub">Suínos que saíram do DF para outras UFs, cabeças por mês</div><div id="pq-gta-ch"></div><div class="tscroll"><table class="ctab" id="pq-gta"></table></div><div class="src" id="pq-gta-src"></div></div>
+        <div class="card span5"><h3>Para onde vão e de onde vêm os suínos</h3><div class="sub">Cabeças, soma dos últimos 12 meses</div><div id="pq-gta-uf"></div></div>
+        <div class="card span6" id="pq-ovi"></div>
+        <div class="card span6" id="pq-pesca"></div>
+        <div class="card span12" id="pq-emater"></div>
+      </div>
+    </div>
+  </section>
+
   <section id="conjuntura" class="alt">
     <div class="wrap">
       <div class="sec-head">
@@ -825,6 +846,7 @@ section[id]{scroll-margin-top:60px}
 <script id="snapshot-fotos" type="application/json">/*FOTOS*/</script>
 <script id="snapshot-contato" type="application/json">/*CONTATO*/</script>
 <script id="snapshot-painel" type="application/json">/*PAINEL*/</script>
+<script id="snapshot-quadros" type="application/json">/*QUADROS*/</script>
 <script>/*PAINEL_CALC*/</script>
 <script>
 (function(){
@@ -1210,9 +1232,48 @@ function initForm(){
 }
 renderContato();initForm();
 
+let Q=parse("snapshot-quadros");
+function renderProducao(){
+  const sec=$("#producao");if(!sec)return;
+  if(!Q||!Q.producao||!Q.producao.length){sec.style.display="none";return}
+  sec.style.display="";
+  const ano=Q.producao[0].ano;
+  $("#pq-nota").textContent=`Rebanhos, trânsito animal e comércio exterior das cadeias acompanhadas pelo NEAGRO-DF, com destaque para o Distrito Federal. Séries mensais até ${mesExt(Q.mes_aprovado)}, último mês aprovado pela equipe. Dados atualizados em ${fdate(Q.extraido_em)}.`;
+  $("#pq-prod-sub").textContent=`Brasil, Distrito Federal e as três maiores UFs, ${ano}`;
+  $("#pq-prod").innerHTML=`<thead><tr><th>Indicador</th><th class="r">Brasil</th><th class="r">Distrito Federal</th><th class="r">DF no Brasil</th><th>Maiores UFs (participação)</th></tr></thead><tbody>${Q.producao.map(p=>`<tr><td><b>${esc(p.nome)}</b><div class="note">${esc(p.unidade)}, ${esc(p.ano)}</div></td><td class="r">${kn(p.brasil)}</td><td class="r">${kn(p.df)}</td><td class="r">${p.df_pct!=null?fmt(p.df_pct,2)+"%":"s/d"}${p.df_posicao?`<div class="note">${p.df_posicao}º de ${p.ufs_com_dado} UFs</div>`:""}</td><td>${p.maiores.slice(0,3).map(m=>`${esc(m.uf)} ${fmt(m.pct,1)}%`).join(" · ")}</td></tr>`).join("")}</tbody>`;
+  const fts=[...new Map(Q.producao.map(p=>[p.fonte,p])).values()];
+  $("#pq-prod-src").innerHTML=`Fontes: ${fts.map(p=>`<a href="${esc(p.link)}">${esc(p.fonte)}</a>`).join("; ")}. Extraído em ${fdate(Q.extraido_em)}.`;
+  const g=Q.gta_suinos;
+  if(g&&g.meses&&g.meses.length){
+    const n=g.meses.length,ini=Math.max(0,n-13);
+    line($("#pq-gta-ch"),g.meses.slice(ini).map((m,i)=>[m,g.saida.total[ini+i]||0]),{casas:0});
+    const ix=[n-1,n-2,n-13].filter(i=>i>=0);
+    $("#pq-gta").innerHTML=`<thead><tr><th>Fluxo</th>${ix.map(i=>`<th class="r">${esc(g.meses[i])}</th>`).join("")}</tr></thead><tbody>${[["Entrada no DF","entrada"],["Saída do DF","saida"],["Interno (DF para DF)","interno"]].map(([r,k])=>`<tr><td><b>${r}</b><div class="note">${esc(g.meses[n-1])}: abate ${kn(g[k].abate[n-1])}, engorda ${kn(g[k].engorda[n-1])}</div></td>${ix.map(i=>`<td class="r">${kn(g[k].total[i])}</td>`).join("")}</tr>`).join("")}</tbody>`;
+    $("#pq-gta-src").textContent=`Fonte: ${g.fonte}. Extraído em ${fdate(Q.extraido_em)}.`;
+    $("#pq-gta-uf").innerHTML=`<div class="sub" style="margin-top:8px">Destinos das saídas do DF</div><div id="pq-gta-d"></div><div class="sub" style="margin-top:8px">Origens das entradas no DF</div><div id="pq-gta-o"></div>`;
+    hbars($("#pq-gta-d"),g.destinos.slice(0,5).map(d=>[d.nome,d.ultimos12]),{fmtv:v=>kn(v),labelW:130,W:460});
+    hbars($("#pq-gta-o"),g.origens.slice(0,5).map(d=>[d.nome,d.ultimos12]),{fmtv:v=>kn(v),labelW:130,W:460});
+  }
+  const cx=Q.comex||{};
+  const tab=l=>`<div class="tscroll"><table class="ctab"><thead><tr><th>País</th><th class="r">Toneladas</th><th class="r">US$ mil</th></tr></thead><tbody>${l.map(p=>`<tr><td>${esc(p.pais)}</td><td class="r">${fmt(p.kg/1000,1)}</td><td class="r">${fmt(p.usd/1000,0)}</td></tr>`).join("")}</tbody></table></div>`;
+  const kp=(t,o)=>o?`<div><div class="note">${t}</div><b>${fmt(o.kg/1000,1)} t</b><div class="note">US$ ${fmt(o.usd/1e6,2)} milhões</div></div>`:"";
+  const o=cx.ovinos_caprinos;
+  if(o&&o.exportacao){
+    $("#pq-ovi").innerHTML=`<h3>Ovinos e caprinos no comércio exterior</h3><div class="sub">${esc(o.titulo)}, ${esc(o.exportacao.de)} a ${esc(o.exportacao.ate)}</div><div class="kpis" style="grid-template-columns:repeat(2,minmax(0,1fr))">${kp("Importação",o.importacao)}${kp("Exportação",o.exportacao)}</div>${o.importacao?`<div class="sub">Origens da importação</div>${tab(o.importacao.paises.slice(0,5))}`:""}<div class="sub" style="margin-top:10px">Destinos da exportação</div>${tab(o.exportacao.paises.slice(0,5))}<div class="src">A maior parte das exportações vai para pavilhões de conveniência (Libéria, Ilhas Marshall, Panamá e outros), perfil de fornecimento de bordo a navios. Fonte: <a href="${esc(o.link)}">${esc(o.fonte)}</a>. Extraído em ${fdate(Q.extraido_em)}.</div>`;
+  }else $("#pq-ovi").style.display="none";
+  const pe=cx.pescado;
+  if(pe&&pe.exportacao){
+    $("#pq-pesca").innerHTML=`<h3>Pescado no comércio exterior</h3><div class="sub">${esc(pe.titulo)}, ${esc(pe.de)} a ${esc(pe.ate)}</div><div class="kpis" style="grid-template-columns:repeat(2,minmax(0,1fr))">${kp("Importação",pe.importacao)}${kp("Exportação",pe.exportacao)}</div><div class="sub">Origens da importação</div>${tab(pe.importacao.paises.slice(0,5))}<div class="sub" style="margin-top:10px">Destinos da exportação</div>${tab(pe.exportacao.paises.slice(0,5))}<div class="src">Fonte: <a href="${esc(pe.link)}">${esc(pe.fonte)}</a>. Extraído em ${fdate(Q.extraido_em)}.</div>`;
+  }else $("#pq-pesca").style.display="none";
+  const em=Q.emater_df;
+  if(em){
+    const lin=[].concat(...["bov","lei","ovi","pbr"].map(k=>em[k]||[]));
+    $("#pq-emater").innerHTML=`<h3>O Distrito Federal segundo a EMATER-DF</h3><div class="kpis">${lin.map(l=>`<div><div class="note">${esc(l[0])}</div><b>${esc(l[1])}</b><div class="note">${esc(l[2])}</div></div>`).join("")}</div><div class="src">Fonte: ${esc(em.fonte)}.</div>`;
+  }else $("#pq-emater").style.display="none";
+}
 function renderAll(){
   const r=f=>{try{f()}catch(e){console.error(e)}};
-  r(renderTicker);r(renderBoletins);r(renderPainel);r(renderCadeias);r(renderIndicadores);r(renderTerritorio);r(renderCartoes);r(renderBrasil);r(renderNoticias);r(renderEquipe);r(renderFontes);
+  r(renderTicker);r(renderBoletins);r(renderPainel);r(renderCadeias);r(renderIndicadores);r(renderTerritorio);r(renderProducao);r(renderCartoes);r(renderBrasil);r(renderNoticias);r(renderEquipe);r(renderFontes);
   if(!calcReady){r(renderCalc);calcReady=true}else if(!calcTocado){r(montarPresets);r(()=>setPreset(presetAtual))}else r(calc);
 }
 renderAll();
@@ -1226,6 +1287,7 @@ async function refresh(){
   try{const d=await getJSON("data/dados.json");if(d&&d.indicadores){D=d;changed=true}}catch(e){}
   try{const b=await getJSON("data/boletins.json");if(b&&b.edicoes){B=b;changed=true}}catch(e){}
   try{const x=await getJSON("data/painel.json");if(x&&x.semaforo){P=x;changed=true}}catch(e){}
+  try{const q=await getJSON("data/painel_quadros.json");if(q&&q.producao){Q=q;changed=true}}catch(e){}
   /* Lê a base do núcleo e recalcula os indicadores na hora; se falhar, vale o retrato do robô. */
   try{
     if(window.PainelNEAGRO){
