@@ -265,6 +265,22 @@
   "edicoes": [
     {
       "serie": "animal",
+      "numero": "6.0265",
+      "designacao": "Vol. 4, No. 10 (nov. 2026)",
+      "data": "2026-11-24",
+      "titulo": "Boletim de Mercado NEAGRO-DF: Caprinocultura e ovinocultura",
+      "cadeias": [
+        "Caprinocultura",
+        "Ovinocultura"
+      ],
+      "resumo": "Preços de insumos e produtos nas praças acompanhadas pelo NEAGRO-DF no DF e Entorno, relações de troca entre insumo e produto e análise do comportamento do mercado no período.",
+      "destaques": [],
+      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6-0265-boletim-caprinocultura-e-ovinocultura-neagro-df-2026-11-24.pdf",
+      "origem": "drive",
+      "pdf_original": "https://drive.google.com/file/d/1bbyMnD465nb2DLhzUciBFFfxb19PIfG2/view"
+    },
+    {
+      "serie": "animal",
       "numero": "6.0255",
       "data": "2026-10-15",
       "titulo": "Boletim de Mercado NEAGRO-DF: Caprinocultura e ovinocultura, setembro de 2026",
