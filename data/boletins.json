@@ -295,9 +295,9 @@
     {
       "serie": "animal",
       "numero": "6.034",
-      "designacao": "Vol. 4, No. 10 (out. 2026)",
+      "designacao": "Vol. 4, No. 9 (set. 2026)",
       "data": "2026-10-29",
-      "titulo": "Boletim de Mercado NEAGRO-DF: Suinocultura",
+      "titulo": "Boletim de Mercado NEAGRO-DF: Suinocultura, setembro de 2026",
       "cadeias": [
         "Suinocultura"
       ],
@@ -310,12 +310,11 @@
     {
       "serie": "animal",
       "numero": "6.033",
-      "designacao": "Vol. 4, No. 10 (out. 2026)",
+      "designacao": "Vol. 4, No. 9 (set. 2026)",
       "data": "2026-10-26",
-      "titulo": "Boletim de Mercado NEAGRO-DF: Caprinocultura e ovinocultura",
+      "titulo": "Boletim de Mercado NEAGRO-DF: Bovinocultura de corte, setembro de 2026",
       "cadeias": [
-        "Caprinocultura",
-        "Ovinocultura"
+        "Bovinocultura de corte"
       ],
       "resumo": "Preços de insumos e produtos nas praças acompanhadas pelo NEAGRO-DF no DF e Entorno, relações de troca entre insumo e produto e análise do comportamento do mercado no período.",
       "destaques": [],
