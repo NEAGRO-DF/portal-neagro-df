@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-25T08:04-03:00",
+  "atualizado_em": "2026-11-25T12:40-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Pecuaristas de MT têm até 10 de dezembro para atualizar rebanhos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/pecuaristas-de-mt-tem-ate-10-de-dezembro-para-atualizar-rebanhos/"
+    },
+    {
+      "titulo": "Ibovespa sobe moderadamente após quatro quedas seguidas sob pressão externa e fiscal",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/ibovespa-sobe-moderadamente-apos-quatro-quedas-seguidas-sob-pressao-externa-e-fiscal/"
+    },
+    {
+      "titulo": "Waldez Góes diz que Brasil sofre efeitos da falta de compromisso climático de outros países",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/waldez-goes-diz-que-brasil-sofre-efeitos-da-falta-de-compromisso-climatico-de-outros-paises/"
+    },
+    {
+      "titulo": "EUA abrem consulta para elevar tarifas sobre açúcar do Brasil",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/eua-abrem-consulta-para-elevar-tarifas-sobre-acucar-do-brasil/"
+    },
+    {
+      "titulo": "CNA alerta para aumento da carga com alíquota de 11,3% da CBS",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/cna-alerta-para-aumento-da-carga-com-aliquota-de-113-da-cbs/"
+    },
+    {
+      "titulo": "Santander rebaixa Petrobras para neutra e corta preço-alvo da ação ON",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/santander-rebaixa-petrobras-para-neutra-e-corta-preco-alvo-da-acao-on/"
+    },
+    {
+      "titulo": "El Niño e exportações pressionam preço do arroz",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/arroz/el-nino-e-exportacoes-pressionam-preco-do-arroz/"
+    },
+    {
+      "titulo": "Dólar perto de R$ 6 eleva custo da indústria de insumos agrícolas",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/dolar-perto-de-r-6-eleva-custo-da-industria-de-insumos-agricolas/"
+    },
+    {
+      "titulo": "Colheita de grãos na Ucrânia atinge 85% da área semeada",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/colheita-de-graos-na-ucrania-atinge-85-da-area-semeada/"
+    },
+    {
+      "titulo": "Ministério do Turismo lança 24 experiências em assentamentos da reforma agrária",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/ministerio-do-turismo-lanca-24-experiencias-em-assentamentos-da-reforma-agraria/"
+    },
+    {
       "titulo": "Frente fria avança e provoca temporais e chuva acima de 100 mm; veja previsão",
       "veiculo": "Canal Rural",
       "data": "2026-11-25",
@@ -678,6 +748,13 @@
       "data": "2026-11-25",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/previsao-do-tempo/rr/maximas-devem-chegar-a-36-c-em-tres-municipios-de-roraima/"
+    },
+    {
+      "titulo": "Plano busca fortalecer protagonismo das mulheres no agronegócio",
+      "veiculo": "Agência Brasil",
+      "data": "2026-11-24",
+      "tema": "Economia",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/plano-busca-fortalecer-protagonismo-das-mulheres-no-agronegocio"
     },
     {
       "titulo": "Boi gordo: altas perdem força com escalas de abate mais confortáveis",
@@ -720,83 +797,6 @@
       "data": "2026-11-24",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/subiu-precos-de-soja-sobem-e-seguem-nos-melhores-niveis-do-ano-confira-o-fechamento-de-mercado/"
-    },
-    {
-      "titulo": "Ministro critica adiamento da UE sobre retorno do Brasil em aves e mel",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/ministro-critica-adiamento-da-ue-sobre-retorno-do-brasil-em-aves-e-mel/"
-    },
-    {
-      "titulo": "Plano busca fortalecer protagonismo das mulheres no agronegócio",
-      "veiculo": "Agência Brasil",
-      "data": "2026-11-24",
-      "tema": "Economia",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/plano-busca-fortalecer-protagonismo-das-mulheres-no-agronegocio"
-    },
-    {
-      "titulo": "CNI critica ajuste fiscal e vê impacto sobre investimento das empresas",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/cni-critica-ajuste-fiscal-e-ve-impacto-sobre-investimento-das-empresas/"
-    },
-    {
-      "titulo": "Portaria atualiza regras para peixe congelado e inclui filé com aditivos",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/portaria-atualiza-regras-para-peixe-congelado-e-inclui-file-com-aditivos/"
-    },
-    {
-      "titulo": "Plano Nacional de Mulheres do Agro é lançado em Brasília",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/plano-nacional-de-mulheres-do-agro-e-lancado-em-brasilia/"
-    },
-    {
-      "titulo": "Anater articula apoio à agricultura familiar no Oeste do Pará",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/anater-articula-apoio-a-agricultura-familiar-no-oeste-do-para/"
-    },
-    {
-      "titulo": "Brasil pode importar até 10 milhões de toneladas de trigo em 2027",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/trigo/brasil-pode-importar-ate-10-milhoes-de-toneladas-de-trigo-em-2027/"
-    },
-    {
-      "titulo": "Após aprovação pela Câmara, ajuste fiscal é sancionado por Lula",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/lula-sanciona-sem-vetos-lei-complementar-do-ajuste-fiscal/"
-    },
-    {
-      "titulo": "Instituições articulam projeto de conservação do solo em Doutor Maurício Cardoso",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/instituicoes-articulam-projeto-de-conservacao-do-solo-em-doutor-mauricio-cardoso/"
-    },
-    {
-      "titulo": "BNDES aprova R$ 8,3 bilhões para ampliar produção de fertilizantes no Brasil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/bndes-aprova-r-83-bilhoes-para-ampliar-producao-de-fertilizantes-no-brasil/"
-    },
-    {
-      "titulo": "Temporal atinge 440 propriedades e provoca perdas de até 95% em lavouras de soja em cidade do Sul; saiba qual",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/temporal-atinge-440-propriedades-e-provoca-perdas-de-ate-95-em-lavouras-de-soja-em-cidade-do-sul-saiba-qual/"
     }
   ],
   "cartoes": [
@@ -1235,6 +1235,13 @@
               -8.6
             ],
             [
+              "Frango inteiro",
+              251.49,
+              "national currency/100kg",
+              "09/11/2026",
+              -59.9
+            ],
+            [
               "Leite cru ao produtor",
               45.16,
               "100KG",
@@ -1242,7 +1249,7 @@
               -23.1
             ]
           ],
-          "nota": "Sem dados recentes para: Frango inteiro.",
+          "nota": "",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
