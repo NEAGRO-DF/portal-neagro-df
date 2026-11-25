@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-24T19:11-03:00",
+  "atualizado_em": "2026-11-25T08:04-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -96,7 +96,7 @@
       "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)",
       "link": "https://www3.bcb.gov.br/sgspub/",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.10813/dados/ultimos/20?formato=json",
-      "extraido_em": "2026-11-24",
+      "extraido_em": "2026-11-25",
       "automatico": true
     },
     {
@@ -110,7 +110,7 @@
       "fonte": "Banco Central do Brasil, SGS série 432 (meta Selic definida pelo Copom)",
       "link": "https://www.bcb.gov.br/controleinflacao/taxaselic",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.432/dados/ultimos/1?formato=json",
-      "extraido_em": "2026-11-24",
+      "extraido_em": "2026-11-25",
       "automatico": true
     },
     {
@@ -175,7 +175,7 @@
       "fonte": "IBGE via Banco Central do Brasil, SGS série 13522 (IPCA acumulado em 12 meses)",
       "link": "https://www.ibge.gov.br/estatisticas/economicas/precos-e-custos/9256-indice-nacional-de-precos-ao-consumidor-amplo.html",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.13522/dados/ultimos/12?formato=json",
-      "extraido_em": "2026-11-24",
+      "extraido_em": "2026-11-25",
       "automatico": true
     },
     {
@@ -190,7 +190,7 @@
       "valor": 6.426,
       "referencia": "24/11/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.21619/dados/ultimos/20?formato=json",
-      "extraido_em": "2026-11-24",
+      "extraido_em": "2026-11-25",
       "variacao_pct": 4.51,
       "variacao_desc": "em 20 pregões"
     },
@@ -206,7 +206,7 @@
       "valor": 5.25,
       "referencia": "out/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.189/dados/ultimos/13?formato=json",
-      "extraido_em": "2026-11-24",
+      "extraido_em": "2026-11-25",
       "variacao_pct": null,
       "variacao_desc": "no mês: 1,47%"
     },
@@ -271,7 +271,7 @@
       "fonte": "FAO, Food Price Index (2014-2016 = 100)",
       "link": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/",
       "endpoint": "https://www.fao.org/media/docs/worldfoodsituationlibraries/wfs-library/food_price_indices_data.csv",
-      "extraido_em": "2026-11-24",
+      "extraido_em": "2026-11-25",
       "automatico": true
     }
   ],
@@ -304,7 +304,7 @@
       "fonte": "IBGE, Contas Nacionais Trimestrais, tabela 5932",
       "link": "https://sidra.ibge.gov.br/tabela/5932",
       "endpoint": "https://apisidra.ibge.gov.br/values/t/5932/n1/all/v/6561,6564/p/last%201/c11255/90707,90687,90691,90696",
-      "extraido_em": "2026-11-24"
+      "extraido_em": "2026-11-25"
     },
     "pib_agro_cepea": {
       "titulo": "PIB do agronegócio (Cepea/Esalq e CNA)",
@@ -339,7 +339,7 @@
       ],
       "fonte": "FAO, Food Price Index, subíndices (2014-2016 = 100)",
       "link": "https://www.fao.org/worldfoodsituation/foodpricesindex/en/",
-      "extraido_em": "2026-11-24",
+      "extraido_em": "2026-11-25",
       "endpoint": "https://www.fao.org/media/docs/worldfoodsituationlibraries/wfs-library/food_price_indices_data.csv"
     }
   },
@@ -401,7 +401,7 @@
       "fonte": "IBGE, Produção Agrícola Municipal (PAM), tabela 5457",
       "link": "https://sidra.ibge.gov.br/tabela/5457",
       "endpoint": "https://apisidra.ibge.gov.br/values/t/5457/n3/53/v/215/p/last%201/c782/allxt",
-      "extraido_em": "2026-11-24"
+      "extraido_em": "2026-11-25"
     },
     "ppm": {
       "titulo": "Efetivo dos rebanhos do Distrito Federal, 2025",
@@ -439,7 +439,7 @@
       "fonte": "IBGE, Pesquisa da Pecuária Municipal (PPM), tabela 3939",
       "link": "https://sidra.ibge.gov.br/tabela/3939",
       "endpoint": "https://apisidra.ibge.gov.br/values/t/3939/n3/53/v/all/p/last%201/c79/allxt",
-      "extraido_em": "2026-11-24"
+      "extraido_em": "2026-11-25"
     }
   },
   "ride": {
@@ -655,9 +655,51 @@
     "fonte": "IBGE, Produção Agrícola Municipal (PAM), tabela 5457, valor total da produção",
     "link": "https://sidra.ibge.gov.br/tabela/5457",
     "endpoint": "https://apisidra.ibge.gov.br/values/t/5457/n6/5300108,5200100,5200175,5200258,5200308,5200605,5200803,5203203,5204003,5205307,5205497,5205513,5205802,5206206,5207907,5208004,5208608,5212501,5213053,5214606,5215231,5215603,5217302,5217609,5219753,5220009,5220686,5221858,5222203,5222302,3104502,3109303,3109451,3170404/v/215/p/last%201/c782/0",
-    "extraido_em": "2026-11-24"
+    "extraido_em": "2026-11-25"
   },
   "noticias": [
+    {
+      "titulo": "Frente fria avança e provoca temporais e chuva acima de 100 mm; veja previsão",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/frente-fria-avanca-e-provoca-temporais-e-chuva-acima-de-100-mm-veja-previsao/"
+    },
+    {
+      "titulo": "CNA debate conservação de vicinais e prioridades para a BR-319",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/cna-debate-conservacao-de-vicinais-e-prioridades-para-a-br-319/"
+    },
+    {
+      "titulo": "Máximas devem chegar a 36 °C em três municípios de Roraima",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/rr/maximas-devem-chegar-a-36-c-em-tres-municipios-de-roraima/"
+    },
+    {
+      "titulo": "Boi gordo: altas perdem força com escalas de abate mais confortáveis",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-altas-perdem-forca-com-escalas-de-abate-mais-confortaveis/"
+    },
+    {
+      "titulo": "FPA recebe novos parlamentares e inicia articulação para comando em 2027",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/fpa-recebe-novos-parlamentares-e-inicia-articulacao-para-comando-em-2027/"
+    },
+    {
+      "titulo": "Mineradora é multada em R$ 16,9 milhões por poluição de rios no Pará",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-24",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/diversos/mineradora-e-multada-em-r-169-milhoes-por-poluicao-de-rios-no-para/"
+    },
     {
       "titulo": "Lei antidesmatamento da UE: Aprosoja alerta para risco de ‘transtornos e multas’ na comercialização de soja",
       "veiculo": "Canal Rural",
@@ -685,6 +727,13 @@
       "data": "2026-11-24",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/ministro-critica-adiamento-da-ue-sobre-retorno-do-brasil-em-aves-e-mel/"
+    },
+    {
+      "titulo": "Plano busca fortalecer protagonismo das mulheres no agronegócio",
+      "veiculo": "Agência Brasil",
+      "data": "2026-11-24",
+      "tema": "Economia",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/plano-busca-fortalecer-protagonismo-das-mulheres-no-agronegocio"
     },
     {
       "titulo": "CNI critica ajuste fiscal e vê impacto sobre investimento das empresas",
@@ -748,55 +797,6 @@
       "data": "2026-11-24",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/temporal-atinge-440-propriedades-e-provoca-perdas-de-ate-95-em-lavouras-de-soja-em-cidade-do-sul-saiba-qual/"
-    },
-    {
-      "titulo": "Crédito Fundiário entrega imóveis rurais a 69 famílias no Ceará",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/credito-fundiario-entrega-imoveis-rurais-a-69-familias-no-ceara/"
-    },
-    {
-      "titulo": "Cecafé discute uso da Plataforma AB+S para atender exigências do mercado externo",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/cecafe-discute-uso-da-plataforma-abs-para-atender-exigencias-do-mercado-externo/"
-    },
-    {
-      "titulo": "Mapa lança programa nacional para conservação de recursos genéticos",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/mapa-lanca-programa-nacional-para-conservacao-de-recursos-geneticos/"
-    },
-    {
-      "titulo": "Fonterra eleva projeção de preço ao produtor para a temporada 2026/27",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/fonterra-eleva-projecao-de-preco-ao-produtor-para-a-temporada-2026-27/"
-    },
-    {
-      "titulo": "Caravana da Adapar sobre uso de defensivos agrícolas começa em Curitiba e região metropolitana",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/caravana-da-adapar-sobre-uso-de-defensivos-agricolas-comeca-em-curitiba-e-regiao-metropolitana/"
-    },
-    {
-      "titulo": "Soja sobe em Chicago, mas avanço do plantio no Brasil limita ganhos",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/soja/soja-sobe-em-chicago-mas-avanco-do-plantio-no-brasil-limita-ganhos/"
-    },
-    {
-      "titulo": "Exportações do agro aos países árabes crescem 15,94% em outubro",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/exportacoes-do-agro-aos-paises-arabes-crescem-1594-em-outubro/"
     }
   ],
   "cartoes": [
@@ -875,7 +875,7 @@
           "fonte": "IBGE, PIB dos Municípios, tabela 5938",
           "link": "https://sidra.ibge.gov.br/tabela/5938",
           "endpoint": "https://apisidra.ibge.gov.br/values/t/5938/n6/5300108,5200100,5200175,5200258,5200308,5200605,5200803,5203203,5204003,5205307,5205497,5205513,5205802,5206206,5207907,5208004,5208608,5212501,5213053,5214606,5215231,5215603,5217302,5217609,5219753,5220009,5220686,5221858,5222203,5222302,3104502,3109303,3109451,3170404/v/37/p/last%201",
-          "extraido_em": "2026-11-24",
+          "extraido_em": "2026-11-25",
           "automatico": true
         },
         {
@@ -918,7 +918,7 @@
           "fonte": "IBGE, PIB dos Municípios, tabela 5938",
           "link": "https://sidra.ibge.gov.br/tabela/5938",
           "endpoint": "https://apisidra.ibge.gov.br/values/t/5938/n1/all/n3/53/n6/5300108,5200100,5200175,5200258,5200308,5200605,5200803,5203203,5204003,5205307,5205497,5205513,5205802,5206206,5207907,5208004,5208608,5212501,5213053,5214606,5215231,5215603,5217302,5217609,5219753,5220009,5220686,5221858,5222203,5222302,3104502,3109303,3109451,3170404/v/513,517,6575,525/p/last%206",
-          "extraido_em": "2026-11-24",
+          "extraido_em": "2026-11-25",
           "automatico": true
         },
         {
@@ -983,7 +983,7 @@
           "fonte": "MDIC/Secex, ComexStat, exportações por município",
           "link": "https://comexstat.mdic.gov.br/pt/municipio",
           "endpoint": "https://api-comexstat.mdic.gov.br/cities",
-          "extraido_em": "2026-11-24",
+          "extraido_em": "2026-11-25",
           "automatico": true
         }
       ]
@@ -1029,7 +1029,7 @@
           "link": "https://comexstat.mdic.gov.br/pt/geral",
           "endpoint": "https://api-comexstat.mdic.gov.br/general",
           "link2": "https://indicadores.agricultura.gov.br/agrostat/index.htm",
-          "extraido_em": "2026-11-24",
+          "extraido_em": "2026-11-25",
           "automatico": true
         },
         {
@@ -1079,7 +1079,7 @@
           "fonte": "MDIC/Secex, ComexStat",
           "link": "https://comexstat.mdic.gov.br/pt/geral",
           "endpoint": "https://api-comexstat.mdic.gov.br/general",
-          "extraido_em": "2026-11-24",
+          "extraido_em": "2026-11-25",
           "automatico": true
         },
         {
@@ -1134,7 +1134,7 @@
           "fonte": "MDIC/Secex, ComexStat, bloco União Europeia",
           "link": "https://comexstat.mdic.gov.br/pt/geral",
           "endpoint": "https://api-comexstat.mdic.gov.br/general",
-          "extraido_em": "2026-11-24",
+          "extraido_em": "2026-11-25",
           "automatico": true
         }
       ]
@@ -1203,7 +1203,7 @@
           "fonte": "USDA/FAS, Production, Supply and Distribution (PSD Online)",
           "link": "https://apps.fas.usda.gov/psdonline/app/index.html#/app/downloads",
           "endpoint": "https://apps.fas.usda.gov/psdonline/downloads/psd_{oilseeds,grains_pulses,livestock}_csv.zip",
-          "extraido_em": "2026-11-24",
+          "extraido_em": "2026-11-25",
           "automatico": true
         },
         {
@@ -1222,38 +1222,31 @@
           "linhas": [
             [
               "Carcaça bovina (classe R3)",
-              667.51,
+              649.62,
               "€/100Kg",
               "09/11/2026",
-              9.7
+              1.1
             ],
             [
               "Carcaça suína (classe E)",
-              141.85,
+              141.78,
               "100 KG",
               "09/11/2026",
-              -5.8
-            ],
-            [
-              "Frango inteiro",
-              287.43,
-              "national currency/100kg",
-              "09/11/2026",
-              -54.4
+              -8.6
             ],
             [
               "Leite cru ao produtor",
-              44.54,
+              45.16,
               "100KG",
-              "01/09/2026",
-              -24.2
+              "01/10/2026",
+              -23.1
             ]
           ],
-          "nota": "",
+          "nota": "Sem dados recentes para: Frango inteiro.",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
-          "extraido_em": "2026-11-24",
+          "extraido_em": "2026-11-25",
           "automatico": true
         },
         {
@@ -1283,7 +1276,7 @@
           "fonte": "USDA, Comissão Europeia, OCDE/FAO e MAPA",
           "link": "https://www.ers.usda.gov/topics/farm-economy/agricultural-baseline-projections",
           "endpoint": "links para os relatórios oficiais (publicação anual)",
-          "extraido_em": "2026-11-24"
+          "extraido_em": "2026-11-25"
         }
       ]
     }
