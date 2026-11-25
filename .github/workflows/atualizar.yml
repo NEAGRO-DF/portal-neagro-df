@@ -29,7 +29,7 @@ jobs:
       - name: Indicadores de economia, comércio exterior e mercado mundial
         run: python scripts/atualizar_indicadores.py
         timeout-minutes: 15
-      - name: Ler o painel NEAGRO-DF (relações de troca e GTA)
+      - name: Ler o painel NEAGRO-DF (relações de troca, GTA, rebanhos por UF e comércio exterior)
         run: node scripts/painel.js
         env:
           PAINEL_URL: ${{ secrets.PAINEL_URL }}
@@ -41,7 +41,7 @@ jobs:
         run: |
           git config user.name "robo-neagro"
           git config user.email "robo-neagro@users.noreply.github.com"
-          git add data/dados.json data/painel.json data/boletins.json index.html boletins/
+          git add data/dados.json data/painel.json data/painel_quadros.json data/boletins.json index.html boletins/
           git diff --cached --quiet || git commit -m "Atualização automática dos dados $(date -u +%F)"
           git push
       - name: Conferir a integração com o painel
