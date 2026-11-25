@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-25T16:38-03:00",
+  "atualizado_em": "2026-11-25T16:45-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,27 @@
   },
   "noticias": [
     {
+      "titulo": "Movimentação de soja no Porto de Rio Grande cresce 14,4% até outubro",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/movimentacao-de-soja-no-porto-de-rio-grande-cresce-144-ate-outubro/"
+    },
+    {
+      "titulo": "Temporais afetam 40 municípios e deixam quatro mortos no Paraná",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/diversos/temporais-afetam-40-municipios-e-deixam-quatro-mortos-no-parana/"
+    },
+    {
+      "titulo": "Proteção de cultivares avança no Senado com prazo maior para variedades de ciclo longo",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/protecao-de-cultivares-avanca-no-senado-com-prazo-maior-para-variedades-de-ciclo-longo/"
+    },
+    {
       "titulo": "Fim de ano será de calorão ou frio? Previsão aponta contrastes no clima e alerta para risco de enchentes e deslizamentos",
       "veiculo": "Canal Rural",
       "data": "2026-11-25",
@@ -776,27 +797,6 @@
       "data": "2026-11-25",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/arroz/el-nino-e-exportacoes-pressionam-preco-do-arroz/"
-    },
-    {
-      "titulo": "Dólar perto de R$ 6 eleva custo da indústria de insumos agrícolas",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/dolar-perto-de-r-6-eleva-custo-da-industria-de-insumos-agricolas/"
-    },
-    {
-      "titulo": "Colheita de grãos na Ucrânia atinge 85% da área semeada",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/colheita-de-graos-na-ucrania-atinge-85-da-area-semeada/"
-    },
-    {
-      "titulo": "Ministério do Turismo lança 24 experiências em assentamentos da reforma agrária",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/ministerio-do-turismo-lanca-24-experiencias-em-assentamentos-da-reforma-agraria/"
     }
   ],
   "cartoes": [

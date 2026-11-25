@@ -1,6 +1,6 @@
 {
  "versao_painel": "v5.19",
- "mes_aprovado": "set/26",
+ "mes_aprovado": "out/26",
  "extraido_em": "2026-11-25",
  "producao": [
   {
@@ -386,7 +386,8 @@
    "jun/26",
    "jul/26",
    "ago/26",
-   "set/26"
+   "set/26",
+   "out/26"
   ],
   "entrada": {
    "total": [
@@ -410,7 +411,8 @@
     4408,
     4682,
     7997,
-    7191
+    7191,
+    4790
    ],
    "abate": [
     1925,
@@ -433,7 +435,8 @@
     1852,
     1860,
     2295,
-    2720
+    2720,
+    1000
    ],
    "engorda": [
     2000,
@@ -456,7 +459,8 @@
     2494,
     2784,
     5680,
-    4450
+    4450,
+    3790
    ]
   },
   "saida": {
@@ -481,7 +485,8 @@
     13276,
     13701,
     14326,
-    16294
+    16294,
+    13481
    ],
    "abate": [
     7138,
@@ -504,7 +509,8 @@
     10872,
     9922,
     11544,
-    11346
+    11346,
+    9679
    ],
    "engorda": [
     1352,
@@ -527,7 +533,8 @@
     2137,
     3628,
     2535,
-    4823
+    4823,
+    3674
    ]
   },
   "interno": {
@@ -552,7 +559,8 @@
     28607,
     32708,
     34740,
-    35302
+    35302,
+    35262
    ],
    "abate": [
     10452,
@@ -575,7 +583,8 @@
     10008,
     11469,
     10618,
-    11123
+    11123,
+    10286
    ],
    "engorda": [
     21080,
@@ -598,51 +607,52 @@
     18599,
     21239,
     24122,
-    24179
+    24179,
+    24976
    ]
   },
   "destinos": [
    {
     "uf": "GO",
     "nome": "Goiás",
-    "ultimos12": 74860
+    "ultimos12": 70480
    },
    {
     "uf": "BA",
     "nome": "Bahia",
-    "ultimos12": 30152
+    "ultimos12": 29800
    },
    {
     "uf": "CE",
     "nome": "Ceará",
-    "ultimos12": 24170
+    "ultimos12": 25500
    },
    {
     "uf": "SP",
     "nome": "São Paulo",
-    "ultimos12": 17596
+    "ultimos12": 16797
    },
    {
     "uf": "MG",
     "nome": "Minas Gerais",
-    "ultimos12": 11411
+    "ultimos12": 11568
    }
   ],
   "origens": [
    {
     "uf": "GO",
     "nome": "Goiás",
-    "ultimos12": 39102
+    "ultimos12": 33610
    },
    {
     "uf": "MT",
     "nome": "Mato Grosso",
-    "ultimos12": 19870
+    "ultimos12": 19862
    },
    {
     "uf": "MG",
     "nome": "Minas Gerais",
-    "ultimos12": 4246
+    "ultimos12": 4216
    }
   ],
   "fonte": "SEAGRI-DF, Guias de Trânsito Animal (GTA) de suínos emitidas e recebidas no DF, compiladas pelo NEAGRO-DF",
@@ -943,77 +953,77 @@
    "titulo": "Pescado (capítulo 03 da NCM)",
    "fonte": "MDIC/Secex, Comex Stat",
    "link": "https://comexstat.mdic.gov.br/pt/geral",
-   "de": "out/25",
-   "ate": "set/26",
+   "de": "nov/25",
+   "ate": "out/26",
    "exportacao": {
-    "kg": 6070631,
-    "usd": 41523012,
+    "kg": 5867208,
+    "usd": 41116798,
     "paises": [
      {
       "pais": "Estados Unidos",
-      "kg": 4589539,
-      "usd": 33704789
+      "kg": 4475260,
+      "usd": 33473779
      },
      {
       "pais": "Canadá",
-      "kg": 324096,
-      "usd": 2348617
-     },
-     {
-      "pais": "Peru",
-      "kg": 323003,
-      "usd": 1051655
-     },
-     {
-      "pais": "México",
-      "kg": 144462,
-      "usd": 877803
+      "kg": 300157,
+      "usd": 2212339
      },
      {
       "pais": "Vietnã",
-      "kg": 196926,
-      "usd": 670294
+      "kg": 267608,
+      "usd": 935264
      },
      {
-      "pais": "Argentina",
-      "kg": 79321,
-      "usd": 488414
+      "pais": "México",
+      "kg": 132486,
+      "usd": 817640
+     },
+     {
+      "pais": "Peru",
+      "kg": 160903,
+      "usd": 637091
+     },
+     {
+      "pais": "Colômbia",
+      "kg": 101590,
+      "usd": 460746
      }
     ]
    },
    "importacao": {
-    "kg": 118657396,
-    "usd": 422573264,
+    "kg": 121674427,
+    "usd": 434956832,
     "paises": [
      {
       "pais": "Vietnã",
-      "kg": 76275030,
-      "usd": 230545550
+      "kg": 79613307,
+      "usd": 241175066
      },
      {
       "pais": "Argentina",
-      "kg": 20515684,
-      "usd": 71881466
+      "kg": 20596530,
+      "usd": 73551390
      },
      {
       "pais": "Chile",
-      "kg": 6869579,
-      "usd": 49904933
+      "kg": 7000643,
+      "usd": 50034656
      },
      {
       "pais": "China",
-      "kg": 12644537,
-      "usd": 48785618
+      "kg": 12194331,
+      "usd": 49813744
      },
      {
       "pais": "Portugal",
-      "kg": 1084637,
-      "usd": 14414012
+      "kg": 1005285,
+      "usd": 13109325
      },
      {
       "pais": "Islândia",
-      "kg": 381986,
-      "usd": 2314550
+      "kg": 405986,
+      "usd": 2486395
      }
     ]
    }

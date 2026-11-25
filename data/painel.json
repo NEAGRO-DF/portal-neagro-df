@@ -1,248 +1,97 @@
 {
-  "mes": "set/26",
-  "mes_anterior": "ago/26",
+  "mes": "out/26",
+  "mes_anterior": "set/26",
   "base": "mai/26",
   "indices": {
-    "ipca": 0.82,
-    "igpdi": 1.5
+    "ipca": 0.14,
+    "igpdi": 1.15
   },
   "resumo": [
     {
       "item": "Milho (GO)",
-      "variacao": 9.53
+      "variacao": -6.08
     },
     {
       "item": "Farelo de soja (GO)",
-      "variacao": 29.53
+      "variacao": 0.07
     },
     {
       "item": "Suíno vivo (DF)",
-      "variacao": 6.07
-    },
-    {
-      "item": "Boi gordo (SP, Barretos, Scot)",
-      "variacao": 5.33
+      "variacao": 24.41
     },
     {
       "item": "Frango vivo (GO)",
-      "variacao": 8.35
+      "variacao": 3.05
     },
     {
       "item": "Ovo (GO)",
-      "variacao": -11.11
-    },
-    {
-      "item": "Leite (GO)",
-      "variacao": 0.7
+      "variacao": 4.09
     }
   ],
   "semaforo": [
     {
       "cadeia": "Suinocultura",
       "relacao": "Milho × suíno vivo (DF)",
-      "irt": 10.2308,
+      "irt": 8.6232,
       "casas": 1,
       "ler": "kg de suíno por saca de milho",
-      "media": 8.0145,
-      "meses": 21,
+      "media": 8.0421,
+      "meses": 22,
       "sinal": "desfavoravel",
       "conferir": false
     },
     {
       "cadeia": "Suinocultura",
       "relacao": "Farelo de soja × suíno vivo (DF)",
-      "irt": 361.1912,
+      "irt": 290.5368,
       "casas": 1,
       "ler": "kg de suíno por tonelada de farelo",
-      "media": 225.5148,
-      "meses": 21,
-      "sinal": "desfavoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Milho × boi gordo (GO)",
-      "irt": 0.1719,
-      "casas": 2,
-      "ler": "@ de boi por saca de milho",
-      "media": 0.1833,
-      "meses": 21,
-      "sinal": "favoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Milho × boi gordo (MG)",
-      "irt": 0.1862,
-      "casas": 2,
-      "ler": "@ de boi por saca de milho",
-      "media": 0.2077,
-      "meses": 21,
-      "sinal": "favoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Milho × boi gordo (MS)",
-      "irt": 0.1549,
-      "casas": 2,
-      "ler": "@ de boi por saca de milho",
-      "media": 0.1755,
-      "meses": 21,
-      "sinal": "favoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Milho × boi gordo (MT)",
-      "irt": 0.1495,
-      "casas": 2,
-      "ler": "@ de boi por saca de milho",
-      "media": 0.1595,
-      "meses": 21,
-      "sinal": "favoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Milho × boi gordo (PR)",
-      "irt": 0.1627,
-      "casas": 2,
-      "ler": "@ de boi por saca de milho",
-      "media": 0.1735,
-      "meses": 21,
-      "sinal": "favoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Milho × boi gordo (SC)",
-      "irt": 0.1748,
-      "casas": 2,
-      "ler": "@ de boi por saca de milho",
-      "media": 0.1896,
-      "meses": 21,
-      "sinal": "favoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Milho × boi gordo (SP)",
-      "irt": 0.1798,
-      "casas": 2,
-      "ler": "@ de boi por saca de milho",
-      "media": 0.1954,
-      "meses": 21,
-      "sinal": "favoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Farelo de soja × boi gordo (GO)",
-      "irt": 6.0331,
-      "casas": 2,
-      "ler": "@ de boi por tonelada de farelo",
-      "media": 5.5008,
-      "meses": 21,
-      "sinal": "desfavoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Farelo de soja × boi gordo (MT)",
-      "irt": 5.8523,
-      "casas": 2,
-      "ler": "@ de boi por tonelada de farelo",
-      "media": 5.2409,
-      "meses": 21,
-      "sinal": "desfavoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Farelo de soja × boi gordo (SC)",
-      "irt": 6.0724,
-      "casas": 2,
-      "ler": "@ de boi por tonelada de farelo",
-      "media": 5.9764,
-      "meses": 21,
-      "sinal": "normal",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de corte",
-      "relacao": "Farelo de soja × boi gordo (SP)",
-      "irt": 5.9769,
-      "casas": 2,
-      "ler": "@ de boi por tonelada de farelo",
-      "media": 5.5365,
-      "meses": 21,
+      "media": 228.4704,
+      "meses": 22,
       "sinal": "desfavoravel",
       "conferir": false
     },
     {
       "cadeia": "Avicultura de corte",
       "relacao": "Milho × frango vivo (GO)",
-      "irt": 10.4677,
+      "irt": 9.5409,
       "casas": 1,
       "ler": "kg de frango por saca de milho",
-      "media": 10.1837,
-      "meses": 21,
-      "sinal": "normal",
+      "media": 10.1545,
+      "meses": 22,
+      "sinal": "favoravel",
       "conferir": false
     },
     {
       "cadeia": "Avicultura de corte",
       "relacao": "Farelo de soja × frango vivo (GO)",
-      "irt": 367.3405,
+      "irt": 356.7287,
       "casas": 1,
       "ler": "kg de frango por tonelada de farelo",
-      "media": 307.7307,
-      "meses": 21,
+      "media": 309.9579,
+      "meses": 22,
       "sinal": "desfavoravel",
       "conferir": false
     },
     {
       "cadeia": "Avicultura de postura",
       "relacao": "Milho × ovo (GO)",
-      "irt": 13.275,
+      "irt": 11.9782,
       "casas": 2,
       "ler": "dúzias de ovos por saca de milho",
-      "media": 10.118,
-      "meses": 21,
+      "media": 10.2025,
+      "meses": 22,
       "sinal": "desfavoravel",
       "conferir": false
     },
     {
       "cadeia": "Avicultura de postura",
       "relacao": "Farelo de soja × ovo (GO)",
-      "irt": 465.8545,
+      "irt": 447.8581,
       "casas": 1,
       "ler": "dúzias de ovos por tonelada de farelo",
-      "media": 307.6967,
-      "meses": 21,
-      "sinal": "desfavoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de leite",
-      "relacao": "Milho × leite (GO)",
-      "irt": 20.2813,
-      "casas": 2,
-      "ler": "litros de leite por saca de milho",
-      "media": 22.2576,
-      "meses": 21,
-      "sinal": "favoravel",
-      "conferir": false
-    },
-    {
-      "cadeia": "Bovinocultura de leite",
-      "relacao": "Farelo de soja × leite (GO)",
-      "irt": 711.7222,
-      "casas": 1,
-      "ler": "litros de leite por tonelada de farelo",
-      "media": 672.5602,
-      "meses": 21,
+      "media": 314.0677,
+      "meses": 22,
       "sinal": "desfavoravel",
       "conferir": false
     }
@@ -250,64 +99,56 @@
   "precos": {
     "suino": {
       "nome": "Suíno vivo DF",
-      "valor": 5.675,
+      "valor": 7.06,
       "unidade": "R$/kg",
       "casas": 2,
-      "variacao": 6.07
+      "variacao": 24.41
     },
     "milho": {
       "nome": "Milho DF",
-      "valor": 58.06,
+      "valor": 60.88,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "variacao": 8.58
+      "variacao": 4.86
     },
     "soja": {
       "nome": "Soja DF",
-      "valor": 142.27,
+      "valor": 143.91,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "variacao": 8.6
+      "variacao": 1.15
     },
     "ovo": {
       "nome": "Ovo DF",
-      "valor": 4.3623,
+      "valor": 4.44,
       "unidade": "R$/dúzia",
       "casas": 2,
-      "variacao": -2.04
-    },
-    "leite": {
-      "nome": "Leite DF",
-      "valor": 2.76,
-      "unidade": "R$/litro",
-      "casas": 2,
-      "variacao": 1.1
+      "variacao": 1.78
     },
     "frango": {
       "nome": "Frango vivo GO",
-      "valor": 5.58,
+      "valor": 5.75,
       "unidade": "R$/kg",
       "casas": 2,
-      "variacao": 8.35
+      "variacao": 3.05
     },
     "tilapia": {
       "nome": "Tilápia (Grandes Lagos)",
-      "valor": 9.48,
+      "valor": 9.44,
       "unidade": "R$/kg",
       "casas": 2,
-      "variacao": -0.32
+      "variacao": -0.42
     },
     "farelo": {
       "nome": "Farelo de soja GO",
-      "valor": 2049.76,
+      "valor": 2051.19,
       "unidade": "R$/t",
       "casas": 2,
-      "variacao": 29.53
+      "variacao": 0.07
     }
   },
   "series": {
     "meses": [
-      "set/25",
       "out/25",
       "nov/25",
       "dez/25",
@@ -319,11 +160,11 @@
       "jun/26",
       "jul/26",
       "ago/26",
-      "set/26"
+      "set/26",
+      "out/26"
     ],
     "irt": {
       "Milho × suíno vivo (DF)": [
-        6.0188,
         6.3345,
         6.0523,
         6.5205,
@@ -335,10 +176,10 @@
         8.9112,
         9.0799,
         9.9944,
-        10.2308
+        10.2308,
+        8.6232
       ],
       "Milho × boi gordo (SP)": [
-        0.1978,
         0.1905,
         0.1864,
         0.1982,
@@ -350,10 +191,10 @@
         0.1745,
         0.1731,
         0.1786,
-        0.1798
+        0.1798,
+        null
       ],
       "Milho × frango vivo (GO)": [
-        8.6451,
         8.2672,
         8.9951,
         10.3869,
@@ -365,10 +206,10 @@
         9.7423,
         9.7907,
         10.3553,
-        10.4677
+        10.4677,
+        9.5409
       ],
       "Milho × ovo (GO)": [
-        9.5945,
         9.983,
         10.4863,
         12.9275,
@@ -380,10 +221,10 @@
         9.2954,
         9.7154,
         10.7737,
-        13.275
+        13.275,
+        11.9782
       ],
       "Milho × leite (GO)": [
-        19.3792,
         20.668,
         23.9739,
         27.4976,
@@ -395,12 +236,12 @@
         18.3551,
         18.2383,
         18.6469,
-        20.2813
+        20.2813,
+        null
       ]
     },
     "precos": {
       "sdf": [
-        9.05,
         8.64,
         8.8,
         8.8,
@@ -412,10 +253,10 @@
         6.025,
         5.88,
         5.35,
-        5.675
+        5.675,
+        7.06
       ],
       "milho_df": [
-        54.47,
         54.73,
         53.26,
         57.38,
@@ -427,10 +268,10 @@
         53.69,
         53.39,
         53.47,
-        58.06
+        58.06,
+        60.88
       ],
       "ovdf": [
-        4.998,
         4.4877,
         4.3733,
         4.4753,
@@ -442,10 +283,10 @@
         5.3333,
         4.829,
         4.4533,
-        4.3623
+        4.3623,
+        4.44
       ],
       "ledf": [
-        2.65,
         2.5,
         2.43,
         2.3,
@@ -457,7 +298,8 @@
         2.65,
         2.67,
         2.73,
-        2.76
+        2.76,
+        null
       ]
     }
   },
@@ -469,46 +311,161 @@
     "Milho × ovo (GO)"
   ],
   "gta_suinos": {
-    "entrada": 7191,
-    "saida": 16294
+    "entrada": 4790,
+    "saida": 13481
   },
-  "meses_registrados": 21,
+  "meses_registrados": 22,
   "relacoes_esperadas": 19,
-  "alertas": [],
+  "pendentes": [
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Milho × boi gordo (GO)"
+    },
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Milho × boi gordo (MG)"
+    },
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Milho × boi gordo (MS)"
+    },
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Milho × boi gordo (MT)"
+    },
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Milho × boi gordo (PR)"
+    },
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Milho × boi gordo (SC)"
+    },
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Milho × boi gordo (SP)"
+    },
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Farelo de soja × boi gordo (GO)"
+    },
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Farelo de soja × boi gordo (MT)"
+    },
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Farelo de soja × boi gordo (SC)"
+    },
+    {
+      "cadeia": "Bovinocultura de corte",
+      "relacao": "Farelo de soja × boi gordo (SP)"
+    },
+    {
+      "cadeia": "Bovinocultura de leite",
+      "relacao": "Milho × leite (GO)"
+    },
+    {
+      "cadeia": "Bovinocultura de leite",
+      "relacao": "Farelo de soja × leite (GO)"
+    }
+  ],
+  "alertas": [
+    {
+      "tipo": "pendente",
+      "campo": "ub_go",
+      "mes": "out/26",
+      "texto": "Campo ub_go lançado nos meses anteriores e ainda sem valor em out/26 (lançamento pendente; o portal mostra a relação como em atualização)."
+    },
+    {
+      "tipo": "pendente",
+      "campo": "ub_mg",
+      "mes": "out/26",
+      "texto": "Campo ub_mg lançado nos meses anteriores e ainda sem valor em out/26 (lançamento pendente; o portal mostra a relação como em atualização)."
+    },
+    {
+      "tipo": "pendente",
+      "campo": "ub_ms",
+      "mes": "out/26",
+      "texto": "Campo ub_ms lançado nos meses anteriores e ainda sem valor em out/26 (lançamento pendente; o portal mostra a relação como em atualização)."
+    },
+    {
+      "tipo": "pendente",
+      "campo": "ub_mt",
+      "mes": "out/26",
+      "texto": "Campo ub_mt lançado nos meses anteriores e ainda sem valor em out/26 (lançamento pendente; o portal mostra a relação como em atualização)."
+    },
+    {
+      "tipo": "pendente",
+      "campo": "ub_pr",
+      "mes": "out/26",
+      "texto": "Campo ub_pr lançado nos meses anteriores e ainda sem valor em out/26 (lançamento pendente; o portal mostra a relação como em atualização)."
+    },
+    {
+      "tipo": "pendente",
+      "campo": "ub_sc",
+      "mes": "out/26",
+      "texto": "Campo ub_sc lançado nos meses anteriores e ainda sem valor em out/26 (lançamento pendente; o portal mostra a relação como em atualização)."
+    },
+    {
+      "tipo": "pendente",
+      "campo": "ub_sp",
+      "mes": "out/26",
+      "texto": "Campo ub_sp lançado nos meses anteriores e ainda sem valor em out/26 (lançamento pendente; o portal mostra a relação como em atualização)."
+    },
+    {
+      "tipo": "pendente",
+      "campo": "lego",
+      "mes": "out/26",
+      "texto": "Campo lego lançado nos meses anteriores e ainda sem valor em out/26 (lançamento pendente; o portal mostra a relação como em atualização)."
+    },
+    {
+      "tipo": "pendente",
+      "campo": "scb_spbar",
+      "mes": "out/26",
+      "texto": "Campo scb_spbar lançado nos meses anteriores e ainda sem valor em out/26 (lançamento pendente; o portal mostra a relação como em atualização)."
+    },
+    {
+      "tipo": "pendente",
+      "campo": "ledf",
+      "mes": "out/26",
+      "texto": "Campo ledf lançado nos meses anteriores e ainda sem valor em out/26 (lançamento pendente; o portal mostra a relação como em atualização)."
+    }
+  ],
   "gta": {
-    "mes": "set/26",
+    "mes": "out/26",
     "parcial": null,
     "ate": null,
     "linhas": [
       {
         "especie": "Suínos",
-        "entrada": 7191,
-        "saida": 16294,
+        "entrada": 4790,
+        "saida": 13481,
         "interno": null
       },
       {
         "especie": "Bovinos",
-        "entrada": 1428,
-        "saida": 670,
-        "interno": 3212
+        "entrada": 501,
+        "saida": 924,
+        "interno": 2911
       },
       {
         "especie": "Aves vivas",
-        "entrada": 665233,
-        "saida": 8434369,
-        "interno": 9296664
+        "entrada": 577880,
+        "saida": 9329530,
+        "interno": 9604011
       },
       {
         "especie": "Caprinos",
-        "entrada": 270,
-        "saida": 19,
+        "entrada": 43,
+        "saida": 29,
         "interno": 0
       },
       {
         "especie": "Ovinos",
-        "entrada": 134,
-        "saida": 50,
-        "interno": 40
+        "entrada": 26,
+        "saida": 26,
+        "interno": 59
       }
     ]
   },
