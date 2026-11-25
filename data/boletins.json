@@ -1,8 +1,6 @@
 {
   "_instrucoes": "Os boletins da Produção Animal entram sozinhos: basta salvar o PDF na pasta do ano no Google Drive (link no 'acervo' da série) com o nome no padrão '6.035 - Boletim SUÍNOS - NEAGRO-DF - 28.11.2026.pdf'. O robô (scripts/boletins_drive.py) lê as pastas a cada execução e acrescenta os novos boletins em 'edicoes'. Ao abrir a pasta de um ano novo no Drive, acrescente o link dela no início do 'acervo' da série. Edições de outras séries (morango, tilápia) são lançadas à mão em 'edicoes', com os campos: serie, numero, data (AAAA-MM-DD), titulo, cadeias, resumo, destaques, pdf. O site destaca a edição mais recente. Para manter fora do portal um PDF que está na pasta do Drive (por exemplo, edição de mês ainda incompleto), inclua o link dele na lista 'ignorar'; para publicá-lo depois, retire o link dessa lista.",
   "ignorar": [
-    "https://drive.google.com/file/d/1EYeEvHPTZ_rlFfrGdtZnVytFqVb2NkX2/view",
-    "https://drive.google.com/file/d/1MNVOG3_1sddJc34e9Zf4s1eaJUt2GEx-/view",
     "https://drive.google.com/file/d/1JcRFaLauWF7KCu76DQWcKvK62ZI29XsG/view",
     "https://drive.google.com/file/d/1aJMDUV7yqURiejqghj0aIsrWkc7m6jP2/view",
     "https://drive.google.com/file/d/16S1ocV6dNaXXKOILa7t4NzXybSdJ7_hP/view",
