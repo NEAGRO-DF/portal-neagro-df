@@ -76,7 +76,9 @@ async function main() {
     resultado = calc.calcular(meses, lanc, indices);
     if (!resultado) throw new Error("nenhum mês com dados comuns (milho e farelo)");
     log(`semáforo de ${resultado.mes}: ${resultado.semaforo.length} relações, ${resultado.meses_registrados} meses registrados`);
-    if (resultado.semaforo.length < resultado.relacoes_esperadas)
+    const pend = (resultado.pendentes || []).length;
+    if (pend) log(`relações em atualização em ${resultado.mes}: ${resultado.pendentes.map(x => x.relacao).join("; ")}`);
+    if (resultado.semaforo.length + pend < resultado.relacoes_esperadas)
       resultado.alertas.push({ tipo: "estrutura", campo: null, mes: resultado.mes,
         texto: `Semáforo de ${resultado.mes} com ${resultado.semaforo.length} de ${resultado.relacoes_esperadas} relações. Conferir campos ausentes ou renomeados no painel.` });
   } catch (e) {
