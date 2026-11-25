@@ -43,7 +43,7 @@ TODAS = ["Suinocultura", "Bovinocultura de corte", "Bovinocultura de leite", "Av
          "Avicultura de postura", "Insumos"]
 CADEIAS = [
     (r"insumo", ["Insumos"]),
-    (r"caprin|ovin", ["Caprinocultura", "Ovinocultura"]),
+    (r"caprin|(?<![a-z])ovin", ["Caprinocultura", "Ovinocultura"]),  # "ovin" no início da palavra: BOVINOS não é ovino
     (r"pisci|til[aá]pia", ["Piscicultura"]),
     (r"corte e leite", ["Bovinocultura de corte", "Bovinocultura de leite"]),
     (r"bovino", ["Bovinocultura de corte"]),
