@@ -90,7 +90,7 @@
       var nunca = !meses.some(function (m) { return k in m; });
       var sumiu = !nunca && !(k in atual) && recentes.length && recentes.every(function (m) { return k in m; });
       if (nunca) alertas.push({ tipo: "estrutura", campo: k, mes: atual.mes, texto: "Campo " + k + " não existe na base do painel. O painel pode ter mudado o nome do campo; ajuste src/painel-calc.js." });
-      else if (sumiu) alertas.push({ tipo: "estrutura", campo: k, mes: atual.mes, texto: "Campo " + k + " lançado nos meses anteriores e ausente em " + atual.mes + " (lançamento pendente ou campo renomeado)." });
+      else if (sumiu) alertas.push({ tipo: "pendente", campo: k, mes: atual.mes, texto: "Campo " + k + " lançado nos meses anteriores e ainda sem valor em " + atual.mes + " (lançamento pendente; o portal mostra a relação como em atualização)." });
     });
     Object.keys(PRACAS).forEach(function (prod) {
       var ks = Object.keys(PRACAS[prod]).filter(function (k) { return pos(atual[k]); });
@@ -111,7 +111,7 @@
 
   function calcular(docsMeses, docsLanc, docsIndices) {
     // Último mês aprovado para publicação pelo NEAGRO-DF
-    var MES_APROVADO = "set/26";
+    var MES_APROVADO = "out/26";
 
     var meses = mesclar(docsMeses, docsLanc).filter(function (m) {
       return ordem(m.mes) <= ordem(MES_APROVADO);
@@ -130,14 +130,14 @@
       return ordem(m.mes) <= ordem(atual.mes);
     });
 
-    var semaforo = [], alertas = verificar(meses, atual, anterior);
+    var semaforo = [], pendentes = [], alertas = verificar(meses, atual, anterior);
 
 
 
     var suspeito = {}; alertas.forEach(function (a) { if (a.tipo === "valor") suspeito[a.campo] = 1; });
     RELACOES.forEach(function (r) {
       var serie = ate.filter(function (m) { return pos(m[r.a]) && pos(m[r.b]); }).map(function (m) { return m[r.a] / m[r.b]; });
-      if (!(pos(atual[r.a]) && pos(atual[r.b])) || !serie.length) return;
+      if (!(pos(atual[r.a]) && pos(atual[r.b])) || !serie.length) { pendentes.push({ cadeia: r.cadeia, relacao: r.relacao }); return; }
       var irt = atual[r.a] / atual[r.b];
       var media = serie.reduce(function (s, v) { return s + v; }, 0) / serie.length;
       var desvio = irt / media - 1;
@@ -170,6 +170,7 @@
       gta_suinos: pos(atual.gta_ent_tot) || pos(atual.gta_sai_tot) ? { entrada: atual.gta_ent_tot || 0, saida: atual.gta_sai_tot || 0 } : null,
       meses_registrados: comDados.length,
       relacoes_esperadas: RELACOES.length,
+      pendentes: pendentes,
       alertas: alertas
     };
   }
@@ -178,7 +179,7 @@
   var ESPECIES = [["bov", "Bovinos"], ["ave", "Aves vivas"], ["cap", "Caprinos"], ["ovi", "Ovinos"]];
   function gta(G, suinos, mesSuinos) {
     if (!G || !G.meses) return null;
-    var MES_APROVADO = "set/26";
+    var MES_APROVADO = "out/26";
     var i = G.meses.length - 1;
     while (i >= 0 && (ordem(G.meses[i]) > ordem(MES_APROVADO) || G.meses[i] === G.parcial)) {
       i -= 1;
