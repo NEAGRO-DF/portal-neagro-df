@@ -518,10 +518,7 @@ section[id]{scroll-margin-top:60px}
           <span class="eyebrow">Indicadores NEAGRO-DF</span>
           <h2 id="pn-titulo">Relações de troca do mês</h2> 
           
-<p style="background:#fff8e6;border-left:4px solid #d4a017;padding:12px 16px;border-radius:6px;margin:12px 0;color:#785600;">
-  <strong>Outubro de 2026: em atualização</strong><br>
-  Os dados de outubro estão em fase de consolidação e validação pela equipe NEAGRO-DF/UnB. Os indicadores apresentados correspondem ao último mês aprovado: setembro de 2026.
-</p>
+<p id="pn-aviso" hidden style="background:#fff8e6;border-left:4px solid #d4a017;padding:12px 16px;border-radius:6px;margin:12px 0;color:#785600;"></p>
 
           <p>Quanto o produtor precisa vender para comprar milho, o principal componente da ração. Quanto menor o índice, maior o poder de compra. O sinal compara o mês com a média dos meses acompanhados pelo núcleo.</p>
         </div>
@@ -935,7 +932,13 @@ function renderPainel(){
   const ix=P.indices||{};
   $("#pn-chips").innerHTML=[`Mês em análise: ${P.mes}`,ix.ipca!=null?`IPCA ${P.mes}: ${ix.ipca>0?"+":""}${fmt(ix.ipca,2)}%`:"",ix.igpdi!=null?`IGP-DI ${P.mes}: ${ix.igpdi>0?"+":""}${fmt(ix.igpdi,2)}%`:"",`${P.meses_registrados} meses acompanhados`].filter(Boolean).map(t=>`<span>${esc(t)}</span>`).join("");
   const dest=(P.destaques||[]).map(n=>P.semaforo.find(x=>x.relacao===n)).filter(Boolean);
-  $("#pn-kpis").innerHTML=dest.map(r=>{const dv=(r.irt/r.media-1)*100;
+  const pend=P.pendentes||[];
+  const av=$("#pn-aviso");
+  if(av){if(pend.length){const cad=[...new Set(pend.map(x=>x.cadeia.toLowerCase()))];const lista=cad.length>1?cad.slice(0,-1).join(", ")+" e "+cad[cad.length-1]:cad[0];
+    av.innerHTML=`<strong>${esc(mesExt(P.mes).replace(/^./,c=>c.toUpperCase()))}: ${esc(lista)} em atualização</strong><br>Os preços dessas cadeias ainda estão em lançamento e validação pela equipe NEAGRO-DF/UnB. As demais relações de troca de ${esc(mesExt(P.mes))} já estão aprovadas; ${pend.length} ${pend.length>1?"relações aparecem":"relação aparece"} como em atualização até a conclusão.`;av.hidden=false}else av.hidden=true}
+  const kpiPend=n=>`<div class="pn-kpi"><span class="k-n">${esc(n)}</span><span class="k-v">...</span><span class="k-u">em atualização</span><span class="note" style="font-size:.74rem">Preço de ${esc(mesExt(P.mes))} em lançamento pela equipe.</span></div>`;
+  const ordemK=(P.destaques||[]).filter(n=>dest.some(r=>r.relacao===n)||pend.some(x=>x.relacao===n));
+  $("#pn-kpis").innerHTML=ordemK.map(n=>{const r=dest.find(x=>x.relacao===n);if(!r)return kpiPend(n);const dv=(r.irt/r.media-1)*100;
     return `<div class="pn-kpi"><span class="k-n">${esc(r.relacao)}</span><span class="k-v">${fmt(r.irt,r.casas)}</span><span class="k-u">${esc(r.ler)}</span><span><span class="sig ${r.sinal}">${SIG[r.sinal]}</span> <span class="k-d note">${dv>=0?"+":""}${fmt(dv,1)}% sobre a média</span></span>${r.conferir?`<span class="note" style="font-size:.74rem">Valor em conferência pela equipe.</span>`:""}</div>`}).join("");
   const S=P.series||{meses:[],irt:{},precos:{}};
   if(!pnRel||!dest.some(r=>r.relacao===pnRel))pnRel=dest.length?dest[0].relacao:null;
@@ -949,7 +952,7 @@ function renderPainel(){
   $("#pn-resumo-sub").textContent=`Variação dos preços em relação a ${mesExt(P.mes_anterior)}`;
   $("#pn-resumo").innerHTML=(P.resumo||[]).map(r=>`<li><span>${esc(r.item)}</span><span class="delta ${r.variacao>=0?"up":"down"}">${r.variacao>=0?"▲":"▼"} ${fmt(Math.abs(r.variacao),1)}%</span></li>`).join("");
   const n=t=>P.semaforo.filter(x=>x.sinal===t).length;
-  $("#pn-cont-sub").textContent=`${P.semaforo.length} relações entre milho ou farelo de soja e suíno, boi, frango, ovo e leite, em várias praças.`;
+  $("#pn-cont-sub").textContent=`${P.semaforo.length} relações entre milho ou farelo de soja e suíno, boi, frango, ovo e leite, em várias praças${pend.length?`; ${pend.length} em atualização`:""}.`;
   $("#pn-cont").innerHTML=["favoravel","normal","desfavoravel"].map(t=>`<span class="sig ${t}">${n(t)} ${SIG[t].toLowerCase()}${n(t)===1?"":"s"}</span>`).join("");
   const SP=[["sdf","suino","R$/kg"],["milho_df","milho","R$/saca 60 kg"],["ovdf","ovo","R$/dúzia"],["ledf","leite","R$/litro"]];
   $("#pn-spark").innerHTML=SP.map(([k,c],i)=>{const x=pp(c);return x&&S.precos[k]?`<div class="card"><div class="s-n">${esc(x.nome)}</div><div class="s-v">R$ ${fmt(x.valor,x.casas)} <small class="note">${esc(x.unidade.replace("R$/","por "))}</small></div><div class="note" style="font-size:.78rem">${x.variacao!=null?`${x.variacao>=0?"▲ +":"▼ "}${fmt(x.variacao,1)}% sobre ${esc(P.mes_anterior)}`:""}</div><div id="pn-sp-${i}"></div></div>`:""}).join("");
