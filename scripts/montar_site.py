@@ -1,6 +1,6 @@
 """Monta o index.html do portal NEAGRO-DF.
 
-Insere o retrato mais recente de data/dados.json, data/boletins.json, data/fotos.json, data/contato.json e data/painel.json dentro da
+Insere o retrato mais recente de data/dados.json, data/boletins.json, data/fotos.json, data/contato.json, data/painel.json e data/painel_quadros.json dentro da
 página, para que ela funcione mesmo sem acesso aos arquivos JSON ou às APIs.
 
 Uso:  python scripts/montar_site.py
@@ -18,9 +18,11 @@ def main() -> None:
     fotos = json.loads((RAIZ / "data" / "fotos.json").read_text(encoding="utf-8"))
     contato = json.loads((RAIZ / "data" / "contato.json").read_text(encoding="utf-8"))
     painel = json.loads((RAIZ / "data" / "painel.json").read_text(encoding="utf-8"))
+    arq_q = RAIZ / "data" / "painel_quadros.json"
+    quadros = json.loads(arq_q.read_text(encoding="utf-8")) if arq_q.exists() else None
     calc = (RAIZ / "src" / "painel-calc.js").read_text(encoding="utf-8")
     seguro = lambda o: json.dumps(o, ensure_ascii=False).replace("</", "<\\/")
-    corpo = tpl.replace("/*DADOS*/", seguro(dados)).replace("/*BOLETINS*/", seguro(bol)).replace("/*FOTOS*/", seguro(fotos)).replace("/*CONTATO*/", seguro(contato)).replace("/*PAINEL*/", seguro(painel)).replace("/*PAINEL_CALC*/", calc)
+    corpo = tpl.replace("/*DADOS*/", seguro(dados)).replace("/*BOLETINS*/", seguro(bol)).replace("/*FOTOS*/", seguro(fotos)).replace("/*CONTATO*/", seguro(contato)).replace("/*PAINEL*/", seguro(painel)).replace("/*QUADROS*/", seguro(quadros)).replace("/*PAINEL_CALC*/", calc)
 
     # Versão completa para hospedagem (servidor da UnB, Netlify, GitHub Pages).
     # Elementos obrigatórios do Governo Federal: entram apenas na versão hospedada.
