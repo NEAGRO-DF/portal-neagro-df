@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-25T16:59-03:00",
+  "atualizado_em": "2026-11-25T17:11-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,34 @@
   },
   "noticias": [
     {
+      "titulo": "Petróleo sobe com tensões no Oriente Médio e avanço do risco geopolítico",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/petroleo-sobe-com-tensoes-no-oriente-medio-e-avanco-do-risco-geopolitico/"
+    },
+    {
+      "titulo": "Soja 2026/27: chuvas favorecem lavouras, mas custos e juros preocupam produtores em MT",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/soja-2026-27-chuvas-favorecem-lavouras-mas-custos-e-juros-preocupam-produtores-em-mt/"
+    },
+    {
+      "titulo": "JBS mira Omã e Indonésia como frentes de expansão",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/jbs-mira-oma-e-indonesia-como-frentes-de-expansao/"
+    },
+    {
+      "titulo": "IBGE encerra nesta quarta (25) inscrições para vagas ligadas ao Censo Agropecuário; veja como participar",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/nacional/ibge-encerra-nesta-quarta-25-inscricoes-para-vagas-ligadas-ao-censo-agropecuario-veja-como-participar/"
+    },
+    {
       "titulo": "Movimentação de soja no Porto de Rio Grande cresce 14,4% até outubro",
       "veiculo": "Canal Rural",
       "data": "2026-11-25",
@@ -769,34 +797,6 @@
       "data": "2026-11-25",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/politica/waldez-goes-diz-que-brasil-sofre-efeitos-da-falta-de-compromisso-climatico-de-outros-paises/"
-    },
-    {
-      "titulo": "EUA abrem consulta para elevar tarifas sobre açúcar do Brasil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/eua-abrem-consulta-para-elevar-tarifas-sobre-acucar-do-brasil/"
-    },
-    {
-      "titulo": "CNA alerta para aumento da carga com alíquota de 11,3% da CBS",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/cna-alerta-para-aumento-da-carga-com-aliquota-de-113-da-cbs/"
-    },
-    {
-      "titulo": "Santander rebaixa Petrobras para neutra e corta preço-alvo da ação ON",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/santander-rebaixa-petrobras-para-neutra-e-corta-preco-alvo-da-acao-on/"
-    },
-    {
-      "titulo": "El Niño e exportações pressionam preço do arroz",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/arroz/el-nino-e-exportacoes-pressionam-preco-do-arroz/"
     }
   ],
   "cartoes": [
