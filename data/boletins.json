@@ -169,7 +169,9 @@
     "https://drive.google.com/file/d/1mOPKOXfLzIH9otfHwabWqX0cPnAdZ_Hh/view",
     "https://drive.google.com/file/d/1wemXCpzJc5eaa07IetmaB6zKZj29nzsL/view",
     "https://drive.google.com/file/d/1uCieV27wn95EDjAIKIV8Kpnk3qdwRELz/view",
-    "https://drive.google.com/file/d/12QyWxPYmxO0W6a5QtG69QhTr022for-_/view"
+    "https://drive.google.com/file/d/12QyWxPYmxO0W6a5QtG69QhTr022for-_/view",
+    "https://drive.google.com/file/d/1MbDGRTpl_ZQybrdMjDHuGcAPICOU0eTT/view",
+    "https://drive.google.com/file/d/1kfdhVFJirOBxJO0gHHHUzN3PoCoddtkx/view"
   ],
   "series": [
     {
@@ -382,22 +384,6 @@
     },
     {
       "serie": "animal",
-      "numero": "6.0252",
-      "data": "2026-10-15",
-      "titulo": "Boletim de Mercado NEAGRO-DF: Bovinocultura de corte e de leite, setembro de 2026",
-      "cadeias": [
-        "Bovinocultura de corte",
-        "Bovinocultura de leite"
-      ],
-      "resumo": "Mês de referência: setembro de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
-      "destaques": [],
-      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0252-boletim-bovinos-corte-e-leite-neagro-df-2026-10-15.pdf",
-      "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1MbDGRTpl_ZQybrdMjDHuGcAPICOU0eTT/view",
-      "designacao": "Vol. 4, No. 9 (set. 2026)"
-    },
-    {
-      "serie": "animal",
       "numero": "6.0251",
       "data": "2026-10-15",
       "titulo": "Boletim de Mercado NEAGRO-DF: Insumos (milho, farelo de soja, sorgo e soja), setembro de 2026",
@@ -487,22 +473,6 @@
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0243-boletim-suinos-neagro-df-2026-09-15.pdf",
       "origem": "manual",
       "pdf_original": "https://drive.google.com/file/d/11jRkVcJg8I2x68593wZY1hoIQN88lhJH/view",
-      "designacao": "Vol. 4, No. 8 (ago. 2026)"
-    },
-    {
-      "serie": "animal",
-      "numero": "6.0242",
-      "data": "2026-09-15",
-      "titulo": "Boletim de Mercado NEAGRO-DF: Bovinocultura de corte e de leite, agosto de 2026",
-      "cadeias": [
-        "Bovinocultura de corte",
-        "Bovinocultura de leite"
-      ],
-      "resumo": "Mês de referência: agosto de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
-      "destaques": [],
-      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0242-boletim-bovinos-corte-e-leite-neagro-df-2026-09-15.pdf",
-      "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1kfdhVFJirOBxJO0gHHHUzN3PoCoddtkx/view",
       "designacao": "Vol. 4, No. 8 (ago. 2026)"
     },
     {
