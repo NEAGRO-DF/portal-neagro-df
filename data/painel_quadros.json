@@ -1,0 +1,1071 @@
+{
+ "versao_painel": "v5.19",
+ "mes_aprovado": "set/26",
+ "extraido_em": "2026-11-25",
+ "producao": [
+  {
+   "id": "REBANHO_BOV",
+   "nome": "Rebanho bovino",
+   "ano": "2025",
+   "unidade": "cabeças",
+   "brasil": 234251041,
+   "df": 76003,
+   "df_pct": 0.03,
+   "df_posicao": 26,
+   "ufs_com_dado": 27,
+   "maiores": [
+    {
+     "uf": "MT",
+     "nome": "Mato Grosso",
+     "valor": 31645874,
+     "pct": 13.5
+    },
+    {
+     "uf": "PA",
+     "nome": "Pará",
+     "valor": 25559452,
+     "pct": 10.9
+    },
+    {
+     "uf": "GO",
+     "nome": "Goiás",
+     "valor": 22494716,
+     "pct": 9.6
+    },
+    {
+     "uf": "MG",
+     "nome": "Minas Gerais",
+     "valor": 22102505,
+     "pct": 9.4
+    },
+    {
+     "uf": "MS",
+     "nome": "Mato Grosso do Sul",
+     "valor": 17946309,
+     "pct": 7.7
+    }
+   ],
+   "fonte": "IBGE, PPM, Tabela 3939",
+   "link": "https://sidra.ibge.gov.br/tabela/3939"
+  },
+  {
+   "id": "VACAS_ORD",
+   "nome": "Vacas ordenhadas",
+   "ano": "2025",
+   "unidade": "cabeças",
+   "brasil": 14681416,
+   "df": 12598,
+   "df_pct": 0.09,
+   "df_posicao": 26,
+   "ufs_com_dado": 27,
+   "maiores": [
+    {
+     "uf": "MG",
+     "nome": "Minas Gerais",
+     "valor": 2963271,
+     "pct": 20.2
+    },
+    {
+     "uf": "GO",
+     "nome": "Goiás",
+     "valor": 1373906,
+     "pct": 9.4
+    },
+    {
+     "uf": "PR",
+     "nome": "Paraná",
+     "valor": 1117187,
+     "pct": 7.6
+    },
+    {
+     "uf": "RS",
+     "nome": "Rio Grande do Sul",
+     "valor": 1009282,
+     "pct": 6.9
+    },
+    {
+     "uf": "BA",
+     "nome": "Bahia",
+     "valor": 885837,
+     "pct": 6
+    }
+   ],
+   "fonte": "IBGE, PPM, Tabela 94",
+   "link": "https://sidra.ibge.gov.br/tabela/94"
+  },
+  {
+   "id": "PROD_LEITE",
+   "nome": "Produção de leite",
+   "ano": "2025",
+   "unidade": "mil litros",
+   "brasil": 36684276,
+   "df": 32598,
+   "df_pct": 0.09,
+   "df_posicao": 25,
+   "ufs_com_dado": 27,
+   "maiores": [
+    {
+     "uf": "MG",
+     "nome": "Minas Gerais",
+     "valor": 10070127,
+     "pct": 27.5
+    },
+    {
+     "uf": "PR",
+     "nome": "Paraná",
+     "valor": 4800868,
+     "pct": 13.1
+    },
+    {
+     "uf": "RS",
+     "nome": "Rio Grande do Sul",
+     "valor": 4237264,
+     "pct": 11.6
+    },
+    {
+     "uf": "SC",
+     "nome": "Santa Catarina",
+     "valor": 3432778,
+     "pct": 9.4
+    },
+    {
+     "uf": "GO",
+     "nome": "Goiás",
+     "valor": 2906910,
+     "pct": 7.9
+    }
+   ],
+   "fonte": "IBGE, PPM, Tabela 74",
+   "link": "https://sidra.ibge.gov.br/tabela/74"
+  },
+  {
+   "id": "SUI_REB",
+   "nome": "Rebanho suíno",
+   "ano": "2025",
+   "unidade": "cabeças",
+   "brasil": 43993601,
+   "df": 146753,
+   "df_pct": 0.33,
+   "df_posicao": 23,
+   "ufs_com_dado": 27,
+   "maiores": [
+    {
+     "uf": "SC",
+     "nome": "Santa Catarina",
+     "valor": 9350304,
+     "pct": 21.3
+    },
+    {
+     "uf": "PR",
+     "nome": "Paraná",
+     "valor": 7047439,
+     "pct": 16
+    },
+    {
+     "uf": "RS",
+     "nome": "Rio Grande do Sul",
+     "valor": 6375913,
+     "pct": 14.5
+    },
+    {
+     "uf": "MG",
+     "nome": "Minas Gerais",
+     "valor": 5760042,
+     "pct": 13.1
+    },
+    {
+     "uf": "MT",
+     "nome": "Mato Grosso",
+     "valor": 2092539,
+     "pct": 4.8
+    }
+   ],
+   "fonte": "IBGE, PPM, Tabela 3939",
+   "link": "https://sidra.ibge.gov.br/tabela/3939"
+  },
+  {
+   "id": "SUI_MAT",
+   "nome": "Matrizes de suínos",
+   "ano": "2025",
+   "unidade": "cabeças",
+   "brasil": 4962901,
+   "df": 16582,
+   "df_pct": 0.33,
+   "df_posicao": 22,
+   "ufs_com_dado": 27,
+   "maiores": [
+    {
+     "uf": "SC",
+     "nome": "Santa Catarina",
+     "valor": 1116484,
+     "pct": 22.5
+    },
+    {
+     "uf": "PR",
+     "nome": "Paraná",
+     "valor": 614553,
+     "pct": 12.4
+    },
+    {
+     "uf": "RS",
+     "nome": "Rio Grande do Sul",
+     "valor": 556544,
+     "pct": 11.2
+    },
+    {
+     "uf": "MG",
+     "nome": "Minas Gerais",
+     "valor": 512614,
+     "pct": 10.3
+    },
+    {
+     "uf": "CE",
+     "nome": "Ceará",
+     "valor": 239704,
+     "pct": 4.8
+    }
+   ],
+   "fonte": "IBGE, PPM, Tabela 3939",
+   "link": "https://sidra.ibge.gov.br/tabela/3939"
+  },
+  {
+   "id": "AVI_GAL",
+   "nome": "Galináceos",
+   "ano": "2025",
+   "unidade": "cabeças",
+   "brasil": 1607487573,
+   "df": 8164577,
+   "df_pct": 0.51,
+   "df_posicao": 20,
+   "ufs_com_dado": 27,
+   "maiores": [
+    {
+     "uf": "PR",
+     "nome": "Paraná",
+     "valor": 463493696,
+     "pct": 28.8
+    },
+    {
+     "uf": "SP",
+     "nome": "São Paulo",
+     "valor": 196363079,
+     "pct": 12.2
+    },
+    {
+     "uf": "RS",
+     "nome": "Rio Grande do Sul",
+     "valor": 166194733,
+     "pct": 10.3
+    },
+    {
+     "uf": "SC",
+     "nome": "Santa Catarina",
+     "valor": 143165477,
+     "pct": 8.9
+    },
+    {
+     "uf": "MG",
+     "nome": "Minas Gerais",
+     "valor": 133185104,
+     "pct": 8.3
+    }
+   ],
+   "fonte": "IBGE, PPM, Tabela 3939",
+   "link": "https://sidra.ibge.gov.br/tabela/3939"
+  },
+  {
+   "id": "AVI_GLN",
+   "nome": "Galinhas (postura)",
+   "ano": "2025",
+   "unidade": "cabeças",
+   "brasil": 293326317,
+   "df": 1185487,
+   "df_pct": 0.4,
+   "df_posicao": 24,
+   "ufs_com_dado": 27,
+   "maiores": [
+    {
+     "uf": "SP",
+     "nome": "São Paulo",
+     "valor": 59046504,
+     "pct": 20.1
+    },
+    {
+     "uf": "PR",
+     "nome": "Paraná",
+     "valor": 29160501,
+     "pct": 9.9
+    },
+    {
+     "uf": "MG",
+     "nome": "Minas Gerais",
+     "valor": 26931650,
+     "pct": 9.2
+    },
+    {
+     "uf": "RS",
+     "nome": "Rio Grande do Sul",
+     "valor": 23876551,
+     "pct": 8.1
+    },
+    {
+     "uf": "SC",
+     "nome": "Santa Catarina",
+     "valor": 19116754,
+     "pct": 6.5
+    }
+   ],
+   "fonte": "IBGE, PPM, Tabela 3939",
+   "link": "https://sidra.ibge.gov.br/tabela/3939"
+  },
+  {
+   "id": "PEIXE_BR",
+   "nome": "Peixes de cultivo",
+   "ano": "2025",
+   "unidade": "toneladas",
+   "brasil": 1011540,
+   "df": 2270,
+   "df_pct": 0.22,
+   "df_posicao": 26,
+   "ufs_com_dado": 27,
+   "maiores": [
+    {
+     "uf": "PR",
+     "nome": "Paraná",
+     "valor": 273100,
+     "pct": 27
+    },
+    {
+     "uf": "SP",
+     "nome": "São Paulo",
+     "valor": 93700,
+     "pct": 9.3
+    },
+    {
+     "uf": "MG",
+     "nome": "Minas Gerais",
+     "valor": 77500,
+     "pct": 7.7
+    },
+    {
+     "uf": "SC",
+     "nome": "Santa Catarina",
+     "valor": 63400,
+     "pct": 6.3
+    },
+    {
+     "uf": "MA",
+     "nome": "Maranhão",
+     "valor": 59600,
+     "pct": 5.9
+    }
+   ],
+   "fonte": "Associação Brasileira da Piscicultura, Anuário Peixe BR",
+   "link": "https://www.peixebr.com.br/anuario/"
+  }
+ ],
+ "gta_suinos": {
+  "meses": [
+   "jan/25",
+   "fev/25",
+   "mar/25",
+   "abr/25",
+   "mai/25",
+   "jun/25",
+   "jul/25",
+   "ago/25",
+   "set/25",
+   "out/25",
+   "nov/25",
+   "dez/25",
+   "jan/26",
+   "fev/26",
+   "mar/26",
+   "abr/26",
+   "mai/26",
+   "jun/26",
+   "jul/26",
+   "ago/26",
+   "set/26"
+  ],
+  "entrada": {
+   "total": [
+    3955,
+    2745,
+    5394,
+    6241,
+    5403,
+    9991,
+    10574,
+    8728,
+    8204,
+    8090,
+    2879,
+    4288,
+    5212,
+    3473,
+    4252,
+    6514,
+    4860,
+    4408,
+    4682,
+    7997,
+    7191
+   ],
+   "abate": [
+    1925,
+    1950,
+    1948,
+    3032,
+    2814,
+    3230,
+    2862,
+    2281,
+    1657,
+    1160,
+    0,
+    1050,
+    2070,
+    1610,
+    2165,
+    2070,
+    1860,
+    1852,
+    1860,
+    2295,
+    2720
+   ],
+   "engorda": [
+    2000,
+    750,
+    3431,
+    3176,
+    2548,
+    6681,
+    7650,
+    6370,
+    6418,
+    6860,
+    2836,
+    3158,
+    3110,
+    1792,
+    1992,
+    4381,
+    2935,
+    2494,
+    2784,
+    5680,
+    4450
+   ]
+  },
+  "saida": {
+   "total": [
+    8651,
+    9045,
+    11320,
+    13140,
+    11002,
+    11693,
+    14057,
+    13394,
+    11638,
+    12163,
+    11059,
+    12609,
+    14017,
+    13718,
+    11874,
+    12374,
+    14185,
+    13276,
+    13701,
+    14326,
+    16294
+   ],
+   "abate": [
+    7138,
+    6123,
+    8821,
+    10170,
+    8361,
+    8793,
+    9534,
+    9410,
+    9616,
+    10264,
+    8116,
+    10359,
+    11341,
+    11071,
+    9135,
+    10533,
+    12019,
+    10872,
+    9922,
+    11544,
+    11346
+   ],
+   "engorda": [
+    1352,
+    2753,
+    2322,
+    2640,
+    2390,
+    2728,
+    3982,
+    3784,
+    1727,
+    1577,
+    2474,
+    1896,
+    2253,
+    2381,
+    2455,
+    1674,
+    2059,
+    2137,
+    3628,
+    2535,
+    4823
+   ]
+  },
+  "interno": {
+   "total": [
+    31532,
+    26948,
+    30866,
+    28072,
+    29784,
+    37671,
+    30539,
+    27784,
+    29409,
+    28154,
+    25378,
+    38681,
+    25079,
+    37651,
+    29477,
+    32606,
+    31746,
+    28607,
+    32708,
+    34740,
+    35302
+   ],
+   "abate": [
+    10452,
+    9890,
+    9581,
+    11305,
+    10951,
+    11036,
+    11599,
+    10034,
+    9860,
+    10511,
+    9805,
+    11417,
+    7898,
+    8354,
+    9374,
+    9606,
+    9567,
+    10008,
+    11469,
+    10618,
+    11123
+   ],
+   "engorda": [
+    21080,
+    17025,
+    21263,
+    16740,
+    18808,
+    26635,
+    18925,
+    17725,
+    19496,
+    17617,
+    15554,
+    27237,
+    17169,
+    29297,
+    20103,
+    23000,
+    22179,
+    18599,
+    21239,
+    24122,
+    24179
+   ]
+  },
+  "destinos": [
+   {
+    "uf": "GO",
+    "nome": "Goiás",
+    "ultimos12": 74860
+   },
+   {
+    "uf": "BA",
+    "nome": "Bahia",
+    "ultimos12": 30152
+   },
+   {
+    "uf": "CE",
+    "nome": "Ceará",
+    "ultimos12": 24170
+   },
+   {
+    "uf": "SP",
+    "nome": "São Paulo",
+    "ultimos12": 17596
+   },
+   {
+    "uf": "MG",
+    "nome": "Minas Gerais",
+    "ultimos12": 11411
+   }
+  ],
+  "origens": [
+   {
+    "uf": "GO",
+    "nome": "Goiás",
+    "ultimos12": 39102
+   },
+   {
+    "uf": "MT",
+    "nome": "Mato Grosso",
+    "ultimos12": 19870
+   },
+   {
+    "uf": "MG",
+    "nome": "Minas Gerais",
+    "ultimos12": 4246
+   }
+  ],
+  "fonte": "SEAGRI-DF, Guias de Trânsito Animal (GTA) de suínos emitidas e recebidas no DF, compiladas pelo NEAGRO-DF",
+  "link": ""
+ },
+ "comex": {
+  "ovinos_caprinos": {
+   "titulo": "Carne de ovinos e caprinos (NCM/SH4 0204)",
+   "exportacao": {
+    "de": "out/25",
+    "ate": "set/26",
+    "kg": 100771,
+    "usd": 1197976,
+    "meses": [
+     {
+      "mes": "jan/25",
+      "kg": 6620,
+      "usd": 75401
+     },
+     {
+      "mes": "fev/25",
+      "kg": 5573,
+      "usd": 64165
+     },
+     {
+      "mes": "mar/25",
+      "kg": 8838,
+      "usd": 106607
+     },
+     {
+      "mes": "abr/25",
+      "kg": 18916,
+      "usd": 157177
+     },
+     {
+      "mes": "mai/25",
+      "kg": 6128,
+      "usd": 69745
+     },
+     {
+      "mes": "jun/25",
+      "kg": 5698,
+      "usd": 73439
+     },
+     {
+      "mes": "jul/25",
+      "kg": 19893,
+      "usd": 135529
+     },
+     {
+      "mes": "ago/25",
+      "kg": 6732,
+      "usd": 86381
+     },
+     {
+      "mes": "set/25",
+      "kg": 16616,
+      "usd": 172645
+     },
+     {
+      "mes": "out/25",
+      "kg": 7808,
+      "usd": 100200
+     },
+     {
+      "mes": "nov/25",
+      "kg": 16112,
+      "usd": 150156
+     },
+     {
+      "mes": "dez/25",
+      "kg": 7944,
+      "usd": 99244
+     },
+     {
+      "mes": "jan/26",
+      "kg": 5366,
+      "usd": 71721
+     },
+     {
+      "mes": "fev/26",
+      "kg": 8248,
+      "usd": 74937
+     },
+     {
+      "mes": "mar/26",
+      "kg": 10574,
+      "usd": 110633
+     },
+     {
+      "mes": "abr/26",
+      "kg": 10437,
+      "usd": 121783
+     },
+     {
+      "mes": "mai/26",
+      "kg": 5940,
+      "usd": 78872
+     },
+     {
+      "mes": "jun/26",
+      "kg": 8737,
+      "usd": 117919
+     },
+     {
+      "mes": "jul/26",
+      "kg": 7202,
+      "usd": 98496
+     },
+     {
+      "mes": "ago/26",
+      "kg": 6299,
+      "usd": 83605
+     },
+     {
+      "mes": "set/26",
+      "kg": 6104,
+      "usd": 90410
+     }
+    ],
+    "paises": [
+     {
+      "pais": "Libéria",
+      "kg": 15763,
+      "usd": 198964
+     },
+     {
+      "pais": "Marshall, Ilhas",
+      "kg": 12634,
+      "usd": 169991
+     },
+     {
+      "pais": "Panamá",
+      "kg": 11500,
+      "usd": 143723
+     },
+     {
+      "pais": "Argentina",
+      "kg": 10365,
+      "usd": 53957
+     },
+     {
+      "pais": "Guiana",
+      "kg": 10364,
+      "usd": 69915
+     },
+     {
+      "pais": "Singapura",
+      "kg": 6537,
+      "usd": 93477
+     }
+    ]
+   },
+   "importacao": {
+    "de": "out/25",
+    "ate": "set/26",
+    "kg": 4712393,
+    "usd": 44715184,
+    "meses": [
+     {
+      "mes": "jan/25",
+      "kg": 408365,
+      "usd": 2538979
+     },
+     {
+      "mes": "fev/25",
+      "kg": 210111,
+      "usd": 1588695
+     },
+     {
+      "mes": "mar/25",
+      "kg": 276425,
+      "usd": 1833350
+     },
+     {
+      "mes": "abr/25",
+      "kg": 273576,
+      "usd": 1717429
+     },
+     {
+      "mes": "mai/25",
+      "kg": 410193,
+      "usd": 2680078
+     },
+     {
+      "mes": "jun/25",
+      "kg": 394589,
+      "usd": 2515200
+     },
+     {
+      "mes": "jul/25",
+      "kg": 462232,
+      "usd": 3528780
+     },
+     {
+      "mes": "ago/25",
+      "kg": 334011,
+      "usd": 2562116
+     },
+     {
+      "mes": "set/25",
+      "kg": 432094,
+      "usd": 3955306
+     },
+     {
+      "mes": "out/25",
+      "kg": 370481,
+      "usd": 3444307
+     },
+     {
+      "mes": "nov/25",
+      "kg": 506668,
+      "usd": 4767439
+     },
+     {
+      "mes": "dez/25",
+      "kg": 619872,
+      "usd": 6146939
+     },
+     {
+      "mes": "jan/26",
+      "kg": 346401,
+      "usd": 3444889
+     },
+     {
+      "mes": "fev/26",
+      "kg": 305075,
+      "usd": 2924480
+     },
+     {
+      "mes": "mar/26",
+      "kg": 492039,
+      "usd": 4126101
+     },
+     {
+      "mes": "abr/26",
+      "kg": 356858,
+      "usd": 3478498
+     },
+     {
+      "mes": "mai/26",
+      "kg": 321470,
+      "usd": 3448676
+     },
+     {
+      "mes": "jun/26",
+      "kg": 542483,
+      "usd": 4447421
+     },
+     {
+      "mes": "jul/26",
+      "kg": 330510,
+      "usd": 3252175
+     },
+     {
+      "mes": "ago/26",
+      "kg": 197843,
+      "usd": 1821563
+     },
+     {
+      "mes": "set/26",
+      "kg": 322693,
+      "usd": 3412696
+     }
+    ],
+    "paises": [
+     {
+      "pais": "Uruguai",
+      "kg": 3078747,
+      "usd": 29794252
+     },
+     {
+      "pais": "Argentina",
+      "kg": 937294,
+      "usd": 6065536
+     },
+     {
+      "pais": "Chile",
+      "kg": 613995,
+      "usd": 7650413
+     },
+     {
+      "pais": "Austrália",
+      "kg": 58366,
+      "usd": 971734
+     },
+     {
+      "pais": "Nova Zelândia",
+      "kg": 23991,
+      "usd": 233249
+     }
+    ]
+   },
+   "fonte": "MDIC/Secex, Comex Stat",
+   "link": "https://comexstat.mdic.gov.br/pt/geral"
+  },
+  "pescado": {
+   "titulo": "Pescado (capítulo 03 da NCM)",
+   "fonte": "MDIC/Secex, Comex Stat",
+   "link": "https://comexstat.mdic.gov.br/pt/geral",
+   "de": "out/25",
+   "ate": "set/26",
+   "exportacao": {
+    "kg": 6070631,
+    "usd": 41523012,
+    "paises": [
+     {
+      "pais": "Estados Unidos",
+      "kg": 4589539,
+      "usd": 33704789
+     },
+     {
+      "pais": "Canadá",
+      "kg": 324096,
+      "usd": 2348617
+     },
+     {
+      "pais": "Peru",
+      "kg": 323003,
+      "usd": 1051655
+     },
+     {
+      "pais": "México",
+      "kg": 144462,
+      "usd": 877803
+     },
+     {
+      "pais": "Vietnã",
+      "kg": 196926,
+      "usd": 670294
+     },
+     {
+      "pais": "Argentina",
+      "kg": 79321,
+      "usd": 488414
+     }
+    ]
+   },
+   "importacao": {
+    "kg": 118657396,
+    "usd": 422573264,
+    "paises": [
+     {
+      "pais": "Vietnã",
+      "kg": 76275030,
+      "usd": 230545550
+     },
+     {
+      "pais": "Argentina",
+      "kg": 20515684,
+      "usd": 71881466
+     },
+     {
+      "pais": "Chile",
+      "kg": 6869579,
+      "usd": 49904933
+     },
+     {
+      "pais": "China",
+      "kg": 12644537,
+      "usd": 48785618
+     },
+     {
+      "pais": "Portugal",
+      "kg": 1084637,
+      "usd": 14414012
+     },
+     {
+      "pais": "Islândia",
+      "kg": 381986,
+      "usd": 2314550
+     }
+    ]
+   }
+  }
+ },
+ "emater_df": {
+  "fonte": "EMATER-DF, Relatório de Informações Agropecuárias (RIA-DF) 2025",
+  "bov": [
+   [
+    "Rebanho bovino do DF (EMATER-DF)",
+    "74.375",
+    "cabeças · 2.932 produtores"
+   ],
+   [
+    "Produção de carne bovina, DF",
+    "4.838.014 kg",
+    "EMATER-DF, RIA-DF 2025"
+   ]
+  ],
+  "lei": [
+   [
+    "Produção de leite, DF (EMATER-DF)",
+    "32.358.044 L",
+    "leite de bovinos · EMATER-DF, RIA-DF 2025"
+   ]
+  ],
+  "pbr": [
+   [
+    "Produção de pescado, DF (EMATER-DF)",
+    "2.636.952 kg",
+    "1.073 produtores · 87,62 ha de lâmina d'água"
+   ]
+  ],
+  "pei": [
+   [
+    "Produção de pescado, DF (EMATER-DF)",
+    "2.636.952 kg",
+    "1.073 produtores · 87,62 ha de lâmina d'água"
+   ]
+  ],
+  "ovi": [
+   [
+    "Rebanho de ovinos do DF (EMATER-DF)",
+    "14.422",
+    "cabeças · 627 produtores"
+   ],
+   [
+    "Produção de carne ovina, DF",
+    "126.314 kg",
+    "EMATER-DF, RIA-DF 2025 · leite: 5.301 L"
+   ]
+  ]
+ },
+ "faltam": []
+}

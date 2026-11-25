@@ -1,21 +1,17 @@
 {
-  "atualizado_em": "2026-11-25T12:40-03:00",
+  "atualizado_em": "2026-11-25T16:21-03:00",
   "indicadores": [
     {
       "id": "dolar",
       "nome": "Dólar comercial",
-      "valor": 5.8567,
+      "valor": 5.8819,
       "unidade": "R$/US$",
       "casas": 4,
-      "referencia": "24/11/2026",
-      "variacao_pct": 6.49,
+      "referencia": "25/11/2026",
+      "variacao_pct": 10.27,
       "variacao_desc": "em 20 pregões",
       "grupo": "macro",
       "serie": [
-        [
-          "26/10",
-          5.4998
-        ],
         [
           "27/10",
           5.334
@@ -91,6 +87,10 @@
         [
           "24/11",
           5.8567
+        ],
+        [
+          "25/11",
+          5.8819
         ]
       ],
       "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)",
@@ -187,11 +187,11 @@
       "fonte": "Banco Central do Brasil, SGS série 21619 (taxa de câmbio livre, euro, venda)",
       "link": "https://www3.bcb.gov.br/sgspub/",
       "automatico": true,
-      "valor": 6.426,
-      "referencia": "24/11/2026",
+      "valor": 6.4413,
+      "referencia": "25/11/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.21619/dados/ultimos/20?formato=json",
       "extraido_em": "2026-11-25",
-      "variacao_pct": 4.51,
+      "variacao_pct": 8.35,
       "variacao_desc": "em 20 pregões"
     },
     {
@@ -213,50 +213,50 @@
     {
       "id": "boi",
       "nome": "Boi gordo Cepea/Esalq",
-      "valor": 395.4,
+      "valor": 395.45,
       "unidade": "R$/@",
       "casas": 2,
-      "referencia": "13/11/2026",
-      "variacao_pct": 0.28,
-      "variacao_desc": "no dia",
+      "referencia": "24/11/2026",
+      "variacao_pct": 0.01,
+      "variacao_desc": "sobre 13/11/2026",
       "grupo": "precos",
-      "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo), divulgado pelo Notícias Agrícolas",
+      "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo), à vista, widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/boi-gordo.aspx",
-      "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública",
-      "extraido_em": "2026-11-14",
-      "automatico": false
+      "endpoint": "https://www.cepea.org.br/br/widgetproduto.js.php?fonte=arial&tamanho=10&largura=400px&corfundo=dbd6b2&cortexto=333333&corlinha=ede7bf&id_indicador%5B%5D=2&id_indicador%5B%5D=92&id_indicador%5B%5D=77",
+      "extraido_em": "2026-11-25",
+      "automatico": true
     },
     {
       "id": "soja",
       "nome": "Soja Paranaguá Cepea/Esalq",
-      "valor": 164.49,
+      "valor": 170.23,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "referencia": "13/11/2026",
-      "variacao_pct": 1.34,
-      "variacao_desc": "no dia",
+      "referencia": "24/11/2026",
+      "variacao_pct": 3.49,
+      "variacao_desc": "sobre 13/11/2026",
       "grupo": "precos",
-      "fonte": "Indicador da Soja Cepea/Esalq Paranaguá, divulgado pelo Notícias Agrícolas",
+      "fonte": "Indicador da Soja Cepea/Esalq Paranaguá, widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/soja.aspx",
-      "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública",
-      "extraido_em": "2026-11-14",
-      "automatico": false
+      "endpoint": "https://www.cepea.org.br/br/widgetproduto.js.php?fonte=arial&tamanho=10&largura=400px&corfundo=dbd6b2&cortexto=333333&corlinha=ede7bf&id_indicador%5B%5D=2&id_indicador%5B%5D=92&id_indicador%5B%5D=77",
+      "extraido_em": "2026-11-25",
+      "automatico": true
     },
     {
       "id": "milho",
       "nome": "Milho Esalq/B3",
-      "valor": 67.34,
+      "valor": 68.16,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "referencia": "13/11/2026",
-      "variacao_pct": 0.09,
-      "variacao_desc": "no dia",
+      "referencia": "24/11/2026",
+      "variacao_pct": 1.22,
+      "variacao_desc": "sobre 13/11/2026",
       "grupo": "precos",
-      "fonte": "Indicador do Milho Esalq/B3, divulgado pelo Notícias Agrícolas",
+      "fonte": "Indicador do Milho Esalq/B3 (Campinas), widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/milho.aspx",
-      "endpoint": "entrada manual (data/manual.json); o Cepea não oferece API pública",
-      "extraido_em": "2026-11-14",
-      "automatico": false
+      "endpoint": "https://www.cepea.org.br/br/widgetproduto.js.php?fonte=arial&tamanho=10&largura=400px&corfundo=dbd6b2&cortexto=333333&corlinha=ede7bf&id_indicador%5B%5D=2&id_indicador%5B%5D=92&id_indicador%5B%5D=77",
+      "extraido_em": "2026-11-25",
+      "automatico": true
     },
     {
       "id": "fao",
@@ -659,6 +659,76 @@
   },
   "noticias": [
     {
+      "titulo": "Fim de ano será de calorão ou frio? Previsão aponta contrastes no clima e alerta para risco de enchentes e deslizamentos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/fim-de-ano-sera-de-calorao-ou-frio-previsao-aponta-contrastes-no-clima-e-alerta-para-risco-de-enchentes-e-deslizamentos/"
+    },
+    {
+      "titulo": "Ajuste fiscal amplia em R$ 70 bi margem para congelamento de despesas em 2027",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/ajuste-fiscal-amplia-em-r-70-bi-margem-para-congelamento-de-despesas-em-2027/"
+    },
+    {
+      "titulo": "ANTAQ retoma agenda com usuários de portos e armadores",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/antaq-retoma-agenda-com-usuarios-de-portos-e-armadores/"
+    },
+    {
+      "titulo": "Mapa lança programa nacional para conservação ex situ de recursos genéticos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/mapa-lanca-programa-nacional-para-conservacao-ex-situ-de-recursos-geneticos/"
+    },
+    {
+      "titulo": "Projeto aprovado na Câmara proíbe venda casada em operações de crédito rural",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/projeto-aprovado-na-camara-proibe-venda-casada-em-operacoes-de-credito-rural/"
+    },
+    {
+      "titulo": "CNA fecha 2026 com debate sobre governança, mercado e antidumping no leite",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/cna-fecha-2026-com-debate-sobre-governanca-mercado-e-antidumping-no-leite/"
+    },
+    {
+      "titulo": "Prêmio Orgulho da Terra 2026 anuncia vencedores em Curitiba",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/diversos/premio-orgulho-da-terra-2026-anuncia-vencedores-em-curitiba/"
+    },
+    {
+      "titulo": "CNA participa de fórum global da FAO sobre agricultura familiar",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/cna-participa-de-forum-global-da-fao-sobre-agricultura-familiar/"
+    },
+    {
+      "titulo": "Moretti diz que subsídios aos combustíveis impediram superávit primário em 2026",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/moretti-diz-que-subsidios-aos-combustiveis-impediram-superavit-primario-em-2026/"
+    },
+    {
+      "titulo": "Subvenção ao diesel deve ser prorrogada por mais um mês, diz Moretti",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/subvencao-ao-diesel-deve-ser-prorrogada-por-mais-um-mes-diz-moretti/"
+    },
+    {
       "titulo": "Pecuaristas de MT têm até 10 de dezembro para atualizar rebanhos",
       "veiculo": "Canal Rural",
       "data": "2026-11-25",
@@ -727,76 +797,6 @@
       "data": "2026-11-25",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/politica/ministerio-do-turismo-lanca-24-experiencias-em-assentamentos-da-reforma-agraria/"
-    },
-    {
-      "titulo": "Frente fria avança e provoca temporais e chuva acima de 100 mm; veja previsão",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/frente-fria-avanca-e-provoca-temporais-e-chuva-acima-de-100-mm-veja-previsao/"
-    },
-    {
-      "titulo": "CNA debate conservação de vicinais e prioridades para a BR-319",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/cna-debate-conservacao-de-vicinais-e-prioridades-para-a-br-319/"
-    },
-    {
-      "titulo": "Máximas devem chegar a 36 °C em três municípios de Roraima",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/rr/maximas-devem-chegar-a-36-c-em-tres-municipios-de-roraima/"
-    },
-    {
-      "titulo": "Plano busca fortalecer protagonismo das mulheres no agronegócio",
-      "veiculo": "Agência Brasil",
-      "data": "2026-11-24",
-      "tema": "Economia",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/plano-busca-fortalecer-protagonismo-das-mulheres-no-agronegocio"
-    },
-    {
-      "titulo": "Boi gordo: altas perdem força com escalas de abate mais confortáveis",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-altas-perdem-forca-com-escalas-de-abate-mais-confortaveis/"
-    },
-    {
-      "titulo": "FPA recebe novos parlamentares e inicia articulação para comando em 2027",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/fpa-recebe-novos-parlamentares-e-inicia-articulacao-para-comando-em-2027/"
-    },
-    {
-      "titulo": "Mineradora é multada em R$ 16,9 milhões por poluição de rios no Pará",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/mineradora-e-multada-em-r-169-milhoes-por-poluicao-de-rios-no-para/"
-    },
-    {
-      "titulo": "Lei antidesmatamento da UE: Aprosoja alerta para risco de ‘transtornos e multas’ na comercialização de soja",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/lei-antidesmatamento-da-ue-aprosoja-alerta-para-risco-de-transtornos-e-multas-na-comercializacao-de-soja/"
-    },
-    {
-      "titulo": "Fazenda reduz projeção do PIB para 1,9% em 2026 e 1,8% em 2027",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/fazenda-reduz-projecao-do-pib-para-19-em-2026-e-18-em-2027/"
-    },
-    {
-      "titulo": "Pra cima! Preços de soja sobem e seguem nos melhores níveis do ano; confira o fechamento de mercado",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-24",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/subiu-precos-de-soja-sobem-e-seguem-nos-melhores-niveis-do-ano-confira-o-fechamento-de-mercado/"
     }
   ],
   "cartoes": [
