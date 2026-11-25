@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-25T17:36-03:00",
+  "atualizado_em": "2026-11-25T19:10-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -229,12 +229,12 @@
     {
       "id": "soja",
       "nome": "Soja Paranaguá Cepea/Esalq",
-      "valor": 170.23,
+      "valor": 170.05,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "referencia": "24/11/2026",
-      "variacao_pct": 3.49,
-      "variacao_desc": "sobre 13/11/2026",
+      "referencia": "25/11/2026",
+      "variacao_pct": -0.11,
+      "variacao_desc": "sobre 24/11/2026",
       "grupo": "precos",
       "fonte": "Indicador da Soja Cepea/Esalq Paranaguá, widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/soja.aspx",
@@ -245,12 +245,12 @@
     {
       "id": "milho",
       "nome": "Milho Esalq/B3",
-      "valor": 68.16,
+      "valor": 67.94,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "referencia": "24/11/2026",
-      "variacao_pct": 1.22,
-      "variacao_desc": "sobre 13/11/2026",
+      "referencia": "25/11/2026",
+      "variacao_pct": -0.32,
+      "variacao_desc": "sobre 24/11/2026",
       "grupo": "precos",
       "fonte": "Indicador do Milho Esalq/B3 (Campinas), widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/milho.aspx",
@@ -659,6 +659,62 @@
   },
   "noticias": [
     {
+      "titulo": "Marcas do agro precisam ir além do produto para conquistar valor",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/agronegocio/marcas-do-agro-precisam-ir-alem-do-produto-para-conquistar-valor/"
+    },
+    {
+      "titulo": "Crédito rural e fraudes no BB viram alvo de requerimentos na Câmara",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/credito-rural-e-fraudes-no-bb-viram-alvo-de-requerimentos-na-camara/"
+    },
+    {
+      "titulo": "Soja cai no mercado brasileiro com recuo do dólar, apesar de alta em Chicago",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/soja-cai-no-mercado-brasileiro-com-recuo-do-dolar-apesar-de-alta-em-chicago/"
+    },
+    {
+      "titulo": "Do solo à infraestrutura: a Tramontina  acompanha o dia a dia do campo",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/projetos/conteudo-patrocinado/do-solo-a-infraestrutura-a-tramontina-acompanha-o-dia-a-dia-do-campo/"
+    },
+    {
+      "titulo": "Caso de gripe aviária é registrado em São Mateus, no Espírito Santo",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/espirito-santo/caso-de-gripe-aviaria-e-registrdo-em-sao-mateus-no-espirito-santo/"
+    },
+    {
+      "titulo": "Amcham pede diálogo após consulta dos EUA sobre ampliar tarifas ao Brasil",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/amcham-pede-dialogo-apos-consulta-dos-eua-sobre-ampliar-tarifas-ao-brasil/"
+    },
+    {
+      "titulo": "Eric Moura participa de feira sobre agrobiodiversidade e sementes crioulas no Piauí",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/eric-moura-participa-de-feira-sobre-agrobiodiversidade-e-sementes-crioulas-no-piaui/"
+    },
+    {
+      "titulo": "CNA orienta produtores sobre renegociação de dívidas tributárias",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/cna-orienta-produtores-sobre-renegociacao-de-dividas-tributarias/"
+    },
+    {
       "titulo": "Petróleo sobe com tensões no Oriente Médio e avanço do risco geopolítico",
       "veiculo": "Canal Rural",
       "data": "2026-11-25",
@@ -741,62 +797,6 @@
       "data": "2026-11-25",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/politica/projeto-aprovado-na-camara-proibe-venda-casada-em-operacoes-de-credito-rural/"
-    },
-    {
-      "titulo": "CNA fecha 2026 com debate sobre governança, mercado e antidumping no leite",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/cna-fecha-2026-com-debate-sobre-governanca-mercado-e-antidumping-no-leite/"
-    },
-    {
-      "titulo": "Prêmio Orgulho da Terra 2026 anuncia vencedores em Curitiba",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/premio-orgulho-da-terra-2026-anuncia-vencedores-em-curitiba/"
-    },
-    {
-      "titulo": "CNA participa de fórum global da FAO sobre agricultura familiar",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/cna-participa-de-forum-global-da-fao-sobre-agricultura-familiar/"
-    },
-    {
-      "titulo": "Moretti diz que subsídios aos combustíveis impediram superávit primário em 2026",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/moretti-diz-que-subsidios-aos-combustiveis-impediram-superavit-primario-em-2026/"
-    },
-    {
-      "titulo": "Subvenção ao diesel deve ser prorrogada por mais um mês, diz Moretti",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/subvencao-ao-diesel-deve-ser-prorrogada-por-mais-um-mes-diz-moretti/"
-    },
-    {
-      "titulo": "Pecuaristas de MT têm até 10 de dezembro para atualizar rebanhos",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/pecuaristas-de-mt-tem-ate-10-de-dezembro-para-atualizar-rebanhos/"
-    },
-    {
-      "titulo": "Ibovespa sobe moderadamente após quatro quedas seguidas sob pressão externa e fiscal",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/ibovespa-sobe-moderadamente-apos-quatro-quedas-seguidas-sob-pressao-externa-e-fiscal/"
-    },
-    {
-      "titulo": "Waldez Góes diz que Brasil sofre efeitos da falta de compromisso climático de outros países",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/waldez-goes-diz-que-brasil-sofre-efeitos-da-falta-de-compromisso-climatico-de-outros-paises/"
     }
   ],
   "cartoes": [
