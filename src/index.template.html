@@ -993,7 +993,7 @@ function renderBoletins(){
       <div class="ch"><img src="img/logo-neagro.png" alt=""><span>Núcleo de Estudos sobre o Agronegócio do Distrito Federal (NEAGRO-DF)<br>FAV/UnB</span><img src="img/logo-unb.png" alt=""></div>
       <div class="cn">${esc([desig(ed),numTxt(ed,true)].filter(Boolean).join(" · "))}</div>
       <div class="ct">${esc(ed.titulo)}</div>
-      <div class="cimg" style="${bg(SERIE_FOTO[ed.serie]||"suino")}"></div>
+      <div class="cimg" style="${bg(ed.foto||SERIE_FOTO[ed.serie]||"suino")}"></div>
       <div class="rows"><i></i><i></i><i></i><i></i></div>
       <div class="tb">${"<i></i>".repeat(12)}</div>
     </div>
