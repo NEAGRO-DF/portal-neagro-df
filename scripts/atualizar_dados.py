@@ -320,23 +320,59 @@ CEPEA_NA = {
               "https://www.cepea.org.br/br/indicador/milho.aspx"),
 }
 LINHA_NA = re.compile(r"<tbody[^>]*>\s*<tr>\s*<td>(\d{2}/\d{2}/\d{4})</td>\s*<td>([\d.,]+)</td>\s*<td>(-?[\d.,]+)%</td>", re.S)
+# Reserva: widget oficial de cotações do Cepea, feito para ser incorporado em outros sites.
+# Ids dos indicadores no widget: boi gordo 2, soja Paranaguá 92, milho 77 (a ordem da resposta segue a do pedido).
+CEPEA_WIDGET_IDS = {"boi": 2, "soja": 92, "milho": 77}
+CEPEA_WIDGET = ("https://www.cepea.org.br/br/widgetproduto.js.php?fonte=arial&tamanho=10&largura=400px"
+                "&corfundo=dbd6b2&cortexto=333333&corlinha=ede7bf"
+                + "".join(f"&id_indicador%5B%5D={i}" for i in CEPEA_WIDGET_IDS.values()))
+LINHA_WIDGET = re.compile(r"<td>(\d{2}/\d{2}/\d{4})</td>\s*<td>.*?</td>\s*<td>R\$\s*<span[^>]*>([\d.,]+)</span>", re.S)
+
+
+def _num_br(s: str) -> float:
+    return float(s.replace(".", "").replace(",", "."))
+
+
+def _cepea_widget() -> dict:
+    linhas = LINHA_WIDGET.findall(baixar(CEPEA_WIDGET).decode("utf-8", "replace"))
+    if len(linhas) != len(CEPEA_WIDGET_IDS):
+        raise ValueError(f"widget com {len(linhas)} linha(s)")
+    return dict(zip(CEPEA_WIDGET_IDS, linhas))
 
 
 def atualizar_cepea(ind: list) -> None:
-    """O site do Cepea bloqueia robôs; o Notícias Agrícolas republica os indicadores diários do Cepea/Esalq."""
+    """Indicadores diários do Cepea/Esalq. Fonte principal: Notícias Agrícolas, que republica o indicador com a
+    variação do dia. Se ela recusar o acesso do robô, usa o widget oficial do Cepea e calcula a variação sobre a
+    cotação anterior guardada no portal."""
     alvo = {i["id"]: i for i in ind}
+    widget = None
     for k, (url, fonte, link) in CEPEA_NA.items():
+        if k not in alvo:
+            continue
         try:
             m = LINHA_NA.search(baixar(url).decode("utf-8", "replace"))
-            if not m or k not in alvo:
+            if not m:
                 raise ValueError("tabela não encontrada")
             data, valor, var = m.groups()
-            alvo[k].update(valor=float(valor.replace(".", "").replace(",", ".")), referencia=data,
-                           variacao_pct=float(var.replace(".", "").replace(",", ".")), variacao_desc="no dia",
+            alvo[k].update(valor=_num_br(valor), referencia=data, variacao_pct=_num_br(var), variacao_desc="no dia",
                            fonte=fonte, link=link, endpoint=url, extraido_em=HOJE, automatico=True)
             log(f"Cepea {k}: {valor} em {data}")
+            continue
         except Exception as e:  # noqa: BLE001
-            log(f"Cepea {k}: falhou ({e}); mantido o valor anterior")
+            log(f"Cepea {k}: Notícias Agrícolas falhou ({e}); tentando o widget do Cepea")
+        try:
+            if widget is None:
+                widget = _cepea_widget()
+            data, valor = widget[k]
+            novo, ant = _num_br(valor), alvo[k]
+            if ant.get("referencia") != data and isinstance(ant.get("valor"), (int, float)) and ant["valor"] > 0:
+                ant.update(variacao_pct=round((novo / ant["valor"] - 1) * 100, 2),
+                           variacao_desc=f"sobre {ant.get('referencia')}")
+            ant.update(valor=novo, referencia=data, fonte=fonte.replace("divulgado pelo Notícias Agrícolas",
+                       "widget oficial do Cepea"), link=link, endpoint=CEPEA_WIDGET, extraido_em=HOJE, automatico=True)
+            log(f"Cepea {k} (widget): {valor} em {data}")
+        except Exception as e:  # noqa: BLE001
+            log(f"Cepea {k}: widget também falhou ({e}); mantido o valor anterior")
 
 
 def _data_ref(i: dict):
