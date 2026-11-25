@@ -8,6 +8,7 @@
 const fs = require("fs");
 const path = require("path");
 const calc = require("../src/painel-calc.js");
+const quadros = require("./painel-quadros.js");
 
 const RAIZ = path.resolve(__dirname, "..");
 const SAIDA = path.join(RAIZ, "data", "painel.json");
@@ -48,11 +49,18 @@ async function colecao(nome) {
   return docs;
 }
 
-async function quadroGTA() {
+let HTML_PAINEL = null;
+async function htmlPainel() {
+  if (HTML_PAINEL) return HTML_PAINEL;
   if (!PAINEL) throw new Error("endereço do painel não configurado (secret PAINEL_URL)");
   const r = await fetch(PAINEL, { headers: { "User-Agent": "NEAGRO-DF portal" } });
   if (!r.ok) throw new Error(`painel: HTTP ${r.status}`);
-  const html = await r.text();
+  HTML_PAINEL = await r.text();
+  return HTML_PAINEL;
+}
+
+async function quadroGTA() {
+  const html = await htmlPainel();
   const i = html.indexOf("const GTA_DF = ");
   if (i < 0) throw new Error("quadro GTA_DF não encontrado no painel");
   const fim = html.indexOf(";\n", i);
@@ -82,6 +90,15 @@ async function main() {
     log(`GTA não atualizado (${e.message})`);
     resultado.alertas.push({ tipo: "estrutura", campo: "GTA_DF", mes: resultado.mes, texto: `Quadro GTA_DF não lido no código do painel (${e.message}).` });
     resultado.gta = anterior ? anterior.gta : null;
+  }
+  /* Demais quadros do painel (GTA de suínos, rebanhos por UF, comércio exterior, EMATER-DF): data/painel_quadros.json. */
+  try {
+    const faltam = quadros.gravar(await htmlPainel(), hoje);
+    log(`data/painel_quadros.json gravado${faltam.length ? ` (não lidos: ${faltam.join(", ")})` : ""}`);
+    faltam.forEach(f => resultado.alertas.push({ tipo: "valor", campo: f, mes: resultado.mes,
+      texto: `Quadro ${f} não encontrado no código do painel; o portal manteve o anterior ou omitiu o bloco.` }));
+  } catch (e) {
+    log(`quadros do painel não atualizados (${e.message}); mantido o arquivo anterior`);
   }
   /* O painel não é público: o retrato não traz o endereço do painel nem o da base. */
   resultado.fonte = {
