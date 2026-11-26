@@ -173,7 +173,8 @@
     "https://drive.google.com/file/d/1MbDGRTpl_ZQybrdMjDHuGcAPICOU0eTT/view",
     "https://drive.google.com/file/d/1kfdhVFJirOBxJO0gHHHUzN3PoCoddtkx/view",
     "https://drive.google.com/file/d/1Yyo1D95Lt4oBZGmDU4vkSGw7Ol845wgl/view",
-    "https://drive.google.com/file/d/1Pyoz2goeP4kARSvR-rf4Gaf7wFCrJ5Aj/view"
+    "https://drive.google.com/file/d/1Pyoz2goeP4kARSvR-rf4Gaf7wFCrJ5Aj/view",
+    "https://drive.google.com/file/d/1KO0dRq1PTqEWiwDJfvVkNO8lVmoY-u3_/view"
   ],
   "series": [
     {
@@ -1238,26 +1239,6 @@
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/5-01-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-01-09.pdf",
       "origem": "drive",
       "pdf_original": "https://drive.google.com/file/d/1SNQzyayXcTyLg6bSZAHIQRGpph4g77un/view",
-      "designacao": "Vol. 3, No. 1 (jan. 2025)"
-    },
-    {
-      "serie": "animal",
-      "numero": "4.27",
-      "data": "2025-01-09",
-      "titulo": "Boletim de Mercado da Produção Animal do DF e Entorno",
-      "cadeias": [
-        "Suinocultura",
-        "Bovinocultura de corte",
-        "Bovinocultura de leite",
-        "Avicultura de corte",
-        "Avicultura de postura",
-        "Insumos"
-      ],
-      "resumo": "Preços de insumos e produtos nas praças acompanhadas pelo NEAGRO-DF no DF e Entorno, relações de troca entre insumo e produto e análise do comportamento do mercado no período.",
-      "destaques": [],
-      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2025/4-27-boletim-producao-animal-do-df-e-entorno-neagro-df-2025-01-09.pdf",
-      "origem": "drive",
-      "pdf_original": "https://drive.google.com/file/d/1KO0dRq1PTqEWiwDJfvVkNO8lVmoY-u3_/view",
       "designacao": "Vol. 3, No. 1 (jan. 2025)"
     },
     {
