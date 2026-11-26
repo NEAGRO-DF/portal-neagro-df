@@ -275,7 +275,14 @@ def atualizar_pib_trimestral(dados: dict) -> None:
 # ---------------------------------------------------------------- Notícias (RSS e páginas HTML)
 PALAVRAS = re.compile(r"agro|soja|milho|boi|bovin|su[ií]n|frango|ovo|leite|safra|conab|embrapa|"
                       r"pecu|lavoura|fertiliz|caf[eé]|algod|trigo|tilápia|pescado|cerrado|exporta", re.I)
-POR_FONTE = 5  # itens mais recentes guardados de cada fonte a cada leitura
+POR_FONTE = 5  # itens mais recentes guardados de cada fonte a cada leitura (e mais 5 internacionais)
+# Manchetes sobre o mercado externo que afetam o agro brasileiro recebem o tema "Internacional".
+INTL = re.compile(r"china|chin[eê]s|\beua\b|estados unidos|americano|trump|tarifa|europ|\bue\b|mercosul|argentin|"
+                  r"paraguai|r[uú]ssia|ucr[aâ]nia|[ií]ndia|jap[aã]o|oriente m[eé]dio|chicago|cbot|usda|\bfao\b|\bomc\b|"
+                  r"internacional|mundial|global|exterior|exporta|importa|embarque|d[oó]lar|c[aâ]mbio|guerra|"
+                  r"san[cç][aã]o|el ni[nñ]o|la ni[nñ]a|petr[oó]leo", re.I)
+IMPACTO = re.compile(PALAVRAS.pattern + r"|tarifa|com[eé]rci|d[oó]lar|c[aâ]mbio|petr[oó]leo|alimento|commodit|"
+                     r"gr[aã]o|carne|frigor|clima|fome|abastec|acordo", re.I)
 
 
 def _limpa(t: str) -> str:
@@ -331,18 +338,28 @@ def atualizar_noticias(dados: dict) -> None:
     for f in feeds:
         try:
             itens = _html(f) if f.get("tipo") == "html" else _rss(f)
-            vistos, n = set(), 0
+            vistos, cont = set(), {"geral": 0, "intl": 0}
+            filtro = f.get("filtrar", True)
             for t, l, d in sorted(itens, key=lambda x: x[2], reverse=True):
-                if not t or not l or l in vistos or (f.get("filtrar", True) and not PALAVRAS.search(t)):
+                if not t or not l or l in vistos:
+                    continue
+                intl = bool(INTL.search(t)) and (not filtro or bool(IMPACTO.search(t)))
+                if filtro == "internacional" and not intl:
+                    continue
+                if filtro is True and not PALAVRAS.search(t):
+                    continue
+                grupo = "intl" if intl else "geral"
+                if cont[grupo] >= POR_FONTE:
                     continue
                 vistos.add(l)
+                cont[grupo] += 1
                 # mantém a data da primeira leitura (fontes sem data na listagem recebem a data em que apareceram)
-                novas.append(antigas.get(l) or {"titulo": t, "veiculo": f["veiculo"], "data": d,
-                                                 "tema": f.get("tema", "Agronegócio"), "link": l})
-                n += 1
-                if n >= POR_FONTE:
-                    break
-            log(f"Notícias: {f['veiculo']} lido ({n} item(ns))")
+                n = antigas.get(l) or {"titulo": t, "veiculo": f["veiculo"], "data": d,
+                                       "tema": f.get("tema", "Agronegócio"), "link": l}
+                if intl:
+                    n["tema"] = "Internacional"
+                novas.append(n)
+            log(f"Notícias: {f['veiculo']} lido ({cont['geral']} geral, {cont['intl']} internacional)")
         except Exception as e:  # noqa: BLE001
             log(f"Notícias: {f['veiculo']} falhou ({e})")
     vistos, saida = set(), []
@@ -350,7 +367,8 @@ def atualizar_noticias(dados: dict) -> None:
         if n["link"] not in vistos:
             vistos.add(n["link"])
             saida.append(n)
-    dados["noticias"] = saida[:40]
+    intl = [n for n in saida if n.get("tema") == "Internacional"][:20]
+    dados["noticias"] = [n for n in saida if n.get("tema") != "Internacional"][:30] + intl
 
 
 # ---------------------------------------------------------------- Cepea/Esalq (via Notícias Agrícolas)
