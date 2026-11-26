@@ -376,8 +376,14 @@ def atualizar_noticias(dados: dict) -> None:
     if not FEEDS.exists():
         return
     feeds = json.loads(FEEDS.read_text(encoding="utf-8"))["feeds"]
-    antigas = {n["link"]: n for n in dados.get("noticias", [])
-               if not VETADAS.search(n.get("titulo", "")) and (n.get("validade") or HOJE) >= HOJE}
+    def vigente(n: dict) -> bool:
+        if VETADAS.search(n.get("titulo", "")):
+            return False
+        if n.get("tema") == "Clima":           # aviso sem validade é de leitura antiga: expira
+            return (n.get("validade") or "") >= HOJE
+        return True
+
+    antigas = {n["link"]: n for n in dados.get("noticias", []) if vigente(n)}
     novas = []
     for f in feeds:
         try:
