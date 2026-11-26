@@ -1,5 +1,5 @@
 {
- "_instrucoes": "Fontes lidas pelo robô. tipo 'rss' (padrão) ou 'html' (com 'padrao' definido em scripts/atualizar_dados.py, HTML_FONTES). 'filtrar': true mantém só manchetes com termos do agronegócio. Fontes sem data na listagem recebem a data em que apareceram pela primeira vez. Fontes que falharem são ignoradas e registradas no log.",
+ "_instrucoes": "Fontes lidas pelo robô. tipo 'rss' (padrão) ou 'html' (com 'padrao' definido em scripts/atualizar_dados.py, HTML_FONTES). 'filtrar': true mantém só manchetes com termos do agronegócio; 'internacional' mantém só manchetes sobre o mercado externo que afetam o agro (China, EUA, tarifas, câmbio etc.). Em todas as fontes, essas manchetes recebem o tema Internacional e aparecem no bloco Mercado internacional. Fontes sem data na listagem recebem a data em que apareceram pela primeira vez. Fontes que falharem são ignoradas e registradas no log.",
  "feeds": [
   {
    "veiculo": "Embrapa",
@@ -57,6 +57,18 @@
    "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml",
    "tema": "Economia",
    "filtrar": true
+  },
+  {
+   "veiculo": "Agência Brasil",
+   "url": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
+   "tema": "Internacional",
+   "filtrar": "internacional"
+  },
+  {
+   "veiculo": "g1 Mundo",
+   "url": "https://g1.globo.com/rss/g1/mundo/",
+   "tema": "Internacional",
+   "filtrar": "internacional"
   }
  ]
 }
