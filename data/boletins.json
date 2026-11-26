@@ -171,7 +171,9 @@
     "https://drive.google.com/file/d/1uCieV27wn95EDjAIKIV8Kpnk3qdwRELz/view",
     "https://drive.google.com/file/d/12QyWxPYmxO0W6a5QtG69QhTr022for-_/view",
     "https://drive.google.com/file/d/1MbDGRTpl_ZQybrdMjDHuGcAPICOU0eTT/view",
-    "https://drive.google.com/file/d/1kfdhVFJirOBxJO0gHHHUzN3PoCoddtkx/view"
+    "https://drive.google.com/file/d/1kfdhVFJirOBxJO0gHHHUzN3PoCoddtkx/view",
+    "https://drive.google.com/file/d/1Yyo1D95Lt4oBZGmDU4vkSGw7Ol845wgl/view",
+    "https://drive.google.com/file/d/1Pyoz2goeP4kARSvR-rf4Gaf7wFCrJ5Aj/view"
   ],
   "series": [
     {
@@ -369,21 +371,6 @@
     },
     {
       "serie": "animal",
-      "numero": "6.0253",
-      "data": "2026-10-15",
-      "titulo": "Boletim de Mercado NEAGRO-DF: Suinocultura, setembro de 2026",
-      "cadeias": [
-        "Suinocultura"
-      ],
-      "resumo": "Mês de referência: setembro de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
-      "destaques": [],
-      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0253-boletim-suinos-neagro-df-2026-10-15.pdf",
-      "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1Yyo1D95Lt4oBZGmDU4vkSGw7Ol845wgl/view",
-      "designacao": "Vol. 4, No. 9 (set. 2026)"
-    },
-    {
-      "serie": "animal",
       "numero": "6.0251",
       "data": "2026-10-15",
       "titulo": "Boletim de Mercado NEAGRO-DF: Insumos (milho, farelo de soja, sorgo e soja), setembro de 2026",
@@ -473,21 +460,6 @@
       "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0243-boletim-suinos-neagro-df-2026-09-15.pdf",
       "origem": "manual",
       "pdf_original": "https://drive.google.com/file/d/11jRkVcJg8I2x68593wZY1hoIQN88lhJH/view",
-      "designacao": "Vol. 4, No. 8 (ago. 2026)"
-    },
-    {
-      "serie": "animal",
-      "numero": "6.0241",
-      "data": "2026-09-15",
-      "titulo": "Boletim de Mercado NEAGRO-DF: Insumos (milho, farelo de soja, sorgo e soja), agosto de 2026",
-      "cadeias": [
-        "Insumos"
-      ],
-      "resumo": "Mês de referência: agosto de 2026. Preços por praça com destaque para o Distrito Federal, Índice de Relação de Troca, movimentação de animais por GTA, comércio internacional e contexto de mercado.",
-      "destaques": [],
-      "pdf": "https://neagro-df.github.io/portal-neagro-df/boletins/2026/6.0241-boletim-insumos-neagro-df-2026-09-15.pdf",
-      "origem": "manual",
-      "pdf_original": "https://drive.google.com/file/d/1Pyoz2goeP4kARSvR-rf4Gaf7wFCrJ5Aj/view",
       "designacao": "Vol. 4, No. 8 (ago. 2026)"
     },
     {
