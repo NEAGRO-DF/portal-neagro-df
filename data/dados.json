@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-26T08:19-03:00",
+  "atualizado_em": "2026-11-26T08:21-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,13 @@
   },
   "noticias": [
     {
+      "titulo": "Tirso Meirelles alerta para aumento dos custos no campo e falta de mão de obra: ‘Custo será grande’",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/tirso-meirelles-alerta-para-aumento-dos-custos-no-campo-e-falta-de-mao-de-obra-custo-sera-grande/"
+    },
+    {
       "titulo": "Castelinho de Veranópolis recebe projeto de restauro",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
@@ -722,18 +729,18 @@
       "link": "https://www.canalrural.com.br/projetos/conteudo-patrocinado/do-solo-a-infraestrutura-a-tramontina-acompanha-o-dia-a-dia-do-campo/"
     },
     {
-      "titulo": "Caso de gripe aviária é registrado em São Mateus, no Espírito Santo",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/espirito-santo/caso-de-gripe-aviaria-e-registrdo-em-sao-mateus-no-espirito-santo/"
-    },
-    {
       "titulo": "Brasil critica possível novo tarifaço dos EUA e diz que não cederá",
       "veiculo": "Agência Brasil",
       "data": "2026-11-25",
       "tema": "Economia",
       "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-critica-possivel-novo-tarifaco-dos-eua-e-diz-que-nao-cedera"
+    },
+    {
+      "titulo": "Caso de gripe aviária é registrado em São Mateus, no Espírito Santo",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/espirito-santo/caso-de-gripe-aviaria-e-registrdo-em-sao-mateus-no-espirito-santo/"
     },
     {
       "titulo": "Amcham pede diálogo após consulta dos EUA sobre ampliar tarifas ao Brasil",
@@ -790,13 +797,6 @@
       "data": "2026-11-25",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/movimentacao-de-soja-no-porto-de-rio-grande-cresce-144-ate-outubro/"
-    },
-    {
-      "titulo": "Temporais afetam 40 municípios e deixam quatro mortos no Paraná",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/temporais-afetam-40-municipios-e-deixam-quatro-mortos-no-parana/"
     }
   ],
   "cartoes": [
@@ -1228,6 +1228,20 @@
               -24.5
             ],
             [
+              "Carcaça suína (classe E)",
+              140.17,
+              "100 KG",
+              "16/11/2026",
+              -9.7
+            ],
+            [
+              "Frango inteiro",
+              250.85,
+              "national currency/100kg",
+              "16/11/2026",
+              -11.0
+            ],
+            [
               "Leite cru ao produtor",
               46.02,
               "100KG",
@@ -1235,7 +1249,7 @@
               7.2
             ]
           ],
-          "nota": "Sem dados recentes para: Carcaça suína (classe E), Frango inteiro.",
+          "nota": "",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
