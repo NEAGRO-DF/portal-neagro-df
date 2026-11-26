@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-26T10:12-03:00",
+  "atualizado_em": "2026-11-26T10:15-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,22 @@
   },
   "noticias": [
     {
+      "titulo": "Chuvas Intensas: aviso do INMET para Noroeste de Minas (perigo potencial)",
+      "veiculo": "INMET",
+      "data": "2026-11-27",
+      "tema": "Clima",
+      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56514",
+      "validade": "2026-11-27"
+    },
+    {
+      "titulo": "Chuvas Intensas: aviso do INMET para Leste Goiano e Noroeste de Minas (perigo potencial)",
+      "veiculo": "INMET",
+      "data": "2026-11-27",
+      "tema": "Clima",
+      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56513",
+      "validade": "2026-11-27"
+    },
+    {
       "titulo": "Inscrições abertas para a 7ª edição do Curso de Criação do Bicudo-do-Algodoeiro",
       "veiculo": "Embrapa",
       "data": "2026-11-26",
@@ -792,11 +808,28 @@
       "link": "https://www.agrolink.com.br/noticias/trigo-gaucho-tem-pedidas-de-ate-r--1-470-t-para-janeiro_521519.html"
     },
     {
+      "titulo": "Chuvas Intensas: aviso do INMET para Noroeste de Minas (perigo)",
+      "veiculo": "INMET",
+      "data": "2026-11-26",
+      "tema": "Clima",
+      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56511",
+      "validade": "2026-11-26"
+    },
+    {
+      "titulo": "Chuvas Intensas: aviso do INMET para Noroeste de Minas (perigo)",
+      "veiculo": "INMET",
+      "data": "2026-11-26",
+      "tema": "Clima",
+      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56510",
+      "validade": "2026-11-26"
+    },
+    {
       "titulo": "Aviso de Chuvas Intensas. Severidade Grau: Perigo Potencial",
       "veiculo": "INMET",
       "data": "2026-11-26",
       "tema": "Clima",
-      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56509"
+      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56509",
+      "validade": "2026-11-26"
     },
     {
       "titulo": "Aviso de Chuvas Intensas. Severidade Grau: Perigo Potencial",
@@ -841,34 +874,6 @@
       "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150514635/cannabis-e-uma-so-saude-saiba-mais-sobre-essa-relacao-em-workshop-no-dia-3-de-dezembro"
     },
     {
-      "titulo": "Aviso de Tempestade. Severidade Grau: Perigo Potencial",
-      "veiculo": "INMET",
-      "data": "2026-11-25",
-      "tema": "Clima",
-      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56500"
-    },
-    {
-      "titulo": "Aviso de Tempestade. Severidade Grau: Perigo Potencial",
-      "veiculo": "INMET",
-      "data": "2026-11-25",
-      "tema": "Clima",
-      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56499"
-    },
-    {
-      "titulo": "CRB-JD realiza curso de aperfeiçoamento sobre coleções microbianas em parceria com a ANPII Bio",
-      "veiculo": "Embrapa",
-      "data": "2026-11-25",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150504369/crb-jd-realiza-curso-de-aperfeicoamento-sobre-colecoes-microbianas-em-parceria-com-a-anpii-bio"
-    },
-    {
-      "titulo": "Conab participa da Feira do Cooperativismo da Reforma Agrária Popular na UnB",
-      "veiculo": "Conab",
-      "data": "2026-11-25",
-      "tema": "Abastecimento",
-      "link": "https://www.gov.br/conab/pt-br/assuntos/noticias/conab-participa-da-feira-do-cooperativismo-da-reforma-agraria-popular-na-unb"
-    },
-    {
       "titulo": "Importação de ureia sobe e alcança maior patamar de 2026",
       "veiculo": "Scot Consultoria",
       "data": "2026-11-26",
@@ -902,6 +907,13 @@
       "data": "2026-11-26",
       "tema": "Internacional",
       "link": "https://www.canalrural.com.br/previsao-do-tempo/el-nino-deve-atingir-forca-maxima-em-dezembro-e-provocar-chuva-forte-tornados-e-calor-intenso-no-brasil/"
+    },
+    {
+      "titulo": "Macron diz que carne brasileira é 'dopada' e comemora veto da UE ao produto",
+      "veiculo": "g1 Agronegócios",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/macron-diz-que-carne-brasileira-e-dopada-e-comemora-veto-da-ue-ao-produto.ghtml"
     },
     {
       "titulo": "Tarifaço de Trump: nova taxa sobre açúcar brasileiro deve ter impacto 'praticamente nulo', diz analista",
@@ -1000,13 +1012,6 @@
       "data": "2026-11-25",
       "tema": "Internacional",
       "link": "https://g1.globo.com/mundo/noticia/2026/11/25/eua-deixam-de-lado-proposta-de-acordos-comerciais-com-russia-para-tentar-encerrar-guerra-na-ucrania-diz-jornal.ghtml"
-    },
-    {
-      "titulo": "Trump amplia ofensiva comercial e propõe novas tarifas contra Brasil, China e outros parceiros",
-      "veiculo": "g1 Mundo",
-      "data": "2026-11-25",
-      "tema": "Internacional",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/25/trump-amplia-ofensiva-comercial.ghtml"
     }
   ],
   "cartoes": [
@@ -1431,21 +1436,14 @@
           ],
           "linhas": [
             [
-              "Carcaça suína (classe E)",
-              140.17,
-              "100 KG",
+              "Carcaça bovina (classe R3)",
+              485.03,
+              "€/100Kg",
               "16/11/2026",
-              -9.7
-            ],
-            [
-              "Frango inteiro",
-              250.85,
-              "national currency/100kg",
-              "16/11/2026",
-              -11.0
+              -24.5
             ]
           ],
-          "nota": "Sem dados recentes para: Carcaça bovina (classe R3), Leite cru ao produtor.",
+          "nota": "Sem dados recentes para: Carcaça suína (classe E), Frango inteiro, Leite cru ao produtor.",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
