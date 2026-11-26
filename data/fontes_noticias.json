@@ -1,5 +1,5 @@
 {
-  "_instrucoes": "Fontes lidas pelo robô. tipo 'rss' (padrão) ou 'html' (com 'padrao' definido em scripts/atualizar_dados.py, HTML_FONTES). 'filtrar': true mantém só manchetes com termos do agronegócio; 'internacional' mantém só manchetes sobre o mercado externo que afetam o agro (China, EUA, tarifas, câmbio etc.). Em todas as fontes, essas manchetes recebem o tema Internacional e aparecem no bloco Mercado internacional. Fontes sem data na listagem recebem a data em que apareceram pela primeira vez. Fontes que falharem são ignoradas e registradas no log. O portal é institucional (FAV/UnB): manchetes de fraude, corrupção, crime e polêmica política são descartadas em qualquer fonte ou tema pela lista VETADAS, em scripts/atualizar_dados.py, antes dos demais filtros, e também são removidas das que já estavam guardadas.",
+  "_instrucoes": "Fontes lidas pelo robô. tipo 'rss' (padrão) ou 'html' (com 'padrao' definido em scripts/atualizar_dados.py, HTML_FONTES). 'filtrar': true mantém só manchetes com termos do agronegócio; 'internacional' mantém só manchetes sobre o mercado externo que afetam o agro (China, EUA, tarifas, câmbio etc.). Em todas as fontes, essas manchetes recebem o tema Internacional e aparecem no bloco Mercado internacional. Fontes sem data na listagem recebem a data em que apareceram pela primeira vez. Fontes que falharem são ignoradas e registradas no log. O portal é institucional (FAV/UnB): manchetes de fraude, corrupção, crime e polêmica política são descartadas em qualquer fonte ou tema pela lista VETADAS, em scripts/atualizar_dados.py, antes dos demais filtros, e também são removidas das que já estavam guardadas. 'filtrar': 'regiao' mantém só as manchetes que citam o DF, o Entorno ou a RIDE, conferidas no título e no resumo do item; serve para as fontes de clima.",
   "feeds": [
     {
       "veiculo": "Embrapa",
@@ -69,6 +69,12 @@
       "url": "https://g1.globo.com/rss/g1/mundo/",
       "tema": "Internacional",
       "filtrar": "internacional"
+    },
+    {
+      "veiculo": "INMET",
+      "url": "https://apiprevmet3.inmet.gov.br/avisos/rss",
+      "tema": "Clima",
+      "filtrar": "regiao"
     }
   ]
 }

@@ -8,7 +8,8 @@ on:
     - cron: "47 14 * * 1-5"   # dias úteis, 11h47 de Brasília (lançamentos do painel)
   workflow_dispatch: {}
   push:
-    paths: ["data/boletins.json", "data/manual.json", "data/contato.json", "src/**"]
+    paths: ["data/boletins.json", "data/manual.json", "data/contato.json",
+             "data/fontes_noticias.json", "scripts/**", "src/**"]
 
 permissions:
   contents: write

@@ -286,6 +286,15 @@ IMPACTO = re.compile(PALAVRAS.pattern + r"|tarifa|com[eé]rci|d[oó]lar|c[aâ]mb
 
 # O portal é institucional (FAV/UnB): manchetes de fraude, corrupção, crime e polêmica política
 # ficam de fora do bloco de notícias, qualquer que seja a fonte ou o tema.
+# Fontes de clima: só interessam as manchetes que falam do DF, do Entorno ou da RIDE.
+REGIAO = re.compile(
+    r"distrito federal|\bdf\b|bras[ií]lia|entorno|\bride\b|planalto central|centro-oeste|cerrado|"
+    r"goi[aá]s|\bgo\b|minas gerais|\bmg\b|"
+    r"formosa|luzi[aâ]nia|planaltina|valpara[ií]so|[aá]guas lindas|cristalina|santo ant[oô]nio do descoberto|"
+    r"novo gama|cidade ocidental|alexânia|cocalzinho|corumb[aá] de goi[aá]s|padre bernardo|mimoso de goi[aá]s|"
+    r"vila boa|[aá]gua fria de goi[aá]s|cabeceiras|una[ií]|buritis|cabeceira grande",
+    re.I)
+
 VETADAS = re.compile(
     r"fraude|fraudul|corrup|propina|suborno|lavagem de dinheiro|desvio de (?:recurso|verba|dinheiro)|"
     r"sonega|caixa dois|cartel|improbidade|pirataria|falsifica|adultera[çc][aã]o|"
@@ -317,7 +326,8 @@ def _rss(f: dict) -> list:
             d = datetime.strptime(d[:25].strip(), "%a, %d %b %Y %H:%M:%S").strftime("%Y-%m-%d")
         except ValueError:
             d = HOJE
-        itens.append((t, l, d))
+        resumo = _limpa(it.findtext("description") or "")
+        itens.append((t, l, d, resumo))
     return itens
 
 
@@ -338,7 +348,7 @@ def _html(f: dict) -> list:
     itens = []
     for g in HTML_FONTES[f["padrao"]].findall(pag):
         link = g[0] if g[0].startswith("http") else f.get("base", "") + g[0]
-        itens.append((_limpa(g[1]), link, _data_br(g[2]) if len(g) > 2 else HOJE))
+        itens.append((_limpa(g[1]), link, _data_br(g[2]) if len(g) > 2 else HOJE, ""))
     return itens
 
 
@@ -353,10 +363,12 @@ def atualizar_noticias(dados: dict) -> None:
             itens = _html(f) if f.get("tipo") == "html" else _rss(f)
             vistos, cont = set(), {"geral": 0, "intl": 0}
             filtro = f.get("filtrar", True)
-            for t, l, d in sorted(itens, key=lambda x: x[2], reverse=True):
+            for t, l, d, resumo in sorted(itens, key=lambda x: x[2], reverse=True):
                 if not t or not l or l in vistos:
                     continue
                 if VETADAS.search(t):
+                    continue
+                if filtro == "regiao" and not REGIAO.search(t + " " + resumo):
                     continue
                 intl = bool(INTL.search(t)) and (not filtro or bool(IMPACTO.search(t)))
                 if filtro == "internacional" and not intl:
