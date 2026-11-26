@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-26T10:10-03:00",
+  "atualizado_em": "2026-11-26T10:12-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -1431,13 +1431,6 @@
           ],
           "linhas": [
             [
-              "Carcaça bovina (classe R3)",
-              485.03,
-              "€/100Kg",
-              "16/11/2026",
-              -24.5
-            ],
-            [
               "Carcaça suína (classe E)",
               140.17,
               "100 KG",
@@ -1452,7 +1445,7 @@
               -11.0
             ]
           ],
-          "nota": "Sem dados recentes para: Leite cru ao produtor.",
+          "nota": "Sem dados recentes para: Carcaça bovina (classe R3), Leite cru ao produtor.",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
