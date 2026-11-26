@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-26T09:35-03:00",
+  "atualizado_em": "2026-11-26T09:42-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -911,6 +911,13 @@
       "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/tarifaco-de-trump-nova-taxa-sobre-acucar-brasileiro-deve-ter-impacto-praticamente-nulo-diz-analista.ghtml"
     },
     {
+      "titulo": "Arco Norte amplia embarques de soja e milho em 59%",
+      "veiculo": "Agrolink",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://www.agrolink.com.br/noticias/arco-norte-amplia-embarques-de-soja-e-milho-em-59-_521528.html"
+    },
+    {
       "titulo": "Brasil critica possível novo tarifaço dos EUA e diz que não cederá",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
@@ -1000,13 +1007,6 @@
       "data": "2026-11-25",
       "tema": "Internacional",
       "link": "https://g1.globo.com/mundo/noticia/2026/11/25/eua-deixam-de-lado-proposta-de-acordos-comerciais-com-russia-para-tentar-encerrar-guerra-na-ucrania-diz-jornal.ghtml"
-    },
-    {
-      "titulo": "Trump amplia ofensiva comercial e propõe novas tarifas contra Brasil, China e outros parceiros",
-      "veiculo": "g1 Mundo",
-      "data": "2026-11-25",
-      "tema": "Internacional",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/25/trump-amplia-ofensiva-comercial.ghtml"
     }
   ],
   "cartoes": [
@@ -1438,6 +1438,20 @@
               -24.5
             ],
             [
+              "Carcaça suína (classe E)",
+              140.17,
+              "100 KG",
+              "16/11/2026",
+              -9.7
+            ],
+            [
+              "Frango inteiro",
+              250.85,
+              "national currency/100kg",
+              "16/11/2026",
+              -11.0
+            ],
+            [
               "Leite cru ao produtor",
               46.02,
               "100KG",
@@ -1445,7 +1459,7 @@
               7.2
             ]
           ],
-          "nota": "Sem dados recentes para: Carcaça suína (classe E), Frango inteiro.",
+          "nota": "",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
