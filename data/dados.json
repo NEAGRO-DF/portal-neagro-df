@@ -1,21 +1,17 @@
 {
-  "atualizado_em": "2026-11-26T12:40-03:00",
+  "atualizado_em": "2026-11-26T19:09-03:00",
   "indicadores": [
     {
       "id": "dolar",
       "nome": "Dólar comercial",
-      "valor": 5.8819,
+      "valor": 5.744,
       "unidade": "R$/US$",
       "casas": 4,
-      "referencia": "25/11/2026",
-      "variacao_pct": 10.27,
+      "referencia": "26/11/2026",
+      "variacao_pct": 7.54,
       "variacao_desc": "em 20 pregões",
       "grupo": "macro",
       "serie": [
-        [
-          "27/10",
-          5.334
-        ],
         [
           "28/10",
           5.3414
@@ -91,6 +87,10 @@
         [
           "25/11",
           5.8819
+        ],
+        [
+          "26/11",
+          5.744
         ]
       ],
       "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)",
@@ -187,11 +187,11 @@
       "fonte": "Banco Central do Brasil, SGS série 21619 (taxa de câmbio livre, euro, venda)",
       "link": "https://www3.bcb.gov.br/sgspub/",
       "automatico": true,
-      "valor": 6.4413,
-      "referencia": "25/11/2026",
+      "valor": 6.3041,
+      "referencia": "26/11/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.21619/dados/ultimos/20?formato=json",
       "extraido_em": "2026-11-26",
-      "variacao_pct": 8.35,
+      "variacao_pct": 5.92,
       "variacao_desc": "em 20 pregões"
     },
     {
@@ -213,12 +213,12 @@
     {
       "id": "boi",
       "nome": "Boi gordo Cepea/Esalq",
-      "valor": 395.45,
+      "valor": 396.7,
       "unidade": "R$/@",
       "casas": 2,
-      "referencia": "24/11/2026",
-      "variacao_pct": 0.01,
-      "variacao_desc": "sobre 13/11/2026",
+      "referencia": "26/11/2026",
+      "variacao_pct": 0.32,
+      "variacao_desc": "sobre 24/11/2026",
       "grupo": "precos",
       "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo), à vista, widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/boi-gordo.aspx",
@@ -229,12 +229,12 @@
     {
       "id": "soja",
       "nome": "Soja Paranaguá Cepea/Esalq",
-      "valor": 170.05,
+      "valor": 169.18,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "referencia": "25/11/2026",
-      "variacao_pct": -0.11,
-      "variacao_desc": "sobre 24/11/2026",
+      "referencia": "26/11/2026",
+      "variacao_pct": -0.51,
+      "variacao_desc": "sobre 25/11/2026",
       "grupo": "precos",
       "fonte": "Indicador da Soja Cepea/Esalq Paranaguá, widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/soja.aspx",
@@ -245,12 +245,12 @@
     {
       "id": "milho",
       "nome": "Milho Esalq/B3",
-      "valor": 67.94,
+      "valor": 68.0,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "referencia": "25/11/2026",
-      "variacao_pct": -0.32,
-      "variacao_desc": "sobre 24/11/2026",
+      "referencia": "26/11/2026",
+      "variacao_pct": 0.09,
+      "variacao_desc": "sobre 25/11/2026",
       "grupo": "precos",
       "fonte": "Indicador do Milho Esalq/B3 (Campinas), widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/milho.aspx",
@@ -675,6 +675,62 @@
       "validade": "2026-11-27"
     },
     {
+      "titulo": "Embrapa Recursos Genéticos e Biotecnologia celebra 52 anos com R$ 3,4 milhões em royalties e novos contratos de inovação",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150593299/embrapa-recursos-geneticos-e-biotecnologia-celebra-52-anos-com-r-34-milhoes-em-royalties-e-novos-contratos-de-inovacao"
+    },
+    {
+      "titulo": "Novos cursos fortalecem conservação da agrobiodiversidade e gestão da sociobioeconomia",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150589519/novos-cursos-fortalecem-conservacao--da-agrobiodiversidade-e-gestao-da-sociobioeconomia"
+    },
+    {
+      "titulo": "Manejo-Matte e Ferti-Matte passam a operar exclusivamente via web a partir de 30/11",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150588937/manejo-matte-e-ferti-matte-passam-a-operar-exclusivamente-via-web-a-partir-de-3011"
+    },
+    {
+      "titulo": "Observatório do Cânhamo é apresentado durante solenidade comemorativa",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150587737/observatorio-do-canhamo-e-apresentado-durante-solenidade--comemorativa"
+    },
+    {
+      "titulo": "Galinha da raça Canela-Preta é aposta do projeto Lagos do São Francisco para fortalecer a agricultura familiar no Semiárido",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150581744/galinha-da-raca-canela-preta-e-aposta-do-projeto-lagos-do-sao-francisco-para-fortalecer-a-agricultura-familiar-no-semiarido"
+    },
+    {
+      "titulo": "O que os números dizem sobre a pecuária do Acre?",
+      "veiculo": "Scot Consultoria",
+      "data": "2026-11-26",
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61134/o-que-os-numeros-dizem-sobre-a-pecuaria-do-acre.htm"
+    },
+    {
+      "titulo": "Fique Sabendo - Cotações de bovinos Nelore destinados à reposição no Maranhão",
+      "veiculo": "Scot Consultoria",
+      "data": "2026-11-26",
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61133/fique-sabendo-cotacoes-de-bovinos-nelore-destinados-a-reposicao-no-maranhao.htm"
+    },
+    {
+      "titulo": "Mercado do boi gordo: em São Paulo, mercado estável",
+      "veiculo": "Scot Consultoria",
+      "data": "2026-11-26",
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61132/mercado-do-boi-gordo-em-sao-paulo-mercado-estavel.htm"
+    },
+    {
       "titulo": "Carta Conjuntura - A carne sozinha não paga a conta do frigorífico",
       "veiculo": "Scot Consultoria",
       "data": "2026-11-26",
@@ -689,60 +745,39 @@
       "link": "https://www.scotconsultoria.com.br/noticias/cartas/61129/carta-insumos-fertilizante-organomineral-vale-a-pena-investir.htm"
     },
     {
-      "titulo": "A cotação da novilha e da vaca subiu em São Paulo",
-      "veiculo": "Scot Consultoria",
-      "data": "2026-11-26",
-      "tema": "Pecuária",
-      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61128/a-cotacao-da-novilha-e-da-vaca-subiu-em-sao-paulo.htm"
-    },
-    {
-      "titulo": "Fique Sabendo - Abate de bovinos no terceiro trimestre de 2026",
-      "veiculo": "Scot Consultoria",
-      "data": "2026-11-26",
-      "tema": "Pecuária",
-      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61127/fique-sabendo-abate-de-bovinos-no-terceiro-trimestre-de-2026.htm"
-    },
-    {
-      "titulo": "Alta nas cotações no mercado do boi gordo em São Paulo",
-      "veiculo": "Scot Consultoria",
-      "data": "2026-11-26",
-      "tema": "Pecuária",
-      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61126/alta-nas-cotacoes-no-mercado-do-boi-gordo-em-sao-paulo.htm"
-    },
-    {
-      "titulo": "Próxima transformação do agro exige conhecimento e capacidade de adaptação",
+      "titulo": "Workshop em Teresina apresenta Plataforma Terras do Brasil a três estados do Nordeste",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/agronegocio/proxima-transformacao-do-agro-exige-conhecimento-e-capacidade-de-adaptacao/"
+      "link": "https://www.canalrural.com.br/politica/workshop-em-teresina-apresenta-plataforma-terras-do-brasil-a-tres-estados-do-nordeste/"
     },
     {
-      "titulo": "Kassab diz que percepção sobre Trabuco na Fazenda melhora confiança no governo",
+      "titulo": "CNA acusa Macron de tentar prejudicar imagem do agro brasileiro",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/kassab-diz-que-percepcao-sobre-trabuco-na-fazenda-melhora-confianca-no-governo/"
+      "link": "https://www.canalrural.com.br/pecuaria/cna-acusa-macron-de-tentar-prejudicar-imagem-do-agro-brasileiro/"
     },
     {
-      "titulo": "André de Paula participa do Prêmio Canasplan 2026 em João Pessoa",
+      "titulo": "Trabuco é sondado para o Ministério da Fazenda no próximo governo Lula",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/andre-de-paula-participa-do-premio-canasplan-2026-em-joao-pessoa/"
+      "link": "https://www.canalrural.com.br/politica/trabuco-e-sondado-para-o-ministerio-da-fazenda-no-proximo-governo-lula/"
     },
     {
-      "titulo": "CNA defende papel do produtor rural na segurança hídrica em fórum da água",
+      "titulo": "Área de TI do Mapa completa 50 anos com foco na digitalização de serviços",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/cna-defende-papel-do-produtor-rural-na-seguranca-hidrica-em-forum-da-agua/"
+      "link": "https://www.canalrural.com.br/politica/area-de-ti-do-mapa-completa-50-anos-com-foco-na-digitalizacao-de-servicos/"
     },
     {
-      "titulo": "‘Falas infundadas’, diz ABPA sobre ataque de Macron a carne brasileira",
+      "titulo": "Workshop do Mapa debate seguro rural e perspectivas do PSR para 2027",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/internacional/falas-infundadas-diz-abpa-sobre-ataque-de-macron-a-carne-brasileira/"
+      "link": "https://www.canalrural.com.br/politica/workshop-do-mapa-debate-seguro-rural-e-perspectivas-do-psr-para-2027/"
     },
     {
       "titulo": "Preço dos alimentos: o que ficou mais caro e o que barateou na prévia da inflação de novembro",
@@ -752,39 +787,46 @@
       "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/preco-dos-alimentos-o-que-ficou-mais-caro-e-o-que-barateou-na-previa-da-inflacao-de-novembro.ghtml"
     },
     {
-      "titulo": "Cafeicultura regenerativa comprova viabilidade econômica e impacto ambiental em escala territorial no Brasil",
+      "titulo": "Café robusta reage após perdas recentes e fecha em alta na Bolsa de Londres",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/cafeicultura-regenerativa-comprova-viabilidade-economica-e-impacto-ambiental-em-escala-territorial-no-brasil_521534.html"
+      "link": "https://www.agrolink.com.br/noticias/cafe-robusta-reage-apos-perdas-recentes-e-fecha-em-alta-na-bolsa-de-londres_521575.html"
     },
     {
-      "titulo": "SUÍNOS: Queda dos preços amplia competitividade da carne suína frente às concorrentes",
+      "titulo": "RS: melhora do tempo favorece recuperação das lavouras do feijão",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/suinos--queda-dos-precos-amplia-competitividade-da-carne-suina-frente-as-concorrentes_521526.html"
+      "link": "https://www.agrolink.com.br/noticias/rs--melhora-do-tempo-favorece-recuperacao-das-lavouras-do-feijao_521574.html"
     },
     {
-      "titulo": "BOI: Diferença de preços entre boi gordo e fêmeas sinaliza mudanças no ciclo pecuário",
+      "titulo": "Boi gordo mantém preços estáveis em São Paulo e no Paraná",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/boi--diferenca-de-precos-entre-boi-gordo-e-femeas-sinaliza-mudancas-no-ciclo-pecuario_521525.html"
+      "link": "https://www.agrolink.com.br/noticias/boi-gordo-mantem-precos-estaveis-em-sao-paulo-e-no-parana_521573.html"
     },
     {
-      "titulo": "Encontro debate futuro da Agronomia no Brasil",
+      "titulo": "Alertas Agrotempo indicam calor severo no Piauí, com até 40 °C, na sexta (27/11)",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/faesp-senar-e-confaeab-promovem-o-1--encontro-brasileiro-das-liderancas-da-agronomia-3c_521522.html"
+      "link": "https://www.agrolink.com.br/agrotempo/noticia/alertas-agrotempo-indicam-calor-severo-no-piaui--com-ate-40--c--na-sexta--27-11-_521565.html"
     },
     {
-      "titulo": "Falta de lenha pode frear avanço do etanol de milho",
+      "titulo": "Brasil amplia compras de trigo e enfrenta custos maiores",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/falta-de-lenha-pode-frear-avanco-do-etanol-de-milho_521521.html"
+      "link": "https://www.agrolink.com.br/noticias/brasil-amplia-compras-de-trigo-e-enfrenta-custos-maiores_521558.html"
+    },
+    {
+      "titulo": "Seca na Amazônia: governo estuda auxílio emergencial para pescadores",
+      "veiculo": "Agência Brasil",
+      "data": "2026-11-26",
+      "tema": "Economia",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/seca-na-amazonia-governo-estuda-auxilio-emergencial-para-pescadores"
     },
     {
       "titulo": "Chuvas Intensas: aviso do INMET para Noroeste de Minas (perigo)",
@@ -811,67 +853,32 @@
       "validade": "2026-11-26"
     },
     {
-      "titulo": "Santa Catarina e Paraná recebem visitas para diagnóstico do Zarc Níveis de Manejo Milho",
-      "veiculo": "Embrapa",
+      "titulo": "A cotação da novilha e da vaca subiu em São Paulo",
+      "veiculo": "Scot Consultoria",
       "data": "2026-11-26",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150556121/santa-catarina-e-parana-recebem-visitas-para-diagnostico-do-zarc-niveis-de-manejo-milho"
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61128/a-cotacao-da-novilha-e-da-vaca-subiu-em-sao-paulo.htm"
     },
     {
-      "titulo": "Inscrições abertas para a 7ª edição do Curso de Criação do Bicudo-do-Algodoeiro",
-      "veiculo": "Embrapa",
+      "titulo": "Fique Sabendo - Abate de bovinos no terceiro trimestre de 2026",
+      "veiculo": "Scot Consultoria",
       "data": "2026-11-26",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150555258/inscricoes-abertas-para-a-7-edicao-do-curso-de-criacao-do-bicudo-do-algodoeiro"
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61127/fique-sabendo-abate-de-bovinos-no-terceiro-trimestre-de-2026.htm"
     },
     {
-      "titulo": "SBIAgro 2027 vai debater robótica e sistemas inteligentes na agricultura",
-      "veiculo": "Embrapa",
+      "titulo": "Alta nas cotações no mercado do boi gordo em São Paulo",
+      "veiculo": "Scot Consultoria",
       "data": "2026-11-26",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150549895/sbiagro-2027-vai-debater-robotica-e-sistemas-inteligentes-na-agricultura"
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61126/alta-nas-cotacoes-no-mercado-do-boi-gordo-em-sao-paulo.htm"
     },
     {
-      "titulo": "Embrapa capacita técnicos da CATI para qualificar atendimento ao produtor de leite em São Paulo",
-      "veiculo": "Embrapa",
+      "titulo": "Conab recebe delegação argentina na Paraíba para intercâmbio sobre agricultura familiar e abastecimento",
+      "veiculo": "Conab",
       "data": "2026-11-26",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150549817/embrapa-capacita-tecnicos-da-cati-para-qualificar-atendimento-ao-produtor-de-leite-em-sao-paulo"
-    },
-    {
-      "titulo": "Embrapa lança curso on-line e gratuito sobre biorrefinarias integradas",
-      "veiculo": "Embrapa",
-      "data": "2026-11-26",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150535523/embrapa-lanca-curso-on-line-e-gratuito-sobre-biorrefinarias-integradas"
-    },
-    {
-      "titulo": "Diretora de defesa animal da Seapi é homenageada pela Asgav no Rio Grande do Sul",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/aves-e-suinos/diretora-de-defesa-animal-da-seapi-e-homenageada-pela-asgav-no-rio-grande-do-sul/"
-    },
-    {
-      "titulo": "Áreas em restauração no Brasil triplicam em cinco anos",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/areas-em-restauracao-no-brasil-triplicam-em-cinco-anos/"
-    },
-    {
-      "titulo": "Juros futuros recuam após IPCA-15 de novembro abaixo das estimativas",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/juros-futuros-recuam-apos-ipca-15-de-novembro-abaixo-das-estimativas/"
-    },
-    {
-      "titulo": "Arroba do boi gordo volta a subir em SP e avança, mas recua no mercado futuro",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/arroba-do-boi-gordo-volta-a-subir-em-sp-e-avanca-mas-recua-no-mercado-futuro/"
+      "tema": "Internacional",
+      "link": "https://www.gov.br/conab/pt-br/assuntos/noticias/conab-recebe-delegacao-argentina-na-paraiba-para-intercambio-sobre-agricultura-familiar-e-abastecimento"
     },
     {
       "titulo": "Importação de ureia sobe e alcança maior patamar de 2026",
@@ -895,6 +902,27 @@
       "link": "https://www.scotconsultoria.com.br/noticias/artigos/61102/arroba-em-dolares-cara-para-o-historico-e-barata-para-o-mundo.htm"
     },
     {
+      "titulo": "Conab recebe missão argentina na Paraíba para intercâmbio sobre agricultura familiar",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://www.canalrural.com.br/agricultura/conab-recebe-missao-argentina-na-paraiba-para-intercambio-sobre-agricultura-familiar/"
+    },
+    {
+      "titulo": "Soja recua no Brasil com forte queda do dólar e negócios travados; confira os preços do dia",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/soja-recua-no-brasil-com-forte-queda-do-dolar-e-negocios-travados-confira-os-precos-do-dia/"
+    },
+    {
+      "titulo": "Macron critica cortes no orçamento da UE e defende recursos para agricultura",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://www.canalrural.com.br/politica/macron-critica-cortes-no-orcamento-da-ue-e-defende-recursos-para-agricultura/"
+    },
+    {
       "titulo": "'Carne dopada': exportadores brasileiros rebatem fala de Macron: 'grave e inaceitável um chefe de Estado recorrer a inverdades'",
       "veiculo": "g1 Agronegócios",
       "data": "2026-11-26",
@@ -916,39 +944,39 @@
       "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/tarifaco-de-trump-nova-taxa-sobre-acucar-brasileiro-deve-ter-impacto-praticamente-nulo-diz-analista.ghtml"
     },
     {
-      "titulo": "El Niño pode reduzir oferta de leite no Sul",
+      "titulo": "Exportações de mel recuam em outubro",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.agrolink.com.br/noticias/el-nino-pode-reduzir-oferta-de-leite-no-sul_521533.html"
+      "link": "https://www.agrolink.com.br/noticias/exportacoes-de-mel-recuam-em-outubro_521570.html"
     },
     {
-      "titulo": "Arco Norte amplia embarques de soja e milho em 59%",
+      "titulo": "Trigo em Chicago cai ao menor nível desde fevereiro",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.agrolink.com.br/noticias/arco-norte-amplia-embarques-de-soja-e-milho-em-59-_521528.html"
+      "link": "https://www.agrolink.com.br/noticias/trigo-em-chicago-cai-ao-menor-nivel-desde-fevereiro_521566.html"
     },
     {
-      "titulo": "Brasil critica possível novo tarifaço dos EUA e diz que não cederá",
+      "titulo": "Preço do milho fica estável em Chicago",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.agrolink.com.br/noticias/brasil-critica-possivel-novo-tarifaco-dos-eua-e-diz-que-nao-cedera_521524.html"
+      "link": "https://www.agrolink.com.br/noticias/preco-do-milho-fica-estavel-em-chicago_521562.html"
     },
     {
-      "titulo": "Soja sobe em parte do interior com dólar em queda",
+      "titulo": "Soja sobe para US$ 12,44 por bushel em Chicago",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.agrolink.com.br/noticias/soja-sobe-em-parte-do-interior-com-dolar-em-queda_521517.html"
+      "link": "https://www.agrolink.com.br/noticias/soja-sobe-para-us--12-44-por-bushel-em-chicago_521561.html"
     },
     {
-      "titulo": "Canadá pode ser o 2º maior exportador de trigo",
+      "titulo": "Exportações do Brasil crescem 23% em novembro",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.agrolink.com.br/noticias/canada-pode-ser-o-2--maior-exportador-de-trigo_521510.html"
+      "link": "https://www.agrolink.com.br/noticias/exportacoes-do-brasil-crescem-23--em-novembro_521549.html"
     },
     {
       "titulo": "China: questões comerciais com EUA devem ser resolvidas com diálogo",
@@ -972,46 +1000,18 @@
       "link": "https://g1.globo.com/economia/noticia/2026/11/26/china-brasil-e-uniao-europeia-reagem-a-novas-tarifas-anunciadas-por-trump.ghtml"
     },
     {
-      "titulo": "Macron chama carne bovina brasileira de ‘dopada’ e celebra restrições às importações",
-      "veiculo": "Canal Rural",
+      "titulo": "El Niño pode reduzir oferta de leite no Sul",
+      "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.canalrural.com.br/pecuaria/macron-chama-carne-bovina-brasileira-de-dopada-e-celebra-restricoes-as-importacoes/"
+      "link": "https://www.agrolink.com.br/noticias/el-nino-pode-reduzir-oferta-de-leite-no-sul_521533.html"
     },
     {
-      "titulo": "Especulações sobre novo ministro da Fazenda faz dólar cair e Ibovespa subir",
-      "veiculo": "Canal Rural",
+      "titulo": "Arco Norte amplia embarques de soja e milho em 59%",
+      "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.canalrural.com.br/economia/especulacoes-sobre-novo-ministro-da-fazenda-faz-dolar-cair-e-ibovespa-subir/"
-    },
-    {
-      "titulo": "El Niño deve atingir força máxima em dezembro e provocar chuva forte, tornados e calor intenso no Brasil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/el-nino-deve-atingir-forca-maxima-em-dezembro-e-provocar-chuva-forte-tornados-e-calor-intenso-no-brasil/"
-    },
-    {
-      "titulo": "Secretária de Agricultura de Trump defende novas tarifas e acusa Brasil de 'práticas desleais' contra agricultores dos EUA",
-      "veiculo": "g1 Agronegócios",
-      "data": "2026-11-25",
-      "tema": "Internacional",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/25/secretaria-de-agricultura-de-trump-defende-novas-tarifas-e-acusa-brasil-de-praticas-desleais-contra-agricultores-dos-eua.ghtml"
-    },
-    {
-      "titulo": "Após suspensão, JBS espera retomada das exportações de frango à UE em dezembro",
-      "veiculo": "g1 Agronegócios",
-      "data": "2026-11-25",
-      "tema": "Internacional",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/25/jbs-exportacao-frango-uniao-europeia.ghtml"
-    },
-    {
-      "titulo": "Brasil critica possível novo tarifaço dos EUA e diz que não cederá",
-      "veiculo": "Agência Brasil",
-      "data": "2026-11-25",
-      "tema": "Internacional",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-critica-possivel-novo-tarifaco-dos-eua-e-diz-que-nao-cedera"
+      "link": "https://www.agrolink.com.br/noticias/arco-norte-amplia-embarques-de-soja-e-milho-em-59-_521528.html"
     }
   ],
   "cartoes": [
@@ -1198,7 +1198,7 @@
           "fonte": "MDIC/Secex, ComexStat, exportações por município",
           "link": "https://comexstat.mdic.gov.br/pt/municipio",
           "endpoint": "https://api-comexstat.mdic.gov.br/cities",
-          "extraido_em": "2026-11-25",
+          "extraido_em": "2026-11-26",
           "automatico": true
         }
       ]
@@ -1244,7 +1244,7 @@
           "link": "https://comexstat.mdic.gov.br/pt/geral",
           "endpoint": "https://api-comexstat.mdic.gov.br/general",
           "link2": "https://indicadores.agricultura.gov.br/agrostat/index.htm",
-          "extraido_em": "2026-11-25",
+          "extraido_em": "2026-11-26",
           "automatico": true
         },
         {
@@ -1294,7 +1294,7 @@
           "fonte": "MDIC/Secex, ComexStat",
           "link": "https://comexstat.mdic.gov.br/pt/geral",
           "endpoint": "https://api-comexstat.mdic.gov.br/general",
-          "extraido_em": "2026-11-25",
+          "extraido_em": "2026-11-26",
           "automatico": true
         },
         {
@@ -1349,7 +1349,7 @@
           "fonte": "MDIC/Secex, ComexStat, bloco União Europeia",
           "link": "https://comexstat.mdic.gov.br/pt/geral",
           "endpoint": "https://api-comexstat.mdic.gov.br/general",
-          "extraido_em": "2026-11-25",
+          "extraido_em": "2026-11-26",
           "automatico": true
         }
       ]
@@ -1441,9 +1441,30 @@
               "€/100Kg",
               "16/11/2026",
               -24.5
+            ],
+            [
+              "Carcaça suína (classe E)",
+              140.17,
+              "100 KG",
+              "16/11/2026",
+              -9.7
+            ],
+            [
+              "Frango inteiro",
+              250.85,
+              "national currency/100kg",
+              "16/11/2026",
+              -11.0
+            ],
+            [
+              "Leite cru ao produtor",
+              46.02,
+              "100KG",
+              "01/10/2026",
+              7.2
             ]
           ],
-          "nota": "Sem dados recentes para: Carcaça suína (classe E), Frango inteiro, Leite cru ao produtor.",
+          "nota": "",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
