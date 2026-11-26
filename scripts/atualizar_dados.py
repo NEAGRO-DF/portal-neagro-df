@@ -287,13 +287,11 @@ IMPACTO = re.compile(PALAVRAS.pattern + r"|tarifa|com[eé]rci|d[oó]lar|c[aâ]mb
 # O portal é institucional (FAV/UnB): manchetes de fraude, corrupção, crime e polêmica política
 # ficam de fora do bloco de notícias, qualquer que seja a fonte ou o tema.
 # Fontes de clima: só interessam as manchetes que falam do DF, do Entorno ou da RIDE.
-REGIAO = re.compile(
-    r"distrito federal|\bdf\b|bras[ií]lia|entorno|\bride\b|planalto central|centro-oeste|cerrado|"
-    r"goi[aá]s|\bgo\b|minas gerais|\bmg\b|"
-    r"formosa|luzi[aâ]nia|planaltina|valpara[ií]so|[aá]guas lindas|cristalina|santo ant[oô]nio do descoberto|"
-    r"novo gama|cidade ocidental|alexânia|cocalzinho|corumb[aá] de goi[aá]s|padre bernardo|mimoso de goi[aá]s|"
-    r"vila boa|[aá]gua fria de goi[aá]s|cabeceiras|una[ií]|buritis|cabeceira grande",
-    re.I)
+REGIAO = re.compile(r"distrito federal|bras[ií]lia|leste goiano|noroeste de minas", re.I)
+# Campos do aviso do INMET, que vêm concatenados no resumo do item.
+AVISO = {c: re.compile(c + r"(.*?)(?=" + p2 + r")", re.S) for c, p2 in
+         (("Evento", "Severidade"), ("Severidade", "In[ií]cio"), ("Fim", "Descri[çc][aã]o"))}
+AVISO_AREAS = re.compile(r"Aviso para as [ÁA]reas:(.*)$", re.S)
 
 VETADAS = re.compile(
     r"fraude|fraudul|corrup|propina|suborno|lavagem de dinheiro|desvio de (?:recurso|verba|dinheiro)|"
@@ -352,11 +350,34 @@ def _html(f: dict) -> list:
     return itens
 
 
+def _aviso(titulo: str, resumo: str) -> tuple:
+    """Do aviso do INMET tira um título que diz o evento, a gravidade e as áreas do DF e da RIDE
+    atingidas, além da data de fim da validade. Sem resumo reconhecível, devolve o título original."""
+    def campo(c):
+        m = AVISO[c].search(resumo)
+        return (m.group(1).strip() if m else "")
+    evento, grau, fim = campo("Evento"), campo("Severidade"), campo("Fim")[:10]
+    m = AVISO_AREAS.search(resumo)
+    areas = [a for a in REGIAO.findall(m.group(1)) if a] if m else []
+    vistas, nomes = set(), []
+    for a in areas:
+        k = a.lower()
+        if k not in vistas:
+            vistas.add(k)
+            nomes.append(a if a.lower() != "distrito federal" else "Distrito Federal")
+    if not evento:
+        return titulo, fim
+    onde = ", ".join(nomes[:-1]) + " e " + nomes[-1] if len(nomes) > 1 else (nomes[0] if nomes else "")
+    t = f"{evento}: aviso do INMET para {onde}" if onde else f"{evento}: aviso do INMET"
+    return (t + f" ({grau.lower()})" if grau else t), fim
+
+
 def atualizar_noticias(dados: dict) -> None:
     if not FEEDS.exists():
         return
     feeds = json.loads(FEEDS.read_text(encoding="utf-8"))["feeds"]
-    antigas = {n["link"]: n for n in dados.get("noticias", []) if not VETADAS.search(n.get("titulo", ""))}
+    antigas = {n["link"]: n for n in dados.get("noticias", [])
+               if not VETADAS.search(n.get("titulo", "")) and (n.get("validade") or HOJE) >= HOJE}
     novas = []
     for f in feeds:
         try:
@@ -370,8 +391,6 @@ def atualizar_noticias(dados: dict) -> None:
                     continue
                 if filtro == "regiao" and not REGIAO.search(t + " " + resumo):
                     continue
-                if filtro == "regiao" and cont["geral"] == 0:
-                    log(f"Notícias: {f['veiculo']} item bruto -> titulo={t!r} resumo={resumo[:600]!r}")
                 intl = bool(INTL.search(t)) and (not filtro or bool(IMPACTO.search(t)))
                 if filtro == "internacional" and not intl:
                     continue
@@ -383,8 +402,15 @@ def atualizar_noticias(dados: dict) -> None:
                 vistos.add(l)
                 cont[grupo] += 1
                 # mantém a data da primeira leitura (fontes sem data na listagem recebem a data em que apareceram)
+                if filtro == "regiao":
+                    novo_t, validade = _aviso(t, resumo)
+                    if validade and validade < HOJE:
+                        continue            # aviso já vencido
+                    t = novo_t
                 n = antigas.get(l) or {"titulo": t, "veiculo": f["veiculo"], "data": d,
                                        "tema": f.get("tema", "Agronegócio"), "link": l}
+                if filtro == "regiao" and validade:
+                    n["validade"] = validade
                 if intl:
                     n["tema"] = "Internacional"
                 novas.append(n)
