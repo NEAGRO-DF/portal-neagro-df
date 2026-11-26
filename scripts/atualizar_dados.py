@@ -409,8 +409,10 @@ def atualizar_noticias(dados: dict) -> None:
                     t = novo_t
                 n = antigas.get(l) or {"titulo": t, "veiculo": f["veiculo"], "data": d,
                                        "tema": f.get("tema", "Agronegócio"), "link": l}
-                if filtro == "regiao" and validade:
-                    n["validade"] = validade
+                if filtro == "regiao":
+                    # o aviso é reescrito a cada leitura: título e validade vêm sempre do item atual
+                    n["titulo"] = t
+                    n["validade"] = validade or HOJE
                 if intl:
                     n["tema"] = "Internacional"
                 novas.append(n)
