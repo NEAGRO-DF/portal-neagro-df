@@ -1,74 +1,74 @@
 {
- "_instrucoes": "Fontes lidas pelo robô. tipo 'rss' (padrão) ou 'html' (com 'padrao' definido em scripts/atualizar_dados.py, HTML_FONTES). 'filtrar': true mantém só manchetes com termos do agronegócio; 'internacional' mantém só manchetes sobre o mercado externo que afetam o agro (China, EUA, tarifas, câmbio etc.). Em todas as fontes, essas manchetes recebem o tema Internacional e aparecem no bloco Mercado internacional. Fontes sem data na listagem recebem a data em que apareceram pela primeira vez. Fontes que falharem são ignoradas e registradas no log.",
- "feeds": [
-  {
-   "veiculo": "Embrapa",
-   "url": "https://www.embrapa.br/busca-de-noticias",
-   "tipo": "html",
-   "padrao": "embrapa",
-   "tema": "Pesquisa",
-   "filtrar": false
-  },
-  {
-   "veiculo": "Conab",
-   "url": "https://www.gov.br/conab/pt-br/assuntos/noticias",
-   "tipo": "html",
-   "padrao": "plone",
-   "tema": "Abastecimento",
-   "filtrar": false
-  },
-  {
-   "veiculo": "Notícias Agrícolas",
-   "url": "https://www.noticiasagricolas.com.br/noticias/",
-   "tipo": "html",
-   "padrao": "noticias_agricolas",
-   "base": "https://www.noticiasagricolas.com.br",
-   "tema": "Mercado",
-   "filtrar": true
-  },
-  {
-   "veiculo": "Scot Consultoria",
-   "url": "https://www.scotconsultoria.com.br/noticias/",
-   "tipo": "html",
-   "padrao": "scot",
-   "tema": "Pecuária",
-   "filtrar": false
-  },
-  {
-   "veiculo": "Canal Rural",
-   "url": "https://www.canalrural.com.br/feed/",
-   "tema": "Mercado",
-   "filtrar": false
-  },
-  {
-   "veiculo": "g1 Agronegócios",
-   "url": "https://g1.globo.com/rss/g1/economia/agronegocios/",
-   "tema": "Agronegócio",
-   "filtrar": false
-  },
-  {
-   "veiculo": "Agrolink",
-   "url": "https://www.agrolink.com.br/rss/noticias.rss",
-   "tema": "Mercado",
-   "filtrar": true
-  },
-  {
-   "veiculo": "Agência Brasil",
-   "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml",
-   "tema": "Economia",
-   "filtrar": true
-  },
-  {
-   "veiculo": "Agência Brasil",
-   "url": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
-   "tema": "Internacional",
-   "filtrar": "internacional"
-  },
-  {
-   "veiculo": "g1 Mundo",
-   "url": "https://g1.globo.com/rss/g1/mundo/",
-   "tema": "Internacional",
-   "filtrar": "internacional"
-  }
- ]
+  "_instrucoes": "Fontes lidas pelo robô. tipo 'rss' (padrão) ou 'html' (com 'padrao' definido em scripts/atualizar_dados.py, HTML_FONTES). 'filtrar': true mantém só manchetes com termos do agronegócio; 'internacional' mantém só manchetes sobre o mercado externo que afetam o agro (China, EUA, tarifas, câmbio etc.). Em todas as fontes, essas manchetes recebem o tema Internacional e aparecem no bloco Mercado internacional. Fontes sem data na listagem recebem a data em que apareceram pela primeira vez. Fontes que falharem são ignoradas e registradas no log. O portal é institucional (FAV/UnB): manchetes de fraude, corrupção, crime e polêmica política são descartadas em qualquer fonte ou tema pela lista VETADAS, em scripts/atualizar_dados.py, antes dos demais filtros, e também são removidas das que já estavam guardadas.",
+  "feeds": [
+    {
+      "veiculo": "Embrapa",
+      "url": "https://www.embrapa.br/busca-de-noticias",
+      "tipo": "html",
+      "padrao": "embrapa",
+      "tema": "Pesquisa",
+      "filtrar": false
+    },
+    {
+      "veiculo": "Conab",
+      "url": "https://www.gov.br/conab/pt-br/assuntos/noticias",
+      "tipo": "html",
+      "padrao": "plone",
+      "tema": "Abastecimento",
+      "filtrar": false
+    },
+    {
+      "veiculo": "Notícias Agrícolas",
+      "url": "https://www.noticiasagricolas.com.br/noticias/",
+      "tipo": "html",
+      "padrao": "noticias_agricolas",
+      "base": "https://www.noticiasagricolas.com.br",
+      "tema": "Mercado",
+      "filtrar": true
+    },
+    {
+      "veiculo": "Scot Consultoria",
+      "url": "https://www.scotconsultoria.com.br/noticias/",
+      "tipo": "html",
+      "padrao": "scot",
+      "tema": "Pecuária",
+      "filtrar": false
+    },
+    {
+      "veiculo": "Canal Rural",
+      "url": "https://www.canalrural.com.br/feed/",
+      "tema": "Mercado",
+      "filtrar": false
+    },
+    {
+      "veiculo": "g1 Agronegócios",
+      "url": "https://g1.globo.com/rss/g1/economia/agronegocios/",
+      "tema": "Agronegócio",
+      "filtrar": false
+    },
+    {
+      "veiculo": "Agrolink",
+      "url": "https://www.agrolink.com.br/rss/noticias.rss",
+      "tema": "Mercado",
+      "filtrar": true
+    },
+    {
+      "veiculo": "Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/rss/economia/feed.xml",
+      "tema": "Economia",
+      "filtrar": true
+    },
+    {
+      "veiculo": "Agência Brasil",
+      "url": "https://agenciabrasil.ebc.com.br/rss/internacional/feed.xml",
+      "tema": "Internacional",
+      "filtrar": "internacional"
+    },
+    {
+      "veiculo": "g1 Mundo",
+      "url": "https://g1.globo.com/rss/g1/mundo/",
+      "tema": "Internacional",
+      "filtrar": "internacional"
+    }
+  ]
 }

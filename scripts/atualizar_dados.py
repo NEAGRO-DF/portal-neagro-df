@@ -284,6 +284,19 @@ INTL = re.compile(r"china|chin[eê]s|\beua\b|estados unidos|americano|trump|tari
 IMPACTO = re.compile(PALAVRAS.pattern + r"|tarifa|com[eé]rci|d[oó]lar|c[aâ]mbio|petr[oó]leo|alimento|commodit|"
                      r"gr[aã]o|carne|frigor|clima|fome|abastec|acordo", re.I)
 
+# O portal é institucional (FAV/UnB): manchetes de fraude, corrupção, crime e polêmica política
+# ficam de fora do bloco de notícias, qualquer que seja a fonte ou o tema.
+VETADAS = re.compile(
+    r"fraude|fraudul|corrup|propina|suborno|lavagem de dinheiro|desvio de (?:recurso|verba|dinheiro)|"
+    r"sonega|caixa dois|cartel|improbidade|pirataria|falsifica|adultera[çc][aã]o|"
+    r"opera[çc][aã]o d[ae] (?:pol[ií]cia|combate)|pol[ií]cia federal|minist[eé]rio p[uú]blico|\bmpf\b|"
+    r"\bcpi\b|\bcpmi\b|den[uú]ncia|indicia|\br[eé]u\b|\bpreso\b|pris[aã]o|mandado de busca|apreens|"
+    r"sob investiga|investiga[çc][aã]o (?:policial|criminal)|a[çc][aã]o judicial|condena[çc][aã]o|"
+    r"esc[aâ]ndalo|impeachment|cassa[çc][aã]o|mil[ií]cia|"
+    r"garimpo ilegal|desmatamento ilegal|trabalho escravo|invas[aã]o de terra|conflito agr[aá]rio|"
+    r"assassin|homic[ií]dio|chacina|latroc[ií]nio",
+    re.I)
+
 
 def _limpa(t: str) -> str:
     import html
@@ -333,7 +346,7 @@ def atualizar_noticias(dados: dict) -> None:
     if not FEEDS.exists():
         return
     feeds = json.loads(FEEDS.read_text(encoding="utf-8"))["feeds"]
-    antigas = {n["link"]: n for n in dados.get("noticias", [])}
+    antigas = {n["link"]: n for n in dados.get("noticias", []) if not VETADAS.search(n.get("titulo", ""))}
     novas = []
     for f in feeds:
         try:
@@ -342,6 +355,8 @@ def atualizar_noticias(dados: dict) -> None:
             filtro = f.get("filtrar", True)
             for t, l, d in sorted(itens, key=lambda x: x[2], reverse=True):
                 if not t or not l or l in vistos:
+                    continue
+                if VETADAS.search(t):
                     continue
                 intl = bool(INTL.search(t)) and (not filtro or bool(IMPACTO.search(t)))
                 if filtro == "internacional" and not intl:
