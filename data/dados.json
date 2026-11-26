@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-26T08:32-03:00",
+  "atualizado_em": "2026-11-26T08:34-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,18 +659,18 @@
   },
   "noticias": [
     {
-      "titulo": "Castelinho de Veranópolis recebe projeto de restauro",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/castelinho-de-veranopolis-recebe-projeto-de-restauro/"
-    },
-    {
       "titulo": "Tirso Meirelles alerta para aumento dos custos no campo e falta de mão de obra: ‘Custo será grande’",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/tirso-meirelles-alerta-para-aumento-dos-custos-no-campo-e-falta-de-mao-de-obra-custo-sera-grande/"
+    },
+    {
+      "titulo": "Castelinho de Veranópolis recebe projeto de restauro",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/agricultura/castelinho-de-veranopolis-recebe-projeto-de-restauro/"
     },
     {
       "titulo": "Boi gordo: escalas confortáveis limitam altas da arroba no Centro-Sul",
@@ -729,18 +729,18 @@
       "link": "https://www.canalrural.com.br/projetos/conteudo-patrocinado/do-solo-a-infraestrutura-a-tramontina-acompanha-o-dia-a-dia-do-campo/"
     },
     {
-      "titulo": "Caso de gripe aviária é registrado em São Mateus, no Espírito Santo",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/espirito-santo/caso-de-gripe-aviaria-e-registrdo-em-sao-mateus-no-espirito-santo/"
-    },
-    {
       "titulo": "Brasil critica possível novo tarifaço dos EUA e diz que não cederá",
       "veiculo": "Agência Brasil",
       "data": "2026-11-25",
       "tema": "Economia",
       "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-critica-possivel-novo-tarifaco-dos-eua-e-diz-que-nao-cedera"
+    },
+    {
+      "titulo": "Caso de gripe aviária é registrado em São Mateus, no Espírito Santo",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-25",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/espirito-santo/caso-de-gripe-aviaria-e-registrdo-em-sao-mateus-no-espirito-santo/"
     },
     {
       "titulo": "Amcham pede diálogo após consulta dos EUA sobre ampliar tarifas ao Brasil",
@@ -1221,6 +1221,13 @@
           ],
           "linhas": [
             [
+              "Carcaça suína (classe E)",
+              140.17,
+              "100 KG",
+              "16/11/2026",
+              -9.7
+            ],
+            [
               "Frango inteiro",
               250.85,
               "national currency/100kg",
@@ -1228,7 +1235,7 @@
               -11.0
             ]
           ],
-          "nota": "Sem dados recentes para: Carcaça bovina (classe R3), Carcaça suína (classe E), Leite cru ao produtor.",
+          "nota": "Sem dados recentes para: Carcaça bovina (classe R3), Leite cru ao produtor.",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
