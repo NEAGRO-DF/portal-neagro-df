@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-26T10:19-03:00",
+  "atualizado_em": "2026-11-26T12:40-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -675,41 +675,6 @@
       "validade": "2026-11-27"
     },
     {
-      "titulo": "Santa Catarina e Paraná recebem visitas para diagnóstico do Zarc Níveis de Manejo Milho",
-      "veiculo": "Embrapa",
-      "data": "2026-11-26",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150556121/santa-catarina-e-parana-recebem-visitas-para-diagnostico-do-zarc-niveis-de-manejo-milho"
-    },
-    {
-      "titulo": "Inscrições abertas para a 7ª edição do Curso de Criação do Bicudo-do-Algodoeiro",
-      "veiculo": "Embrapa",
-      "data": "2026-11-26",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150555258/inscricoes-abertas-para-a-7-edicao-do-curso-de-criacao-do-bicudo-do-algodoeiro"
-    },
-    {
-      "titulo": "SBIAgro 2027 vai debater robótica e sistemas inteligentes na agricultura",
-      "veiculo": "Embrapa",
-      "data": "2026-11-26",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150549895/sbiagro-2027-vai-debater-robotica-e-sistemas-inteligentes-na-agricultura"
-    },
-    {
-      "titulo": "Embrapa capacita técnicos da CATI para qualificar atendimento ao produtor de leite em São Paulo",
-      "veiculo": "Embrapa",
-      "data": "2026-11-26",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150549817/embrapa-capacita-tecnicos-da-cati-para-qualificar-atendimento-ao-produtor-de-leite-em-sao-paulo"
-    },
-    {
-      "titulo": "Embrapa lança curso on-line e gratuito sobre biorrefinarias integradas",
-      "veiculo": "Embrapa",
-      "data": "2026-11-26",
-      "tema": "Pesquisa",
-      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150535523/embrapa-lanca-curso-on-line-e-gratuito-sobre-biorrefinarias-integradas"
-    },
-    {
       "titulo": "Carta Conjuntura - A carne sozinha não paga a conta do frigorífico",
       "veiculo": "Scot Consultoria",
       "data": "2026-11-26",
@@ -745,39 +710,53 @@
       "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61126/alta-nas-cotacoes-no-mercado-do-boi-gordo-em-sao-paulo.htm"
     },
     {
-      "titulo": "Diretora de defesa animal da Seapi é homenageada pela Asgav no Rio Grande do Sul",
+      "titulo": "Próxima transformação do agro exige conhecimento e capacidade de adaptação",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/aves-e-suinos/diretora-de-defesa-animal-da-seapi-e-homenageada-pela-asgav-no-rio-grande-do-sul/"
+      "link": "https://www.canalrural.com.br/agricultura/agronegocio/proxima-transformacao-do-agro-exige-conhecimento-e-capacidade-de-adaptacao/"
     },
     {
-      "titulo": "Áreas em restauração no Brasil triplicam em cinco anos",
+      "titulo": "Kassab diz que percepção sobre Trabuco na Fazenda melhora confiança no governo",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/areas-em-restauracao-no-brasil-triplicam-em-cinco-anos/"
+      "link": "https://www.canalrural.com.br/economia/kassab-diz-que-percepcao-sobre-trabuco-na-fazenda-melhora-confianca-no-governo/"
     },
     {
-      "titulo": "Juros futuros recuam após IPCA-15 de novembro abaixo das estimativas",
+      "titulo": "André de Paula participa do Prêmio Canasplan 2026 em João Pessoa",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/juros-futuros-recuam-apos-ipca-15-de-novembro-abaixo-das-estimativas/"
+      "link": "https://www.canalrural.com.br/agricultura/andre-de-paula-participa-do-premio-canasplan-2026-em-joao-pessoa/"
     },
     {
-      "titulo": "Arroba do boi gordo volta a subir em SP e avança, mas recua no mercado futuro",
+      "titulo": "CNA defende papel do produtor rural na segurança hídrica em fórum da água",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/arroba-do-boi-gordo-volta-a-subir-em-sp-e-avanca-mas-recua-no-mercado-futuro/"
+      "link": "https://www.canalrural.com.br/agricultura/cna-defende-papel-do-produtor-rural-na-seguranca-hidrica-em-forum-da-agua/"
     },
     {
-      "titulo": "Boi gordo: retenção de fêmeas pode mudar cenário de oferta e preços da arroba",
+      "titulo": "‘Falas infundadas’, diz ABPA sobre ataque de Macron a carne brasileira",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-retencao-de-femeas-pode-mudar-cenario-de-oferta-e-precos-da-arroba/"
+      "link": "https://www.canalrural.com.br/internacional/falas-infundadas-diz-abpa-sobre-ataque-de-macron-a-carne-brasileira/"
+    },
+    {
+      "titulo": "Preço dos alimentos: o que ficou mais caro e o que barateou na prévia da inflação de novembro",
+      "veiculo": "g1 Agronegócios",
+      "data": "2026-11-26",
+      "tema": "Agronegócio",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/preco-dos-alimentos-o-que-ficou-mais-caro-e-o-que-barateou-na-previa-da-inflacao-de-novembro.ghtml"
+    },
+    {
+      "titulo": "Cafeicultura regenerativa comprova viabilidade econômica e impacto ambiental em escala territorial no Brasil",
+      "veiculo": "Agrolink",
+      "data": "2026-11-26",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/cafeicultura-regenerativa-comprova-viabilidade-economica-e-impacto-ambiental-em-escala-territorial-no-brasil_521534.html"
     },
     {
       "titulo": "SUÍNOS: Queda dos preços amplia competitividade da carne suína frente às concorrentes",
@@ -808,13 +787,6 @@
       "link": "https://www.agrolink.com.br/noticias/falta-de-lenha-pode-frear-avanco-do-etanol-de-milho_521521.html"
     },
     {
-      "titulo": "Trigo gaúcho tem pedidas de até R$ 1.470/t para janeiro",
-      "veiculo": "Agrolink",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/trigo-gaucho-tem-pedidas-de-ate-r--1-470-t-para-janeiro_521519.html"
-    },
-    {
       "titulo": "Chuvas Intensas: aviso do INMET para Noroeste de Minas (perigo)",
       "veiculo": "INMET",
       "data": "2026-11-26",
@@ -839,39 +811,67 @@
       "validade": "2026-11-26"
     },
     {
-      "titulo": "Corteva investe US$ 3,2 milhões em unidade de SP para formular fungicida para soja",
+      "titulo": "Santa Catarina e Paraná recebem visitas para diagnóstico do Zarc Níveis de Manejo Milho",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150556121/santa-catarina-e-parana-recebem-visitas-para-diagnostico-do-zarc-niveis-de-manejo-milho"
+    },
+    {
+      "titulo": "Inscrições abertas para a 7ª edição do Curso de Criação do Bicudo-do-Algodoeiro",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150555258/inscricoes-abertas-para-a-7-edicao-do-curso-de-criacao-do-bicudo-do-algodoeiro"
+    },
+    {
+      "titulo": "SBIAgro 2027 vai debater robótica e sistemas inteligentes na agricultura",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150549895/sbiagro-2027-vai-debater-robotica-e-sistemas-inteligentes-na-agricultura"
+    },
+    {
+      "titulo": "Embrapa capacita técnicos da CATI para qualificar atendimento ao produtor de leite em São Paulo",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150549817/embrapa-capacita-tecnicos-da-cati-para-qualificar-atendimento-ao-produtor-de-leite-em-sao-paulo"
+    },
+    {
+      "titulo": "Embrapa lança curso on-line e gratuito sobre biorrefinarias integradas",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150535523/embrapa-lanca-curso-on-line-e-gratuito-sobre-biorrefinarias-integradas"
+    },
+    {
+      "titulo": "Diretora de defesa animal da Seapi é homenageada pela Asgav no Rio Grande do Sul",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/corteva-investe-us-32-milhoes-em-unidade-de-sp-para-formular-fungicida-para-soja/"
+      "link": "https://www.canalrural.com.br/aves-e-suinos/diretora-de-defesa-animal-da-seapi-e-homenageada-pela-asgav-no-rio-grande-do-sul/"
     },
     {
-      "titulo": "Tirso Meirelles alerta para aumento dos custos no campo e falta de mão de obra: ‘Custo será grande’",
+      "titulo": "Áreas em restauração no Brasil triplicam em cinco anos",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/tirso-meirelles-alerta-para-aumento-dos-custos-no-campo-e-falta-de-mao-de-obra-custo-sera-grande/"
+      "link": "https://www.canalrural.com.br/diversos/areas-em-restauracao-no-brasil-triplicam-em-cinco-anos/"
     },
     {
-      "titulo": "Castelinho de Veranópolis recebe projeto de restauro",
+      "titulo": "Juros futuros recuam após IPCA-15 de novembro abaixo das estimativas",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/castelinho-de-veranopolis-recebe-projeto-de-restauro/"
+      "link": "https://www.canalrural.com.br/economia/juros-futuros-recuam-apos-ipca-15-de-novembro-abaixo-das-estimativas/"
     },
     {
-      "titulo": "Milho cai a R$ 61,96 no RS e avança no Paraná",
-      "veiculo": "Agrolink",
+      "titulo": "Arroba do boi gordo volta a subir em SP e avança, mas recua no mercado futuro",
+      "veiculo": "Canal Rural",
       "data": "2026-11-26",
       "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/milho-cai-a-r--61-96-no-rs-e-avanca-no-parana_521518.html"
-    },
-    {
-      "titulo": "Pacote fiscal pode apertar o caixa do agro, diz especialista",
-      "veiculo": "Agrolink",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/pacote-fiscal-pode-apertar-o-caixa-do-agro--diz-especialista_521514.html"
+      "link": "https://www.canalrural.com.br/pecuaria/arroba-do-boi-gordo-volta-a-subir-em-sp-e-avanca-mas-recua-no-mercado-futuro/"
     },
     {
       "titulo": "Importação de ureia sobe e alcança maior patamar de 2026",
@@ -895,25 +895,11 @@
       "link": "https://www.scotconsultoria.com.br/noticias/artigos/61102/arroba-em-dolares-cara-para-o-historico-e-barata-para-o-mundo.htm"
     },
     {
-      "titulo": "Macron chama carne bovina brasileira de ‘dopada’ e celebra restrições às importações",
-      "veiculo": "Canal Rural",
+      "titulo": "'Carne dopada': exportadores brasileiros rebatem fala de Macron: 'grave e inaceitável um chefe de Estado recorrer a inverdades'",
+      "veiculo": "g1 Agronegócios",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.canalrural.com.br/pecuaria/macron-chama-carne-bovina-brasileira-de-dopada-e-celebra-restricoes-as-importacoes/"
-    },
-    {
-      "titulo": "Especulações sobre novo ministro da Fazenda faz dólar cair e Ibovespa subir",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.canalrural.com.br/economia/especulacoes-sobre-novo-ministro-da-fazenda-faz-dolar-cair-e-ibovespa-subir/"
-    },
-    {
-      "titulo": "El Niño deve atingir força máxima em dezembro e provocar chuva forte, tornados e calor intenso no Brasil",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/el-nino-deve-atingir-forca-maxima-em-dezembro-e-provocar-chuva-forte-tornados-e-calor-intenso-no-brasil/"
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/exportadores-de-carne-rebatem-fala-de-macron.ghtml"
     },
     {
       "titulo": "Macron diz que carne brasileira é 'dopada' e comemora veto da UE ao produto",
@@ -928,6 +914,13 @@
       "data": "2026-11-26",
       "tema": "Internacional",
       "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/tarifaco-de-trump-nova-taxa-sobre-acucar-brasileiro-deve-ter-impacto-praticamente-nulo-diz-analista.ghtml"
+    },
+    {
+      "titulo": "El Niño pode reduzir oferta de leite no Sul",
+      "veiculo": "Agrolink",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://www.agrolink.com.br/noticias/el-nino-pode-reduzir-oferta-de-leite-no-sul_521533.html"
     },
     {
       "titulo": "Arco Norte amplia embarques de soja e milho em 59%",
@@ -965,11 +958,39 @@
       "link": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/china-questoes-comerciais-com-eua-devem-ser-resolvidas-com-dialogo"
     },
     {
+      "titulo": "Milhares protestam no Paraguai contra violência contra mulher e prejuízos provocados por crise bancária",
+      "veiculo": "g1 Mundo",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://g1.globo.com/mundo/noticia/2026/11/26/milhares-protestam-no-paraguai-contra-violencia-contra-a-mulher-e-crise-do-ueno-bank.ghtml"
+    },
+    {
       "titulo": "Tarifaço: China, Brasil e União Europeia criticam nova rodada de tarifas proposta pelos EUA",
       "veiculo": "g1 Mundo",
       "data": "2026-11-26",
       "tema": "Internacional",
       "link": "https://g1.globo.com/economia/noticia/2026/11/26/china-brasil-e-uniao-europeia-reagem-a-novas-tarifas-anunciadas-por-trump.ghtml"
+    },
+    {
+      "titulo": "Macron chama carne bovina brasileira de ‘dopada’ e celebra restrições às importações",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://www.canalrural.com.br/pecuaria/macron-chama-carne-bovina-brasileira-de-dopada-e-celebra-restricoes-as-importacoes/"
+    },
+    {
+      "titulo": "Especulações sobre novo ministro da Fazenda faz dólar cair e Ibovespa subir",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://www.canalrural.com.br/economia/especulacoes-sobre-novo-ministro-da-fazenda-faz-dolar-cair-e-ibovespa-subir/"
+    },
+    {
+      "titulo": "El Niño deve atingir força máxima em dezembro e provocar chuva forte, tornados e calor intenso no Brasil",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/el-nino-deve-atingir-forca-maxima-em-dezembro-e-provocar-chuva-forte-tornados-e-calor-intenso-no-brasil/"
     },
     {
       "titulo": "Secretária de Agricultura de Trump defende novas tarifas e acusa Brasil de 'práticas desleais' contra agricultores dos EUA",
@@ -986,32 +1007,11 @@
       "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/25/jbs-exportacao-frango-uniao-europeia.ghtml"
     },
     {
-      "titulo": "Tarifaço: açúcar brasileiro pode ter nova taxa para entrar nos EUA; veja o que pode mudar",
-      "veiculo": "g1 Agronegócios",
-      "data": "2026-11-25",
-      "tema": "Internacional",
-      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/25/eua-querem-mudar-taxacao-sobre-acucar-brasileiro-veja-como-pode-ficar.ghtml"
-    },
-    {
-      "titulo": "Ministro André de Paula destaca parceria institucional e papel das cooperativas na expansão das exportações do agro",
-      "veiculo": "Agrolink",
-      "data": "2026-11-25",
-      "tema": "Internacional",
-      "link": "https://www.agrolink.com.br/noticias/ministro-andre-de-paula-destaca-parceria-institucional-e-papel-das-cooperativas-na-expansao-das-exportacoes-do-agro_521493.html"
-    },
-    {
       "titulo": "Brasil critica possível novo tarifaço dos EUA e diz que não cederá",
       "veiculo": "Agência Brasil",
       "data": "2026-11-25",
       "tema": "Internacional",
       "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-critica-possivel-novo-tarifaco-dos-eua-e-diz-que-nao-cedera"
-    },
-    {
-      "titulo": "Governo Lula diz estar indignado com nova proposta de tarifa dos EUA contra o Brasil e que não 'cederá a esse tipo de ameaça'",
-      "veiculo": "g1 Mundo",
-      "data": "2026-11-25",
-      "tema": "Internacional",
-      "link": "https://g1.globo.com/economia/noticia/2026/11/25/governo-lula-diz-estar-indignado-com-nova-proposta-de-tarifa-dos-eua-contra-o-brasil-e-que-nao-cedera-a-esse-tipo-de-ameaca.ghtml"
     }
   ],
   "cartoes": [
@@ -1436,21 +1436,14 @@
           ],
           "linhas": [
             [
-              "Carcaça suína (classe E)",
-              140.17,
-              "100 KG",
+              "Carcaça bovina (classe R3)",
+              485.03,
+              "€/100Kg",
               "16/11/2026",
-              -9.7
-            ],
-            [
-              "Frango inteiro",
-              250.85,
-              "national currency/100kg",
-              "16/11/2026",
-              -11.0
+              -24.5
             ]
           ],
-          "nota": "Sem dados recentes para: Carcaça bovina (classe R3), Leite cru ao produtor.",
+          "nota": "Sem dados recentes para: Carcaça suína (classe E), Frango inteiro, Leite cru ao produtor.",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
