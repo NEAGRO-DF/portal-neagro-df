@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-26T08:04-03:00",
+  "atualizado_em": "2026-11-26T08:19-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -1228,14 +1228,14 @@
               -24.5
             ],
             [
-              "Frango inteiro",
-              250.85,
-              "national currency/100kg",
-              "16/11/2026",
-              -11.0
+              "Leite cru ao produtor",
+              46.02,
+              "100KG",
+              "01/10/2026",
+              7.2
             ]
           ],
-          "nota": "Sem dados recentes para: Carcaça suína (classe E), Leite cru ao produtor.",
+          "nota": "Sem dados recentes para: Carcaça suína (classe E), Frango inteiro.",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
