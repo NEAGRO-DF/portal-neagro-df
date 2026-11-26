@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-26T08:40-03:00",
+  "atualizado_em": "2026-11-26T09:11-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -659,6 +659,62 @@
   },
   "noticias": [
     {
+      "titulo": "SBIAgro 2027 vai debater robótica e sistemas inteligentes na agricultura",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150549895/sbiagro-2027-vai-debater-robotica-e-sistemas-inteligentes-na-agricultura"
+    },
+    {
+      "titulo": "Embrapa capacita técnicos da CATI para qualificar atendimento ao produtor de leite em São Paulo",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150549817/embrapa-capacita-tecnicos-da-cati-para-qualificar-atendimento-ao-produtor-de-leite-em-sao-paulo"
+    },
+    {
+      "titulo": "Embrapa lança curso on-line e gratuito sobre biorrefinarias integradas",
+      "veiculo": "Embrapa",
+      "data": "2026-11-26",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150535523/embrapa-lanca-curso-on-line-e-gratuito-sobre-biorrefinarias-integradas"
+    },
+    {
+      "titulo": "Carta Conjuntura - A carne sozinha não paga a conta do frigorífico",
+      "veiculo": "Scot Consultoria",
+      "data": "2026-11-26",
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/cartas/61130/carta-conjuntura-a-carne-sozinha-nao-paga-a-conta-do-frigorifico.htm"
+    },
+    {
+      "titulo": "Carta Insumos - Fertilizante organomineral: vale a pena investir?",
+      "veiculo": "Scot Consultoria",
+      "data": "2026-11-26",
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/cartas/61129/carta-insumos-fertilizante-organomineral-vale-a-pena-investir.htm"
+    },
+    {
+      "titulo": "A cotação da novilha e da vaca subiu em São Paulo",
+      "veiculo": "Scot Consultoria",
+      "data": "2026-11-26",
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61128/a-cotacao-da-novilha-e-da-vaca-subiu-em-sao-paulo.htm"
+    },
+    {
+      "titulo": "Fique Sabendo - Abate de bovinos no terceiro trimestre de 2026",
+      "veiculo": "Scot Consultoria",
+      "data": "2026-11-26",
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61127/fique-sabendo-abate-de-bovinos-no-terceiro-trimestre-de-2026.htm"
+    },
+    {
+      "titulo": "Alta nas cotações no mercado do boi gordo em São Paulo",
+      "veiculo": "Scot Consultoria",
+      "data": "2026-11-26",
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61126/alta-nas-cotacoes-no-mercado-do-boi-gordo-em-sao-paulo.htm"
+    },
+    {
       "titulo": "El Niño deve atingir força máxima em dezembro e provocar chuva forte, tornados e calor intenso no Brasil",
       "veiculo": "Canal Rural",
       "data": "2026-11-26",
@@ -680,6 +736,76 @@
       "link": "https://www.canalrural.com.br/agricultura/castelinho-de-veranopolis-recebe-projeto-de-restauro/"
     },
     {
+      "titulo": "Tarifaço de Trump: nova taxa sobre açúcar brasileiro deve ter impacto 'praticamente nulo', diz analista",
+      "veiculo": "g1 Agronegócios",
+      "data": "2026-11-26",
+      "tema": "Agronegócio",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/tarifaco-de-trump-nova-taxa-sobre-acucar-brasileiro-deve-ter-impacto-praticamente-nulo-diz-analista.ghtml"
+    },
+    {
+      "titulo": "Trigo gaúcho tem pedidas de até R$ 1.470/t para janeiro",
+      "veiculo": "Agrolink",
+      "data": "2026-11-26",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/trigo-gaucho-tem-pedidas-de-ate-r--1-470-t-para-janeiro_521519.html"
+    },
+    {
+      "titulo": "Milho cai a R$ 61,96 no RS e avança no Paraná",
+      "veiculo": "Agrolink",
+      "data": "2026-11-26",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/milho-cai-a-r--61-96-no-rs-e-avanca-no-parana_521518.html"
+    },
+    {
+      "titulo": "Soja sobe em parte do interior com dólar em queda",
+      "veiculo": "Agrolink",
+      "data": "2026-11-26",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/soja-sobe-em-parte-do-interior-com-dolar-em-queda_521517.html"
+    },
+    {
+      "titulo": "Pacote fiscal pode apertar o caixa do agro, diz especialista",
+      "veiculo": "Agrolink",
+      "data": "2026-11-26",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/pacote-fiscal-pode-apertar-o-caixa-do-agro--diz-especialista_521514.html"
+    },
+    {
+      "titulo": "Canadá pode ser o 2º maior exportador de trigo",
+      "veiculo": "Agrolink",
+      "data": "2026-11-26",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/canada-pode-ser-o-2--maior-exportador-de-trigo_521510.html"
+    },
+    {
+      "titulo": "Cannabis e Uma Só Saúde: saiba mais sobre essa relação em workshop no dia 3 de dezembro",
+      "veiculo": "Embrapa",
+      "data": "2026-11-25",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150514635/cannabis-e-uma-so-saude-saiba-mais-sobre-essa-relacao-em-workshop-no-dia-3-de-dezembro"
+    },
+    {
+      "titulo": "CRB-JD realiza curso de aperfeiçoamento sobre coleções microbianas em parceria com a ANPII Bio",
+      "veiculo": "Embrapa",
+      "data": "2026-11-25",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150504369/crb-jd-realiza-curso-de-aperfeicoamento-sobre-colecoes-microbianas-em-parceria-com-a-anpii-bio"
+    },
+    {
+      "titulo": "Conab participa da Feira do Cooperativismo da Reforma Agrária Popular na UnB",
+      "veiculo": "Conab",
+      "data": "2026-11-25",
+      "tema": "Abastecimento",
+      "link": "https://www.gov.br/conab/pt-br/assuntos/noticias/conab-participa-da-feira-do-cooperativismo-da-reforma-agraria-popular-na-unb"
+    },
+    {
+      "titulo": "AVISO DE PAUTA – 11º Boletim Prohort 2026",
+      "veiculo": "Conab",
+      "data": "2026-11-25",
+      "tema": "Abastecimento",
+      "link": "https://www.gov.br/conab/pt-br/assuntos/noticias/aviso-de-pauta-2013-11o-boletim-prohort-2026"
+    },
+    {
       "titulo": "Boi gordo: escalas confortáveis limitam altas da arroba no Centro-Sul",
       "veiculo": "Canal Rural",
       "data": "2026-11-25",
@@ -692,6 +818,34 @@
       "data": "2026-11-25",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/diversos/mapa-lanca-premio-suinocultura-113-para-reconhecer-boas-praticas-no-setor/"
+    },
+    {
+      "titulo": "Secretária de Agricultura de Trump defende novas tarifas e acusa Brasil de 'práticas desleais' contra agricultores dos EUA",
+      "veiculo": "g1 Agronegócios",
+      "data": "2026-11-25",
+      "tema": "Agronegócio",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/25/secretaria-de-agricultura-de-trump-defende-novas-tarifas-e-acusa-brasil-de-praticas-desleais-contra-agricultores-dos-eua.ghtml"
+    },
+    {
+      "titulo": "Após suspensão, JBS espera retomada das exportações de frango à UE em dezembro",
+      "veiculo": "g1 Agronegócios",
+      "data": "2026-11-25",
+      "tema": "Agronegócio",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/25/jbs-exportacao-frango-uniao-europeia.ghtml"
+    },
+    {
+      "titulo": "Tarifaço: açúcar brasileiro pode ter nova taxa para entrar nos EUA; veja o que pode mudar",
+      "veiculo": "g1 Agronegócios",
+      "data": "2026-11-25",
+      "tema": "Agronegócio",
+      "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/25/eua-querem-mudar-taxacao-sobre-acucar-brasileiro-veja-como-pode-ficar.ghtml"
+    },
+    {
+      "titulo": "Brasil critica possível novo tarifaço dos EUA e diz que não cederá",
+      "veiculo": "Agência Brasil",
+      "data": "2026-11-25",
+      "tema": "Economia",
+      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-critica-possivel-novo-tarifaco-dos-eua-e-diz-que-nao-cedera"
     },
     {
       "titulo": "Brasil reage a proposta dos EUA de tarifar açúcar e aviões",
@@ -727,13 +881,6 @@
       "data": "2026-11-25",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/soja-cai-no-mercado-brasileiro-com-recuo-do-dolar-apesar-de-alta-em-chicago/"
-    },
-    {
-      "titulo": "Brasil critica possível novo tarifaço dos EUA e diz que não cederá",
-      "veiculo": "Agência Brasil",
-      "data": "2026-11-25",
-      "tema": "Economia",
-      "link": "https://agenciabrasil.ebc.com.br/economia/noticia/2026-11/brasil-critica-possivel-novo-tarifaco-dos-eua-e-diz-que-nao-cedera"
     },
     {
       "titulo": "Do solo à infraestrutura: a Tramontina  acompanha o dia a dia do campo",
@@ -790,13 +937,6 @@
       "data": "2026-11-25",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/jbs-mira-oma-e-indonesia-como-frentes-de-expansao/"
-    },
-    {
-      "titulo": "IBGE encerra nesta quarta (25) inscrições para vagas ligadas ao Censo Agropecuário; veja como participar",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-25",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/nacional/ibge-encerra-nesta-quarta-25-inscricoes-para-vagas-ligadas-ao-censo-agropecuario-veja-como-participar/"
     }
   ],
   "cartoes": [
@@ -1228,6 +1368,13 @@
               -24.5
             ],
             [
+              "Frango inteiro",
+              250.85,
+              "national currency/100kg",
+              "16/11/2026",
+              -11.0
+            ],
+            [
               "Leite cru ao produtor",
               46.02,
               "100KG",
@@ -1235,7 +1382,7 @@
               7.2
             ]
           ],
-          "nota": "Sem dados recentes para: Carcaça suína (classe E), Frango inteiro.",
+          "nota": "Sem dados recentes para: Carcaça suína (classe E).",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
