@@ -370,6 +370,8 @@ def atualizar_noticias(dados: dict) -> None:
                     continue
                 if filtro == "regiao" and not REGIAO.search(t + " " + resumo):
                     continue
+                if filtro == "regiao" and cont["geral"] == 0:
+                    log(f"Notícias: {f['veiculo']} item bruto -> titulo={t!r} resumo={resumo[:600]!r}")
                 intl = bool(INTL.search(t)) and (not filtro or bool(IMPACTO.search(t)))
                 if filtro == "internacional" and not intl:
                     continue
