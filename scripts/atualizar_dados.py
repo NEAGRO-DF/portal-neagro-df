@@ -272,39 +272,85 @@ def atualizar_pib_trimestral(dados: dict) -> None:
         log(f"PIB trimestral: falhou ({e}); mantido o valor anterior")
 
 
-# ---------------------------------------------------------------- Notícias (RSS)
+# ---------------------------------------------------------------- Notícias (RSS e páginas HTML)
 PALAVRAS = re.compile(r"agro|soja|milho|boi|bovin|su[ií]n|frango|ovo|leite|safra|conab|embrapa|"
                       r"pecu|lavoura|fertiliz|caf[eé]|algod|trigo|tilápia|pescado|cerrado|exporta", re.I)
+POR_FONTE = 5  # itens mais recentes guardados de cada fonte a cada leitura
+
+
+def _limpa(t: str) -> str:
+    import html
+    return re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", "", t))).strip()
+
+
+def _data_br(d: str) -> str:
+    dd, mm, aa = d.split("/")
+    return f"{'20' + aa if len(aa) == 2 else aa}-{mm}-{dd}"
+
+
+def _rss(f: dict) -> list:
+    itens = []
+    for it in ET.fromstring(baixar(f["url"])).iter("item"):
+        t, l = _limpa(it.findtext("title") or ""), (it.findtext("link") or "").strip()
+        d = it.findtext("pubDate") or ""
+        try:
+            d = datetime.strptime(d[:25].strip(), "%a, %d %b %Y %H:%M:%S").strftime("%Y-%m-%d")
+        except ValueError:
+            d = HOJE
+        itens.append((t, l, d))
+    return itens
+
+
+# Páginas sem RSS: expressão regular com grupos (link, título[, data dd/mm/aa ou dd/mm/aaaa]).
+HTML_FONTES = {
+    "embrapa": re.compile(r'<div class="titulo">\s*<a href="([^"?]+)[^"]*">\s*(.*?)\s*</a>.*?'
+                          r'Data de publica.*?<span class="situacao">\s*(\d{2}/\d{2}/\d{2,4})', re.S),
+    "plone": re.compile(r'<a class="summary url" href="([^"]+)"[^>]*>(.*?)</a>.*?icon-day"></i>\s*(\d{2}/\d{2}/\d{4})', re.S),
+    "noticias_agricolas": re.compile(r'href="(/noticias/[a-z-]+/\d+-[^"]+\.html)"[^>]*>(?:(?!</a>)[\s\S]){0,800}?'
+                                     r'<h[23][^>]*>\s*([^<]+?)\s*</h[23]>'),
+    "scot": re.compile(r'<a href="(https://www\.scotconsultoria\.com\.br/noticias/(?:todas-noticias|cartas|artigos)/'
+                       r'\d+/[^"]+\.htm)"[^>]*>\s*([^<]{15,250}?)\s*</a>'),
+}
+
+
+def _html(f: dict) -> list:
+    pag = baixar(f["url"]).decode("utf-8", "replace")
+    itens = []
+    for g in HTML_FONTES[f["padrao"]].findall(pag):
+        link = g[0] if g[0].startswith("http") else f.get("base", "") + g[0]
+        itens.append((_limpa(g[1]), link, _data_br(g[2]) if len(g) > 2 else HOJE))
+    return itens
 
 
 def atualizar_noticias(dados: dict) -> None:
     if not FEEDS.exists():
         return
     feeds = json.loads(FEEDS.read_text(encoding="utf-8"))["feeds"]
+    antigas = {n["link"]: n for n in dados.get("noticias", [])}
     novas = []
     for f in feeds:
         try:
-            raiz = ET.fromstring(baixar(f["url"]))
-            for it in raiz.iter("item"):
-                t, l = (it.findtext("title") or "").strip(), (it.findtext("link") or "").strip()
-                if not t or not l or (f.get("filtrar", True) and not PALAVRAS.search(t)):
+            itens = _html(f) if f.get("tipo") == "html" else _rss(f)
+            vistos, n = set(), 0
+            for t, l, d in sorted(itens, key=lambda x: x[2], reverse=True):
+                if not t or not l or l in vistos or (f.get("filtrar", True) and not PALAVRAS.search(t)):
                     continue
-                d = it.findtext("pubDate") or ""
-                try:
-                    d = datetime.strptime(d[:25].strip(), "%a, %d %b %Y %H:%M:%S").strftime("%Y-%m-%d")
-                except ValueError:
-                    d = HOJE
-                novas.append({"titulo": t, "veiculo": f["veiculo"], "data": d, "tema": f.get("tema", "Agronegócio"),
-                              "link": l})
-            log(f"Notícias: {f['veiculo']} lido")
+                vistos.add(l)
+                # mantém a data da primeira leitura (fontes sem data na listagem recebem a data em que apareceram)
+                novas.append(antigas.get(l) or {"titulo": t, "veiculo": f["veiculo"], "data": d,
+                                                 "tema": f.get("tema", "Agronegócio"), "link": l})
+                n += 1
+                if n >= POR_FONTE:
+                    break
+            log(f"Notícias: {f['veiculo']} lido ({n} item(ns))")
         except Exception as e:  # noqa: BLE001
             log(f"Notícias: {f['veiculo']} falhou ({e})")
     vistos, saida = set(), []
-    for n in sorted(novas + dados.get("noticias", []), key=lambda n: n.get("data") or "", reverse=True):
+    for n in sorted(novas + list(antigas.values()), key=lambda n: n.get("data") or "", reverse=True):
         if n["link"] not in vistos:
             vistos.add(n["link"])
             saida.append(n)
-    dados["noticias"] = saida[:20]
+    dados["noticias"] = saida[:40]
 
 
 # ---------------------------------------------------------------- Cepea/Esalq (via Notícias Agrícolas)
