@@ -1157,7 +1157,7 @@ function renderCartoes(){
   G.forEach(g=>g.cartoes.forEach(c=>{if(c.tipo==="barras"&&c.barras&&c.barras.length){const e=$("#cb-"+c.id);if(e)hbars(e,c.barras,{labelW:230,W:600,fmtv:v=>fmt(v,c.casas==null?1:c.casas),hi:r=>!!r[2]})}}));
 }
 const FOCO_CAD={
-  "Suinocultura":{re:/su[ií]n|porc|lech[aã]o|granj|peste su/i,precos:["suino","milho","farelo"],gta:true},
+  "Suinocultura":{re:/su[ií]n|porc|lech[aã]o|peste su/i,precos:["suino","milho","farelo"],gta:true},
   "Bovinocultura de corte":{re:/\bboi\b|bovin|arroba|pecu[aá]ria de corte|bezerr|frigor/i,precos:["milho","farelo"]},
   "Avicultura de corte":{re:/frango|av[ií]col|avicul|\bovos?\b|gripe avi/i,precos:["frango","ovo","milho","farelo"]},
   "Piscicultura":{re:/til[aá]pia|pescado|piscicul|peixe/i,precos:["tilapia","milho","farelo"]},
