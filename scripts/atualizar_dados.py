@@ -281,6 +281,23 @@ INTL = re.compile(r"china|chin[eê]s|\beua\b|estados unidos|americano|trump|tari
                   r"paraguai|r[uú]ssia|ucr[aâ]nia|[ií]ndia|jap[aã]o|oriente m[eé]dio|chicago|cbot|usda|\bfao\b|\bomc\b|"
                   r"internacional|mundial|global|exterior|exporta|importa|embarque|d[oó]lar|c[aâ]mbio|guerra|"
                   r"san[cç][aã]o|el ni[nñ]o|la ni[nñ]a|petr[oó]leo", re.I)
+# Cadeia em foco (data/boletins.json, chave "foco"): guarda também as manchetes dela, além do limite geral.
+FOCO_RE = {"Suinocultura": r"su[ií]n|porc|lech[aã]o|granj|peste su",
+           "Bovinocultura de corte": r"\bboi\b|bovin|arroba|pecu[aá]ria de corte|bezerr|frigor",
+           "Avicultura de corte": r"frango|av[ií]col|avicul|\bovos?\b|gripe avi",
+           "Piscicultura": r"til[aá]pia|pescado|piscicul|peixe",
+           "Insumos": r"milho|farelo|soja|fertiliz|ureia"}
+
+
+def _foco():
+    """Devolve (cadeia em foco, expressão das manchetes dela) ou (None, None)."""
+    try:
+        cad = json.loads((RAIZ / "data" / "boletins.json").read_text(encoding="utf-8")).get("foco", {}).get("cadeia")
+        return (cad, re.compile(FOCO_RE[cad], re.I)) if cad in FOCO_RE else (None, None)
+    except Exception:  # noqa: BLE001
+        return None, None
+
+
 IMPACTO = re.compile(PALAVRAS.pattern + r"|tarifa|com[eé]rci|d[oó]lar|c[aâ]mbio|petr[oó]leo|alimento|commodit|"
                      r"gr[aã]o|carne|frigor|clima|fome|abastec|acordo", re.I)
 
@@ -384,11 +401,14 @@ def atualizar_noticias(dados: dict) -> None:
         return True
 
     antigas = {n["link"]: n for n in dados.get("noticias", []) if vigente(n)}
+    cad_foco, foco = _foco()
     novas = []
     for f in feeds:
+        if f.get("cadeia") and f["cadeia"] != cad_foco:
+            continue                        # fonte específica de uma cadeia: só é lida quando ela está em foco
         try:
             itens = _html(f) if f.get("tipo") == "html" else _rss(f)
-            vistos, cont = set(), {"geral": 0, "intl": 0}
+            vistos, cont = set(), {"geral": 0, "intl": 0, "foco": 0}
             filtro = f.get("filtrar", True)
             for t, l, d, resumo in sorted(itens, key=lambda x: x[2], reverse=True):
                 if not t or not l or l in vistos:
@@ -402,7 +422,7 @@ def atualizar_noticias(dados: dict) -> None:
                     continue
                 if filtro is True and not PALAVRAS.search(t):
                     continue
-                grupo = "intl" if intl else "geral"
+                grupo = "intl" if intl else "foco" if foco and foco.search(t) else "geral"
                 if cont[grupo] >= POR_FONTE:
                     continue
                 vistos.add(l)
@@ -422,7 +442,7 @@ def atualizar_noticias(dados: dict) -> None:
                 if intl:
                     n["tema"] = "Internacional"
                 novas.append(n)
-            log(f"Notícias: {f['veiculo']} lido ({cont['geral']} geral, {cont['intl']} internacional)")
+            log(f"Notícias: {f['veiculo']} lido ({cont['geral']} geral, {cont['intl']} internacional, {cont['foco']} da cadeia em foco)")
         except Exception as e:  # noqa: BLE001
             log(f"Notícias: {f['veiculo']} falhou ({e})")
     vistos, saida = set(), []
@@ -431,7 +451,11 @@ def atualizar_noticias(dados: dict) -> None:
             vistos.add(n["link"])
             saida.append(n)
     intl = [n for n in saida if n.get("tema") == "Internacional"][:20]
-    dados["noticias"] = [n for n in saida if n.get("tema") != "Internacional"][:30] + intl
+    geral = [n for n in saida if n.get("tema") != "Internacional"]
+    escolhidas = geral[:30]
+    if foco:
+        escolhidas += [n for n in geral[30:] if foco.search(n["titulo"])][:20]
+    dados["noticias"] = escolhidas + intl
 
 
 # ---------------------------------------------------------------- Cepea/Esalq (via Notícias Agrícolas)
