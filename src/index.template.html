@@ -701,6 +701,7 @@ section[id]{scroll-margin-top:60px}
           <p>Como vai a agropecuária no PIB, o PIB do agronegócio, os preços internacionais dos alimentos e as notícias do setor.</p>
         </div>
       </div>
+      <div class="card" id="foco" style="margin-bottom:22px" hidden></div>
       <div class="grid12">
         <div class="card span4" id="pib"></div>
         <div class="card span4" id="pibagro"></div>
@@ -982,7 +983,8 @@ function renderPainel(){
 }
 const SERIE_FOTO={animal:"suino",morango:"morango",tilapia:"tilapia"};
 function renderBoletins(){
-  const ed=B.edicoes[0],serie=B.series.find(s=>s.id===ed.serie);
+  const FOCO=B.foco&&B.foco.cadeia,edF=FOCO?B.edicoes.find(e=>(e.cadeias||[]).includes(FOCO)):null;
+  const ed=edF||B.edicoes[0],serie=B.series.find(s=>s.id===ed.serie);
   const CAD_BOL=[
     {n:"Bovinocultura de corte e leite",f:"boi",m:c=>/^Bovinocultura/.test(c)},
     {n:"Suinocultura",f:"suino",m:c=>c==="Suinocultura"},
@@ -1004,7 +1006,7 @@ function renderBoletins(){
       <div class="tb">${"<i></i>".repeat(12)}</div>
     </div>
     <div class="feature-body">
-      <div><span class="tag">Edição mais recente</span></div>
+      <div><span class="tag">${edF&&edF!==B.edicoes[0]?"Boletim em destaque":"Edição mais recente"}</span></div>
       <h3>${esc(ed.titulo)}</h3>
       <div class="meta">${desig(ed)?`<span>${esc(desig(ed))}</span>`:""}<span>${esc(numTxt(ed,true))}</span><span>${fmes(ed.data)}</span><span>${esc(serie.periodicidade)}</span></div>
       <p>${esc(ed.resumo)}</p>
@@ -1154,6 +1156,33 @@ function renderCartoes(){
   el.innerHTML=G.map(g=>`<h3 class="cgrp">${esc(g.titulo)}</h3><div class="grid12">${g.cartoes.map(c=>`<div class="card ${larga(c)?"span12":"span6"}"><h3>${esc(c.titulo)}</h3>${c.sub?`<div class="sub">${esc(c.sub)}</div>`:""}${corpo(c)}${c.nota?`<p class="note" style="margin-top:10px">${esc(c.nota)}</p>`:""}<div class="src">${srcLine(c)}${c.link2?` Ver também <a href="${esc(c.link2)}">Agrostat/MAPA</a>.`:""}</div></div>`).join("")}</div>`).join("");
   G.forEach(g=>g.cartoes.forEach(c=>{if(c.tipo==="barras"&&c.barras&&c.barras.length){const e=$("#cb-"+c.id);if(e)hbars(e,c.barras,{labelW:230,W:600,fmtv:v=>fmt(v,c.casas==null?1:c.casas),hi:r=>!!r[2]})}}));
 }
+const FOCO_CAD={
+  "Suinocultura":{re:/su[ií]n|porc|lech[aã]o|granj|peste su/i,precos:["suino","milho","farelo"],gta:true},
+  "Bovinocultura de corte":{re:/\bboi\b|bovin|arroba|pecu[aá]ria de corte|bezerr|frigor/i,precos:["milho","farelo"]},
+  "Avicultura de corte":{re:/frango|av[ií]col|avicul|\bovos?\b|gripe avi/i,precos:["frango","ovo","milho","farelo"]},
+  "Piscicultura":{re:/til[aá]pia|pescado|piscicul|peixe/i,precos:["tilapia","milho","farelo"]},
+  "Insumos":{re:/milho|farelo|soja|fertiliz|ureia/i,precos:["milho","soja","farelo"]}};
+function renderFoco(){
+  const el=$("#foco"),cad=B.foco&&B.foco.cadeia,cfg=cad&&FOCO_CAD[cad];
+  if(!cfg){el.hidden=true;return}
+  el.hidden=false;
+  const kpi=(k,v,s)=>`<div class="kpi"><div class="k">${esc(k)}</div><div class="v">${v}</div><div class="s">${s}</div></div>`;
+  const var_=v=>v==null?"":`${v>0?"+":""}${fmt(v,1)}% no mês`;
+  const precos=cfg.precos.map(k=>pp(k)).filter(Boolean).map(x=>kpi(x.nome,"R$ "+fmt(x.valor,x.casas==null?2:x.casas),`${esc(x.unidade)}${x.variacao!=null?" · "+var_(x.variacao):""}`));
+  const rel=(P&&P.semaforo||[]).filter(r=>r.cadeia===cad).map(r=>`<div class="kpi"><div class="k">${esc(r.relacao)}</div><div class="v">${fmt(r.irt,r.casas==null?1:r.casas)}</div><div class="s">${esc(r.ler)}; média ${fmt(r.media,r.casas==null?1:r.casas)}</div><div style="margin-top:6px"><span class="sig ${r.sinal}">${SIG[r.sinal]||""}</span></div></div>`);
+  const pend=(P&&P.pendentes||[]).filter(r=>r.cadeia===cad).map(r=>kpi(r.relacao,"em atualização",""));
+  const g=cfg.gta&&P&&P.gta_suinos?[kpi("Suínos que entraram no DF (GTA)",kn(P.gta_suinos.entrada),"animais, "+esc(mesExt(P.gta&&P.gta.mes||P.mes))),kpi("Suínos que saíram do DF (GTA)",kn(P.gta_suinos.saida),"animais, "+esc(mesExt(P.gta&&P.gta.mes||P.mes)))]:[];
+  const macro=D.indicadores.filter(i=>i.grupo==="macro"||i.grupo==="precos").map(i=>kpi(i.nome,fmt(i.valor,i.casas==null?2:i.casas),`${esc(i.unidade||"")}${i.referencia?", "+esc(i.referencia):""}`));
+  const nt=[...D.noticias].filter(x=>cfg.re.test(x.titulo)).sort((a,b)=>(b.data||"").localeCompare(a.data||"")).slice(0,6);
+  const grade=a=>a.length?`<div class="kpis">${a.join("")}</div>`:"";
+  el.innerHTML=`<span class="eyebrow">Em foco hoje</span><h3 style="margin:4px 0 6px">${esc(cad)}</h3>
+    <p class="sub" style="margin:0 0 14px">Preços e relações de troca de ${esc(mesExt(P&&P.mes))}, último mês aprovado pela equipe, indicadores econômicos do dia e as notícias mais recentes da cadeia. <a href="#feature">Ler o boletim em destaque</a> · <a href="#calculadora">Calcular a relação de troca</a></p>
+    <h4 style="margin:0 0 8px">Preços</h4>${grade(precos)}
+    <h4 style="margin:0 0 8px">${g.length?"Relações de troca e movimentação de animais":"Relações de troca"}</h4>${grade(rel.concat(pend,g))}
+    <h4 style="margin:0 0 8px">Indicadores econômicos</h4>${grade(macro)}
+    <h4 style="margin:0 0 8px">Notícias da ${esc(cad.toLowerCase())}</h4>
+    <div class="news">${nt.length?nt.map(x=>`<div class="card nw"><span class="t">${esc(cad)}</span><a href="${esc(x.link)}">${esc(x.titulo)}</a><div class="m"><span>${esc(x.veiculo)}</span>${x.data?`<span>${fdate(x.data)}</span>`:""}</div></div>`).join(""):`<p style="color:var(--muted)">Sem notícias recentes desta cadeia nas fontes acompanhadas.</p>`}</div>`;
+}
 function renderNoticias(){
   const lista=(intl,max)=>{const c={};return [...D.noticias].filter(x=>(x.tema==="Internacional")===intl).sort((a,b)=>(b.data||"").localeCompare(a.data||"")).filter(x=>(c[x.veiculo]=(c[x.veiculo]||0)+1)<=2).slice(0,max)};
   const card=x=>`<div class="card nw"><span class="t">${esc(x.tema)}</span><a href="${esc(x.link)}">${esc(x.titulo)}</a><div class="m"><span>${esc(x.veiculo)}</span>${x.data?`<span>${fdate(x.data)}</span>`:""}</div></div>`;
@@ -1285,7 +1314,7 @@ function renderProducao(){
 }
 function renderAll(){
   const r=f=>{try{f()}catch(e){console.error(e)}};
-  r(renderTicker);r(renderBoletins);r(renderPainel);r(renderCadeias);r(renderIndicadores);r(renderTerritorio);r(renderProducao);r(renderCartoes);r(renderBrasil);r(renderNoticias);r(renderEquipe);r(renderFontes);
+  r(renderTicker);r(renderBoletins);r(renderPainel);r(renderCadeias);r(renderIndicadores);r(renderTerritorio);r(renderProducao);r(renderCartoes);r(renderBrasil);r(renderNoticias);r(renderFoco);r(renderEquipe);r(renderFontes);
   if(!calcReady){r(renderCalc);calcReady=true}else if(!calcTocado){r(montarPresets);r(()=>setPreset(presetAtual))}else r(calc);
 }
 renderAll();
