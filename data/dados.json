@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-27T08:00-03:00",
+  "atualizado_em": "2026-11-27T09:00-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -666,6 +666,20 @@
       "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61131/ordenha-brasil-no-ritmo-do-tempo.htm"
     },
     {
+      "titulo": "Últimos dias de novembro terão chuva acima de 100 mm, ventos de até 75 km/h e risco de granizo; veja a previsão",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/previsao-do-tempo/ultimos-dias-de-novembro-terao-chuva-acima-de-100-mm-ventos-de-ate-75-km-h-e-risco-de-granizo-veja-a-previsao/"
+    },
+    {
+      "titulo": "Cade aprova sem restrições operação entre Itaú Unibanco, Bougainville e Klabin",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/cade-aprova-sem-restricoes-operacao-entre-itau-unibanco-bougainville-e-klabin/"
+    },
+    {
       "titulo": "Erosão costeira e parques eólicos pressionam reserva no litoral do Rio Grande do Norte",
       "veiculo": "Canal Rural",
       "data": "2026-11-27",
@@ -685,6 +699,13 @@
       "data": "2026-11-27",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/economia/precos-da-industria-sobem-098-em-outubro-com-pressao-de-alimentos-e-combustiveis/"
+    },
+    {
+      "titulo": "Gel do milho ajuda a reter umidade junto às raízes",
+      "veiculo": "Agrolink",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/gel-do-milho-ajuda-a-reter-umidade-junto-as-raizes_521585.html"
     },
     {
       "titulo": "Trigo no RS tem ofertas de R$ 1.200 a R$ 1.800 por tonelada",
@@ -787,20 +808,6 @@
       "link": "https://www.scotconsultoria.com.br/noticias/cartas/61130/carta-conjuntura-a-carne-sozinha-nao-paga-a-conta-do-frigorifico.htm"
     },
     {
-      "titulo": "Boi gordo perde força após sequência de altas e mercado entra em fase de consolidação, aponta analista",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-perde-forca-apos-sequencia-de-altas-e-mercado-entra-em-fase-de-consolidacao-aponta-analista/"
-    },
-    {
-      "titulo": "Tereza Cristina cobra autonomia de Trabuco e ajuste fiscal no governo Lula",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/tereza-cristina-cobra-autonomia-de-trabuco-e-ajuste-fiscal-no-governo-lula/"
-    },
-    {
       "titulo": "Brasil rebate Macron após fala sobre carne 'dopada' e acusa França de protecionismo",
       "veiculo": "g1 Agronegócios",
       "data": "2026-11-26",
@@ -820,6 +827,20 @@
       "data": "2026-11-26",
       "tema": "Mercado",
       "link": "https://www.agrolink.com.br/noticias/na-lavoura-de-melancia-em-canarana--abelhas-sao-essenciais-para-a-producao-de-frutos-e-mel_521576.html"
+    },
+    {
+      "titulo": "Boi gordo perde força após sequência de altas e mercado entra em fase de consolidação, aponta analista",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/pecuaria/boi-gordo-perde-forca-apos-sequencia-de-altas-e-mercado-entra-em-fase-de-consolidacao-aponta-analista/"
+    },
+    {
+      "titulo": "Tereza Cristina cobra autonomia de Trabuco e ajuste fiscal no governo Lula",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/tereza-cristina-cobra-autonomia-de-trabuco-e-ajuste-fiscal-no-governo-lula/"
     },
     {
       "titulo": "Café robusta reage após perdas recentes e fecha em alta na Bolsa de Londres",
@@ -850,25 +871,25 @@
       "link": "https://www.canalrural.com.br/pecuaria/cna-acusa-macron-de-tentar-prejudicar-imagem-do-agro-brasileiro/"
     },
     {
-      "titulo": "Trabuco é sondado para o Ministério da Fazenda no próximo governo Lula",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/trabuco-e-sondado-para-o-ministerio-da-fazenda-no-proximo-governo-lula/"
+      "titulo": "Nas Filipinas, ministro diz estar 'otimista' com negociações e que restrição à carne suína do Brasil 'é medida de 60 dias'",
+      "veiculo": "g1 Agronegócios",
+      "data": "2026-11-14",
+      "tema": "Agronegócio",
+      "link": "https://g1.globo.com/politica/noticia/2026/11/14/nas-filipinas-ministro-diz-estar-otimista-com-negociacoes-e-que-restricao-a-carne-suina-do-brasil-e-medida-de-60-dias.ghtml"
     },
     {
-      "titulo": "Área de TI do Mapa completa 50 anos com foco na digitalização de serviços",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/area-de-ti-do-mapa-completa-50-anos-com-foco-na-digitalizacao-de-servicos/"
+      "titulo": "SC confirma 4° foco da doença de Newcastle e reforça medidas de controle em granjas",
+      "veiculo": "g1 Agronegócios",
+      "data": "2026-11-04",
+      "tema": "Agronegócio",
+      "link": "https://g1.globo.com/sc/santa-catarina/noticia/2026/11/04/sc-confirma-quarto-foco-da-doenca-de-newcastle.ghtml"
     },
     {
-      "titulo": "Workshop do Mapa debate seguro rural e perspectivas do PSR para 2027",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/workshop-do-mapa-debate-seguro-rural-e-perspectivas-do-psr-para-2027/"
+      "titulo": "Doença de Newcastle: 6 mil aves são abatidas em granja no Oeste de SC",
+      "veiculo": "g1 Agronegócios",
+      "data": "2026-10-22",
+      "tema": "Agronegócio",
+      "link": "https://g1.globo.com/sc/santa-catarina/noticia/2026/10/22/doenca-newcastle-6-mil-aves-abatidas-granja-oeste-sc.ghtml"
     },
     {
       "titulo": "Embrapa debate caminhos para a transição sustentável do agro no Brasil Global Summit",
@@ -876,6 +897,13 @@
       "data": "2026-11-27",
       "tema": "Internacional",
       "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150602493/embrapa-debate-caminhos-para-a-transicao-sustentavel-do-agro-no-brasil-global-summit"
+    },
+    {
+      "titulo": "Super El Niño inaugura nova fase do fenômeno, diz pesquisador do Inpe",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Internacional",
+      "link": "https://www.canalrural.com.br/diversos/super-el-nino-inaugura-nova-fase-do-fenomeno-diz-pesquisador-do-inpe/"
     },
     {
       "titulo": "Carne brasileira 'dopada'? Auditoria da própria União Europeia contraria declaração de Macron",
@@ -1002,13 +1030,6 @@
       "data": "2026-11-26",
       "tema": "Internacional",
       "link": "https://www.canalrural.com.br/agricultura/conab-recebe-missao-argentina-na-paraiba-para-intercambio-sobre-agricultura-familiar/"
-    },
-    {
-      "titulo": "Soja recua no Brasil com forte queda do dólar e negócios travados; confira os preços do dia",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.canalrural.com.br/agricultura/projeto-soja-brasil/soja-recua-no-brasil-com-forte-queda-do-dolar-e-negocios-travados-confira-os-precos-do-dia/"
     }
   ],
   "cartoes": [
