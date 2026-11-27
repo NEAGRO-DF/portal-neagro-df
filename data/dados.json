@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-27T09:00-03:00",
+  "atualizado_em": "2026-11-27T09:04-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -666,6 +666,13 @@
       "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61131/ordenha-brasil-no-ritmo-do-tempo.htm"
     },
     {
+      "titulo": "IGP-M sobe 1,24% em novembro com pressão de alimentos in natura",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/igp-m-sobe-124-em-novembro-com-pressao-de-alimentos-in-natura/"
+    },
+    {
       "titulo": "Últimos dias de novembro terão chuva acima de 100 mm, ventos de até 75 km/h e risco de granizo; veja a previsão",
       "veiculo": "Canal Rural",
       "data": "2026-11-27",
@@ -692,13 +699,6 @@
       "data": "2026-11-27",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/agronegocio/black-friday-como-comparar-insumos-e-maquinas-antes-de-fechar-negocio/"
-    },
-    {
-      "titulo": "Preços da indústria sobem 0,98% em outubro com pressão de alimentos e combustíveis",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/precos-da-industria-sobem-098-em-outubro-com-pressao-de-alimentos-e-combustiveis/"
     },
     {
       "titulo": "Gel do milho ajuda a reter umidade junto às raízes",
@@ -743,6 +743,13 @@
       "tema": "Clima",
       "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56513",
       "validade": "2026-11-27"
+    },
+    {
+      "titulo": "Preços da indústria sobem 0,98% em outubro com pressão de alimentos e combustíveis",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/precos-da-industria-sobem-098-em-outubro-com-pressao-de-alimentos-e-combustiveis/"
     },
     {
       "titulo": "Embrapa Recursos Genéticos e Biotecnologia celebra 52 anos com R$ 3,4 milhões em royalties e novos contratos de inovação",
@@ -864,13 +871,6 @@
       "link": "https://www.canalrural.com.br/politica/workshop-em-teresina-apresenta-plataforma-terras-do-brasil-a-tres-estados-do-nordeste/"
     },
     {
-      "titulo": "CNA acusa Macron de tentar prejudicar imagem do agro brasileiro",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/pecuaria/cna-acusa-macron-de-tentar-prejudicar-imagem-do-agro-brasileiro/"
-    },
-    {
       "titulo": "Nas Filipinas, ministro diz estar 'otimista' com negociações e que restrição à carne suína do Brasil 'é medida de 60 dias'",
       "veiculo": "g1 Agronegócios",
       "data": "2026-11-14",
@@ -897,6 +897,13 @@
       "data": "2026-11-27",
       "tema": "Internacional",
       "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150602493/embrapa-debate-caminhos-para-a-transicao-sustentavel-do-agro-no-brasil-global-summit"
+    },
+    {
+      "titulo": "Confirmação de Trabuco no ministério da Fazenda faz Ibovespa subir 6% e dólar cair",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Internacional",
+      "link": "https://www.canalrural.com.br/economia/confirmacao-de-trabuco-no-ministerio-da-fazenda-faz-ibovespa-subir-6-e-dolar-cair/"
     },
     {
       "titulo": "Super El Niño inaugura nova fase do fenômeno, diz pesquisador do Inpe",
@@ -946,13 +953,6 @@
       "data": "2026-11-26",
       "tema": "Internacional",
       "link": "https://www.scotconsultoria.com.br/noticias/artigos/61102/arroba-em-dolares-cara-para-o-historico-e-barata-para-o-mundo.htm"
-    },
-    {
-      "titulo": "Gecex zera imposto de importação de cones de lúpulo e insumos de nutrição animal",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.canalrural.com.br/economia/gecex-zera-imposto-de-importacao-de-cones-de-lupulo-e-insumos-de-nutricao-animal/"
     },
     {
       "titulo": "'Carne dopada': exportadores brasileiros rebatem fala de Macron: 'grave e inaceitável um chefe de Estado recorrer a inverdades'",
@@ -1018,18 +1018,18 @@
       "link": "https://g1.globo.com/economia/noticia/2026/11/26/china-brasil-e-uniao-europeia-reagem-a-novas-tarifas-anunciadas-por-trump.ghtml"
     },
     {
+      "titulo": "Gecex zera imposto de importação de cones de lúpulo e insumos de nutrição animal",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://www.canalrural.com.br/economia/gecex-zera-imposto-de-importacao-de-cones-de-lupulo-e-insumos-de-nutricao-animal/"
+    },
+    {
       "titulo": "Conab recebe delegação argentina na Paraíba para intercâmbio sobre agricultura familiar e abastecimento",
       "veiculo": "Conab",
       "data": "2026-11-26",
       "tema": "Internacional",
       "link": "https://www.gov.br/conab/pt-br/assuntos/noticias/conab-recebe-delegacao-argentina-na-paraiba-para-intercambio-sobre-agricultura-familiar-e-abastecimento"
-    },
-    {
-      "titulo": "Conab recebe missão argentina na Paraíba para intercâmbio sobre agricultura familiar",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.canalrural.com.br/agricultura/conab-recebe-missao-argentina-na-paraiba-para-intercambio-sobre-agricultura-familiar/"
     }
   ],
   "cartoes": [
