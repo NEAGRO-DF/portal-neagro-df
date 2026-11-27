@@ -1,21 +1,17 @@
 {
-  "atualizado_em": "2026-11-27T12:39-03:00",
+  "atualizado_em": "2026-11-27T19:09-03:00",
   "indicadores": [
     {
       "id": "dolar",
       "nome": "Dólar comercial",
-      "valor": 5.744,
+      "valor": 5.5424,
       "unidade": "R$/US$",
       "casas": 4,
-      "referencia": "26/11/2026",
-      "variacao_pct": 7.54,
+      "referencia": "27/11/2026",
+      "variacao_pct": 3.14,
       "variacao_desc": "em 20 pregões",
       "grupo": "macro",
       "serie": [
-        [
-          "28/10",
-          5.3414
-        ],
         [
           "29/10",
           5.3738
@@ -91,6 +87,10 @@
         [
           "26/11",
           5.744
+        ],
+        [
+          "27/11",
+          5.5424
         ]
       ],
       "fonte": "Banco Central do Brasil, SGS série 10813 (taxa de câmbio livre, dólar, compra)",
@@ -187,11 +187,11 @@
       "fonte": "Banco Central do Brasil, SGS série 21619 (taxa de câmbio livre, euro, venda)",
       "link": "https://www3.bcb.gov.br/sgspub/",
       "automatico": true,
-      "valor": 6.3041,
-      "referencia": "26/11/2026",
+      "valor": 6.0646,
+      "referencia": "27/11/2026",
       "endpoint": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.21619/dados/ultimos/20?formato=json",
       "extraido_em": "2026-11-27",
-      "variacao_pct": 5.92,
+      "variacao_pct": 1.08,
       "variacao_desc": "em 20 pregões"
     },
     {
@@ -213,12 +213,12 @@
     {
       "id": "boi",
       "nome": "Boi gordo Cepea/Esalq",
-      "valor": 396.7,
+      "valor": 398.2,
       "unidade": "R$/@",
       "casas": 2,
-      "referencia": "26/11/2026",
-      "variacao_pct": 0.32,
-      "variacao_desc": "sobre 24/11/2026",
+      "referencia": "27/11/2026",
+      "variacao_pct": 0.38,
+      "variacao_desc": "sobre 26/11/2026",
       "grupo": "precos",
       "fonte": "Indicador do Boi Gordo Cepea/Esalq (estado de São Paulo), à vista, widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/boi-gordo.aspx",
@@ -229,12 +229,12 @@
     {
       "id": "soja",
       "nome": "Soja Paranaguá Cepea/Esalq",
-      "valor": 169.18,
+      "valor": 166.81,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "referencia": "26/11/2026",
-      "variacao_pct": -0.51,
-      "variacao_desc": "sobre 25/11/2026",
+      "referencia": "27/11/2026",
+      "variacao_pct": -1.4,
+      "variacao_desc": "sobre 26/11/2026",
       "grupo": "precos",
       "fonte": "Indicador da Soja Cepea/Esalq Paranaguá, widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/soja.aspx",
@@ -245,12 +245,12 @@
     {
       "id": "milho",
       "nome": "Milho Esalq/B3",
-      "valor": 68.0,
+      "valor": 67.98,
       "unidade": "R$/sc 60 kg",
       "casas": 2,
-      "referencia": "26/11/2026",
-      "variacao_pct": 0.09,
-      "variacao_desc": "sobre 25/11/2026",
+      "referencia": "27/11/2026",
+      "variacao_pct": -0.03,
+      "variacao_desc": "sobre 26/11/2026",
       "grupo": "precos",
       "fonte": "Indicador do Milho Esalq/B3 (Campinas), widget oficial do Cepea",
       "link": "https://www.cepea.org.br/br/indicador/milho.aspx",
@@ -659,6 +659,30 @@
   },
   "noticias": [
     {
+      "titulo": "Tempestade: aviso do INMET para Noroeste de Minas (perigo potencial)",
+      "veiculo": "INMET",
+      "data": "2026-11-30",
+      "tema": "Clima",
+      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56527",
+      "validade": "2026-11-30"
+    },
+    {
+      "titulo": "Chuvas Intensas: aviso do INMET para Noroeste de Minas (perigo potencial)",
+      "veiculo": "INMET",
+      "data": "2026-11-29",
+      "tema": "Clima",
+      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56532",
+      "validade": "2026-11-29"
+    },
+    {
+      "titulo": "Chuvas Intensas: aviso do INMET para Leste Goiano e Noroeste de Minas (perigo potencial)",
+      "veiculo": "INMET",
+      "data": "2026-11-29",
+      "tema": "Clima",
+      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56529",
+      "validade": "2026-11-29"
+    },
+    {
       "titulo": "Chuvas Intensas: aviso do INMET para Leste Goiano e Noroeste de Minas (perigo potencial)",
       "veiculo": "INMET",
       "data": "2026-11-29",
@@ -671,8 +695,73 @@
       "veiculo": "INMET",
       "data": "2026-11-28",
       "tema": "Clima",
+      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56530",
+      "validade": "2026-11-28"
+    },
+    {
+      "titulo": "Chuvas Intensas: aviso do INMET para Leste Goiano e Noroeste de Minas (perigo potencial)",
+      "veiculo": "INMET",
+      "data": "2026-11-28",
+      "tema": "Clima",
+      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56528",
+      "validade": "2026-11-28"
+    },
+    {
+      "titulo": "Chuvas Intensas: aviso do INMET para Leste Goiano e Noroeste de Minas (perigo potencial)",
+      "veiculo": "INMET",
+      "data": "2026-11-28",
+      "tema": "Clima",
       "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56521",
       "validade": "2026-11-28"
+    },
+    {
+      "titulo": "Acordo operacionaliza unidade para pesquisa em agricultura espacial",
+      "veiculo": "Embrapa",
+      "data": "2026-11-27",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150642742/acordo-operacionaliza-unidade-para-pesquisa-em-agricultura-espacial"
+    },
+    {
+      "titulo": "Secretária nacional de Aquicultura conhece equipes e estruturas de pesquisa em SE",
+      "veiculo": "Embrapa",
+      "data": "2026-11-27",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150640594/secretaria-nacional-de-aquicultura-conhece-equipes-e-estruturas-de-pesquisa-em-se"
+    },
+    {
+      "titulo": "Embrapa lança curso on-line sobre o uso de dados da cadeia produtiva do trigo",
+      "veiculo": "Embrapa",
+      "data": "2026-11-27",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150638174/embrapa-lanca-curso-on-line-sobre-o-uso-de-dados-da-cadeia-produtiva-do-trigo"
+    },
+    {
+      "titulo": "Oficina ensina técnicas de desidratação para agregar valor a produtos agroflorestais",
+      "veiculo": "Embrapa",
+      "data": "2026-11-27",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150635576/oficina-ensina-tecnicas-de-desidratacao-para-agregar-valor-a-produtos-agroflorestais"
+    },
+    {
+      "titulo": "Embrapa Café fortalece conexões na SIC 2026",
+      "veiculo": "Embrapa",
+      "data": "2026-11-27",
+      "tema": "Pesquisa",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150635050/embrapa-cafe-fortalece-conexoes-na-sic-2026"
+    },
+    {
+      "titulo": "Inflação, juros e preço dos fertilizantes no radar no final de novembro",
+      "veiculo": "Scot Consultoria",
+      "data": "2026-11-27",
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/artigos/61138/inflacao-juros-e-preco-dos-fertilizantes-no-radar-no-final-de-novembro.htm"
+    },
+    {
+      "titulo": "Semana termina com mais altas no mercado do boi gordo em São Paulo",
+      "veiculo": "Scot Consultoria",
+      "data": "2026-11-27",
+      "tema": "Pecuária",
+      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61135/semana-termina-com-mais-altas-no-mercado-do-boi-gordo-em-sao-paulo.htm"
     },
     {
       "titulo": "Ordenha Brasil - no ritmo do tempo",
@@ -680,6 +769,83 @@
       "data": "2026-11-27",
       "tema": "Pecuária",
       "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61131/ordenha-brasil-no-ritmo-do-tempo.htm"
+    },
+    {
+      "titulo": "Mapa lança programa nacional de conservação ex situ de recursos genéticos",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/mapa-lanca-programa-nacional-de-conservacao-ex-situ-de-recursos-geneticos/"
+    },
+    {
+      "titulo": "Fundo Amazônia avança em iniciativa de R$ 50,5 milhões para comunidades quilombolas",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/politica/fundo-amazonia-avanca-em-iniciativa-de-r-505-milhoes-para-comunidades-quilombolas/"
+    },
+    {
+      "titulo": "Conab registra alta dos fretes agrícolas em mais de 93% das rotas do Centro-Oeste",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/conab-registra-alta-dos-fretes-agricolas-em-mais-de-93-das-rotas-do-centro-oeste/"
+    },
+    {
+      "titulo": "ANP apreende 5 milhões de litros de combustíveis em distribuidora de Goiás",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/economia/anp-apreende-5-milhoes-de-litros-de-combustiveis-em-distribuidora-de-goias/"
+    },
+    {
+      "titulo": "Entre o ajuste e o crescimento: as escolhas econômicas do governo Lula 4",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.canalrural.com.br/opiniao-noticias/entre-o-ajuste-e-o-crescimento-as-escolhas-economicas-do-proximo-governo/"
+    },
+    {
+      "titulo": "Veja como criar e introduzir abelhas-rainhas nas colmeias",
+      "veiculo": "g1 Agronegócios",
+      "data": "2026-11-27",
+      "tema": "Agronegócio",
+      "link": "https://g1.globo.com/economia/agronegocios/globo-rural/noticia/2026/11/27/veja-como-criar-e-introduzir-abelhas-rainhas-nas-colmeias.ghtml"
+    },
+    {
+      "titulo": "Manejo de brotações no café pode facilitar a colheita",
+      "veiculo": "Agrolink",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/manejo-de-brotacoes-no-cafe-pode-facilitar-a-colheita_521633.html"
+    },
+    {
+      "titulo": "Safra de grãos chega a 46,93 milhões de toneladas no Paraná",
+      "veiculo": "Agrolink",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/safra-de-graos-chega-a-46-93-milhoes-de-toneladas-no-parana_521630.html"
+    },
+    {
+      "titulo": "MT: fiscalização apreende 1,9 mil litros e 380 quilos de agroquímicos",
+      "veiculo": "Agrolink",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/mt--fiscalizacao-apreende-1-9-mil-litros-e-380-quilos-de-agroquimicos_521629.html"
+    },
+    {
+      "titulo": "Estudo comprova eficiência do manejo regenerativo no café",
+      "veiculo": "Agrolink",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/estudo-comprova-eficiencia-do-manejo-regenerativo-no-cafe_521626.html"
+    },
+    {
+      "titulo": "Produção de soja avança em Goiás; veja os custos para a safra 2026/27",
+      "veiculo": "Agrolink",
+      "data": "2026-11-27",
+      "tema": "Mercado",
+      "link": "https://www.agrolink.com.br/noticias/producao-de-soja-avanca-em-goias--veja-os-custos-para-a-safra-2026-27_521624.html"
     },
     {
       "titulo": "JBS mira expansão na Ásia e aposta em proteínas voltadas à longevidade",
@@ -708,171 +874,6 @@
       "data": "2026-11-27",
       "tema": "Mercado",
       "link": "https://www.canalrural.com.br/agricultura/safra-2026-27-de-soja-e-estimada-em-1823-milhoes-de-toneladas/"
-    },
-    {
-      "titulo": "Crédito ao agro sobe 2,3% em outubro e estoque total atinge R$ 7,466 trilhões",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/credito-ao-agro-sobe-23-em-outubro-e-estoque-total-atinge-r-7466-trilhoes/"
-    },
-    {
-      "titulo": "CGU e MDA concluem antes do prazo meta de serviços para agricultura familiar",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/cgu-e-mda-concluem-antes-do-prazo-meta-de-servicos-para-agricultura-familiar/"
-    },
-    {
-      "titulo": "Milho brasileiro perde poder de compra diante do adubo",
-      "veiculo": "Agrolink",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/milho-brasileiro-perde-poder-de-compra-diante-do-adubo_521597.html"
-    },
-    {
-      "titulo": "Armazenagem pode responder por perdas de até 10% da produção de soja",
-      "veiculo": "Agrolink",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/armazenagem-pode-responder-por-perdas-de-ate-10--da-producao-de-soja_521596.html"
-    },
-    {
-      "titulo": "Produtores de leite podem perder R$ 0,12 por litro",
-      "veiculo": "Agrolink",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/produtores-de-leite-podem-perder-r--0-12-por-litro_521595.html"
-    },
-    {
-      "titulo": "Nanotecnologia e o residual contra a cigarrinha do milho",
-      "veiculo": "Agrolink",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/nanotecnologia-e-o-residual-contra-a-cigarrinha-do-milho_521594.html"
-    },
-    {
-      "titulo": "IA e novas gerações mudam o jeito de fazer marketing no Agro",
-      "veiculo": "Agrolink",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/ia-e-novas-geracoes-mudam-o-jeito-de-fazer-marketing-no-agro_521592.html"
-    },
-    {
-      "titulo": "Chuvas Intensas: aviso do INMET para Leste Goiano e Noroeste de Minas (perigo potencial)",
-      "veiculo": "INMET",
-      "data": "2026-11-27",
-      "tema": "Clima",
-      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56518",
-      "validade": "2026-11-27"
-    },
-    {
-      "titulo": "Chuvas Intensas: aviso do INMET para Leste Goiano, Noroeste de Minas e Distrito Federal (perigo potencial)",
-      "veiculo": "INMET",
-      "data": "2026-11-27",
-      "tema": "Clima",
-      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56517",
-      "validade": "2026-11-27"
-    },
-    {
-      "titulo": "Chuvas Intensas: aviso do INMET para Noroeste de Minas (perigo potencial)",
-      "veiculo": "INMET",
-      "data": "2026-11-27",
-      "tema": "Clima",
-      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56514",
-      "validade": "2026-11-27"
-    },
-    {
-      "titulo": "IGP-M sobe 1,24% em novembro com pressão de alimentos in natura",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/igp-m-sobe-124-em-novembro-com-pressao-de-alimentos-in-natura/"
-    },
-    {
-      "titulo": "Últimos dias de novembro terão chuva acima de 100 mm, ventos de até 75 km/h e risco de granizo; veja a previsão",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/previsao-do-tempo/ultimos-dias-de-novembro-terao-chuva-acima-de-100-mm-ventos-de-ate-75-km-h-e-risco-de-granizo-veja-a-previsao/"
-    },
-    {
-      "titulo": "Cade aprova sem restrições operação entre Itaú Unibanco, Bougainville e Klabin",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/cade-aprova-sem-restricoes-operacao-entre-itau-unibanco-bougainville-e-klabin/"
-    },
-    {
-      "titulo": "Erosão costeira e parques eólicos pressionam reserva no litoral do Rio Grande do Norte",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/diversos/erosao-costeira-e-parques-eolicos-pressionam-reserva-no-litoral-do-rio-grande-do-norte/"
-    },
-    {
-      "titulo": "Black Friday: como comparar insumos e máquinas antes de fechar negócio",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/agricultura/agronegocio/black-friday-como-comparar-insumos-e-maquinas-antes-de-fechar-negocio/"
-    },
-    {
-      "titulo": "Gel do milho ajuda a reter umidade junto às raízes",
-      "veiculo": "Agrolink",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/gel-do-milho-ajuda-a-reter-umidade-junto-as-raizes_521585.html"
-    },
-    {
-      "titulo": "Trigo no RS tem ofertas de R$ 1.200 a R$ 1.800 por tonelada",
-      "veiculo": "Agrolink",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/trigo-no-rs-tem-ofertas-de-r--1-200-a-r--1-800-por-tonelada_521584.html"
-    },
-    {
-      "titulo": "Milho reage no RS e saca chega a R$ 65,45 no Paraná",
-      "veiculo": "Agrolink",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/milho-reage-no-rs-e-saca-chega-a-r--65-45-no-parana_521583.html"
-    },
-    {
-      "titulo": "Raízes dão pistas sobre nematoides na lavoura",
-      "veiculo": "Agrolink",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.agrolink.com.br/noticias/raizes-dao-pistas-sobre-nematoides-na-lavoura_521580.html"
-    },
-    {
-      "titulo": "Chuvas Intensas: aviso do INMET para Leste Goiano e Noroeste de Minas (perigo potencial)",
-      "veiculo": "INMET",
-      "data": "2026-11-27",
-      "tema": "Clima",
-      "link": "https://apiprevmet3.inmet.gov.br/avisos/rss/56513",
-      "validade": "2026-11-27"
-    },
-    {
-      "titulo": "Preços da indústria sobem 0,98% em outubro com pressão de alimentos e combustíveis",
-      "veiculo": "Canal Rural",
-      "data": "2026-11-27",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/economia/precos-da-industria-sobem-098-em-outubro-com-pressao-de-alimentos-e-combustiveis/"
-    },
-    {
-      "titulo": "O que os números dizem sobre a pecuária do Acre?",
-      "veiculo": "Scot Consultoria",
-      "data": "2026-11-26",
-      "tema": "Pecuária",
-      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61134/o-que-os-numeros-dizem-sobre-a-pecuaria-do-acre.htm"
-    },
-    {
-      "titulo": "Fique Sabendo - Cotações de bovinos Nelore destinados à reposição no Maranhão",
-      "veiculo": "Scot Consultoria",
-      "data": "2026-11-26",
-      "tema": "Pecuária",
-      "link": "https://www.scotconsultoria.com.br/noticias/todas-noticias/61133/fique-sabendo-cotacoes-de-bovinos-nelore-destinados-a-reposicao-no-maranhao.htm"
     },
     {
       "titulo": "Carne suína em baixa está mais competitiva do que nunca, avalia Cepea",
@@ -917,11 +918,25 @@
       "link": "https://www.canalrural.com.br/opiniao-noticias/abates-recordes-e-pressao-sobre-os-precos-marcam-suinocultura-brasileira-em-2026/"
     },
     {
+      "titulo": "Embrapa e MCTI firmam acordos voltados à inovação agropecuária e à cooperação internacional",
+      "veiculo": "Embrapa",
+      "data": "2026-11-27",
+      "tema": "Internacional",
+      "link": "https://www.embrapa.br/busca-de-noticias/-/noticia/150641303/embrapa-e-mcti-firmam-acordos-voltados-a-inovacao-agropecuaria-e-a-cooperacao-internacional"
+    },
+    {
       "titulo": "Carne brasileira 'dopada'? Auditoria da própria União Europeia contraria declaração de Macron",
       "veiculo": "g1 Agronegócios",
       "data": "2026-11-27",
       "tema": "Internacional",
       "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/27/carne-brasileira-dopada-auditoria-da-propria-uniao-europeia-contraria-declaracao-de-macron.ghtml"
+    },
+    {
+      "titulo": "Boi gordo: São Paulo registra alta para boi China, vaca e novilha",
+      "veiculo": "Agrolink",
+      "data": "2026-11-27",
+      "tema": "Internacional",
+      "link": "https://www.agrolink.com.br/noticias/boi-gordo--sao-paulo-registra-alta-para-boi-china--vaca-e-novilha_521631.html"
     },
     {
       "titulo": "Chicago reabre com foco nas exportações de grãos",
@@ -943,6 +958,13 @@
       "data": "2026-11-27",
       "tema": "Internacional",
       "link": "https://www.agrolink.com.br/noticias/trigo-bate-recorde-de-produtividade-no-noroeste-argentino_521577.html"
+    },
+    {
+      "titulo": "Governo avalia que novo tarifaço dos EUA busca proteger big techs",
+      "veiculo": "Agência Brasil",
+      "data": "2026-11-27",
+      "tema": "Internacional",
+      "link": "https://agenciabrasil.ebc.com.br/internacional/noticia/2026-11/governo-avalia-que-novo-tarifaco-dos-eua-busca-proteger-big-techs"
     },
     {
       "titulo": "Embrapa debate caminhos para a transição sustentável do agro no Brasil Global Summit",
@@ -980,13 +1002,6 @@
       "link": "https://www.scotconsultoria.com.br/noticias/artigos/61115/exportacao-de-gado-vivo-tem-o-melhor-outubro-da-historia-e-chega-a-1-2-milhao-de-cabecas-no-ano.htm"
     },
     {
-      "titulo": "Arroba em dólares: cara para o histórico e, barata para o mundo",
-      "veiculo": "Scot Consultoria",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.scotconsultoria.com.br/noticias/artigos/61102/arroba-em-dolares-cara-para-o-historico-e-barata-para-o-mundo.htm"
-    },
-    {
       "titulo": "'Carne dopada': exportadores brasileiros rebatem fala de Macron: 'grave e inaceitável um chefe de Estado recorrer a inverdades'",
       "veiculo": "g1 Agronegócios",
       "data": "2026-11-26",
@@ -1006,20 +1021,6 @@
       "data": "2026-11-26",
       "tema": "Internacional",
       "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/26/tarifaco-de-trump-nova-taxa-sobre-acucar-brasileiro-deve-ter-impacto-praticamente-nulo-diz-analista.ghtml"
-    },
-    {
-      "titulo": "Exportações de mel recuam em outubro",
-      "veiculo": "Agrolink",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.agrolink.com.br/noticias/exportacoes-de-mel-recuam-em-outubro_521570.html"
-    },
-    {
-      "titulo": "Trigo em Chicago cai ao menor nível desde fevereiro",
-      "veiculo": "Agrolink",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.agrolink.com.br/noticias/trigo-em-chicago-cai-ao-menor-nivel-desde-fevereiro_521566.html"
     },
     {
       "titulo": "China: questões comerciais com EUA devem ser resolvidas com diálogo",
@@ -1043,18 +1044,18 @@
       "link": "https://g1.globo.com/economia/noticia/2026/11/26/china-brasil-e-uniao-europeia-reagem-a-novas-tarifas-anunciadas-por-trump.ghtml"
     },
     {
-      "titulo": "Conab recebe delegação argentina na Paraíba para intercâmbio sobre agricultura familiar e abastecimento",
-      "veiculo": "Conab",
+      "titulo": "Arroba em dólares: cara para o histórico e, barata para o mundo",
+      "veiculo": "Scot Consultoria",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.gov.br/conab/pt-br/assuntos/noticias/conab-recebe-delegacao-argentina-na-paraiba-para-intercambio-sobre-agricultura-familiar-e-abastecimento"
+      "link": "https://www.scotconsultoria.com.br/noticias/artigos/61102/arroba-em-dolares-cara-para-o-historico-e-barata-para-o-mundo.htm"
     },
     {
-      "titulo": "Preço do milho fica estável em Chicago",
+      "titulo": "Exportações de mel recuam em outubro",
       "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.agrolink.com.br/noticias/preco-do-milho-fica-estavel-em-chicago_521562.html"
+      "link": "https://www.agrolink.com.br/noticias/exportacoes-de-mel-recuam-em-outubro_521570.html"
     }
   ],
   "cartoes": [
@@ -1493,13 +1494,6 @@
               -9.7
             ],
             [
-              "Frango inteiro",
-              600.54,
-              "national currency/100kg",
-              "16/11/2026",
-              -4.1
-            ],
-            [
               "Leite cru ao produtor",
               46.03,
               "100KG",
@@ -1507,7 +1501,7 @@
               -21.7
             ]
           ],
-          "nota": "",
+          "nota": "Sem dados recentes para: Frango inteiro.",
           "fonte": "Comissão Europeia, Agri-food Data Portal",
           "link": "https://agridata.ec.europa.eu/extensions/DataPortal/home.html",
           "endpoint": "https://ec.europa.eu/agrifood/api/{beef,pigmeat,poultry,rawMilk}/prices",
