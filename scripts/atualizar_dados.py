@@ -282,7 +282,7 @@ INTL = re.compile(r"china|chin[eê]s|\beua\b|estados unidos|americano|trump|tari
                   r"internacional|mundial|global|exterior|exporta|importa|embarque|d[oó]lar|c[aâ]mbio|guerra|"
                   r"san[cç][aã]o|el ni[nñ]o|la ni[nñ]a|petr[oó]leo", re.I)
 # Cadeia em foco (data/boletins.json, chave "foco"): guarda também as manchetes dela, além do limite geral.
-FOCO_RE = {"Suinocultura": r"su[ií]n|porc|lech[aã]o|granj|peste su",
+FOCO_RE = {"Suinocultura": r"su[ií]n|porc|lech[aã]o|peste su",
            "Bovinocultura de corte": r"\bboi\b|bovin|arroba|pecu[aá]ria de corte|bezerr|frigor",
            "Avicultura de corte": r"frango|av[ií]col|avicul|\bovos?\b|gripe avi",
            "Piscicultura": r"til[aá]pia|pescado|piscicul|peixe",
