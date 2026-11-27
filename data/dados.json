@@ -1,5 +1,5 @@
 {
-  "atualizado_em": "2026-11-27T09:04-03:00",
+  "atualizado_em": "2026-11-27T09:09-03:00",
   "indicadores": [
     {
       "id": "dolar",
@@ -815,6 +815,13 @@
       "link": "https://www.scotconsultoria.com.br/noticias/cartas/61130/carta-conjuntura-a-carne-sozinha-nao-paga-a-conta-do-frigorifico.htm"
     },
     {
+      "titulo": "Carne suína em baixa está mais competitiva do que nunca, avalia Cepea",
+      "veiculo": "Canal Rural",
+      "data": "2026-11-26",
+      "tema": "Suinocultura",
+      "link": "https://www.canalrural.com.br/suino/carne-suina-em-baixa-esta-mais-competitiva-do-que-nunca-avalia-cepea/"
+    },
+    {
       "titulo": "Brasil rebate Macron após fala sobre carne 'dopada' e acusa França de protecionismo",
       "veiculo": "g1 Agronegócios",
       "data": "2026-11-26",
@@ -864,11 +871,11 @@
       "link": "https://www.scotconsultoria.com.br/noticias/cartas/61129/carta-insumos-fertilizante-organomineral-vale-a-pena-investir.htm"
     },
     {
-      "titulo": "Workshop em Teresina apresenta Plataforma Terras do Brasil a três estados do Nordeste",
+      "titulo": "Preço do suíno vivo cai em novembro e alta do milho pressiona produtores",
       "veiculo": "Canal Rural",
-      "data": "2026-11-26",
-      "tema": "Mercado",
-      "link": "https://www.canalrural.com.br/politica/workshop-em-teresina-apresenta-plataforma-terras-do-brasil-a-tres-estados-do-nordeste/"
+      "data": "2026-11-19",
+      "tema": "Suinocultura",
+      "link": "https://www.canalrural.com.br/suino/preco-do-suino-vivo-cai-em-novembro-e-alta-do-milho-pressiona-produtores/"
     },
     {
       "titulo": "Nas Filipinas, ministro diz estar 'otimista' com negociações e que restrição à carne suína do Brasil 'é medida de 60 dias'",
@@ -878,18 +885,25 @@
       "link": "https://g1.globo.com/politica/noticia/2026/11/14/nas-filipinas-ministro-diz-estar-otimista-com-negociacoes-e-que-restricao-a-carne-suina-do-brasil-e-medida-de-60-dias.ghtml"
     },
     {
-      "titulo": "SC confirma 4° foco da doença de Newcastle e reforça medidas de controle em granjas",
-      "veiculo": "g1 Agronegócios",
-      "data": "2026-11-04",
-      "tema": "Agronegócio",
-      "link": "https://g1.globo.com/sc/santa-catarina/noticia/2026/11/04/sc-confirma-quarto-foco-da-doenca-de-newcastle.ghtml"
+      "titulo": "Suínos em alta recuperam o poder de compra do produtor, diz Cepea",
+      "veiculo": "Canal Rural",
+      "data": "2026-10-15",
+      "tema": "Suinocultura",
+      "link": "https://www.canalrural.com.br/suino/suinos-em-alta-recuperam-o-poder-de-compra-do-produtor-diz-cepea/"
     },
     {
-      "titulo": "Doença de Newcastle: 6 mil aves são abatidas em granja no Oeste de SC",
-      "veiculo": "g1 Agronegócios",
-      "data": "2026-10-22",
-      "tema": "Agronegócio",
-      "link": "https://g1.globo.com/sc/santa-catarina/noticia/2026/10/22/doenca-newcastle-6-mil-aves-abatidas-granja-oeste-sc.ghtml"
+      "titulo": "Preços do suíno vivo e da carne seguem em alta no início de outubro, aponta Cepea",
+      "veiculo": "Canal Rural",
+      "data": "2026-10-08",
+      "tema": "Suinocultura",
+      "link": "https://www.canalrural.com.br/suino/precos-do-suino-vivo-e-da-carne-seguem-em-alta-no-inicio-de-outubro-aponta-cepea/"
+    },
+    {
+      "titulo": "Abates recordes e pressão sobre os preços marcam suinocultura brasileira em 2026",
+      "veiculo": "Canal Rural",
+      "data": "2026-09-09",
+      "tema": "Suinocultura",
+      "link": "https://www.canalrural.com.br/opiniao-noticias/abates-recordes-e-pressao-sobre-os-precos-marcam-suinocultura-brasileira-em-2026/"
     },
     {
       "titulo": "Embrapa debate caminhos para a transição sustentável do agro no Brasil Global Summit",
@@ -920,6 +934,13 @@
       "link": "https://g1.globo.com/economia/agronegocios/noticia/2026/11/27/carne-brasileira-dopada-auditoria-da-propria-uniao-europeia-contraria-declaracao-de-macron.ghtml"
     },
     {
+      "titulo": "Chicago reabre com foco nas exportações de grãos",
+      "veiculo": "Agrolink",
+      "data": "2026-11-27",
+      "tema": "Internacional",
+      "link": "https://www.agrolink.com.br/noticias/chicago-reabre-com-foco-nas-exportacoes-de-graos_521586.html"
+    },
+    {
       "titulo": "Soja chega a R$ 151,38 em Passo Fundo com dólar em baixa",
       "veiculo": "Agrolink",
       "data": "2026-11-27",
@@ -932,6 +953,13 @@
       "data": "2026-11-27",
       "tema": "Internacional",
       "link": "https://www.agrolink.com.br/noticias/trigo-bate-recorde-de-produtividade-no-noroeste-argentino_521577.html"
+    },
+    {
+      "titulo": "Conab recebe delegação argentina na Paraíba para intercâmbio sobre agricultura familiar e abastecimento",
+      "veiculo": "Conab",
+      "data": "2026-11-26",
+      "tema": "Internacional",
+      "link": "https://www.gov.br/conab/pt-br/assuntos/noticias/conab-recebe-delegacao-argentina-na-paraiba-para-intercambio-sobre-agricultura-familiar-e-abastecimento"
     },
     {
       "titulo": "Importação de ureia sobe e alcança maior patamar de 2026",
@@ -990,13 +1018,6 @@
       "link": "https://www.agrolink.com.br/noticias/trigo-em-chicago-cai-ao-menor-nivel-desde-fevereiro_521566.html"
     },
     {
-      "titulo": "Preço do milho fica estável em Chicago",
-      "veiculo": "Agrolink",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.agrolink.com.br/noticias/preco-do-milho-fica-estavel-em-chicago_521562.html"
-    },
-    {
       "titulo": "China: questões comerciais com EUA devem ser resolvidas com diálogo",
       "veiculo": "Agência Brasil",
       "data": "2026-11-26",
@@ -1018,18 +1039,11 @@
       "link": "https://g1.globo.com/economia/noticia/2026/11/26/china-brasil-e-uniao-europeia-reagem-a-novas-tarifas-anunciadas-por-trump.ghtml"
     },
     {
-      "titulo": "Gecex zera imposto de importação de cones de lúpulo e insumos de nutrição animal",
-      "veiculo": "Canal Rural",
+      "titulo": "Preço do milho fica estável em Chicago",
+      "veiculo": "Agrolink",
       "data": "2026-11-26",
       "tema": "Internacional",
-      "link": "https://www.canalrural.com.br/economia/gecex-zera-imposto-de-importacao-de-cones-de-lupulo-e-insumos-de-nutricao-animal/"
-    },
-    {
-      "titulo": "Conab recebe delegação argentina na Paraíba para intercâmbio sobre agricultura familiar e abastecimento",
-      "veiculo": "Conab",
-      "data": "2026-11-26",
-      "tema": "Internacional",
-      "link": "https://www.gov.br/conab/pt-br/assuntos/noticias/conab-recebe-delegacao-argentina-na-paraiba-para-intercambio-sobre-agricultura-familiar-e-abastecimento"
+      "link": "https://www.agrolink.com.br/noticias/preco-do-milho-fica-estavel-em-chicago_521562.html"
     }
   ],
   "cartoes": [
